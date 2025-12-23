@@ -1,0 +1,475 @@
+{%- liquid
+  if settings.typography_preset == 'avant_garde'
+    assign weight = settings.accent_icon_weight
+    if settings.swap_fonts
+        assign weight = settings.base_icon_weight
+    endif
+  else 
+      assign weight =  settings.base_icon_weight
+      if settings.swap_fonts
+          assign weight = settings.accent_icon_weight
+      endif
+  endif
+  if settings.typography_preset == 'custom'
+    assign weight = settings.custom_icon_weight
+  endif
+-%}
+
+<div id="CustomSizePopup" class="custom-size-popup popup-wrapper hidden">
+  <div class="custom-size-popup__overlay" onclick="closeCustomSizePopup()"></div>
+  <div class="custom-size-popup__content hide-scrollbar">
+    <button type="button" class="custom-size-popup__close" onclick="closeCustomSizePopup()" aria-label="{{ 'accessibility.close' | t }}">
+      {% if weight == 'regular' %}
+          {% render 'icon', icon: 'cross-regular' %}
+      {% elsif weight == 'medium' %}
+          {% render 'icon', icon: 'cross-medium' %}
+      {% elsif weight == 'bold' %}
+          {% render 'icon', icon: 'cross-bold' %}
+      {% endif %}
+    </button>
+    
+    <div class="custom-size-popup__container">
+      <div class="custom-size-popup__header">
+        <h2 class="custom-size-popup__title heading_s">GUIDELINES FOR TAKING BODY MEASUREMENTS (UNIT: CM)</h2>
+        <div class="custom-size-popup__note-box">
+          <p class="note-title"><strong>NOTE:</strong></p>
+          <p>The body parameters marked with a red <span class="required-star">*</span> are mandatory information. Please ensure to enter them completely and accurately, and select “Add to cart” to finish adding the product to your cart.</p>
+          <p>If you have any questions, please contact us via: <strong>Telegram/WhatsApp: (+84) 989 293 965.</strong></p>
+        </div>
+      </div>
+
+      <div class="custom-size-popup__body">
+        <div class="custom-size-popup__grid">
+          <div class="custom-size-popup__image-sticky">
+            <div class="image-container animate-fade-in">
+              {%- liquid 
+                assign main_image = 'https://cdn.shopify.com/s/files/1/0990/3472/6768/files/body-measurement-guide.jpg?v=1766529205'
+                if custom_size_image != blank
+                  assign main_image = custom_size_image | image_url: width: 1000
+                endif
+              -%}
+              <img src="{{ main_image }}" 
+                   alt="Body Measurement Guide" 
+                   class="measurement-guide-img"
+                   width="600"
+                   height="800"
+                   loading="lazy">
+            </div>
+          </div>
+          
+          <div class="custom-size-popup__form-fields">
+            <div class="measurement-inputs-scroll">
+              {%- assign measurement_blocks = section.blocks | where: 'type', 'measurement_field' -%}
+              {%- if measurement_blocks.size > 0 -%}
+                {%- for block in measurement_blocks -%}
+                  <div class="m-field" data-index="{{ forloop.index }}" {{ block.shopify_attributes }}>
+                    <div class="m-field__header">
+                      <span class="m-field__num">{{ forloop.index }}.</span>
+                      <label class="m-field__label" for="m-input-{{ forloop.index }}">
+                        {{ block.settings.label }}: {% if block.settings.required %}<span class="required-star">*</span>{% endif %}
+                      </label>
+                    </div>
+                    <div class="m-field__input-wrap">
+                      <input type="text" 
+                             id="m-input-{{ forloop.index }}" 
+                             name="properties[{{ block.settings.label }}]" 
+                             class="m-input{% if block.settings.required %} required{% endif %}" 
+                             placeholder="CM"
+                             {% if block.settings.required %}required aria-required="true"{% endif %}>
+                    </div>
+                    {%- if block.settings.description != blank -%}
+                      <p class="m-field__desc">{{ block.settings.description }}</p>
+                    {%- endif -%}
+                  </div>
+                {%- endfor -%}
+              {%- else -%}
+                <p>Please add Measurement Field blocks in the section settings.</p>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="custom-size-popup__footer">
+        <button type="button" class="button button--primary button--full-width big-button premium-cta" onclick="submitCustomSizeForm()">
+          {{ 'products.product.add_to_cart' | t }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* PREMIUM POPUP STYLES */
+.custom-size-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), visibility 0.4s;
+}
+
+.custom-size-popup:not(.hidden) {
+  visibility: visible;
+  opacity: 1;
+}
+
+.custom-size-popup__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+}
+
+.custom-size-popup__content {
+  position: relative;
+  background: #ffffff;
+  width: 92%;
+  max-width: 1100px;
+  height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  z-index: 2001;
+  transform: translateY(20px);
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  overflow: hidden;
+}
+
+.custom-size-popup:not(.hidden) .custom-size-popup__content {
+  transform: translateY(0);
+}
+
+.custom-size-popup__container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 40px;
+}
+
+.custom-size-popup__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #f4f4f4;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  z-index: 10;
+}
+
+.custom-size-popup__close:hover {
+  background: #000;
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+.custom-size-popup__header {
+  margin-bottom: 30px;
+  flex-shrink: 0;
+}
+
+.custom-size-popup__title {
+  font-family: var(--font-heading-family);
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.custom-size-popup__note-box {
+  background: #fff8f8;
+  border-left: 4px solid #ff4d4d;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  border-radius: 4px;
+}
+
+.note-title {
+  color: #ff4d4d;
+  margin-bottom: 5px;
+}
+
+.required-star {
+  color: #ff4d4d;
+  font-weight: bold;
+}
+
+.custom-size-popup__body {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.custom-size-popup__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.custom-size-popup__image-sticky {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fbfbfb;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.measurement-guide-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+	height: auto;
+}
+
+.custom-size-popup__form-fields {
+
+}
+
+/* Scrollbar styling */
+.custom-size-popup__form-fields::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-size-popup__form-fields::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.custom-size-popup__form-fields::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 4px;
+}
+
+.m-field {
+  margin-bottom: 25px;
+  opacity: 0;
+  transform: translateX(10px);
+  animation: slideIn 0.3s forwards;
+}
+
+@keyframes slideIn {
+  to { opacity: 1; transform: translateX(0); }
+}
+
+{% for i in (1..17) %}
+.m-field[data-index="{{ i }}"] { animation-delay: {{ i | times: 0.05 }}s; }
+{% endfor %}
+
+.m-field__header {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.m-field__num {
+  font-weight: 700;
+  color: #000;
+}
+
+.m-field__label {
+  font-weight: 500;
+  color: #333;
+}
+
+.m-field__input-wrap {
+  position: relative;
+}
+
+.m-input {
+  width: 100%;
+  height: 48px;
+  padding: 0 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.m-input:focus {
+  border-color: #000;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.05);
+  outline: none;
+}
+
+.m-input.error {
+  border-color: #ff4d4d;
+  background: #fffafa;
+}
+
+.m-field__desc {
+  font-size: 12px;
+  color: #888;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+.custom-size-popup__footer {
+  flex-shrink: 0;
+  padding-top: 20px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.premium-cta {
+  height: 56px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.premium-cta:hover {
+  transform: scale(1.02);
+}
+
+@media screen and (max-width: 900px) {
+  .custom-size-popup__container {
+    padding: 25px;
+  }
+  .custom-size-popup__grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    overflow-y: auto;
+  }
+  .custom-size-popup__image-sticky {
+    height: auto;
+  }
+  .custom-size-popup__body {
+    overflow-y: auto;
+  }
+  .custom-size-popup__content {
+    height: 95vh;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+</style>
+
+<script>
+let currentProductForm = null;
+
+function closeCustomSizePopup() {
+  const popup = document.getElementById('CustomSizePopup');
+  popup.classList.add('hidden');
+  document.body.classList.remove('overflow-hidden');
+  currentProductForm = null;
+}
+
+function openCustomSizePopup(form) {
+  currentProductForm = form;
+  const popup = document.getElementById('CustomSizePopup');
+  popup.classList.remove('hidden');
+  document.body.classList.add('overflow-hidden');
+  
+  // Autofocus first input
+  setTimeout(() => {
+    const firstInput = popup.querySelector('.m-input');
+    if (firstInput) firstInput.focus();
+  }, 400);
+}
+
+function submitCustomSizeForm() {
+  const popup = document.getElementById('CustomSizePopup');
+  const requiredInputs = popup.querySelectorAll('.m-input.required');
+  let isValid = true;
+  let firstError = null;
+
+  requiredInputs.forEach(input => {
+    if (!input.value.trim()) {
+      input.classList.add('error');
+      isValid = false;
+      if (!firstError) firstError = input;
+    } else {
+      input.classList.remove('error');
+    }
+  });
+
+  if (!isValid) {
+    if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    alert('Please fill in all mandatory fields marked with *');
+    return;
+  }
+
+  // Use the stored form reference
+  if (!currentProductForm) {
+      console.error('No active product form reference found');
+      return;
+  }
+
+  // Clear existing hidden inputs for measurements
+  const existing = currentProductForm.querySelectorAll('input[name^="properties["]');
+  existing.forEach(el => el.remove());
+
+  // Add new properties
+  const allInputs = popup.querySelectorAll('.m-input');
+  allInputs.forEach(input => {
+    if (input.value.trim()) {
+      const hidden = document.createElement('input');
+      hidden.type = 'hidden';
+      hidden.name = input.name;
+      hidden.value = input.value;
+      currentProductForm.appendChild(hidden);
+    }
+  });
+
+  // Flag as validated and submit
+  currentProductForm.dataset.customSizeValidated = "true";
+  
+  // Save reference before closing
+  const targetForm = currentProductForm;
+  
+  // Find the product-form component and trigger its handler
+  const productFormWrapper = targetForm.closest('product-form');
+  
+  // Close popup
+  closeCustomSizePopup();
+
+  if (productFormWrapper) {
+    // Dispatch a real submit event so the ProductForm class handles it (AJAX add)
+    targetForm.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
+  } else {
+    targetForm.submit();
+  }
+}
+
+// Global escape key to close
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeCustomSizePopup();
+});
+</script>

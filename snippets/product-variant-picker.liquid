@@ -75,120 +75,120 @@
                                     assign option_disabled = false
                                   endif
 
-                                assign color_file_name = value | replace: ' ', '_' | append: '.' | append: swatch_file_extension
-                                assign color_value = value | replace: ' ', '_' | downcase
-                                assign img_file = images[color_file_name] | downcase
-                                assign color_image = images[color_file_name] | split: '/' | last | file_img_url: '100x100' | prepend: 'https:' | split: '?' | first
-                              -%}
-                              {%- capture input_dataset -%}
-                                data-available="{{ value.available }}"
-                                data-product-url="{{ value.product_url }}"
-                                data-option-value-id="{{ value.id }}"
-                              {%- endcapture -%}
-                              <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
-                                name="{{ option.name }}"
-                                value="{{ value | escape }}"
-                                form="{{ product_form_id }}"
-                                {% if value.selected %}checked{% endif %}
-                                class="{% if option_disabled %}disabled{% endif %}{% if value.product_url != blank %} product-combined-listings{% endif %}"
-                                {{ input_dataset }}
-                              >
-                              {%- if thumbnail or is_color and color_pills_variant_label contains downcased_option -%}
-                                  {%- liquid
-                                      assign value_downcase = value | downcase | lstrip | replace: ' ', '_'
-                                      assign swatch_config = settings.swatch_config | newline_to_br | split: '<br />'
-                                      assign color_swatch_fallback = value | split: ' ' | last | handle
-                                      if value.swatch.image
-                                          assign image_url = value.swatch.image | image_url: width: 50
-                                          assign swatch_value = 'url(' | append: image_url | append: ')'
-                                          assign color_swatch_fallback = swatch_value
-                                          assign swatch_focal_point = value.swatch.image.presentation.focal_point
-                                      elsif value.swatch.color
-                                          assign color_swatch_fallback = 'rgb(' | append: value.swatch.color.rgb | append: ')'
-                                      endif
-                                      for swatch in swatch_config
-                                          assign swatch_parts = swatch | strip | split: ':'
-                                          assign swatch_name = swatch_parts.first | downcase | lstrip | replace: ' ', '_'
-                                          if swatch_name == value_downcase
-                                              assign swatch_value = swatch_parts.last | strip
-                                              if swatch_value contains '#'
-                                                  assign color_swatch_fallback = swatch_value
-                                              else
-                                                  assign color_swatch_fallback = value | split: ' ' | last | handle
-                                                  if value.swatch.image
-                                                    assign image_url = value.swatch.image | image_url: width: 50
-                                                    assign swatch_value = 'url(' | append: image_url | append: ')'
-                                                    assign color_swatch_fallback = swatch_value
-                                                    assign swatch_focal_point = value.swatch.image.presentation.focal_point
-                                                  elsif value.swatch.color
-                                                    assign color_swatch_fallback = 'rgb(' | append: value.swatch.color.rgb | append: ')'
-                                                  endif
-                                              endif
-                                              break
-                                          endif
-                                      endfor
-                                  -%}
-                              {%- endif -%}
-                              {%- if thumbnail -%}
-                                    {% liquid
-                                      assign color_variant_image = ''
-                                      if value.variant.image
-                                        assign color_variant_image = value.variant.image
-                                      endif
-                                      if value.product_url and product.url != value.product_url and value.variant.product.featured_image
-                                        assign color_variant_image = value.variant.product.featured_image
-                                      endif
-                                      if value.variant.product.featured_image != blank and value.product_url
-                                        assign color_variant_image = value.variant.product.featured_image
-                                      endif
-                                      if color_variant_image == ''
-                                        for variant in product.variants
-                                          assign variant_value = variant.options[option_idx0]
-                                          if variant_value == value and variant.image
-                                            assign color_variant_image = variant.image
-                                            break
-                                          endif 
-                                        endfor
-                                      endif
-                                    %} 
-                                  <label
-                                    for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
-                                    class="color__swatch input--{{ settings.typography_preset }} {% if block.settings.text_size != 'default' %}{{ block.settings.text_size }}{% else %}{% if settings.typography_preset == 'custom' %}{% if settings.uppercase_body_s %} uppercase{% endif %}{% if settings.bolder_font_body_s %} bolder-font{% endif %}{% endif %}{% endif %} color__swatch--{{ settings.pills_layout }} color__swatch--image {%- unless color_variant_image != '' -%}{% if images[color_file_name] != blank and img_file contains color_value %} color__swatch--image--background{% endif %}{%- endunless -%}"
-                                    style="{%- unless color_variant_image != '' -%}{% if images[color_file_name] != blank and img_file contains color_value or value.swatch.image %}--swatch-background: url({{ color_image }});{% else %}--swatch-background: {{ color_swatch_fallback }};{% endif %}{% if swatch_focal_point %} --swatches-focal-point: {{ swatch_focal_point }};{% else %}  --swatches-focal-point: center;{% endif %}{%- endunless -%}"
-                                  >
-                                    <span class="color__swatch-dot--image {% if settings.enable_blending and settings.apply_to_swatches %}enable-blending{% endif %} {% if settings.enable_shadow %}color__swatch-dot--image-shadow{% endif %} ratio-{{ settings.image_swatch_ratio }} {% if settings.image_swatch_radius == '2000px 2000px 0 0' %}color__swatch-dot--image-arc{% endif %} {% unless color_variant_image != '' %}color__swatch-dot--color{% endunless %}">{% if color_variant_image != '' %}{{ color_variant_image | image_url: width: 200 | image_tag }}{% endif %}</span>
-                                    {% if settings.show_image_name %}
-                                      <span class="color__swatch-tooltip color__swatch-tooltip--{{ settings.typography_preset }}">{{ value }}</span>
-                                    {% endif %}
-                                  </label>
-                              {%- elsif is_color and color_pills_variant_label contains downcased_option -%}
-                                <label
-                                  for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
-                                  tabindex="0"
-                                  class="color__swatch input--{{ settings.typography_preset }} {% if block.settings.text_size != 'default' %}{{ block.settings.text_size }}{% else %}{% if settings.typography_preset == 'custom' %}{% if settings.uppercase_body_s %} uppercase{% endif %}{% if settings.bolder_font_body_s %} bolder-font{% endif %}{% endif %}{% endif %} color__swatch--{{ settings.pills_layout }}"
-                                  style="{% if images[color_file_name] != blank and img_file contains color_value %}--swatch-background: url({{ color_image }});{% else %}--swatch-background: {{ color_swatch_fallback }};{% if swatch_focal_point %} --swatches-focal-point: {{ swatch_focal_point }};{% else %}  --swatches-focal-point: center;{% endif %}{% endif %}"
-                                >
-                                  <span class="color__swatch-dot"></span>
-                                  {% if settings.show_color_name == false %}
-                                    <span class="color__swatch-tooltip color__swatch-tooltip--{{ settings.typography_preset }}">{{ value }}</span>
-                                  {% else %}
-                                    <span class="color__swatch-name">{{ value }}</span>
-                                  {% endif %}
-                                </label>
-                              {%- else -%}
-                                <label
-                                  for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
-                                  tabindex="0"
-                                  class="color__swatch input--{{ settings.typography_preset }} {% if block.settings.text_size != 'default' %}{{ block.settings.text_size }}{% else %}{% if settings.typography_preset == 'custom' %}{% if settings.uppercase_body_s %} uppercase{% endif %}{% if settings.bolder_font_body_s %} bolder-font{% endif %}{% endif %}{% endif %} color__swatch--{{ settings.pills_layout }}"
-                                >
-                                  {{ value }}
-                                </label>
-                              {%- endif -%}
-                              <script type="application/json" data-resource="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
-                                {{ value.variant | json }}
-                              </script>
-                            {%- endfor -%}
-                          </div>
+																	assign color_file_name = value | replace: ' ', '_' | append: '.' | append: swatch_file_extension
+																	assign color_value = value | replace: ' ', '_' | downcase
+																	assign img_file = images[color_file_name] | downcase
+																	assign color_image = images[color_file_name] | split: '/' | last | file_img_url: '100x100' | prepend: 'https:' | split: '?' | first
+																-%}
+																{%- capture input_dataset -%}
+																	data-available="{{ value.available }}"
+																	data-product-url="{{ value.product_url }}"
+																	data-option-value-id="{{ value.id }}"
+																{%- endcapture -%}
+																<input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
+																	name="{{ option.name }}"
+																	value="{{ value | escape }}"
+																	form="{{ product_form_id }}"
+																	{% if value.selected %}checked{% endif %}
+																	class="{% if option_disabled %}disabled{% endif %}{% if value.product_url != blank %} product-combined-listings{% endif %}"
+																	{{ input_dataset }}
+																>
+																{%- if thumbnail or is_color and color_pills_variant_label contains downcased_option -%}
+																		{%- liquid
+																				assign value_downcase = value | downcase | lstrip | replace: ' ', '_'
+																				assign swatch_config = settings.swatch_config | newline_to_br | split: '<br />'
+																				assign color_swatch_fallback = value | split: ' ' | last | handle
+																				if value.swatch.image
+																						assign image_url = value.swatch.image | image_url: width: 50
+																						assign swatch_value = 'url(' | append: image_url | append: ')'
+																						assign color_swatch_fallback = swatch_value
+																						assign swatch_focal_point = value.swatch.image.presentation.focal_point
+																				elsif value.swatch.color
+																						assign color_swatch_fallback = 'rgb(' | append: value.swatch.color.rgb | append: ')'
+																				endif
+																				for swatch in swatch_config
+																						assign swatch_parts = swatch | strip | split: ':'
+																						assign swatch_name = swatch_parts.first | downcase | lstrip | replace: ' ', '_'
+																						if swatch_name == value_downcase
+																								assign swatch_value = swatch_parts.last | strip
+																								if swatch_value contains '#'
+																										assign color_swatch_fallback = swatch_value
+																								else
+																										assign color_swatch_fallback = value | split: ' ' | last | handle
+																										if value.swatch.image
+																											assign image_url = value.swatch.image | image_url: width: 50
+																											assign swatch_value = 'url(' | append: image_url | append: ')'
+																											assign color_swatch_fallback = swatch_value
+																											assign swatch_focal_point = value.swatch.image.presentation.focal_point
+																										elsif value.swatch.color
+																											assign color_swatch_fallback = 'rgb(' | append: value.swatch.color.rgb | append: ')'
+																										endif
+																								endif
+																								break
+																						endif
+																				endfor
+																		-%}
+																{%- endif -%}
+																{%- if thumbnail -%}
+																			{% liquid
+																				assign color_variant_image = ''
+																				if value.variant.image
+																					assign color_variant_image = value.variant.image
+																				endif
+																				if value.product_url and product.url != value.product_url and value.variant.product.featured_image
+																					assign color_variant_image = value.variant.product.featured_image
+																				endif
+																				if value.variant.product.featured_image != blank and value.product_url
+																					assign color_variant_image = value.variant.product.featured_image
+																				endif
+																				if color_variant_image == ''
+																					for variant in product.variants
+																						assign variant_value = variant.options[option_idx0]
+																						if variant_value == value and variant.image
+																							assign color_variant_image = variant.image
+																							break
+																						endif 
+																					endfor
+																				endif
+																			%} 
+																		<label
+																			for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
+																			class="color__swatch input--{{ settings.typography_preset }} {% if block.settings.text_size != 'default' %}{{ block.settings.text_size }}{% else %}{% if settings.typography_preset == 'custom' %}{% if settings.uppercase_body_s %} uppercase{% endif %}{% if settings.bolder_font_body_s %} bolder-font{% endif %}{% endif %}{% endif %} color__swatch--{{ settings.pills_layout }} color__swatch--image {%- unless color_variant_image != '' -%}{% if images[color_file_name] != blank and img_file contains color_value %} color__swatch--image--background{% endif %}{%- endunless -%}"
+																			style="{%- unless color_variant_image != '' -%}{% if images[color_file_name] != blank and img_file contains color_value or value.swatch.image %}--swatch-background: url({{ color_image }});{% else %}--swatch-background: {{ color_swatch_fallback }};{% endif %}{% if swatch_focal_point %} --swatches-focal-point: {{ swatch_focal_point }};{% else %}  --swatches-focal-point: center;{% endif %}{%- endunless -%}"
+																		>
+																			<span class="color__swatch-dot--image {% if settings.enable_blending and settings.apply_to_swatches %}enable-blending{% endif %} {% if settings.enable_shadow %}color__swatch-dot--image-shadow{% endif %} ratio-{{ settings.image_swatch_ratio }} {% if settings.image_swatch_radius == '2000px 2000px 0 0' %}color__swatch-dot--image-arc{% endif %} {% unless color_variant_image != '' %}color__swatch-dot--color{% endunless %}">{% if color_variant_image != '' %}{{ color_variant_image | image_url: width: 200 | image_tag }}{% endif %}</span>
+																			{% if settings.show_image_name %}
+																				<span class="color__swatch-tooltip color__swatch-tooltip--{{ settings.typography_preset }}">{{ value }}</span>
+																			{% endif %}
+																		</label>
+																{%- elsif is_color and color_pills_variant_label contains downcased_option -%}
+																	<label
+																		for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
+																		tabindex="0"
+																		class="color__swatch input--{{ settings.typography_preset }} {% if block.settings.text_size != 'default' %}{{ block.settings.text_size }}{% else %}{% if settings.typography_preset == 'custom' %}{% if settings.uppercase_body_s %} uppercase{% endif %}{% if settings.bolder_font_body_s %} bolder-font{% endif %}{% endif %}{% endif %} color__swatch--{{ settings.pills_layout }}"
+																		style="{% if images[color_file_name] != blank and img_file contains color_value %}--swatch-background: url({{ color_image }});{% else %}--swatch-background: {{ color_swatch_fallback }};{% if swatch_focal_point %} --swatches-focal-point: {{ swatch_focal_point }};{% else %}  --swatches-focal-point: center;{% endif %}{% endif %}"
+																	>
+																		<span class="color__swatch-dot"></span>
+																		{% if settings.show_color_name == false %}
+																			<span class="color__swatch-tooltip color__swatch-tooltip--{{ settings.typography_preset }}">{{ value }}</span>
+																		{% else %}
+																			<span class="color__swatch-name">{{ value }}</span>
+																		{% endif %}
+																	</label>
+																{%- else -%}
+																	<label
+																		for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
+																		tabindex="0"
+																		class="color__swatch input--{{ settings.typography_preset }} {% if block.settings.text_size != 'default' %}{{ block.settings.text_size }}{% else %}{% if settings.typography_preset == 'custom' %}{% if settings.uppercase_body_s %} uppercase{% endif %}{% if settings.bolder_font_body_s %} bolder-font{% endif %}{% endif %}{% endif %} color__swatch--{{ settings.pills_layout }}"
+																	>
+																		{{ value }}
+																	</label>
+																{%- endif -%}
+                                <script type="application/json" data-resource="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
+                                  {{ value.variant | json }}
+                                </script>
+                            	{%- endfor -%}
+                          	</div>
                         </div>
                     </variant-radios>
                   {% else %}

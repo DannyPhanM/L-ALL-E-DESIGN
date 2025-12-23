@@ -4951,15 +4951,16 @@ class VariantSelects extends HTMLElement {
   }
 
   alignSwatchTooltip(e) {
-    const colorSwatch = e.target;
+    const colorSwatch = e.currentTarget || e.target;
     const tooltip = colorSwatch.querySelector('.color__swatch-tooltip');
+    if (!tooltip) return;
     const viewport = colorSwatch.closest('.product');
 
     tooltip.style.setProperty('--tooltip-arrow-left', 'auto');
     tooltip.style.setProperty('--tooltip-arrow-transform', 'none');
     tooltip.removeAttribute('style');
 
-    if (tooltip && viewport && viewport.getBoundingClientRect().left >= tooltip.getBoundingClientRect().left) {
+    if (viewport && viewport.getBoundingClientRect().left >= tooltip.getBoundingClientRect().left) {
       tooltip.setAttribute('style', `right: calc(50% - ${(Math.abs(tooltip.getBoundingClientRect().left - viewport.getBoundingClientRect().left))}px);`);
       tooltip.style.setProperty('--tooltip-arrow-left', `${colorSwatch.getBoundingClientRect().width / 2}px`);
       tooltip.style.setProperty('--tooltip-arrow-transform', `translateX(-50%)`);
