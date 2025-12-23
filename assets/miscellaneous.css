@@ -1,0 +1,176 @@
+.miscellaneous-container--header .miscellaneous__items--reverse {
+    flex-direction: row-reverse;
+}
+
+.miscellaneous__items--column.miscellaneous__items--reverse,
+.miscellaneous__items--column .miscellaneous__subblock--reverse {
+    flex-direction: column-reverse !important;
+}
+
+.miscellaneous__subblock--reverse {
+    flex-direction: row-reverse !important;
+}
+
+.miscellaneous-container--header .miscellaneous__subblock--reverse.miscellaneous__subblock--horizontal-flex-start {
+    flex-direction: row-reverse !important;
+    justify-content: flex-end;
+}
+
+.miscellaneous-container--header .miscellaneous__subblock--reverse.miscellaneous__subblock--horizontal-flex-end {
+    flex-direction: row-reverse !important;
+    justify-content: flex-start;
+}
+
+.miscellaneous-container--header .miscellaneous__subblock--horizontal-flex-end,
+.miscellaneous__items--row .miscellaneous__subblock--reverse.miscellaneous__subblock--horizontal-flex-start,
+.miscellaneous-container--header.miscellaneous-container--flex-start .miscellaneous__items--reverse {
+    justify-content: flex-end;
+}
+
+.miscellaneous-container--header.miscellaneous-container--flex-end .miscellaneous__items--reverse {
+    justify-content: flex-start;
+}
+
+.miscellaneous-container--header,
+.miscellaneous-container--mobile-header {
+    display: flex;
+    justify-content: var(--miscellaneous-alignment);
+    flex-wrap: wrap;
+}
+
+.miscellaneous-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.miscellaneous-container--header .miscellaneous__items {
+    width: 100%;
+    gap: 12px 40px;
+    justify-content: var(--miscellaneous-horizontal-alignment);
+}
+
+.miscellaneous-container--mobile-header .miscellaneous__items--stretched {
+    justify-content: var(--miscellaneous-horizontal-alignment);
+}
+
+.miscellaneous__subblock {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.miscellaneous-container--menu-drawer .miscellaneous__subblock--horizontal-center {
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+.miscellaneous-container,
+.miscellaneous__items--column,
+.miscellaneous__items--column .miscellaneous__subblock,
+.miscellaneous__items--column .miscellaneous__subblock--reverse {
+    justify-content: var(--miscellaneous-vertical-alignment);
+    align-items: var(--miscellaneous-horizontal-alignment);
+}
+
+.miscellaneous__items--column .miscellaneous__subblock {
+    flex-direction: column;
+}
+
+.miscellaneous__items--row .miscellaneous__subblock {
+    flex-direction: row;
+    justify-content: var(--miscellaneous-horizontal-alignment);
+    align-items: var(--miscellaneous-vertical-alignment);
+}
+
+.miscellaneous__items--column.miscellaneous__items--stretched,
+.miscellaneous__items--column.miscellaneous__items--stretched .miscellaneous__subblock:only-child {
+    height: 100%;
+    justify-content: var(--miscellaneous-vertical-alignment);
+    align-items: var(--miscellaneous-horizontal-alignment);
+}
+
+.miscellaneous__items {
+    gap: 12px;
+}
+
+.miscellaneous__items,
+.miscellaneous-container--menu-drawer .miscellaneous__subblock,
+.miscellaneous-container--footer .miscellaneous__subblock,
+.miscellaneous-container--main-sidebar .miscellaneous__subblock {
+    display: flex;
+    flex-direction: var(--miscellaneous-view);
+    flex-wrap: wrap;
+}
+.miscellaneous-container--header .miscellaneous__subblock,
+.miscellaneous__items:not(.miscellaneous__items--column),
+.miscellaneous-container--menu-drawer.miscellaneous-container--space-between,
+.miscellaneous-container--menu-drawer.miscellaneous-container--space-between .miscellaneous__items--column .miscellaneous__subblock,
+.miscellaneous-container--footer.miscellaneous-container--space-between,
+.miscellaneous-container--footer.miscellaneous-container--space-between .miscellaneous__items--column .miscellaneous__subblock,
+.miscellaneous-container--header .miscellaneous__items {
+    align-items: center;
+}
+
+.miscellaneous-container--menu-drawer .miscellaneous__items,
+.miscellaneous-container--footer .miscellaneous__items,
+.miscellaneous-container--main-sidebar .miscellaneous__items,
+.miscellaneous-container--menu-drawer .miscellaneous__items .miscellaneous__subblock,
+.miscellaneous-container--1.miscellaneous-container--short .miscellaneous__items,
+.miscellaneous-container--1.miscellaneous-container--medium .miscellaneous__items {
+    width: 100%;
+}
+
+.miscellaneous__subblock.miscellaneous__subblock--horizontal-space-between:only-child {
+    width: calc(100% + 20px);
+    justify-content: space-between;
+} 
+
+.miscellaneous-container--main-sidebar .miscellaneous__items--row,
+.miscellaneous-container--footer .miscellaneous__items--row {
+    justify-content: var(--miscellaneous-horizontal-alignment);
+}
+
+.miscellaneous-container--main-sidebar.miscellaneous-container--flex-start .miscellaneous__items--row.miscellaneous__items--reverse {
+    justify-content: flex-end;
+}
+.miscellaneous-container--main-sidebar.miscellaneous-container--flex-end .miscellaneous__items--row.miscellaneous__items--reverse {
+    justify-content: flex-start;
+}
+.miscellaneous-container--main-sidebar .miscellaneous__items--row.miscellaneous__items--reverse {
+    flex-direction: row-reverse!important;
+}
+
+.miscellaneous-container--main-sidebar .miscellaneous__items--row .miscellaneous__subblock.miscellaneous__subblock--horizontal-space-between:only-child,
+.miscellaneous-container--footer .miscellaneous__items--row .miscellaneous__subblock.miscellaneous__subblock--horizontal-space-between:only-child {
+    width: calc(100% + 20px);
+    justify-content: space-between;
+}
+
+.miscellaneous-container--2.miscellaneous-container--medium,
+.miscellaneous-container--2.miscellaneous-container--wide,
+.miscellaneous-container--3.miscellaneous-container--medium {
+    grid-column: span 2;
+}
+
+.miscellaneous-container--3.miscellaneous-container--wide {
+    grid-column: span 3;
+}
+
+@media screen and (max-width: 920px) {
+    .miscellaneous-container--header.miscellaneous-container {
+        width: 100%;
+    }
+    .miscellaneous-container--header .localization-container {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .miscellaneous-container--1.miscellaneous-container--short .miscellaneous__items,
+    .miscellaneous-container--1.miscellaneous-container--medium .miscellaneous__items {
+        width: 100%;
+    }
+    .miscellaneous-container--header .miscellaneous__items {
+        gap: 12px 24px;
+    }
+}

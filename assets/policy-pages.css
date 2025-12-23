@@ -1,0 +1,673 @@
+.shopify-policy__container {
+    max-width: calc(960px + 48px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    color: rgb(var(--layout-text-color));
+}
+
+.main--spacious .shopify-policy__container {
+    padding: 24px 24px 160px;
+}
+
+.main--compact .shopify-policy__container {
+    padding: 24px 24px 48px;
+}
+
+.shopify-policy__title {
+    text-align: start;
+}
+
+.main--center .shopify-policy__title {
+    text-align: center;
+}
+
+.shopify-policy__body table tr {
+    padding: 12px 0;
+}
+/* Fonts */
+.minimal_uppercase .shopify-policy__title h1 {
+    font: var(--base-heading-xs-font);
+    text-transform: uppercase;
+}
+.minimal_basic .shopify-policy__title h1 {
+    font: var(--base-heading-xs-font);
+}
+.minimal_heavy .shopify-policy__title h1 {
+    font: var(--base-heading-m-font);
+    letter-spacing: -0.01em;
+}
+.classic .shopify-policy__title h1 {
+    font: var(--accent-heading-m-font);
+    letter-spacing: -0.01em;
+}
+.avant_garde .shopify-policy__title h1 {
+    font: var(--base-heading-l-font);
+    text-transform: uppercase; 
+    letter-spacing: -0.02em;
+}
+.contrast .shopify-policy__title h1 {
+    font: var(--accent-heading-xl-font);
+    letter-spacing: -0.02em;
+}
+.brutalist .shopify-policy__title h1 {
+    font: var(--base-heading-xl-font);
+    text-transform: uppercase;
+    letter-spacing: -0.02em; 
+}
+.duet .shopify-policy__title h1 {
+    font: var(--accent-body-l-font);
+}
+
+.custom .shopify-policy__title h1 {
+    font: var(--heading-xs-font);
+    letter-spacing: var(--heading-xs-letter-spacing);
+}
+.uppercase-heading.custom .shopify-policy__title h1 {
+    text-transform: uppercase;
+}
+.none-uppercase-heading.custom .shopify-policy__title h1 {
+    text-transform: none;
+}
+.bolder-font-heading.custom .shopify-policy__title h1 {
+    font-weight: bold;
+}
+.none-bolder-font-heading.custom .shopify-policy__title h1 {
+    font-weight: normal;
+}
+
+/* Styles for full-width page without sidebars */
+/* Laptop */
+@media screen and (max-width: 1440px) {
+    .contrast .shopify-policy__title h1 {
+        font: var(--accent-heading-l-font);
+    }
+    .brutalist .shopify-policy__title h1 {
+        font: var(--base-heading-l-font);
+    }
+    .main--spacious .shopify-policy__container {
+        padding: 24px 24px 128px;
+    }
+}
+/* Tablet */
+@media screen and (max-width: 1024px) {
+    .avant_garde .shopify-policy__title h1,
+    .brutalist .shopify-policy__title h1 {
+        font: var(--base-heading-m-font);
+        letter-spacing: -0.01em;
+    }
+    .contrast .shopify-policy__title h1 {
+        font: var(--accent-heading-m-font);
+        letter-spacing: -0.01em;
+    }
+    .main--spacious .shopify-policy__container {
+        padding: 24px 24px 96px;
+    }
+}
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .avant_garde .shopify-policy__title h1,
+    .brutalist .shopify-policy__title h1,
+    .minimal_heavy .shopify-policy__title h1 {
+        font: var(--base-heading-s-font);
+        letter-spacing: normal;
+    }
+    .contrast .shopify-policy__title h1,
+    .classic .shopify-policy__title h1 {
+        font: var(--accent-heading-s-font);
+        letter-spacing: normal;
+    }
+    .main--spacious .shopify-policy__container {
+        padding: 24px 16px 64px;
+    }
+    .main--compact .shopify-policy__container {
+        padding: 24px 16px 48px;
+    }
+}
+/* Mobile-mini */
+@media screen and (max-width: 500px) {
+    .main--spacious .shopify-policy__container {
+        padding: 24px 16px 48px;
+    }
+    .main--compact .shopify-policy__container {
+        padding: 24px 16px 32px;
+    }
+}
+
+/* Sidebars: Main XS and white space Spacious */
+    /* Laptop */
+    @media screen and (max-width: 1720px) and (min-width: 921px) {
+        .main_xs--spacious.contrast .shopify-policy__title h1 {
+            font: var(--accent-heading-l-font);
+        }
+        .main_xs--spacious.brutalist .shopify-policy__title h1 {
+            font: var(--base-heading-l-font);
+        }
+        .main_xs--spacious.main--spacious .shopify-policy__container {
+            padding: 24px 24px 128px;
+        }
+    }
+    /* Tablet */
+    @media screen and (max-width: 1304px) and (min-width: 921px) {
+        .main_xs--spacious.avant_garde .shopify-policy__title h1,
+        .main_xs--spacious.brutalist .shopify-policy__title h1 {
+            font: var(--base-heading-m-font);
+            letter-spacing: -0.01em;
+        }
+        .main_xs--spacious.contrast .shopify-policy__title h1 {
+            font: var(--accent-heading-m-font);
+            letter-spacing: -0.01em;
+        }
+        .main_xs--spacious.main--spacious .shopify-policy__container {
+            padding: 24px 24px 96px;
+        }
+    }
+    /* Mobile */
+    @media screen and (max-width: 1048px) and (min-width: 921px) {
+        .main_xs--spacious.avant_garde .shopify-policy__title h1,
+        .main_xs--spacious.brutalist .shopify-policy__title h1,
+        .main_xs--spacious.minimal_heavy .shopify-policy__title h1 {
+            font: var(--base-heading-s-font);
+            letter-spacing: normal;
+        }
+        .main_xs--spacious.contrast .shopify-policy__title h1,
+        .main_xs--spacious.classic .shopify-policy__title h1 {
+            font: var(--accent-heading-s-font);
+            letter-spacing: normal;
+        }
+        .main_xs--spacious.main--spacious .shopify-policy__container {
+            padding: 24px 16px 64px;
+        }
+    }
+
+/* Sidebars: Main XS and white space Compact */
+    /* Laptop */
+    @media screen and (max-width: 1646px) and (min-width: 921px) {
+        .main_xs--compact.contrast .shopify-policy__title h1 {
+            font: var(--accent-heading-l-font);
+        }
+        .main_xs--compact.brutalist .shopify-policy__title h1 {
+            font: var(--base-heading-l-font);
+        }
+    }
+    /* Tablet */
+    @media screen and (max-width: 1224px) and (min-width: 921px) {
+        .main_xs--compact.avant_garde .shopify-policy__title h1,
+        .main_xs--compact.brutalist .shopify-policy__title h1 {
+            font: var(--base-heading-m-font);
+            letter-spacing: -0.01em;
+        }
+        .main_xs--compact.contrast .shopify-policy__title h1 {
+            font: var(--accent-heading-m-font);
+            letter-spacing: -0.01em;
+        }
+    }
+    /* Mobile */
+    @media screen and (max-width: 968px) and (min-width: 921px) {
+        .main_xs--compact.avant_garde .shopify-policy__title h1,
+        .main_xs--compact.brutalist .shopify-policy__title h1,
+        .main_xs--compact.minimal_heavy .shopify-policy__title h1 {
+            font: var(--base-heading-s-font);
+            letter-spacing: normal;
+        }
+        .main_xs--compact.contrast .shopify-policy__title h1,
+        .main_xs--compact.classic .shopify-policy__title h1 {
+            font: var(--accent-heading-s-font);
+            letter-spacing: normal;
+        }
+        .main_xs--compact.main--compact .shopify-policy__container {
+            padding: 24px 16px 48px;
+        }
+    }
+
+/* Sidebars: Main XS with secondary and white space Spacious */
+    /* Laptop */
+    @media screen and (max-width: 1816px) and (min-width: 921px) {
+        .main_xs_with_secondary--spacious.contrast .shopify-policy__title h1 {
+            font: var(--accent-heading-l-font);
+        }
+        .main_xs_with_secondary--spacious.brutalist .shopify-policy__title h1 {
+            font: var(--base-heading-l-font);
+        }
+        .main_xs_with_secondary--spacious.main--spacious .shopify-policy__container {
+            padding: 24px 24px 128px;
+        }
+    }
+    /* Tablet */
+    @media screen and (max-width: 1400px) and (min-width: 921px) {
+        .main_xs_with_secondary--spacious.avant_garde .shopify-policy__title h1,
+        .main_xs_with_secondary--spacious.brutalist .shopify-policy__title h1 {
+            font: var(--base-heading-m-font);
+            letter-spacing: -0.01em;
+        }
+        .main_xs_with_secondary--spacious.contrast .shopify-policy__title h1 {
+            font: var(--accent-heading-m-font);
+            letter-spacing: -0.01em;
+        }
+        .main_xs_with_secondary--spacious.main--spacious .shopify-policy__container {
+            padding: 24px 24px 96px;
+        }
+    }
+    /* Mobile */
+    @media screen and (max-width: 1144px) and (min-width: 921px) {
+        .main_xs_with_secondary--spacious.avant_garde .shopify-policy__title h1,
+        .main_xs_with_secondary--spacious.brutalist .shopify-policy__title h1,
+        .main_xs_with_secondary--spacious.minimal_heavy .shopify-policy__title h1 {
+            font: var(--base-heading-s-font);
+            letter-spacing: normal;
+        }
+        .main_xs_with_secondary--spacious.contrast .shopify-policy__title h1,
+        .main_xs_with_secondary--spacious.classic .shopify-policy__title h1 {
+            font: var(--accent-heading-s-font);
+            letter-spacing: normal;
+        }
+        .main_xs_with_secondary--spacious.main--spacious .shopify-policy__container {
+            padding: 24px 16px 64px;
+        }
+    }
+
+/* Sidebars: Main XS with secondary and white space Compact */
+    /* Laptop */
+    @media screen and (max-width: 1755px) and (min-width: 921px) {
+        .main_xs_with_secondary--compact .heading--contrast {
+            font: var(--accent-heading-l-font);
+        }
+        .main_xs_with_secondary--compact .heading--brutalist {
+            font: var(--base-heading-l-font);
+        }
+    }
+    /* Tablet */
+    @media screen and (max-width: 1320px) and (min-width: 921px) {
+        .main_xs_with_secondary--compact .heading--avant_garde,
+        .main_xs_with_secondary--compact .heading--brutalist,
+        .main_xs_with_secondary--compact .section-page-heading--brutalist,
+        .main_xs_with_secondary--compact .section-page-heading--duet {
+            font: var(--base-heading-m-font);
+            letter-spacing: -0.01em;
+        }
+        .main_xs_with_secondary--compact .heading--contrast {
+            font: var(--accent-heading-m-font);
+            letter-spacing: -0.01em;
+        }
+        .main_xs_with_secondary--compact .page {
+            gap: 48px;
+        }
+    }
+    /* Mobile */
+    @media screen and (max-width: 1064px) and (min-width: 921px) {
+        .main_xs_with_secondary--compact.avant_garde .shopify-policy__title h1,
+        .main_xs_with_secondary--compact.brutalist .shopify-policy__title h1,
+        .main_xs_with_secondary--compact.minimal_heavy .shopify-policy__title h1 {
+            font: var(--base-heading-s-font);
+            letter-spacing: normal;
+        }
+        .main_xs_with_secondary--compact.contrast .shopify-policy__title h1,
+        .main_xs_with_secondary--compact.classic .shopify-policy__title h1 {
+            font: var(--accent-heading-s-font);
+            letter-spacing: normal;
+        }
+        .main_xs_with_secondary--compact.main--compact .shopify-policy__container {
+            padding: 24px 16px 48px;
+        }
+    }
+
+/* Sidebars: Main S and white space Spacious */
+    /* Laptop */
+    @media screen and (max-width: 1772px) and (min-width: 921px) {
+        .main_s--spacious.contrast .shopify-policy__title h1 {
+            font: var(--accent-heading-l-font);
+        }
+        .main_s--spacious.brutalist .shopify-policy__title h1 {
+            font: var(--base-heading-l-font);
+        }
+        .main_s--spacious.main--spacious .shopify-policy__container {
+            padding: 24px 24px 128px;
+        }
+    }
+    /* Tablet */
+    @media screen and (max-width: 1304px) and (min-width: 921px) {
+        .main_s--spacious.avant_garde .shopify-policy__title h1,
+        .main_s--spacious.brutalist .shopify-policy__title h1 {
+            font: var(--base-heading-m-font);
+            letter-spacing: -0.01em;
+        }
+        .main_s--spacious.contrast .shopify-policy__title h1 {
+            font: var(--accent-heading-m-font);
+            letter-spacing: -0.01em;
+        }
+        .main_s--spacious.main--spacious .shopify-policy__container {
+            padding: 24px 24px 96px;
+        }
+    }
+    /* Mobile */
+    @media screen and (max-width: 1048px) and (min-width: 921px) {
+        .main_s--spacious.avant_garde .shopify-policy__title h1,
+        .main_s--spacious.brutalist .shopify-policy__title h1,
+        .main_s--spacious.minimal_heavy .shopify-policy__title h1 {
+            font: var(--base-heading-s-font);
+            letter-spacing: normal;
+        }
+        .main_s--spacious.contrast .shopify-policy__title h1,
+        .main_s--spacious.classic .shopify-policy__title h1 {
+            font: var(--accent-heading-s-font);
+            letter-spacing: normal;
+        }
+        .main_s--spacious.main--spacious .shopify-policy__container {
+            padding: 24px 16px 64px;
+        }
+    }
+
+/* Sidebars: Main S and white space Compact */
+    /* Laptop */
+    @media screen and (max-width: 1772px) and (min-width: 921px) {
+        .main_s--compact.contrast .shopify-policy__title h1 {
+            font: var(--accent-heading-l-font);
+        }
+        .main_s--compact.brutalist .shopify-policy__title h1 {
+            font: var(--base-heading-l-font);
+        }
+    }
+    /* Tablet */
+    @media screen and (max-width: 1260px) and (min-width: 921px) {
+        .main_s--compact.avant_garde .shopify-policy__title h1,
+        .main_s--compact.brutalist .shopify-policy__title h1 {
+            font: var(--base-heading-m-font);
+            letter-spacing: -0.01em;
+        }
+        .main_s--compact.contrast .shopify-policy__title h1 {
+            font: var(--accent-heading-m-font);
+            letter-spacing: -0.01em;
+        }
+    }
+    /* Mobile */
+    @media screen and (max-width: 968px) and (min-width: 921px) {
+        .main_s--compact.avant_garde .shopify-policy__title h1,
+        .main_s--compact.brutalist .shopify-policy__title h1,
+        .main_s--compact.minimal_heavy .shopify-policy__title h1 {
+            font: var(--base-heading-s-font);
+            letter-spacing: normal;
+        }
+        .main_s--compact.contrast .shopify-policy__title h1,
+        .main_s--compact.classic .shopify-policy__title h1 {
+            font: var(--accent-heading-s-font);
+            letter-spacing: normal;
+        }
+        .main_s--compact.main--compact .shopify-policy__container {
+            padding: 24px 16px 48px;
+        }
+    }
+
+/* Sidebars: Main S with secondary and white space Spacious */
+    /* Laptop */
+    @media screen and (max-width: 1890px) and (min-width: 921px) {
+        .main_s_with_secondary--spacious.contrast .shopify-policy__title h1 {
+            font: var(--accent-heading-l-font);
+        }
+        .main_s_with_secondary--spacious.brutalist .shopify-policy__title h1 {
+            font: var(--base-heading-l-font);
+        }
+        .main_s_with_secondary--spacious.main--spacious .shopify-policy__container {
+            padding: 24px 24px 128px;
+        }
+    }
+    /* Tablet */
+    @media screen and (max-width: 1400px) and (min-width: 921px) {
+        .main_s_with_secondary--spacious.avant_garde .shopify-policy__title h1,
+        .main_s_with_secondary--spacious.brutalist .shopify-policy__title h1 {
+            font: var(--base-heading-m-font);
+            letter-spacing: -0.01em;
+        }
+        .main_s_with_secondary--spacious.contrast .shopify-policy__title h1 {
+            font: var(--accent-heading-m-font);
+            letter-spacing: -0.01em;
+        }
+        .main_s_with_secondary--spacious.main--spacious .shopify-policy__container {
+            padding: 24px 24px 96px;
+        }
+    }
+    /* Mobile */
+    @media screen and (max-width: 1144px) and (min-width: 921px) {
+        .main_s_with_secondary--spacious.avant_garde .shopify-policy__title h1,
+        .main_s_with_secondary--spacious.brutalist .shopify-policy__title h1,
+        .main_s_with_secondary--spacious.minimal_heavy .shopify-policy__title h1 {
+            font: var(--base-heading-s-font);
+            letter-spacing: normal;
+        }
+        .main_s_with_secondary--spacious.contrast .shopify-policy__title h1,
+        .main_s_with_secondary--spacious.classic .shopify-policy__title h1 {
+            font: var(--accent-heading-s-font);
+            letter-spacing: normal;
+        }
+        .main_s_with_secondary--spacious.main--spacious .shopify-policy__container {
+            padding: 24px 16px 64px;
+        }
+    }
+
+
+/* Sidebars: Main S with secondary and white space Compact */
+    /* Laptop */
+    @media screen and (max-width: 1890px) and (min-width: 921px) {
+        .main_s_with_secondary--compact .contrast .shopify-policy__title h1 {
+            font: var(--accent-heading-l-font);
+        }
+        .main_s_with_secondary--compact .brutalist .shopify-policy__title h1 {
+            font: var(--base-heading-l-font);
+        }
+    }
+    /* Tablet */
+    @media screen and (max-width: 1378px) and (min-width: 921px) {
+        .main_s_with_secondary--compact.avant_garde .shopify-policy__title h1,
+        .main_s_with_secondary--compact.brutalist .shopify-policy__title h1 {
+            font: var(--base-heading-m-font);
+            letter-spacing: -0.01em;
+        }
+        .main_s_with_secondary--compact.contrast .shopify-policy__title h1 {
+            font: var(--accent-heading-m-font);
+            letter-spacing: -0.01em;
+        }
+    }
+    /* Mobile */
+    @media screen and (max-width: 1064px) and (min-width: 921px) {
+        .main_s_with_secondary--compact.avant_garde .shopify-policy__title h1,
+        .main_s_with_secondary--compact.brutalist .shopify-policy__title h1,
+        .main_s_with_secondary--compact.minimal_heavy .shopify-policy__title h1 {
+            font: var(--base-heading-s-font);
+            letter-spacing: normal;
+        }
+        .main_s_with_secondary--compact.contrast .shopify-policy__title h1,
+        .main_s_with_secondary--compact.classic .shopify-policy__title h1 {
+            font: var(--accent-heading-s-font);
+            letter-spacing: normal;
+        }
+        .main_s_with_secondary--compact.main--compact .shopify-policy__container {
+            padding: 24px 16px 48px;
+        }
+    }
+
+/* Sidebars: Main M  */
+    /* Laptop */
+    @media screen and (max-width: 1920px) and (min-width: 921px) {
+        .main_m.contrast .shopify-policy__title h1 {
+            font: var(--accent-heading-l-font);
+        }
+        .main_m.brutalist .shopify-policy__title h1 {
+            font: var(--base-heading-l-font);
+        }
+        .main_m--spacious.main--spacious .shopify-policy__container {
+            padding: 24px 24px 128px;
+        }
+    }
+    /* Tablet */
+    @media screen and (max-width: 1365px) and (min-width: 921px) {
+        .main_m.avant_garde .shopify-policy__title h1,
+        .main_m.brutalist .shopify-policy__title h1 {
+            font: var(--base-heading-m-font);
+            letter-spacing: -0.01em;
+        }
+        .main_m.contrast .shopify-policy__title h1 {
+            font: var(--accent-heading-m-font);
+            letter-spacing: -0.01em;
+        }
+        .main_m--spacious.main--spacious .shopify-policy__container {
+            padding: 24px 24px 96px;
+        }
+    }
+    /* Mobile and white space Spacious */
+    @media screen and (max-width: 1048px) and (min-width: 921px) {
+        .main_m--spacious.avant_garde .shopify-policy__title h1,
+        .main_m--spacious.brutalist .shopify-policy__title h1,
+        .main_m--spacious.minimal_heavy .shopify-policy__title h1 {
+            font: var(--base-heading-s-font);
+            letter-spacing: normal;
+        }
+        .main_m--spacious.contrast .shopify-policy__title h1,
+        .main_m--spacious.classic .shopify-policy__title h1 {
+            font: var(--accent-heading-s-font);
+            letter-spacing: normal;
+        }
+        .main_m--spacious.main--spacious .shopify-policy__container {
+            padding: 24px 16px 64px;
+        }
+    }
+    /* Mobile and white space Compact */
+    @media screen and (max-width: 1024px) and (min-width: 921px) {
+        .main_m--compact.avant_garde .shopify-policy__title h1,
+        .main_m--compact.brutalist .shopify-policy__title h1,
+        .main_m--compact.minimal_heavy .shopify-policy__title h1 {
+            font: var(--base-heading-s-font);
+            letter-spacing: normal;
+        }
+        .main_m--compact.contrast .shopify-policy__title h1,
+        .main_m--compact.classic .shopify-policy__title h1 {
+            font: var(--accent-heading-s-font);
+            letter-spacing: normal;
+        }
+        .main_m--compact.main--compact .shopify-policy__container {
+            padding: 24px 16px 48px;
+        }
+    }   
+
+/* Sidebars: Main M with secondary */
+    /* Laptop */
+    @media screen and (max-width: 2048px) and (min-width: 921px) {
+        .main_m_with_secondary.contrast .shopify-policy__title h1 {
+            font: var(--accent-heading-l-font);
+        }
+        .main_m_with_secondary.brutalist .shopify-policy__title h1 {
+            font: var(--base-heading-l-font);
+        }
+        .main_m_with_secondary--spacious.main--spacious .shopify-policy__container {
+            padding: 24px 24px 128px;
+        }
+    }
+    /* Tablet */
+    @media screen and (max-width: 1493px) and (min-width: 921px) {
+        .main_m_with_secondary.avant_garde .shopify-policy__title h1,
+        .main_m_with_secondary.brutalist .shopify-policy__title h1 {
+            font: var(--base-heading-m-font);
+            letter-spacing: -0.01em;
+        }
+        .main_m_with_secondary.contrast .shopify-policy__title h1 {
+            font: var(--accent-heading-m-font);
+            letter-spacing: -0.01em;
+        }
+        .main_m_with_secondary--spacious.main--spacious .shopify-policy__container {
+            padding: 24px 24px 96px;
+        }
+    }
+    /* Mobile */
+    @media screen and (max-width: 1152px) and (min-width: 921px) {
+        .main_m_with_secondary.avant_garde .shopify-policy__title h1,
+        .main_m_with_secondary.brutalist .shopify-policy__title h1,
+        .main_m_with_secondary.minimal_heavy .shopify-policy__title h1 {
+            font: var(--base-heading-s-font);
+            letter-spacing: normal;
+        }
+        .main_m_with_secondary.contrast .shopify-policy__title h1,
+        .main_m_with_secondary.classic .shopify-policy__title h1 {
+            font: var(--accent-heading-s-font);
+            letter-spacing: normal;
+        }
+        .main_m_with_secondary--spacious.main--spacious .shopify-policy__container {
+            padding: 24px 16px 64px;
+        }
+        .main_m_with_secondary--compact.main--compact .shopify-policy__container {
+            padding: 24px 16px 48px;
+        }
+    }
+
+/* Sidebars: Main L */
+    /* Laptop */
+    @media screen and (max-width: 2880px) and (min-width: 921px) {
+        .main_l--spacious.contrast .shopify-policy__title h1 {
+            font: var(--accent-heading-l-font);
+        }
+        .main_l.brutalist .shopify-policy__title h1 {
+            font: var(--base-heading-l-font);
+        }
+        .main_l--spacious.main--spacious .shopify-policy__container {
+            padding: 24px 24px 128px;
+        }
+        .main_l .heading--contrast {
+            font: var(--accent-heading-l-font);
+        }
+        .main_l .heading--brutalist {
+            font: var(--base-heading-l-font);
+        }   
+    }
+    /* Tablet */
+    @media screen and (max-width: 2048px) and (min-width: 921px) {
+        .main_l--spacious .heading--avant_garde,
+        .main_l--spacious .heading--brutalist,
+        .main_l--spacious .section-page-heading--brutalist,
+        .main_l--spacious .section-page-heading--duet {
+            font: var(--base-heading-m-font);
+            letter-spacing: -0.01em;
+        }
+        .main_l--spacious .heading--contrast {
+            font: var(--accent-heading-m-font);
+            letter-spacing: -0.01em;
+        }
+        .main_l--spacious .page {
+            gap: 48px;
+        }
+        .main_l--compact.avant_garde .shopify-policy__title h1,
+        .main_l--compact.brutalist .shopify-policy__title h1 {
+            font: var(--base-heading-m-font);
+            letter-spacing: -0.01em;
+        }
+        .main_l--compact.contrast .shopify-policy__title h1 {
+            font: var(--accent-heading-m-font);
+            letter-spacing: -0.01em;
+        }
+    }
+    /* Mobile */
+    @media screen and (max-width: 1536px) and (min-width: 921px) {
+        .main_l.avant_garde .shopify-policy__title h1,
+        .main_l.brutalist .shopify-policy__title h1,
+        .main_l.minimal_heavy .shopify-policy__title h1 {
+            font: var(--base-heading-s-font);
+            letter-spacing: normal;
+        }
+        .main_l.contrast .shopify-policy__title h1,
+        .main_l.classic .shopify-policy__title h1 {
+            font: var(--accent-heading-s-font);
+            letter-spacing: normal;
+        }
+        .main_l--spacious.main--spacious .shopify-policy__container {
+            padding: 24px 16px 64px;
+        }
+        .main_l--compact.main--compact .shopify-policy__container {
+            padding: 24px 16px 48px;
+        }
+    }
+    /* Mobile-mini */
+    @media screen and (max-width: 1000px) and (min-width: 921px) {
+        .main_l--spacious.main--spacious .shopify-policy__container {
+            padding: 24px 16px 48px;
+        }
+        .main_l--compact.main--compact .shopify-policy__container {
+            padding: 24px 16px 32px;
+        }
+    }

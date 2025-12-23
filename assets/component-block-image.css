@@ -1,0 +1,203 @@
+.block-media .placeholder-svg, .block-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.block-media {
+    display: flex;
+    border-radius: var(--block-image-radius);
+    -webkit-border-radius: var(--block-image-radius);
+    overflow: clip;
+    max-width: 100%;
+}
+.ratio-original.block-media .placeholder-svg, 
+.ratio-original.block-media img {
+    height: auto;
+}
+.block-media--mobile {
+    display: none;
+}
+.ratio-original.block-media .placeholder-svg {
+    aspect-ratio: 16 / 9;
+}
+a.block-media img, a.block-media .placeholder-svg {
+    /* will-change: opacity; */
+    opacity: 1;
+    transition: opacity var(--animation-duration) var(--transition-timing-function);
+}
+.ratio-original.block-media--desktop .lazy-image {
+    aspect-ratio: var(--desktop-asp-rat);
+}
+
+.ratio-square.block-media--desktop .lazy-image {
+    aspect-ratio: 1 / 1;
+}
+.ratio-portrait.block-media--desktop .lazy-image {
+    aspect-ratio: 4 / 5;
+}
+.ratio-narrow_portrait.block-media--desktop .lazy-image {
+    aspect-ratio: 2 / 3;
+}
+.ratio-traditional.block-media--desktop .lazy-image {
+    aspect-ratio: 4 / 3;
+}
+.ratio-landscape.block-media--desktop .lazy-image {
+    aspect-ratio: 3 / 2;
+}
+.ratio-wide.block-media--desktop .lazy-image {
+    aspect-ratio: 16 / 9;
+}
+.ratio-super_wide.block-media--desktop .lazy-image {
+    aspect-ratio: 4 / 1;
+}
+@media (hover: hover) {
+    a.block-media:hover img, a.block-media:hover .placeholder-svg {
+        opacity: .7;
+    }
+  }
+/* Styles for full-width page without sidebars */
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .block-media--mobile,
+    .block-media--desktop.block-media--all {
+        display: flex;
+    }
+    .mobile-ratio-original.block-media--mobile .lazy-image {
+        aspect-ratio: var(--mobile-asp-rat);
+    }
+    .block-media--desktop {
+        display: none;
+    }
+    .mobile-ratio-original {
+        aspect-ratio: auto;
+    }
+    .mobile-ratio-square,
+    .mobile-ratio-square.block-media--mobile .lazy-image {
+        aspect-ratio: 1 / 1;
+    }
+    .mobile-ratio-portrait,
+    .mobile-ratio-portrait.block-media--mobile .lazy-image {
+        aspect-ratio: 4 / 5;
+    }
+    .mobile-ratio-narrow_portrait,
+    .mobile-ratio-narrow_portrait.block-media--mobile .lazy-image {
+        aspect-ratio: 2 / 3;
+    }
+    .mobile-ratio-traditional,
+    .mobile-ratio-traditional.block-media--mobile .lazy-image {
+        aspect-ratio: 4 / 3;
+    }
+    .mobile-ratio-landscape,
+    .mobile-ratio-landscape.block-media--mobile .lazy-image {
+        aspect-ratio: 3 / 2;
+    }
+    .mobile-ratio-wide,
+    .mobile-ratio-wide.block-media--mobile .lazy-image {
+        aspect-ratio: 16 / 9;
+    }
+    .mobile-ratio-super_wide,
+    .mobile-ratio-super_wide.block-media--mobile .lazy-image {
+        aspect-ratio: 4 / 1;
+    }
+}
+
+/* Sidebars: Main XS and Main S and white space Spacious */
+/* Mobile */
+@media screen and (max-width: 1048px) and (min-width: 921px) {
+    .main_xs--spacious .block-media--mobile,
+    .main_xs--spacious .block-media--desktop.block-media--all,
+    .main_s--spacious .block-media--mobile,
+    .main_s--spacious .block-media--desktop.block-media--all {
+        display: flex;
+    }
+    .main_xs--spacious .block-media--desktop,
+    .main_s--spacious .block-media--desktop {
+        display: none;
+    }
+}
+/* Sidebars: Main XS and Main S and white space Compact */
+/* Mobile */
+@media screen and (max-width: 968px) and (min-width: 921px) {
+    .main_xs--compact .block-media--mobile,
+    .main_xs--compact .block-media--desktop.block-media--all,
+    .main_s--compact .block-media--mobile,
+    .main_s--compact .block-media--desktop.block-media--all {
+        display: flex;
+    }
+    .main_xs--compact .block-media--desktop,
+    .main_s--compact .block-media--desktop {
+        display: none;
+    }
+}
+/* Sidebars: Main XS with secondary and Main S with secondary and white space Spacious */
+/* Mobile */
+@media screen and (max-width: 1144px) and (min-width: 921px) {
+    .main_xs_with_secondary--spacious .block-media--mobile,
+    .main_xs_with_secondary--spacious .block-media--desktop.block-media--all,
+    .main_s_with_secondary--spacious .block-media--mobile,
+    .main_s_with_secondary--spacious .block-media--desktop.block-media--all {
+        display: flex;
+    }
+    .main_xs_with_secondary--spacious .block-media--desktop,
+    .main_s_with_secondary--spacious .block-media--desktop {
+        display: none;
+    }
+}
+/* Sidebars: Main XS with secondary and Main S with secondary and white space Compact */
+/* Mobile */
+@media screen and (max-width: 1064px) and (min-width: 921px) {
+    .main_xs_with_secondary--compact .block-media--mobile,
+    .main_xs_with_secondary--compact .block-media--desktop.block-media--all,
+    .main_s_with_secondary--compact .block-media--mobile,
+    .main_s_with_secondary--compact .block-media--desktop.block-media--all {
+        display: flex;
+    }
+    .main_xs_with_secondary--compact .block-media--desktop,
+    .main_s_with_secondary--compact .block-media--desktop {
+        display: none;
+    }
+}
+/* Sidebars: Main M and white space Spacious */
+/* Mobile */
+@media screen and (max-width: 1048px) and (min-width: 921px) {
+    .main_m--spacious .block-media--mobile,
+    .main_m--spacious .block-media--desktop.block-media--all {
+        display: flex;
+    }
+    .main_m--spacious .block-media--desktop {
+        display: none;
+    }
+}
+/* Sidebars: Main M and white space Compact */
+/* Mobile */
+@media screen and (max-width: 1024px) and (min-width: 921px) {
+    .main_m--compact .block-media--mobile,
+    .main_m--compact .block-media--desktop.block-media--all {
+        display: flex;
+    }
+    .main_m--compact .block-media--desktop {
+        display: none;
+    }
+}
+/* Sidebars: Main M with secondary */
+/* Mobile */
+@media screen and (max-width: 1152px) and (min-width: 921px) {
+    .main_m_with_secondary .block-media--mobile,
+    .main_m_with_secondary .block-media--desktop.block-media--all {
+        display: flex;
+    }
+    .main_m_with_secondary .block-media--desktop {
+        display: none;
+    }
+}
+/* Sidebars: Main L */
+/* Mobile */
+@media screen and (max-width: 1536px) and (min-width: 921px) {
+    .main_l .block-media--mobile,
+    .main_l .block-media--desktop.block-media--all {
+        display: flex;
+    }
+    .main_l .block-media--desktop {
+        display: none;
+    }
+}

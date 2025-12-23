@@ -1,0 +1,176 @@
+{% if localization.available_countries.size > 1 or localization.available_languages.size > 1 %}
+{{ 'localization.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+.disclosure__button--minimal_uppercase .dropdown-icon,
+.disclosure__button--minimal_basic .dropdown-icon,
+.disclosure__button--classic .dropdown-icon,
+.disclosure__button--avant_garde .dropdown-icon {
+    height: {{ 24 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+}
+.disclosure__button--minimal_heavy .dropdown-icon,
+.disclosure__button--brutalist .dropdown-icon {
+    height: {{ 28 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+}
+.disclosure__button--contrast .dropdown-icon {
+    height: {{ 16 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+    width: auto;
+}
+.disclosure__button--duet .dropdown-icon {
+    height: {{ 26 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+}
+.disclosure__button--custom .dropdown-icon {
+    height: max(16px, calc(var(--body-s-font-size) * var(--body-s-line-height)));
+}
+.navigations-body-l .disclosure__button--custom .dropdown-icon {
+    height: max(16px, calc(var(--body-l-font-size) * var(--body-l-line-height)));
+}
+.navigations-body-m .disclosure__button--custom .dropdown-icon {
+    height: max(16px, calc(var(--body-m-font-size) * var(--body-m-line-height)));
+}
+.navigations-label .disclosure__button--custom .dropdown-icon {
+    height: max(16px, calc(var(--label-font-size) * var(--label-line-height)));
+}
+
+@media screen and (max-width: 920px) {
+    .disclosure__button--minimal_uppercase .dropdown-icon,
+    .disclosure__button--minimal_basic .dropdown-icon,
+    .disclosure__button--classic .dropdown-icon,
+    .disclosure__button--avant_garde .dropdown-icon {
+        height: {{ 24 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+    }
+    .disclosure__button--minimal_heavy .dropdown-icon,
+    .disclosure__button--brutalist .dropdown-icon {
+        height: {{ 28 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+    }
+    .disclosure__button--contrast .dropdown-icon {
+        height: {{ 16 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+    }
+    .disclosure__button--duet .dropdown-icon {
+        height: {{ 26 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+    }
+}
+{% endstyle %}
+
+{%- liquid 
+	if settings.typography_preset == 'avant_garde'
+			assign weight = settings.accent_icon_weight
+			if settings.swap_fonts
+					assign weight = settings.base_icon_weight
+			endif
+	else 
+			assign weight =  settings.base_icon_weight
+			if settings.swap_fonts
+					assign weight = settings.accent_icon_weight
+			endif
+	endif
+    assign uppercase_font = false
+    assign bolder_font = false
+    if settings.typography_preset == 'custom'
+        assign weight = settings.custom_icon_weight
+        if settings.uppercase_body_s and settings.navigation_item_size == 'default'
+            assign uppercase_font = true
+        endif
+        if settings.bolder_font_body_s and settings.navigation_item_size == 'default'
+            assign bolder_font = true
+        endif
+    endif
+-%}
+
+<div class="localization-container{% if mega_drawer and section.settings.pinned_block == 'country_and_language' and for_loop.index0 == last_pinned_block_index %} pinned-block{% endif %} {% if section.id contains 'header' %}localization-container--header{% elsif section.id contains 'footer' %}localization-container--footer{% else %}localization-container--{{ section.id }}{% endif %} {% unless mega_drawer %}localization-container--{{ section.settings.grid_columns }} localization-container--{{ country-and-language_settings.block_width }}{% endunless %} {% if country-and-language_settings.show_bottom_line and mega_drawer %} full-bottom-line{% endif %}" 
+     style="--language-alignment: {{ country-and-language_settings.language_alignment }};
+     --localization-vertical-alignment: {{ country-and-language_settings.country_and_language_vertical_alignment }};
+     --localization-horizontal-alignment: {{ country-and-language_settings.country_and_language_horizontal_alignment }}; --item-index: {{ for_loop.index }};
+     {% if mega_drawer %} --spacing: {{ country-and-language_settings.top_spacing }}; --mobile-spacing: {{ country-and-language_settings.mobile_top_spacing }};{% endif%}" data-block-index="{{ for_loop.index0 }}" {{ block_item.shopify_attributes }}>
+    <div class="localization {% if section.id contains 'header' %}localization--header{% elsif section.id contains 'footer' %}localization--footer{% else %}localization--{{ section.id }}{% endif %} localization--{{ type }}">
+    {% if country-and-language_settings.enable_country and localization.available_countries.size > 1 %}
+        <localization-form>
+            {% form 'localization' %}
+                <div class="disclosure {% if section.settings.color_type == 'custom' %}color-custom{% elsif section.settings.color_type == 'invert' %}color-invert{% endif %}">
+                    <button type="button" class="disclosure__button hover-opacity disclosure__button--{{ settings.typography_preset }} {% if settings.navigation_item_size != 'default' and settings.typography_preset == 'custom' %}{{ settings.navigation_item_size }}{% else %}{% if uppercase_font %} uppercase{% endif %}{% if bolder_font %} bolder-font{% endif %}{% endif %} {% if settings.allow_transparent_navigation and settings.navigation_layout == 'sidebar_based' and section.id contains 'sidebar' and section.settings.color_type == 'default' %}scroll-color{% endif %}" aria-expanded="false" aria-controls="CountryList">
+                    <span>{% if country-and-language_settings.short_country_name %}{{ localization.country.iso_code }} ({{ localization.country.currency.iso_code }} {{ localization.country.currency.symbol }})
+                    {% else %}{{ localization.country.name }} ({{ localization.country.currency.iso_code }} {{ localization.country.currency.symbol }})
+                    {% endif %}</span>
+                    <span class="disclosure__button-icon dropdown-icon">
+                        {% if weight == 'regular' %}
+                            {% render 'icon', icon: 'close-chevron-regular' %}
+                        {% elsif weight == 'medium' %}
+                            {% render 'icon', icon: 'close-chevron-medium' %}
+                        {% elsif weight == 'bold' %}
+                            {% render 'icon', icon: 'close-chevron-bold' %}
+                        {% endif %}
+                    </span>
+                    </button>
+                    <div class="disclosure__list-wrapper disclosure__list-wrapper--{{ settings.white_space }}" hidden>
+                        {% style %}
+                        .disclosure__list-wrapper {
+                            --layout-text-color: 
+                                {{ settings.layout_text_color.red }},
+                                {{ settings.layout_text_color.green }}, 
+                                {{ settings.layout_text_color.blue }};
+                        }
+                        {% endstyle %}
+                        <div class="scroll-area hide-scrollbar">
+                            <ul id="CountryList" role="list" class="disclosure__list">
+                            {% for country in localization.available_countries %}
+                                <li class="disclosure__item disclosure__item--{{ settings.typography_preset }} {% if settings.navigation_item_size != 'default' and settings.typography_preset == 'custom' %}{{ settings.navigation_item_size }}{% else %}{% if uppercase_font %} uppercase{% endif %}{% if bolder_font %} bolder-font{% endif %}{% endif %}">
+                                <a class="disclosure__link hover-link" href="#"{% if country.iso_code == localization.country.iso_code %} aria-current="true"{% endif %} data-value="{{ country.iso_code }}">
+                                    <span class="{% if country.iso_code == localization.country.iso_code %} underline-active{% endif %} {% if settings.enable_animated_underline %}link-animation--underline{% else %}link-animation{% endif %}">{{ country.name }} ({{ country.currency.iso_code }} {{ country.currency.symbol }})</span>
+                                </a>
+                                </li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    <input type="hidden" name="country_code" value="{{ localization.country.iso_code }}">
+                </div>
+            {% endform %}
+        </localization-form>
+    {% endif %}
+    {% if country-and-language_settings.enable_language and localization.available_languages.size > 1 or section.enable_language and localization.available_languages.size > 1 %}
+        <localization-form>
+            {% form 'localization' %}
+            <div class="disclosure {% if section.settings.color_type == 'custom' %}color-custom{% elsif section.settings.color_type == 'invert' %}color-invert{% endif %}">
+                <button type="button" class="disclosure__button hover-opacity disclosure__button--{{ settings.typography_preset }} {% if settings.navigation_item_size != 'default' and settings.typography_preset == 'custom' %}{{ settings.navigation_item_size }}{% else %}{% if uppercase_font %} uppercase{% endif %}{% if bolder_font %} bolder-font{% endif %}{% endif %} {% if settings.allow_transparent_navigation and settings.navigation_layout == 'sidebar_based' and section.id contains 'sidebar' and section.settings.color_type == 'default' %}scroll-color{% endif %}" aria-expanded="false" aria-controls="LanguageList">
+                <span>{% if country-and-language_settings.short_language_name == false %}{{ localization.language.name }}
+                {% else %}{{ localization.language.iso_code | capitalize }}
+                {% endif %}</span>
+                <span class="disclosure__button-icon dropdown-icon">
+                    {% if weight == 'regular' %}
+                        {% render 'icon', icon: 'close-chevron-regular' %}
+                    {% elsif weight == 'medium' %}
+                        {% render 'icon', icon: 'close-chevron-medium' %}
+                    {% elsif weight == 'bold' %}
+                        {% render 'icon', icon: 'close-chevron-bold' %}
+                    {% endif %}
+                </span>
+                </button>
+                <div class="disclosure__list-wrapper disclosure__list-wrapper--{{ settings.white_space }}" hidden>
+                    {% style %}
+                        .disclosure__list-wrapper {
+                            --layout-text-color: 
+                                {{ settings.layout_text_color.red }},
+                                {{ settings.layout_text_color.green }}, 
+                                {{ settings.layout_text_color.blue }};
+                        }
+                    {% endstyle %}
+                    <div class="scroll-area hide-scrollbar">
+                        <ul id="LanguageList" role="list" class="disclosure__list">
+                        {% for language in localization.available_languages %}
+                            <li class="disclosure__item disclosure__item--{{ settings.typography_preset }} {% if settings.navigation_item_size != 'default' and settings.typography_preset == 'custom' %}{{ settings.navigation_item_size }}{% else %}{% if uppercase_font %} uppercase{% endif %}{% if bolder_font %} bolder-font{% endif %}{% endif %}" tabindex="-1">
+                                <a class="disclosure__link hover-link" href="#"{% if language.iso_code == localization.language.iso_code %} aria-current="true"{% endif %} hreflang="{{ language.iso_code }}" lang="{{ language.iso_code }}" data-value="{{ language.iso_code }}">
+                                    <span class="{% if language.iso_code == localization.language.iso_code %} underline-active{% endif %} {% if settings.enable_animated_underline %}link-animation--underline{% else %}link-animation{% endif %}">{{ language.endonym_name | capitalize }}</span>
+                                </a>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <input type="hidden" name="locale_code" value="{{ localization.language.iso_code }}">
+            </div>
+            {% endform %}
+        </localization-form>
+    {% endif %}
+    </div>
+</div>
+{% endif %}

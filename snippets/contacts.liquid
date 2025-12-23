@@ -1,0 +1,71 @@
+{{ 'contacts.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+    #shopify-section-{{ section.id }} {
+        --contacts-vertical-alignment: {{ contacts_settings.contacts_vertical_alignment }};
+        --contacts-horizontal-alignment: {{ contacts_settings.contacts_horizontal_alignment }};
+    }
+{% endstyle %}
+
+{% liquid
+    assign uppercase_font = false
+    assign bolder_font = false
+    assign uppercase_label = false
+    assign bolder_label = false
+    if settings.typography_preset == 'custom' and contacts_settings.text_size == 'default'
+        if settings.uppercase_body_s
+            assign uppercase_font = true
+        endif
+        if settings.bolder_font_body_s
+            assign bolder_font = true
+        endif
+        if settings.uppercase_label
+            assign uppercase_label = true
+        endif
+        if settings.bolder_font_label
+            assign bolder_label = true
+        endif
+    endif
+    assign uppercase_font_subheading = false
+    assign bolder_font_subheading = false
+    if settings.typography_preset == 'custom' and contacts_settings.subheading_size == 'default'
+        if settings.uppercase_body_s
+            assign uppercase_font_subheading = true
+        endif
+        if settings.bolder_font_body_s
+            assign bolder_font_subheading = true
+        endif
+    endif
+%}
+
+<div class="contacts-block {% unless mega_drawer %}contacts-block--{{ section.settings.grid_columns }} contacts-block--{{ contacts_settings.block_width }}{% endunless %}{% if contacts_settings.show_bottom_line and mega_drawer %} full-bottom-line{% endif %} {% if section.id contains 'header' %}contacts-block--header{% elsif section.id contains 'footer' %}contacts-block--footer{% else %}contacts-block--{{ section.id }}{% endif %} {% if mega_drawer %}contacts-block--menu-drawer{% endif %} {% if section.settings.color_type == 'custom' %}color-custom{% elsif section.settings.color_type == 'invert' %}color-invert{% endif %} {% if contacts_settings.use_accent_color %}color-accent{% endif %}" 
+    style="--item-index: {{ for_loop.index }};{% if mega_drawer %} --spacing: {{ contacts_settings.top_spacing }}; --mobile-spacing: {{ contacts_settings.mobile_top_spacing }};{% endif%}" {{ block_item.shopify_attributes }}>
+    {% if contacts_settings.contacts_subheading != blank %}
+        <p class="contacts-title {% if settings.allow_transparent_navigation and settings.navigation_layout == 'sidebar_based' and section.id contains 'sidebar' and section.settings.color_type == 'default' %}scroll-color{% endif %} contacts__title--{{ settings.typography_preset }} {% if contacts_settings.subheading_size != 'default' %}{{ contacts_settings.subheading_size }}{% else %}{% if uppercase_font_subheading %} uppercase{% endif %}{% if bolder_font_subheading %} bolder-font{% endif %}{% endif %} subheading {% if settings.dim_text %}dim{% endif %}">{{ contacts_settings.contacts_subheading }}</p>
+    {% endif %}
+    <div class="contacts-container {% if mega_drawer %}contacts-container--menu-drawer{% endif %} {% if section.id contains 'header' %}contacts-container--header{% elsif section.id contains 'footer' %}contacts-container--footer{% else %}contacts-container--{{ section.id }}{% endif %}">
+        <div class="contacts contacts--{{ settings.typography_preset }} {% if contacts_settings.text_size!= 'default' %}{{ contacts_settings.text_size }}{% else %}{% if uppercase_font %} uppercase{% endif %}{% if bolder_font %} bolder-font{% endif %}{% endif %}">
+            {% if contacts_settings.contacts_1 != blank %}
+                {% if contacts_settings.contacts_1_type == 'text' %}
+                    <p class="contacts__item {% if settings.allow_transparent_navigation and settings.navigation_layout == 'sidebar_based' and section.id contains 'sidebar' and section.settings.color_type == 'default' and contacts_settings.use_accent_color == false %}scroll-color{% endif %}">{{ contacts_settings.contacts_1 }}</p>
+                {% elsif contacts_settings.contacts_1_type == 'phone_number' %}
+                   <a href="tel:{{ contacts_settings.contacts_1 }}" class="contacts__item {% if settings.allow_transparent_navigation and settings.navigation_layout == 'sidebar_based' and section.id contains 'sidebar' and section.settings.color_type == 'default' and contacts_settings.use_accent_color == false %}scroll-color{% endif %} hover-opacity">{{ contacts_settings.contacts_1 }}</a>
+                {% elsif contacts_settings.contacts_1_type == 'email' %}
+                    <a href="mailto:{{ contacts_settings.contacts_1 }}" class="contacts__item {% if settings.allow_transparent_navigation and settings.navigation_layout == 'sidebar_based' and section.id contains 'sidebar' and section.settings.color_type == 'default' and contacts_settings.use_accent_color == false %}scroll-color{% endif %} hover-opacity">{{ contacts_settings.contacts_1 }}</a>
+                {% endif %}
+            {% endif %}
+            {% if contacts_settings.contacts_2 != blank %}
+                {% if contacts_settings.contacts_2_type == 'text' %}
+                    <p class="contacts__item {% if settings.allow_transparent_navigation and settings.navigation_layout == 'sidebar_based' and section.id contains 'sidebar' and section.settings.color_type == 'default' and contacts_settings.use_accent_color == false %}scroll-color{% endif %}">{{ contacts_settings.contacts_2 }}</p>
+                {% elsif contacts_settings.contacts_2_type == 'phone_number' %}
+                <a href="tel:{{ contacts_settings.contacts_2 }}" class="contacts__item {% if settings.allow_transparent_navigation and settings.navigation_layout == 'sidebar_based' and section.id contains 'sidebar' and section.settings.color_type == 'default' and contacts_settings.use_accent_color == false %}scroll-color{% endif %} hover-opacity">{{ contacts_settings.contacts_2 }}</a>
+                {% elsif contacts_settings.contacts_2_type == 'email' %}
+                <a href="mailto:{{ contacts_settings.contacts_2 }}" class="contacts__item {% if settings.allow_transparent_navigation and settings.navigation_layout == 'sidebar_based' and section.id contains 'sidebar' and section.settings.color_type == 'default' and contacts_settings.use_accent_color == false %}scroll-color{% endif %} hover-opacity">{{ contacts_settings.contacts_2 }}</a>
+                {% endif %}
+            {% endif %}
+        </div>
+        {% if contacts_settings.contacts_description != blank %}
+            <p class="contacts__description {% if settings.allow_transparent_navigation and settings.navigation_layout == 'sidebar_based' and section.id contains 'sidebar' and section.settings.color_type == 'default' %}scroll-color{% endif %} contacts__description--{{ settings.typography_preset }} {% if contacts_settings.text_size!= 'default' %}{{ contacts_settings.text_size }}{% else %}{% if uppercase_label %} uppercase{% endif %}{% if bolder_label %} bolder-font{% endif %}{% endif %} {% if settings.dim_text %}dim{% endif %}">{{ contacts_settings.contacts_description }}</p>
+        {% endif %}
+    </div>
+</div>

@@ -1,0 +1,71 @@
+.age-verification__image {
+    width: 100%;
+    height: 100%;
+}
+
+.age-verification__image .block-media__image {
+    width: 100%;
+    height: 100%;
+}
+
+.verification-buttons {
+    display: flex;
+    gap: 24px;
+}
+
+.popup-content.center .verification-buttons {
+    align-items: center;
+    justify-content: center;
+}
+
+.age-verification__overlay.overlay--filled.open {
+    opacity: 1;
+}
+.age-verification__overlay.open {
+    opacity: var(--overlay-opacity);
+    background-color: var(--overlay-background);
+    animation: none;
+}
+
+.age-verification .popup-wrapper.open {
+    animation: none;
+}
+.age-verification .popup-wrapper--transparent.open {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.age-verification__image--filled::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    opacity: var(--overlay-opacity);
+    background: var(--overlay-background);
+}
+
+.age-verification__image .block-media__image--mobile {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .age-verification__image .block-media__image--mobile {
+        display: block;
+    }
+    .age-verification__image .block-media__image--desktop {
+        display: none;
+    }
+    .verification-buttons {
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+    .verification-buttons .verification-button {
+        min-height: 44px;
+        min-width: calc((100% - 8px) / 2);
+    }
+    .verification-buttons .verification-button .solid-button,
+    .verification-buttons .verification-button .outlined-button {
+        width: 100%;
+        height: 100%;
+    }
+}

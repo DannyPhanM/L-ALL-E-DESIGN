@@ -1,0 +1,606 @@
+{%- liquid 
+    if settings.typography_preset == 'avant_garde'
+      assign weight = settings.accent_icon_weight
+      if settings.swap_fonts
+          assign weight = settings.base_icon_weight
+      endif
+  else 
+      assign weight =  settings.base_icon_weight
+      if settings.swap_fonts
+          assign weight = settings.accent_icon_weight
+      endif
+  endif
+  if settings.typography_preset == 'custom'
+        assign weight = settings.custom_icon_weight
+    endif
+-%}
+
+{% style %}
+.navigation-buttons--{{ block.id }},
+.navigation-buttons--{{ block.id }} .navigation-buttons__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: {{ button_settings.buttons_horizontal_alignment }};
+    align-items: {{ button_settings.buttons_vertical_alignment }};
+}
+.navigation-buttons--{{ block.id }} .navigation-buttons__wrapper {
+    align-items: center;
+}
+.mega-menu-drawer .navigation-buttons--{{ block.id }} {
+    flex-direction: column;
+    {% if mega_drawer %}
+        gap: 16px;
+    {% else %}
+        gap: 24px;
+    {% endif %}
+    align-items: {{ button_settings.buttons_horizontal_alignment }};
+}
+.navigation-buttons__wrapper {
+    width: 100%;
+}
+.navigation-buttons .icon-button {
+    gap: 7px;
+}
+.navigation-buttons .solid-button,
+.navigation-buttons .outlined-button {
+    gap: 7px;
+    min-width: 120px;
+    min-height: 36px;
+    padding: 6px 12px;
+}
+.navigation-buttons .icon-button,
+.navigation-buttons .solid-button,
+.navigation-buttons .outlined-button,
+.navigation-buttons .block__button,
+.icon-button span {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.navigation-buttons--{{ block.id }}.navigation-buttons--2.navigation-buttons--medium,
+.navigation-buttons--{{ block.id }}.navigation-buttons--2.navigation-buttons--wide,
+.navigation-buttons--{{ block.id }}.navigation-buttons--3.navigation-buttons--medium {
+    grid-column: span 2;
+}
+
+.navigation-buttons--{{ block.id }}.navigation-buttons--3.navigation-buttons--wide {
+    grid-column: span 3;
+}
+.shopify-section:not(.main-sidebar-section) .scroll-color.section-color a:hover,
+.shopify-section:not(.main-sidebar-section) .block__button.scroll-color.footer-color a:hover {
+    opacity: 0.7;
+    --hover-button-color: var(--accent-button-color);
+}
+/* .shopify-section.main-sidebar-section .main-sidebar:not(.overlap-slide-out-menu-opened) .scroll-color.section-color a:hover, */
+.shopify-section.main-sidebar-section .main-sidebar:not(.overlap-slide-out-menu-opened) .block__button.scroll-color.footer-color a:hover {
+    opacity: 0.7;
+    --hover-button-color: var(--accent-button-color);
+}
+{% endstyle %}
+
+{%- if button_label != blank -%}
+    <div class="block__button {% if settings.enable_buttons_zoom %}buttons-zoom{% endif %} {% unless button_link != blank %}disabled{% endunless %} {% if settings.allow_transparent_navigation and settings.navigation_layout == 'sidebar_based' %}{% if settings.allow_transparent_navigation and settings.navigation_layout == 'sidebar_based' and section.id contains 'sidebar' and section.settings.color_type == 'default' %}scroll-color{% endif %}{% endif %}">
+{%- if button_link != blank -%}<a href="{{ button_link }}" {% if target_blank %}target="_blank"{% endif %}  class="{{ button_style }}-button icon-button button--{{ settings.typography_preset }} {% if settings.typography_preset == 'custom' %}{% if settings.navigation_button_size == 'default' %}button-font--default{% else %}{{ settings.navigation_button_size }}{% endif %}{% endif %} {% if button_style == 'link' and settings.enable_animated_underline %}link-button--underline{% endif %}">{%- else -%}
+<span disabled class="{{ button_style }}-button icon-button button--{{ settings.typography_preset }} {% if settings.typography_preset == 'custom' %}{% if settings.navigation_button_size == 'default' %}button-font--default{% else %}{{ settings.navigation_button_size }}{% endif %}{% endif %} {% if button_style == 'link' and settings.enable_animated_underline %}link-button--underline{% endif %}">{%- endif -%}
+    {% if icon != 'none' %}
+        <span>
+            {% if icon == 'arrow_down' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'arrow-down-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'arrow-down-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'arrow-down-bold' %}
+                {% endif %}
+            {% elsif icon == 'arrow_left' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'arrow-left-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'arrow-left-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'arrow-left-bold' %}
+                {% endif %}
+            {% elsif icon == 'arrow_right' %}       
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'arrow-right-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'arrow-right-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'arrow-right-bold' %}
+                {% endif %}
+            {% elsif icon == 'arrow_up' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'arrow-up-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'arrow-up-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'arrow-up-bold' %}
+                {% endif %}
+            {% elsif icon == 'bank' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'bank-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'bank-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'bank-bold' %}
+                {% endif %}
+            {% elsif icon == 'bank_card' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'bank-card-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'bank-card-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'bank-card-bold' %}
+                {% endif %}
+            {% elsif icon == 'bill' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'bill-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'bill-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'bill-bold' %}
+                {% endif %}
+            {% elsif icon == 'bottle' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'bottle-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'bottle-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'bottle-bold' %}
+                {% endif %}
+            {% elsif icon == 'chat' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'chat-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'chat-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'chat-bold' %}
+                {% endif %}
+            {% elsif icon == 'chat_empty' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'chat-empty-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'chat-empty-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'chat-empty-bold' %}
+                {% endif %}
+            {% elsif icon == 'checked_box' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'checked-box-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'checked-box-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'checked-box-bold' %}
+                {% endif %}
+            {% elsif icon == 'checkmark' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'checkmark-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'checkmark-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'checkmark-bold' %}
+                {% endif %}
+            {% elsif icon == 'close' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'close-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'close-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'close-bold' %}
+                {% endif %}
+            {% elsif icon == 'clothes' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'clothes-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'clothes-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'clothes-bold' %}
+                {% endif %}
+            {% elsif icon == 'clothes_hanger' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'clothes-hanger-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'clothes-hanger-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'clothes-hanger-bold' %}
+                {% endif %}
+            {% elsif icon == 'copy' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'copy-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'copy-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'copy-bold' %}
+                {% endif %}
+            {% elsif icon == 'cotton' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'cotton-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'cotton-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'cotton-bold' %}
+                {% endif %}
+            {% elsif icon == 'envelope' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'envelope-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'envelope-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'envelope-bold' %}
+                {% endif %}
+            {% elsif icon == 'eye' %}
+                {% if weight == 'regular' %}
+                {% render 'icon', icon: 'eye-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon', icon: 'eye-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon', icon: 'eye-bold' %}
+                {% endif %}
+            {% elsif icon == 'globe' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'globe-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'globe-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'globe-bold' %}
+                {% endif %}
+            {% elsif icon == 'hand_washing' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'hand-washing-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'hand-washing-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'hand-washing-bold' %}
+                {% endif %}
+            {% elsif icon == 'heart' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'heart-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'heart-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'heart-bold' %}
+                {% endif %}
+            {% elsif icon == 'help' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'help-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'help-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'help-bold' %}
+                {% endif %}
+            {% elsif icon == 'laundry_dryer' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'laundry-dryer-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'laundry-dryer-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'laundry-dryer-bold' %}
+                {% endif %}
+            {% elsif icon == 'laundry_washer' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'laundry-washer-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'laundry-washer-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'laundry-washer-bold' %}
+                {% endif %}
+            {% elsif icon == 'layers' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'layers-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'layers-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'layers-bold' %}
+                {% endif %}
+            {% elsif icon == 'leaf' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'leaf-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'leaf-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'leaf-bold' %}
+                {% endif %}
+            {% elsif icon == 'link' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'link-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'link-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'link-bold' %}
+                {% endif %}
+            {% elsif icon == 'lipstick' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'lipstick-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'lipstick-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'lipstick-bold' %}
+                {% endif %}
+            {% elsif icon == 'loop' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'loop-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'loop-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'loop-bold' %}
+                {% endif %}
+            {% elsif icon == 'measuring_tape' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'measuring-tape-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'measuring-tape-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'measuring-tape-bold' %}
+                {% endif %}
+            {% elsif icon == 'model_silhouette' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'model-silhouette-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'model-silhouette-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'model-silhouette-bold' %}
+                {% endif %}
+            {% elsif icon == 'money_bills' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'money-bills-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'money-bills-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'money-bills-bold' %}
+                {% endif %}
+            {% elsif icon == 'moving_truck' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'moving-truck-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'moving-truck-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'moving-truck-bold' %}
+                {% endif %}
+            {% elsif icon == 'package_closed' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'package-closed-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'package-closed-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'package-closed-bold' %}
+                {% endif %}
+            {% elsif icon == 'package_open' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'package-open-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'package-open-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'package-open-bold' %}
+                {% endif %}
+            {% elsif icon == 'padlock' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'padlock-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'padlock-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'padlock-bold' %}
+                {% endif %}
+            {% elsif icon == 'paper_airplane' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'paper-airplane-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'paper-airplane-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'paper-airplane-bold' %}
+                {% endif %}
+            {% elsif icon == 'paw_print' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'paw-print-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'paw-print-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'paw-print-bold' %}
+                {% endif %}
+            {% elsif icon == 'pencil' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'pencil-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'pencil-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'pencil-bold' %}
+                {% endif %}
+            {% elsif icon == 'planet' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'planet-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'planet-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'planet-bold' %}
+                {% endif %}
+            {% elsif icon == 'plant' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'plant-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'plant-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'plant-bold' %}
+                {% endif %}
+            {% elsif icon == 'play' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'play-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'play-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'play-bold' %}
+                {% endif %}
+            {% elsif icon == 'price_tag' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'price-tag-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'price-tag-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'price-tag-bold' %}
+                {% endif %}
+            {% elsif icon == 'question_mark' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'question-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'question-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'question-bold' %}
+                {% endif %}
+            {% elsif icon == 'recycled_symbol' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'recycled-symbol-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'recycled-symbol-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'recycled-symbol-bold' %}
+                {% endif %}
+            {% elsif icon == 'ruler' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion', icon: 'ruler-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion', icon: 'ruler-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion', icon: 'ruler-bold' %}
+                {% endif %}
+            {% elsif icon == 'scissors' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion-2', icon: 'scissors-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion-2', icon: 'scissors-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion-2', icon: 'scissors-bold' %}
+                {% endif %}
+            {% elsif icon == 'search' %}
+                {% if weight == 'regular' %}
+                {% render 'icon', icon: 'search-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon', icon: 'search-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon', icon: 'search-bold' %}
+                {% endif %}
+            {% elsif icon == 'security_badge' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion-2', icon: 'security-badge-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion-2', icon: 'security-badge-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion-2', icon: 'security-badge-bold' %}
+                {% endif %}
+            {% elsif icon == 'settings' %}
+                {% if weight == 'regular' %}
+                {% render 'icon', icon: 'filter-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon', icon: 'filter-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon', icon: 'filter-bold' %}
+                {% endif %}
+            {% elsif icon == 'share' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion-2', icon: 'share-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion-2', icon: 'share-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion-2', icon: 'share-bold' %}
+                {% endif %}
+            {% elsif icon == 'shopping_cart' %}
+                {% if weight == 'regular' %}
+                {% render 'icon', icon: 'cart-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon', icon: 'cart-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon', icon: 'cart-bold' %}
+                {% endif %}
+            {% elsif icon == 'stiletto' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion-2', icon: 'stiletto-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion-2', icon: 'stiletto-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion-2', icon: 'stiletto-bold' %}
+                {% endif %}
+            {% elsif icon == 'stop_watch' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion-2', icon: 'stop-watch-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion-2', icon: 'stop-watch-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion-2', icon: 'stop-watch-bold' %}
+                {% endif %}
+            {% elsif icon == 'sunflower' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion-2', icon: 'sunflower-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion-2', icon: 'sunflower-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion-2', icon: 'sunflower-bold' %}
+                {% endif %}
+            {% elsif icon == 't_shirt' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion-2', icon: 't-shirt-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion-2', icon: 't-shirt-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion-2', icon: 't-shirt-bold' %}
+                {% endif %}
+            {% elsif icon == 'trash' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion-2', icon: 'trash-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion-2', icon: 'trash-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion-2', icon: 'trash-bold' %}
+                {% endif %}
+            {% elsif icon == 'truck' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion-2', icon: 'truck-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion-2', icon: 'truck-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion-2', icon: 'truck-bold' %}
+                {% endif %}
+            {% elsif icon == 'user' %}
+                {% if weight == 'regular' %}
+                {% render 'icon', icon: 'account-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon', icon: 'account-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon', icon: 'account-bold' %}
+                {% endif %}
+            {% elsif icon == 'washing_symbol' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion-2', icon: 'washing-symbol-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion-2', icon: 'washing-symbol-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion-2', icon: 'washing-symbol-bold' %}
+                {% endif %}
+            {% elsif icon == 'water_bottle' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion-2', icon: 'water-bottle-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion-2', icon: 'water-bottle-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion-2', icon: 'water-bottle-bold' %}
+                {% endif %}
+            {% elsif icon == 'zoom_in' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion-2', icon: 'zoom-in-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion-2', icon: 'zoom-in-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion-2', icon: 'zoom-in-bold' %}
+                {% endif %}
+            {% elsif icon == 'zoom_out' %}
+                {% if weight == 'regular' %}
+                {% render 'icon-accordion-2', icon: 'zoom-out-regular' %}
+                {% elsif weight == 'medium' %}
+                {% render 'icon-accordion-2', icon: 'zoom-out-medium' %}
+                {% elsif weight == 'bold' %}
+                {% render 'icon-accordion-2', icon: 'zoom-out-bold' %}
+                {% endif %}
+            {% endif %}
+        </span>
+    {% endif %}
+    <span class="icon-button__title">{{ button_label }}</span>
+{%- unless button_link != blank -%}</span>{%- endunless -%}{%- if button_link != blank -%}</a>{%- endif -%}
+</div>
+{%- endif -%}

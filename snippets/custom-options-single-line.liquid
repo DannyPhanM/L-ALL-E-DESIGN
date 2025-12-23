@@ -1,0 +1,56 @@
+<custom-options class="section-block custom-options product-form__input" style="--spacing: {{ block.settings.top_spacing }}; --mobile-spacing: {{ block.settings.mobile_top_spacing }};" {{ block.shopify_attributes }}>
+    {% liquid 
+      assign product_form_id = 'product-form-' | append: section.id
+      assign option_label =  block.settings.option_label
+      if block.settings.option_label != blank and block.settings.make_required
+        assign option_label =  block.settings.option_label  | append: '*'
+      endif
+    %}
+    {% style %}
+        .tooltip__icon svg {
+            width: {{ 20 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+            height: {{ 20 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+        }
+        @media screen and (max-width: 920px) {
+            .tooltip__icon svg {
+                width: {{ 20 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+                height: {{ 20 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+            }
+        }
+    {% endstyle %}
+    {% if block.settings.option_label != blank %}
+        <label class="form__label  label--{{ settings.typography_preset }}" for="{{ block.id }}-{{ block.settings.option_name }}">
+            <tooltip-component class="tooltip form__label-name">
+                <span class="{% if block.settings.label_size != 'default' %}{{ block.settings.label_size }}{% else %}{% if settings.typography_preset == 'custom' %}{% if settings.uppercase_body_s %} uppercase{% endif %}{% if settings.bolder_font_body_s %} bolder-font{% endif %}{% endif %}{% endif %} {% if settings.dim_text %}dim{% endif %}">{{ option_label }}</span>
+                {% if block.settings.info_tooltip != blank %}
+                    <span class="tooltip__icon{% if settings.dim_text %} tooltip__icon--dim{% endif %}">
+                        {% if weight_accordion_title == 'regular' %}
+                            {% render 'icon-accordion', icon: 'help-regular' %}
+                        {% elsif weight_accordion_title == 'medium' %}
+                            {% render 'icon-accordion', icon: 'help-medium' %}
+                        {% elsif weight_accordion_title == 'bold' %}
+                            {% render 'icon-accordion', icon: 'help-bold' %}
+                        {% endif %}
+                        <span class="tooltip__text color__swatch-tooltip--{{ settings.typography_preset }}">{{ block.settings.info_tooltip }}</span>
+                    </span>
+                {% endif %}
+            </tooltip-component>
+        </label>
+    {% endif %}
+    <div class="form__variants">
+        <div class="field">
+            <input 
+                type="text"
+                id="{{ block.id }}-{{ block.settings.option_name }}"
+                name="properties[{{ block.settings.option_name }}]"
+                {% if block.settings.max_characters != blank %}
+                    maxlength="{{ block.settings.max_characters }}"
+                {% endif %}
+                {% if block.settings.make_required %}required="required" aria-required="true"{% endif %}
+                form="{{ product_form_id }}"
+                class="input input--{{ settings.typography_preset }}{% if block.settings.make_required %} required{% endif %} {% if block.settings.text_size != 'default' %}{{ block.settings.text_size }}{% else %}{% if settings.typography_preset == 'custom' %}{% if settings.uppercase_body_s %} uppercase{% endif %}{% if settings.bolder_font_body_s %} bolder-font{% endif %}{% endif %}{% endif %}"
+                >
+            <span class="input-error-message visually-hidden input--{{ settings.typography_preset }} label_font">{{ 'products.product.error_message_required' | t }}</span>
+        </div>
+    </div>
+</custom-options>

@@ -1,0 +1,981 @@
+{% if accordion_settings.text != blank or accordion_settings.page != blank %}
+
+  <div class="product__accordion accordion{% if product_block %} section-block{% endif %}" {% if product_block %}style="--spacing: {{ accordion_settings.top_spacing }}; --mobile-spacing: {{ accordion_settings.mobile_top_spacing }};"{% endif %} {{ block_item.shopify_attributes }}>
+    {% style %}
+      .icon-accordion {
+        width: auto;
+        height: {{ 24 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+      }
+      .custom-type-preset .icon-accordion {
+        height: max(24px, calc(var(--body-s-font-size) * var(--body-s-line-height)));
+      }
+      .custom-type-preset .heading_s .icon-accordion,
+      .custom-type-preset .heading_s_uppercase .icon-accordion {
+        height: max(16px, calc(var(--heading-s-font-size) * var(--heading-s-line-height)));	
+      }
+      .custom-type-preset .heading_xs .icon-accordion,
+      .custom-type-preset .heading_xs_uppercase .icon-accordion {
+        height: max(16px, calc(var(--heading-xs-font-size) * var(--heading-xs-line-height)));	
+      }
+      .custom-type-preset .body_l .icon-accordion,
+      .custom-type-preset .body_l_uppercase .icon-accordion {
+          height: max(16px, calc(var(--body-l-font-size) * var(--body-l-line-height)));
+      }
+      .custom-type-preset .body_m .icon-accordion,
+      .custom-type-preset .body_m_uppercase .icon-accordion {
+          height: max(16px, calc(var(--body-m-font-size) * var(--body-m-line-height)));
+      }
+      .custom-type-preset .label_font .icon-accordion,
+      .custom-type-preset .label_font_uppercase .icon-accordion {
+          height: max(16px, calc(var(--label-font-size) * var(--label-line-height)));
+      }
+      .section-product-details .icon-accordion--minimal_uppercase,
+      .section-collapsible-tabs .icon-accordion--minimal_uppercase,
+      .section-product-details .icon-accordion--minimal_basic,
+      .section-collapsible-tabs .icon-accordion--minimal_basic,
+      .section-product-details .icon-accordion--classic,
+      .section-collapsible-tabs .icon-accordion--classic,
+      .section-product-details .icon-accordion--avant_garde,
+      .section-collapsible-tabs .icon-accordion--avant_garde,
+      .section-product-details .icon-accordion--duet,
+      .section-collapsible-tabs .icon-accordion--duet {
+        height: {{ 28 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+      }
+      .section-product-details .icon-accordion--minimal_heavy,
+      .section-collapsible-tabs .icon-accordion--minimal_heavy {
+        height: {{ 36 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+      }
+      .section-product-details .icon-accordion--contrast,
+      .section-collapsible-tabs .icon-accordion--contrast {
+        height: {{ 46 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+      }
+      .section-product-details .icon-accordion--brutalist,
+      .section-collapsible-tabs .icon-accordion--brutalist {
+        height: {{ 64 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+      }
+      .section-product-details .icon-accordion--custom,
+      .section-collapsible-tabs .icon-accordion--custom {
+        height: max(24px, calc(var(--body-l-font-size) * var(--body-l-line-height)));
+      }
+      .section-product-details .icon-accordion.heading_s,
+      .section-product-details .icon-accordion.heading_s_uppercase,
+      .section-collapsible-tabs .icon-accordion.heading_s,
+      .section-collapsible-tabs .icon-accordion.heading_s_uppercase {
+        height: {{ 46 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+      }
+      .custom-type-preset .section-product-details .icon-accordion.heading_s,
+      .custom-type-preset .section-product-details .icon-accordion.heading_s_uppercase,
+      .custom-type-preset .section-collapsible-tabs .icon-accordion.heading_s,
+      .custom-type-preset .section-collapsible-tabs .icon-accordion.heading_s_uppercase {
+        height: max(24px, calc(var(--heading-s-font-size) * var(--heading-s-line-height)));	
+      }
+      .section-product-details .icon-accordion.heading_xs,
+      .section-product-details .icon-accordion.heading_xs_uppercase,
+      .section-collapsible-tabs .icon-accordion.heading_xs,
+      .section-collapsible-tabs .icon-accordion.heading_xs_uppercase {
+        height: {{ 36 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+      }
+      .custom-type-preset .section-product-details .icon-accordion.heading_xs,
+      .custom-type-preset .section-product-details .icon-accordion.heading_xs_uppercase,
+      .custom-type-preset .section-collapsible-tabs .icon-accordion.heading_xs,
+      .custom-type-preset .section-collapsible-tabs .icon-accordion.heading_xs_uppercase {
+        height: max(24px, calc(var(--heading-xs-font-size) * var(--heading-xs-line-height)));
+      }
+      .section-product-details .icon-accordion.body_l,
+      .section-product-details .icon-accordion.body_l_uppercase,
+      .section-collapsible-tabs .icon-accordion.body_l,
+      .section-collapsible-tabs .icon-accordion.body_l_uppercase {
+        height: {{ 28 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+      }
+      .custom-type-preset .section-product-details .icon-accordion.body_l,
+      .custom-type-preset .section-product-details .icon-accordion.body_l_uppercase,
+      .custom-type-preset .section-collapsible-tabs .icon-accordion.body_l,
+      .custom-type-preset .section-collapsible-tabs .icon-accordion.body_l_uppercase {
+        height: {{ 28 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+      }
+      .section-product-details .icon-accordion.body_m,
+      .section-product-details .icon-accordion.body_m_uppercase,
+      .section-collapsible-tabs .icon-accordion.body_m,
+      .section-collapsible-tabs .icon-accordion.body_m_uppercase {
+        height: max(24px, calc(var(--body-l-font-size) * var(--body-l-line-height)));
+      }
+      .section-product-details .icon-accordion.body_s,
+      .section-product-details .icon-accordion.body_s_uppercase,
+      .section-collapsible-tabs .icon-accordion.body_s,
+      .section-collapsible-tabs .icon-accordion.body_s_uppercase {
+        height: {{ 24 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+      }
+      .custom-type-preset .section-product-details .icon-accordion.body_s,
+      .custom-type-preset .section-product-details .icon-accordion.body_s_uppercase,
+      .custom-type-preset .section-collapsible-tabs .icon-accordion.body_s,
+      .custom-type-preset .section-collapsible-tabs .icon-accordion.body_s_uppercase {
+        height: max(24px, calc(var(--body-s-font-size) * var(--body-s-line-height)));
+      }
+      .section-product-details .icon-accordion.label_font,
+      .section-product-details .icon-accordion.label_font_uppercase,
+      .section-collapsible-tabs .icon-accordion.label_font,
+      .section-collapsible-tabs .icon-accordion.label_font_uppercase {
+        height: {{ 24 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+      }
+      .custom-type-preset .section-product-details .icon-accordion.label_font,
+      .custom-type-preset .section-product-details .icon-accordion.label_font_uppercase,
+      .custom-type-preset .section-collapsible-tabs .icon-accordion.label_font,
+      .custom-type-preset .section-collapsible-tabs .icon-accordion.label_font_uppercase {
+        height: max(24px, calc(var(--label-font-size) * var(--label-line-height)));
+      }
+      .section-product-details .summary__title-name--minimal_uppercase,
+      .section-collapsible-tabs .summary__title-name--minimal_uppercase,
+      .section-product-details .summary__title-name--minimal_basic,
+      .section-collapsible-tabs .summary__title-name--minimal_basic,
+      .section-product-details .summary__title-name--classic,
+      .section-collapsible-tabs .summary__title-name--classic,
+      .section-product-details .summary__title-name--avant_garde,
+      .section-collapsible-tabs .summary__title-name--avant_garde,
+      .section-product-details .summary__title-name--duet,
+      .section-collapsible-tabs .summary__title-name--duet,
+      .section-product-details .summary__title-name--custom,
+      .section-collapsible-tabs .summary__title-name--custom {
+        gap: {{ 8 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 8 }}px;
+      }
+      .section-product-details .summary__title-name--minimal_heavy,
+      .section-collapsible-tabs .summary__title-name--minimal_heavy {
+        gap: {{ 12 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 8 }}px;
+      }
+      .section-product-details .summary__title-name--contrast,
+      .section-collapsible-tabs .summary__title-name--contrast {
+        gap: {{ 16 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 8 }}px;
+      }
+      .section-product-details .summary__title-name--brutalist,
+      .section-collapsible-tabs .summary__title-name--brutalist {
+        gap: {{ 24 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 8 }}px;
+      }
+      .section-product-details .summary__title-name.heading_s,
+      .section-product-details .summary__title-name.heading_s_uppercase,
+      .section-collapsible-tabs .summary__title-name.heading_s,
+      .section-collapsible-tabs .summary__title-name.heading_s_uppercase {
+        gap: {{ 24 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 8 }}px;
+      }
+      .section-product-details .summary__title-name.heading_xs,
+      .section-product-details .summary__title-name.heading_xs_uppercase,
+      .section-collapsible-tabs .summary__title-name.heading_xs,
+      .section-collapsible-tabs .summary__title-name.heading_xs_uppercase {
+        gap: {{ 24 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 8 }}px;
+      }
+      .section-product-details .summary__title-name.body_l,
+      .section-product-details .summary__title-name.body_l_uppercase,
+      .section-collapsible-tabs .summary__title-name.body_l,
+      .section-collapsible-tabs .summary__title-name.body_l_uppercase {
+        gap: {{ 16 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 8 }}px;
+      }
+      .section-product-details .summary__title-name.body_m,
+      .section-product-details .summary__title-name.body_m_uppercase,
+      .section-collapsible-tabs .summary__title-name.body_m,
+      .section-collapsible-tabs .summary__title-name.body_m_uppercase {
+        gap: {{ 16 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 8 }}px;
+      }
+      .section-product-details .summary__title-name.body_s,
+      .section-product-details .summary__title-name.body_s_uppercase,
+      .section-collapsible-tabs .summary__title-name.body_s,
+      .section-collapsible-tabs .summary__title-name.body_s_uppercase {
+        gap: {{ 12 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 8 }}px;
+      }
+      .section-product-details .summary__title-name.label_font,
+      .section-product-details .summary__title-name.label_font_uppercase,
+      .section-collapsible-tabs .summary__title-name.label_font,
+      .section-collapsible-tabs .summary__title-name.label_font_uppercase {
+        gap: {{ 8 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 8 }}px;
+      }
+      @media screen and (max-width: 920px) {
+        .icon-accordion {
+          width: auto;
+          height: {{ 24 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+        }
+        .section-product-details .icon-accordion--minimal_uppercase,
+        .section-collapsible-tabs .icon-accordion--minimal_uppercase,
+        .section-product-details .icon-accordion--minimal_basic,
+        .section-collapsible-tabs .icon-accordion--minimal_basic,
+        .section-product-details .icon-accordion--classic,
+        .section-collapsible-tabs .icon-accordion--classic,
+        .section-product-details .icon-accordion--avant_garde,
+        .section-collapsible-tabs .icon-accordion--avant_garde,
+        .section-product-details .icon-accordion--duet,
+        .section-collapsible-tabs .icon-accordion--duet {
+          height: {{ 28 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+        }
+        .section-product-details .icon-accordion--minimal_heavy,
+        .section-collapsible-tabs .icon-accordion--minimal_heavy {
+          height: {{ 36 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+        }
+        .section-product-details .icon-accordion--contrast,
+        .section-collapsible-tabs .icon-accordion--contrast {
+          height: {{ 46 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+        }
+        .section-product-details .icon-accordion--brutalist,
+        .section-collapsible-tabs .icon-accordion--brutalist {
+          height: {{ 64 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+        }
+        .section-product-details .icon-accordion.heading_s,
+        .section-product-details .icon-accordion.heading_s_uppercase,
+        .section-collapsible-tabs .icon-accordion.heading_s,
+        .section-collapsible-tabs .icon-accordion.heading_s_uppercase {
+          height: {{ 46 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+        }
+        .section-product-details .icon-accordion.heading_xs,
+        .section-product-details .icon-accordion.heading_xs_uppercase,
+        .section-collapsible-tabs .icon-accordion.heading_xs,
+        .section-collapsible-tabs .icon-accordion.heading_xs_uppercase {
+          height: {{ 36 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+        }
+        .section-product-details .icon-accordion.body_l,
+        .section-product-details .icon-accordion.body_l_uppercase,
+        .section-collapsible-tabs .icon-accordion.body_l,
+        .section-collapsible-tabs .icon-accordion.body_l_uppercase {
+          height: {{ 28 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+        }
+        .section-product-details .icon-accordion.body_m,
+        .section-product-details .icon-accordion.body_m_uppercase,
+        .section-collapsible-tabs .icon-accordion.body_m,
+        .section-collapsible-tabs .icon-accordion.body_m_uppercase {
+          height: {{ 26 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+        }
+        .section-product-details .icon-accordion.body_s,
+        .section-product-details .icon-accordion.body_s_uppercase,
+        .section-collapsible-tabs .icon-accordion.body_s,
+        .section-collapsible-tabs .icon-accordion.body_s_uppercase {
+          height: {{ 24 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+        }
+        .section-product-details .icon-accordion.label_font,
+        .section-product-details .icon-accordion.label_font_uppercase,
+        .section-collapsible-tabs .icon-accordion.label_font,
+        .section-collapsible-tabs .icon-accordion.label_font_uppercase {
+          height: {{ 24 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+        }
+        .section-product-details .summary__title-name--minimal_uppercase,
+        .section-collapsible-tabs .summary__title-name--minimal_uppercase,
+        .section-product-details .summary__title-name--minimal_basic,
+        .section-collapsible-tabs .summary__title-name--minimal_basic,
+        .section-product-details .summary__title-name--classic,
+        .section-collapsible-tabs .summary__title-name--classic,
+        .section-product-details .summary__title-name--avant_garde,
+        .section-collapsible-tabs .summary__title-name--avant_garde,
+        .section-product-details .summary__title-name--duet,
+        .section-collapsible-tabs .summary__title-name--duet {
+          gap: {{ 8 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 8 }}px;
+        }
+        .section-product-details .summary__title-name--minimal_heavy,
+        .section-collapsible-tabs .summary__title-name--minimal_heavy {
+          gap: {{ 12 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 8 }}px;
+        }
+        .section-product-details .summary__title-name--contrast,
+        .section-collapsible-tabs .summary__title-name--contrast {
+          gap: {{ 16 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 8 }}px;
+        }
+        .section-product-details .summary__title-name--brutalist,
+        .section-collapsible-tabs .summary__title-name--brutalist {
+          gap: {{ 24 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 8 }}px;
+        }
+        .section-product-details .summary__title-name.heading_s,
+        .section-product-details .summary__title-name.heading_s_uppercase,
+        .section-collapsible-tabs .summary__title-name.heading_s,
+        .section-collapsible-tabs .summary__title-name.heading_s_uppercase {
+          gap: {{ 24 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 8 }}px;
+        }
+        .section-product-details .summary__title-name.heading_xs,
+        .section-product-details .summary__title-name.heading_xs_uppercase,
+        .section-collapsible-tabs .summary__title-name.heading_xs,
+        .section-collapsible-tabs .summary__title-name.heading_xs_uppercase {
+          gap: {{ 24 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 8 }}px;
+        }
+        .section-product-details .summary__title-name.body_l,
+        .section-product-details .summary__title-name.body_l_uppercase,
+        .section-collapsible-tabs .summary__title-name.body_l,
+        .section-collapsible-tabs .summary__title-name.body_l_uppercase {
+          gap: {{ 16 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 8 }}px;
+        }
+        .section-product-details .summary__title-name.body_m,
+        .section-product-details .summary__title-name.body_m_uppercase,
+        .section-collapsible-tabs .summary__title-name.body_m,
+        .section-collapsible-tabs .summary__title-name.body_m_uppercase {
+          gap: {{ 16 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 8 }}px;
+        }
+        .section-product-details .summary__title-name.body_s,
+        .section-product-details .summary__title-name.body_s_uppercase,
+        .section-collapsible-tabs .summary__title-name.body_s,
+        .section-collapsible-tabs .summary__title-name.body_s_uppercase {
+          gap: {{ 12 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 8 }}px;
+        }
+        .section-product-details .summary__title-name.label_font,
+        .section-product-details .summary__title-name.label_font_uppercase,
+        .section-collapsible-tabs .summary__title-name.label_font,
+        .section-collapsible-tabs .summary__title-name.label_font_uppercase {
+          gap: {{ 8 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 8 }}px;
+        }
+      }
+      /* Styles for full-width page without sidebars */
+      /* Mobile */
+      @media screen and (max-width: 768px) {
+        .section-product-details .icon-accordion--brutalist,
+        .section-collapsible-tabs .icon-accordion--brutalist {
+          height: {{ 46 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+        }
+      }
+      /* Sidebars: Main XS,S,M and white space Spacious */
+      @media screen and (max-width: 1048px) and (min-width: 921px) {
+        .main_xs--spacious .section-product-details .icon-accordion--brutalist,
+        .main_xs--spacious .section-collapsible-tabs .icon-accordion--brutalist,
+        .main_s--spacious .section-product-details .icon-accordion--brutalist,
+        .main_s--spacious .section-collapsible-tabs .icon-accordion--brutalist,
+        .main_m--spacious .section-product-details .icon-accordion--brutalist,
+        .main_m--spacious .section-collapsible-tabs .icon-accordion--brutalist {
+          height: {{ 46 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+        }
+      }
+      /* Sidebars: Main XS,S and white space Compact */
+      @media screen and (max-width: 968px) and (min-width: 921px) {
+        .main_xs--compact .section-product-details .icon-accordion--brutalist,
+        .main_xs--compact .section-collapsible-tabs .icon-accordion--brutalist,
+        .main_s--compact .section-product-details .icon-accordion--brutalist,
+        .main_s--compact .section-collapsible-tabs .icon-accordion--brutalist {
+          height: {{ 46 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+        }
+      }
+      /* Sidebars: Main XS,S with secondary and white space Spacious */
+      /* Mobile */
+      @media screen and (max-width: 1144px) and (min-width: 921px) {
+        .main_xs_with_secondary--spacious .section-product-details .icon-accordion--brutalist,
+        .main_xs_with_secondary--spacious .section-collapsible-tabs .icon-accordion--brutalist,
+        .main_s_with_secondary--spacious .section-product-details .icon-accordion--brutalist,
+        .main_s_with_secondary--spacious .section-collapsible-tabs .icon-accordion--brutalist {
+          height: {{ 46 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+        }
+      }
+      /* Sidebars: Main XS,S with secondary and white space Compact */
+      /* Mobile */
+      @media screen and (max-width: 1064px) and (min-width: 921px) {
+        .main_xs_with_secondary--compact .section-product-details .icon-accordion--brutalist,
+        .main_xs_with_secondary--compact .section-collapsible-tabs .icon-accordion--brutalist,
+        .main_s_with_secondary--compact .section-product-details .icon-accordion--brutalist,
+        .main_s_with_secondary--compact .section-collapsible-tabs .icon-accordion--brutalist {
+          height: {{ 46 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+        }
+      }
+      /* Sidebars: Main M and white space Compact */
+      @media screen and (max-width: 1024px) and (min-width: 921px) {
+        .main_m--compact .section-product-details .icon-accordion--brutalist,
+        .main_m--compact .section-collapsible-tabs .icon-accordion--brutalist {
+          height: {{ 46 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+        }
+      }
+      /* Sidebars: Main M with secondary */
+      /* Mobile */
+        @media screen and (max-width: 1152px) and (min-width: 921px) {
+          .main_m_with_secondary .section-product-details .icon-accordion--brutalist,
+          .main_m_with_secondary .section-collapsible-tabs .icon-accordion--brutalist {
+            height: {{ 46 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+          }
+        }
+      /* Sidebars: Main L */
+      /* Mobile */
+      @media screen and (max-width: 1152px) and (min-width: 921px) {
+          .main_l .section-product-details .icon-accordion--brutalist,
+          .main_l .section-collapsible-tabs .icon-accordion--brutalist {
+            height: {{ 46 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+          }
+        }
+      {% endstyle %}
+
+      {%- liquid
+        if settings.typography_preset == 'classic' or settings.typography_preset == 'duet'
+                assign weight = settings.accent_icon_weight
+                if settings.swap_fonts
+                        assign weight = settings.base_icon_weight
+                endif
+        else 
+                assign weight =  settings.base_icon_weight
+                if settings.swap_fonts
+                        assign weight = settings.accent_icon_weight
+                endif
+        endif
+        if settings.typography_preset == 'custom'
+            assign weight = settings.custom_icon_weight
+        endif
+    -%}
+    <accordion-block>
+    <div class="accordion-toggle no-js-hidden accordion-toggle--{{ settings.white_space }}">
+      <div tabindex="0" class="accordion__summary {% if section.settings.color_type != 'invert' and section.settings.color_type != 'custom' %}hover-accent{% else %}hover-opacity{% endif %}">
+        <div class="summary__title">
+          <div class="summary__title-name summary__title-name--{{ settings.typography_preset }} {% if title_size != 'default' %}{{ title_size }}{% endif %}{% if uppercase_title %} uppercase{% endif %}{% if bolder_title %} bolder-font{% endif %}">
+            {% unless accordion_settings.icon == 'none' %}
+              <span class="icon-accordion icon-accordion--{{ settings.typography_preset }}">
+                {% if accordion_settings.icon == 'arrow_down' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'arrow-down-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'arrow-down-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'arrow-down-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'arrow_left' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'arrow-left-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'arrow-left-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'arrow-left-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'arrow_right' %}       
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'arrow-right-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'arrow-right-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'arrow-right-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'arrow_up' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'arrow-up-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'arrow-up-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'arrow-up-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'bank' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'bank-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'bank-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'bank-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'bank_card' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'bank-card-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'bank-card-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'bank-card-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'bill' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'bill-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'bill-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'bill-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'bottle' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'bottle-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'bottle-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'bottle-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'chat' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'chat-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'chat-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'chat-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'chat_empty' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'chat-empty-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'chat-empty-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'chat-empty-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'checked_box' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'checked-box-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'checked-box-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'checked-box-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'checkmark' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'checkmark-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'checkmark-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'checkmark-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'close' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'close-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'close-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'close-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'clothes' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'clothes-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'clothes-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'clothes-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'clothes_hanger' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'clothes-hanger-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'clothes-hanger-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'clothes-hanger-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'copy' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'copy-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'copy-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'copy-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'cotton' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'cotton-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'cotton-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'cotton-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'envelope' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'envelope-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'envelope-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'envelope-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'eye' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon', icon: 'eye-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon', icon: 'eye-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon', icon: 'eye-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'globe' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'globe-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'globe-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'globe-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'hand_washing' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'hand-washing-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'hand-washing-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'hand-washing-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'heart' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'heart-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'heart-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'heart-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'help' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'help-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'help-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'help-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'laundry_dryer' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'laundry-dryer-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'laundry-dryer-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'laundry-dryer-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'laundry_washer' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'laundry-washer-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'laundry-washer-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'laundry-washer-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'layers' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'layers-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'layers-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'layers-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'leaf' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'leaf-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'leaf-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'leaf-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'link' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'link-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'link-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'link-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'lipstick' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'lipstick-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'lipstick-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'lipstick-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'loop' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'loop-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'loop-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'loop-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'measuring_tape' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'measuring-tape-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'measuring-tape-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'measuring-tape-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'model_silhouette' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'model-silhouette-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'model-silhouette-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'model-silhouette-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'money_bills' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'money-bills-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'money-bills-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'money-bills-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'moving_truck' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'moving-truck-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'moving-truck-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'moving-truck-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'package_closed' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'package-closed-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'package-closed-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'package-closed-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'package_open' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'package-open-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'package-open-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'package-open-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'padlock' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'padlock-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'padlock-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'padlock-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'paper_airplane' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'paper-airplane-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'paper-airplane-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'paper-airplane-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'paw_print' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'paw-print-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'paw-print-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'paw-print-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'pencil' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'pencil-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'pencil-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'pencil-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'planet' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'planet-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'planet-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'planet-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'plant' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'plant-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'plant-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'plant-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'play' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'play-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'play-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'play-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'price_tag' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'price-tag-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'price-tag-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'price-tag-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'question_mark' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'question-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'question-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'question-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'recycled_symbol' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'recycled-symbol-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'recycled-symbol-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'recycled-symbol-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'ruler' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion', icon: 'ruler-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion', icon: 'ruler-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion', icon: 'ruler-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'scissors' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion-2', icon: 'scissors-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion-2', icon: 'scissors-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion-2', icon: 'scissors-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'search' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon', icon: 'search-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon', icon: 'search-medium' %}
+                    {% elsif _weight == 'bold' %}
+                      {% render 'icon', icon: 'search-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'security_badge' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion-2', icon: 'security-badge-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion-2', icon: 'security-badge-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion-2', icon: 'security-badge-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'settings' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon', icon: 'filter-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon', icon: 'filter-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon', icon: 'filter-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'share' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion-2', icon: 'share-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion-2', icon: 'share-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion-2', icon: 'share-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'shopping_cart' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon', icon: 'cart-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon', icon: 'cart-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon', icon: 'cart-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'stiletto' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion-2', icon: 'stiletto-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion-2', icon: 'stiletto-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion-2', icon: 'stiletto-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'stop_watch' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion-2', icon: 'stop-watch-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion-2', icon: 'stop-watch-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion-2', icon: 'stop-watch-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'sunflower' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion-2', icon: 'sunflower-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion-2', icon: 'sunflower-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion-2', icon: 'sunflower-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 't_shirt' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion-2', icon: 't-shirt-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion-2', icon: 't-shirt-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion-2', icon: 't-shirt-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'trash' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion-2', icon: 'trash-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion-2', icon: 'trash-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion-2', icon: 'trash-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'truck' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion-2', icon: 'truck-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion-2', icon: 'truck-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion-2', icon: 'truck-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'user' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon', icon: 'account-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon', icon: 'account-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon', icon: 'account-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'washing_symbol' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion-2', icon: 'washing-symbol-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion-2', icon: 'washing-symbol-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion-2', icon: 'washing-symbol-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'water_bottle' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion-2', icon: 'water-bottle-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion-2', icon: 'water-bottle-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion-2', icon: 'water-bottle-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'zoom_in' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion-2', icon: 'zoom-in-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion-2', icon: 'zoom-in-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion-2', icon: 'zoom-in-bold' %}
+                    {% endif %}
+                {% elsif accordion_settings.icon == 'zoom_out' %}
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion-2', icon: 'zoom-out-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion-2', icon: 'zoom-out-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion-2', icon: 'zoom-out-bold' %}
+                    {% endif %}
+                {% endif %}
+              </span>
+            {% endunless %}
+            {% liquid
+              assign heading_text = accordion_settings.heading | default: page.title
+              assign final_text = ''
+              assign split_text_curly = heading_text | split: '{'
+              for part in split_text_curly
+                  if part contains '}'
+                      assign split_curly = part | split: '}'
+                      assign styled_text = split_curly[0]
+                      assign after_curly = split_curly[1]
+                      assign final_text = final_text | append: '<span class="styled">' | append: styled_text | append: '</span>' | append: after_curly
+                  else
+                      assign final_text = final_text | append: part
+                  endif
+              endfor
+            %}
+            <h2 class="h4 accordion__title custom-heading accordion__title--{{ settings.typography_preset }} {% if title_size != 'default' %}{{ title_size }}{% endif %}{% if uppercase_title %} uppercase{% endif %}{% if bolder_title %} bolder-font{% endif %}">
+              {{ final_text }}
+            </h2>
+          </div>
+          <span class="icon-accordion icon-accordion--{{ settings.typography_preset }} {% if title_size != 'default' %}{{ title_size }}{% endif %}">
+            <span class="icon-accordion__close">
+                {% if weight == 'regular' %}
+                  {% render 'icon', icon: 'plus-regular' %}
+                {% elsif weight == 'medium' %}
+                  {% render 'icon', icon: 'plus-medium' %}
+                {% elsif weight == 'bold' %}
+                  {% render 'icon', icon: 'plus-bold' %}
+                {% endif %}
+            </span>
+            <span class="icon-accordion__open">
+                {% if weight == 'regular' %}
+                  {% render 'icon', icon: 'minus-regular' %}
+                {% elsif weight == 'medium' %}
+                  {% render 'icon', icon: 'minus-medium' %}
+                {% elsif weight == 'bold' %}
+                  {% render 'icon', icon: 'minus-bold' %}
+                {% endif %}
+            </span>
+          </span>
+        </div>
+      </div>
+      <div class="accordion__panel">
+        <div class="accordion__content accordion__content--{{ settings.white_space }}">
+          {% if accordion_settings.text != blank %}<div class="accordion__text richtext {% if text_size != 'default' %}{{ text_size }}{% endif %}{% if uppercase_text %} uppercase{% endif %}{% if bolder_text %} bolder-font{% endif %} {% if settings.enable_animated_underline %}richtext-link--underline{% endif %} {% if section.id contains 'main-product' or section.id contains 'featured-product' %}body-secondary-text--{{ settings.typography_preset }}{% else %}body-text--{{ settings.typography_preset }}{% endif %}">{{ accordion_settings.text }}</div>{% endif %}
+          {% if accordion_settings.page != blank %}
+            {{ 'section-main-page.css' | asset_url | stylesheet_tag }}
+            {{ 'component-rte.css' | asset_url | stylesheet_tag }}
+            <div class="page__content body-text--{{ settings.typography_preset }} rte">
+              {{ page.content }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    </accordion-block>
+  </div>
+{% endif %}

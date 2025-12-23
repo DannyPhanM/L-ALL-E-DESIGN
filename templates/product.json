@@ -1,0 +1,426 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-product": {
+      "type": "main-product",
+      "blocks": {
+        "sku_JL6Yfm": {
+          "type": "sku",
+          "settings": {
+            "sku_heading": "SKU:",
+            "sku_size": "default",
+            "top_spacing": 1,
+            "mobile_top_spacing": 1
+          }
+        },
+        "5dc5b007-724d-4c23-96b1-6555fc3ac5c4": {
+          "type": "title",
+          "settings": {
+            "title_size": "heading_xs_uppercase",
+            "heading_tag": "h1",
+            "top_spacing": 1,
+            "mobile_top_spacing": 1
+          }
+        },
+        "fb7e45ed-5850-43ba-8d9f-a9fb45354ca4": {
+          "type": "variant_picker",
+          "settings": {
+            "show_label": true,
+            "label_size": "default",
+            "text_size": "label_font",
+            "top_spacing": 1,
+            "mobile_top_spacing": 1
+          }
+        },
+        "f4ca971a-5662-4f51-abc2-9ae805b35906": {
+          "type": "popup",
+          "name": "Size Chart",
+          "settings": {
+            "icon": "measuring_tape",
+            "link_text": "Size chart",
+            "link_size": "default",
+            "text": "",
+            "text_size": "default",
+            "page": "size-chart",
+            "top_spacing": 1,
+            "mobile_top_spacing": 1
+          }
+        },
+        "ac52b7ff-a78f-40ff-9826-d1b661c098c9": {
+          "type": "buy_buttons",
+          "settings": {
+            "stretch_buy_buttons": true,
+            "display_in_a_row": false,
+            "price_in_button": true,
+            "compare_price_on_mobile": true,
+            "show_dynamic_checkout": true,
+            "hide_pickup_availability": false,
+            "show_gift_card_recipient": false,
+            "top_spacing": 1,
+            "mobile_top_spacing": 1
+          }
+        },
+        "text_pKtMPh": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>Sale items are final, non-returnable, and not eligible for free shipping.</em></p>",
+            "dim_text": true,
+            "text_size": "label_font",
+            "top_spacing": 1,
+            "mobile_top_spacing": 1
+          }
+        },
+        "c3416df0-fd61-4eb1-8dfb-146e2c82d415": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Packaging",
+            "collapsible_tabs_size": "default",
+            "text": "",
+            "text_size": "default",
+            "icon": "package_closed",
+            "page": "",
+            "top_spacing": 1,
+            "mobile_top_spacing": 1
+          }
+        },
+        "icons_with_text_7w3nmJ": {
+          "type": "icons_with_text",
+          "settings": {
+            "heading": "",
+            "heading_size": "default",
+            "text_size": "label_font_uppercase",
+            "icon_size": "small",
+            "icon_weight": "regular",
+            "context_icon_radius": "default",
+            "fill_container": false,
+            "icon_1": "loop",
+            "text_1": "<p>7 Days Returns</p>",
+            "page_1": "",
+            "page_content_in_popup_1": true,
+            "icon_2": "truck",
+            "text_2": "<p>Worldwide Shipping</p>",
+            "page_2": "",
+            "page_content_in_popup_2": true,
+            "icon_3": "security_badge",
+            "text_3": "<p>Secure Payments</p>",
+            "page_3": "",
+            "page_content_in_popup_3": false,
+            "icon_4": "none",
+            "text_4": "",
+            "page_4": "",
+            "page_content_in_popup_4": true,
+            "icon_5": "none",
+            "text_5": "",
+            "page_5": "",
+            "page_content_in_popup_5": true,
+            "icon_6": "none",
+            "text_6": "",
+            "page_6": "",
+            "page_content_in_popup_6": true,
+            "top_spacing": 1,
+            "mobile_top_spacing": 1
+          }
+        },
+        "line_hAEx8C": {
+          "type": "line",
+          "settings": {
+            "desktop_padding_top": 24,
+            "desktop_padding_bottom": 24,
+            "mobile_padding_top": 16,
+            "mobile_padding_bottom": 16
+          }
+        },
+        "collapsible_tab_itJezC": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Details and Fit",
+            "collapsible_tabs_size": "default",
+            "text": "{{ product.description }}",
+            "text_size": "default",
+            "icon": "none",
+            "page": "",
+            "top_spacing": 1,
+            "mobile_top_spacing": 1
+          }
+        },
+        "collapsible_tab_6kYyPy": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "CARE INSTRUCTIONS",
+            "collapsible_tabs_size": "default",
+            "text": "<p>L’ALLÉE | CARE INSTRUCTIONS</p><p>Each L’ALLÉE creation is crafted from premium fabrics and delicate silhouettes. Adhering to these care instructions will ensure the longevity, structure, and timeless beauty of your garment.</p><p>CLEANING</p><p>- Professional Dry Clean Only: To preserve fabric integrity, do not hand wash or machine wash. Professional dry cleaning is strictly recommended.</p><p>- Color Separation: Always wash dark, red, and white garments separately to prevent color bleeding or transfer.</p><p>STEAMING & PRESSING </p><p>- Gentle Steaming: Use a steamer at medium heat for silk, pleated, or delicate fabrics.</p><p>- Detail Protection: Avoid direct high heat on structured elements, intricate embellishments, or draped silhouettes to prevent deformation.</p><p>DRYING & STORAGE </p><p>- Shape Preservation: Always hang garments vertically after use or cleaning to maintain their original form. Use padded hangers to protect the shoulder structure.</p><p>- Storage Environment: Store in a cool, dry place, shielded from direct sunlight to prevent color fading.</p><p>IMPORTANT NOTES </p><p>- Hardware & Accessories: Avoid contact with sharp objects (watches, jewelry, or nails) to prevent snagging or damaging the delicate fabric surface.</p><p>- Disclaimer: Damage or distortion resulting from improper care is not covered under our exchange policy.</p><p>OUR PHILOSOPHY </p><p><em>- Luxury deserves thoughtful care. </em>Please follow these instructions meticulously to preserve the integrity of your L’ALLÉE piece.</p>",
+            "text_size": "default",
+            "icon": "none",
+            "page": "flagship-store",
+            "top_spacing": 1,
+            "mobile_top_spacing": 1
+          }
+        },
+        "collapsible_tab_Wcbct3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Duties & Taxes",
+            "collapsible_tabs_size": "default",
+            "text": "<p>- Import duties and taxes may apply upon arrival in your country.</p><p>- Any additional customs charges are the responsibility of the recipient.</p><p>- These fees are determined by local authorities and are beyond our control.</p><p>- For further details, please contact your local customs office.</p>",
+            "text_size": "default",
+            "icon": "none",
+            "page": "flagship-store",
+            "top_spacing": 1,
+            "mobile_top_spacing": 1
+          }
+        },
+        "collapsible_tab_3U6JPi": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping, Return & Exchange",
+            "collapsible_tabs_size": "default",
+            "text": "<p>SHIPPING:</p><p>- Global Availability: We offer worldwide shipping to most destinations.<br/>- In-stock items: Delivered within 5–7 business days<br/>- Made-to-order items: Require additional production time, with total delivery up to 15–20 days<br/>- Shipping Fees: Calculated at checkout based on the total item count, package weight, and destination.</p><p><a href=\"https://lalee-fashion.myshopify.com/pages/shipping-policy\" target=\"_blank\" title=\"https://lalee-fashion.myshopify.com/pages/shipping-policy\">View more details</a></p><p>RETURN & EXCHANGE:</p><p>- Condition: Items must be unworn, in pristine condition, and returned in their original LALLEE packaging (including all tags and accessories).</p><p>- Timeline: Exchange requests must be submitted within 7 days of receipt</p><p>- Required Proof: An unboxing video and the original order receipt are strictly mandatory to process your request.</p><p>- Exchange Value: The eligible value is based on the product price only. Initial shipping fees, taxes, and duties are non-refundable and excluded from the exchange credit.</p><p>- Refund Policy: We do not offer cash refunds. Any price difference will be issued as Store Credit for your future purchases.</p><p>CANCELLATION:</p><p>- Orders Not Yet Shipped: Please contact our Customer Service team immediately if you wish to cancel an order that has not been dispatched. We will assist you with the cancellation and issue a full refund.</p><p>- Refund Timeline: The process typically takes 10–15 business days from the date of your request, though it may take up to 30 business days depending on your card issuer’s policies.</p><p>- Exclusion: This cancellation policy does not apply to Final Sale or discounted items purchased during promotional seasons.<br/>Orders Already Shipped: Once an order has been dispatched, we are unable to process a cancellation.</p><p><a href=\"https://lalee-fashion.myshopify.com/pages/shipping-policy\" target=\"_blank\" title=\"https://lalee-fashion.myshopify.com/pages/shipping-policy\">View more details</a><br/></p>",
+            "text_size": "default",
+            "icon": "none",
+            "page": "",
+            "top_spacing": 1,
+            "mobile_top_spacing": 1
+          }
+        },
+        "line_kanCCT": {
+          "type": "line",
+          "settings": {
+            "desktop_padding_top": 24,
+            "desktop_padding_bottom": 24,
+            "mobile_padding_top": 16,
+            "mobile_padding_bottom": 16
+          }
+        },
+        "dc56d1d9-cab4-452f-9272-c52197a7ab88": {
+          "type": "complementary_products",
+          "settings": {
+            "heading": "Pairs well with",
+            "heading_size": "default",
+            "image_ratio": "narrow_portrait",
+            "focal_point": "center center",
+            "show_second_image": false,
+            "price_position": "with_title",
+            "show_vendor": false,
+            "max_product_name_characters": 100,
+            "show_rating": true,
+            "show_short_description": true,
+            "enable_color_pills": false,
+            "show_pickup_availability": false,
+            "top_spacing": 1,
+            "mobile_top_spacing": 1
+          }
+        },
+        "f8c922ec-d527-49f4-81d7-e882bc9219a1": {
+          "type": "share",
+          "settings": {
+            "text_size": "default",
+            "display_collapsible_link": false,
+            "show_only_icons": true,
+            "top_spacing": 1,
+            "mobile_top_spacing": 1
+          }
+        }
+      },
+      "block_order": [
+        "sku_JL6Yfm",
+        "5dc5b007-724d-4c23-96b1-6555fc3ac5c4",
+        "fb7e45ed-5850-43ba-8d9f-a9fb45354ca4",
+        "f4ca971a-5662-4f51-abc2-9ae805b35906",
+        "ac52b7ff-a78f-40ff-9826-d1b661c098c9",
+        "text_pKtMPh",
+        "c3416df0-fd61-4eb1-8dfb-146e2c82d415",
+        "icons_with_text_7w3nmJ",
+        "line_hAEx8C",
+        "collapsible_tab_itJezC",
+        "collapsible_tab_6kYyPy",
+        "collapsible_tab_Wcbct3",
+        "collapsible_tab_3U6JPi",
+        "line_kanCCT",
+        "dc56d1d9-cab4-452f-9272-c52197a7ab88",
+        "f8c922ec-d527-49f4-81d7-e882bc9219a1"
+      ],
+      "settings": {
+        "enable_sticky_content": true,
+        "sticky_offset": 92,
+        "desktop_gallery_style": "two_columns_grid",
+        "thumbnails_image_ratio": "original",
+        "desktop_gallery_size": "large",
+        "swap_position": false,
+        "image_ratio": "original",
+        "focal_point": "center center",
+        "context_image_radius": "0px",
+        "organize_images": true,
+        "first_image_instead_of_variant": true,
+        "show_media_attached_to_variant": false,
+        "show_extra_images": false,
+        "enable_video_looping": true,
+        "enable_autoplay": true,
+        "disable_video_controls": false,
+        "mobile_navigation": "scrollbar",
+        "enable_image_zoom": true,
+        "image_zoom_style": "slideshow",
+        "desktop_width": 60,
+        "mobile_width": 98,
+        "zoom_overlay_opacity": 60,
+        "zoom_image_ratio": "original",
+        "zoom_focal_point": "center center",
+        "show_arrow_in_mobile": false,
+        "enable_slideshow_zoom_in": true,
+        "enable_sticky_add_to_cart": false,
+        "show_sticky_add_to_cart": "both",
+        "sticky_add_position": "center",
+        "toast_radius": "0px",
+        "show_image_sticky_add": true,
+        "sticky_add_image_ratio": "original",
+        "sticky_add_focal_point": "center center",
+        "sticky_image_radius": "0px",
+        "show_price_sticky_add": true,
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0
+      }
+    },
+    "f88eefea-3183-4353-a927-eb373e1f61f5": {
+      "type": "main-product-details",
+      "blocks": {
+        "template--18729036185874__f88eefea-3183-4353-a927-eb373e1f61f5-16831975672eeb05c4-0": {
+          "type": "description",
+          "settings": {
+            "show_product_image": true,
+            "context_image_radius": "2000px 2000px 0 0",
+            "heading": "{{ product.title }}",
+            "text": "",
+            "heading_size": "heading_xl_uppercase",
+            "text_size": "body_l"
+          }
+        },
+        "template--18729036185874__f88eefea-3183-4353-a927-eb373e1f61f5-16831975672eeb05c4-1": {
+          "type": "table",
+          "settings": {
+            "heading": "",
+            "table_content": "<p>Vendor: {{ product.vendor }}</p><p>Product title: {{ product.title }}</p>",
+            "heading_size": "default",
+            "table_text_size": "default"
+          }
+        },
+        "template--18729036185874__f88eefea-3183-4353-a927-eb373e1f61f5-16831975672eeb05c4-3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping",
+            "text": "",
+            "icon": "none",
+            "page": "",
+            "collapsible_tabs_size": "default",
+            "text_size": "default"
+          }
+        },
+        "1a958f9b-ccd5-4af2-934d-10443480a198": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "RETURNS AND EXCHANGE",
+            "text": "<p>Many of the listed products and sizes are made to order. This information is specified in each product's details. </p><p>Made-to-order items are non-refundable. Instead, we will produce and ship a replacement piece at our own cost in the following cases:</p><ul><li>the parcel was lost by courier (proof will be provided by the courier after an investigation)</li><li>you have received a wrong product (please inform us on the mistake and ship the item back within 14 days from its delivery following our return shipping instructions)</li><li>you have received a defective item* (please inform us on the defect and ship the piece back within 14 days from its delivery following our return shipping instructions)</li></ul><p><br/>*Please note that we often use alternative finishing (raw edges, exposed seams, hand-dyed fabrics etc.) which is featured in product images and cannot be considered a defect. Please specify your claim in your request, and only ship the item back if we agree that it is defective and should be replaced)</p><p>We will make a financial refund in the following cases:</p><ul><li>the loss of the parcel has been investigated by the courier for more than 2 months, and you disagree to receive a replacement item</li><li>we are unable to produce a replacement item (a reason will be provided)</li></ul><p>For products that are in stock by the moment of your purchase, standard return terms are applied. The stock status of each product and size is specified in the product information. You will receive a full refund, excluding shipping cost, after sending a purchased item back, provided that it is unworn, undamaged and all the labels and packaging are kept. If you wish to receive a different size, please specify that in your request and we'll produce a replacement for you after receiving a return. </p><p>Please make sure to send us a return request and dispatch the item back following instructions in our response within 14 days from the order delivery date.Please contact us at studio@irinadzhus.com should you wish to return your purchase or have any questions in this regard.</p>",
+            "icon": "none",
+            "page": "",
+            "collapsible_tabs_size": "default",
+            "text_size": "default"
+          }
+        }
+      },
+      "block_order": [
+        "template--18729036185874__f88eefea-3183-4353-a927-eb373e1f61f5-16831975672eeb05c4-0",
+        "template--18729036185874__f88eefea-3183-4353-a927-eb373e1f61f5-16831975672eeb05c4-1",
+        "template--18729036185874__f88eefea-3183-4353-a927-eb373e1f61f5-16831975672eeb05c4-3",
+        "1a958f9b-ccd5-4af2-934d-10443480a198"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_width": "narrow",
+        "subheading": "Product details",
+        "subheading_size": "default",
+        "subheading_tag": "h3",
+        "collapsible_tabs_size": "heading_s_uppercase",
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0
+      }
+    },
+    "afaa1caf-6b34-4fbe-aa72-e50883d86941": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "Recommended For You",
+        "heading_size": "heading_xs_uppercase",
+        "heading_tag": "h3",
+        "desktop_grid_type": "5",
+        "mobile_layout": "2",
+        "mobile_navigation": "arrows",
+        "image_ratio": "original",
+        "focal_point": "center center",
+        "hover_behavior": "slider",
+        "show_bullets": false,
+        "enable_add_to_cart": false,
+        "enable_quick_view": true,
+        "price_position": "bottom",
+        "show_vendor": false,
+        "max_product_name_characters": 100,
+        "show_rating": true,
+        "show_short_description": true,
+        "enable_color_pills": true,
+        "show_pickup_availability": false,
+        "color_type": "default",
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "desktop_padding_top": 32,
+        "desktop_padding_bottom": 32,
+        "mobile_padding_top": 32,
+        "mobile_padding_bottom": 32
+      }
+    },
+    "06276a8b-3afe-469c-be8e-380883ba80a7": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "heading": "Recently viewed",
+        "heading_size": "heading_xs_uppercase",
+        "heading_tag": "h3",
+        "desktop_grid_type": "5",
+        "mobile_layout": "2",
+        "mobile_navigation": "arrows",
+        "image_ratio": "original",
+        "focal_point": "center center",
+        "hover_behavior": "slider",
+        "show_bullets": true,
+        "enable_add_to_cart": false,
+        "enable_quick_view": true,
+        "price_position": "bottom",
+        "show_vendor": false,
+        "max_product_name_characters": 100,
+        "show_rating": true,
+        "show_short_description": false,
+        "enable_color_pills": true,
+        "show_pickup_availability": false,
+        "color_type": "default",
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "desktop_padding_top": 32,
+        "desktop_padding_bottom": 60,
+        "mobile_padding_top": 32,
+        "mobile_padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "main-product",
+    "f88eefea-3183-4353-a927-eb373e1f61f5",
+    "afaa1caf-6b34-4fbe-aa72-e50883d86941",
+    "06276a8b-3afe-469c-be8e-380883ba80a7"
+  ]
+}

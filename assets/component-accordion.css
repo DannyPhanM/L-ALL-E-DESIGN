@@ -1,0 +1,329 @@
+.accordion summary {
+  position: relative;
+  line-height: 1;
+  color: rgb(var(--layout-text-color));
+}
+  
+.accordion .summary__title {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.section-product-details .summary__title,
+.section-collapsible-tabs .summary__title,
+.store-selector-drawer .summary__title {
+  justify-content: space-between;
+}
+
+.accordion-toggle {
+  max-width: fit-content;
+  word-break: break-word;
+}
+
+.accordion__panel {
+  max-height: 0;
+  transition: max-height 0.3s ease;
+  overflow: clip;
+}
+
+.open_collapsible.is-open .accordion__panel:not([style]) {
+  max-height: none;
+}
+
+.accordion__content {
+  padding-top: 16px;
+  height: fit-content;
+  padding-bottom: 16px;
+}
+
+accordion-block .accordion-toggle {
+  max-width: none;
+}
+
+.icon-accordion {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.icon-accordion svg {
+  fill: rgb(var(--layout-text-color));
+  width: auto;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+}
+
+.icon-accordion__close,
+.icon-accordion__open {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  /* will-change: opacity; */
+  transition: transform var(--animation-duration) var(--transition-timing-function), opacity var(--animation-duration) var(--transition-timing-function);
+}
+
+.icon-accordion__close {
+  opacity: 1;
+  position: relative;
+  width: auto;
+  transform: rotate(0deg);
+}
+.icon-accordion__open {
+  opacity: 0;
+  position: absolute;
+  width: 0;
+  transform: rotate(-90deg);
+}
+
+.accordion-toggle.is-open .icon-accordion__close:not(.share__icon-close) {
+  transform: rotate(-90deg);
+  opacity: 0;
+  position: absolute;
+  width: 0;
+}
+
+.accordion-toggle.is-open .icon-accordion__open {
+  opacity: 1;
+  position: relative;
+  width: auto;
+  transform: rotate(-180deg);
+} 
+
+.section-product-details .accordion__summary,
+.section-collapsible-tabs .accordion__summary,
+.store-selector-drawer .accordion__summary,
+.accordion__content img {
+  max-width: 100%;
+}
+
+.summary__title-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-product-details .accordion-toggle,
+.section-collapsible-tabs .accordion-toggle {
+  border-top: var(--line-width) solid rgba(var(--layout-text-color), var(--line-opacity));
+  border-bottom: var(--line-width) solid rgba(var(--layout-text-color), var(--line-opacity));
+}
+
+.store-selector-drawer .accordion-toggle {
+  border-bottom: var(--line-width) solid rgba(var(--layout-text-color), var(--line-opacity));
+}
+
+.section-product-details .accordion__content--spacious,
+.section-collapsible-tabs .accordion__content--spacious {
+  padding: 0 0 36px;
+}
+
+.section-product-details .accordion__content--compact,
+.section-collapsible-tabs .accordion__content--compact {
+  padding: 0 0 16px;
+}
+
+.section-product-details .accordion + .accordion .accordion-toggle,
+.section-collapsible-tabs .accordion + .accordion .accordion-toggle,
+.store-selector-drawer .accordion + .accordion .accordion-toggle {
+  border-top: var(--line-width) solid transparent;
+}
+
+.section-product-details .accordion-toggle--spacious .accordion__summary,
+.section-collapsible-tabs .accordion-toggle--spacious .accordion__summary,
+.store-selector-drawer .accordion-toggle--spacious .accordion__summary {
+  padding: 24px 0;
+}
+
+.section-product-details .accordion-toggle--compact .accordion__summary,
+.section-collapsible-tabs .accordion-toggle--compact .accordion__summary,
+.store-selector-drawer .accordion-toggle--compact .accordion__summary {
+  padding: 8px 0;
+}
+
+.accordion__content .accordion__text {
+  text-transform: none;
+  text-align: start;
+}
+
+/* Fonts */
+.accordion__title--minimal_uppercase {
+  text-transform: uppercase;
+  font: var(--base-body-s-font);
+  letter-spacing: 0.02em;
+}
+.accordion__title--custom {
+  font: var(--body-s-font);
+  letter-spacing: var(--body-s-letter-spacing);
+}
+.accordion__title--minimal_basic {
+  font: var(--base-body-s-font);
+}
+.accordion__title--minimal_heavy,
+.section-product-details .accordion__title--minimal_basic,
+.section-collapsible-tabs .accordion__title--minimal_basic,
+.store-selector-drawer .accordion__title--minimal_basic {
+  font: var(--base-body-l-font);
+}
+.accordion__title--classic,
+.accordion__title--contrast {
+  font: var(--base-body-m-font);
+}
+.accordion__title--avant_garde,
+.accordion__title--duet  {
+  font: var(--accent-body-m-font);
+}
+.accordion__title--brutalist {
+  font: var(--base-heading-xs-font);
+  text-transform: uppercase;
+}
+.accordion__title--custom {
+  font: var(--body-s-font);
+  letter-spacing: var(--body-s-letter-spacing);
+}
+.section-product-details .accordion__title--minimal_uppercase,
+.section-collapsible-tabs .accordion__title--minimal_uppercase,
+.store-selector-drawer .accordion__title--minimal_uppercase,
+.section-product-details .accordion__title--avant_garde,
+.section-collapsible-tabs .accordion__title--avant_garde,
+.store-selector-drawer .accordion__title--avant_garde {
+  font: var(--base-body-l-font);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.section-product-details .accordion__title--custom,
+.section-collapsible-tabs .accordion__title--custom,
+.store-selector-drawer .accordion__title--custom {
+  font: var(--body-l-font);
+  letter-spacing: var(--body-l-letter-spacing);
+}
+.section-product-details .accordion__title--minimal_heavy,
+.section-collapsible-tabs .accordion__title--minimal_heavy,
+.store-selector-drawer .accordion__title--minimal_heavy {
+  font: var(--base-heading-xs-font);
+}
+.section-product-details .accordion__title--classic,
+.section-product-details .accordion__title--duet,
+.store-selector-drawer .accordion__title--classic,
+.store-selector-drawer .accordion__title--duet,
+.section-collapsible-tabs .accordion__title--classic,
+.section-collapsible-tabs .accordion__title--duet {
+  font: var(--accent-body-l-font);
+}
+.section-product-details .accordion__title--contrast,
+.section-collapsible-tabs .accordion__title--contrast,
+.store-selector-drawer .accordion__title--contrast {
+  font: var(--accent-heading-s-font);
+}
+.section-product-details .accordion__title--brutalist,
+.section-collapsible-tabs .accordion__title--brutalist,
+.store-selector-drawer .accordion__title--brutalist {
+  font: var(--base-heading-m-font);
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+/* Styles for full-width page without sidebars */
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .section-product-details .accordion__title--brutalist,
+  .section-collapsible-tabs .accordion__title--brutalist,
+  .store-selector-drawer .accordion__title--brutalist {
+    font: var(--base-heading-s-font);
+    letter-spacing: normal;
+  }
+}
+
+/* Sidebars: Main XS, Main S, Main M  and white space Spacious */
+/* Mobile */
+@media screen and (max-width: 1048px) and (min-width: 921px) {
+  .main_xs--spacious .section-product-details .accordion__title--brutalist,
+  .main_xs--spacious .section-collapsible-tabs .accordion__title--brutalist,
+  .main_xs--spacious .store-selector-drawer .accordion__title--brutalist,
+  .main_s--spacious .section-product-details .accordion__title--brutalist,
+  .main_s--spacious .section-collapsible-tabs .accordion__title--brutalist,
+  .main_s--spacious .store-selector-drawer .accordion__title--brutalist,
+  .main_m--spacious .section-product-details .accordion__title--brutalist,
+  .main_m--spacious .section-collapsible-tabs .accordion__title--brutalist,
+  .main_m--spacious .store-selector-drawer .accordion__title--brutalist {
+    font: var(--base-heading-s-font);
+    letter-spacing: normal;
+  }
+}
+
+/* Sidebars: Main XS, Main S and white space Compact */
+/* Mobile */
+@media screen and (max-width: 968px) and (min-width: 921px) {
+  .main_xs--compact .section-product-details .accordion__title--brutalist,
+  .main_xs--compact .section-collapsible-tabs .accordion__title--brutalist,
+  .main_xs--compact .store-selector-drawer .accordion__title--brutalist,
+  .main_s--compact .section-product-details .accordion__title--brutalist,
+  .main_s--compact .section-collapsible-tabs .accordion__title--brutalist,
+  .main_s--compact .store-selector-drawer .accordion__title--brutalist {
+    font: var(--base-heading-s-font);
+    letter-spacing: normal;
+  }
+}
+
+/* Sidebars: Main XS with secondary, Main S with secondary and white space Spacious */
+/* Mobile */
+@media screen and (max-width: 1144px) and (min-width: 921px) {
+  .main_xs_with_secondary--spacious .section-product-details .accordion__title--brutalist,
+  .main_xs_with_secondary--spacious .section-collapsible-tabs .accordion__title--brutalist,
+  .main_xs_with_secondary--spacious .store-selector-drawer .accordion__title--brutalist,
+  .main_s_with_secondary--spacious .section-product-details .accordion__title--brutalist,
+  .main_s_with_secondary--spacious .section-collapsible-tabs .accordion__title--brutalist,
+  .main_s_with_secondary--spacious .store-selector-drawer .accordion__title--brutalist {
+    font: var(--base-heading-s-font);
+    letter-spacing: normal;
+  }
+}
+
+/* Sidebars: Main XS with secondary, Main S with secondary and white space Compact */
+/* Mobile */
+@media screen and (max-width: 1064px) and (min-width: 921px) {
+  .main_xs_with_secondary--compact .section-product-details .accordion__title--brutalist,
+  .main_xs_with_secondary--compact .section-collapsible-tabs .accordion__title--brutalist,
+  .main_xs_with_secondary--compact .store-selector-drawer .accordion__title--brutalist,
+  .main_s_with_secondary--compact .section-product-details .accordion__title--brutalist,
+  .main_s_with_secondary--compact .section-collapsible-tabs .accordion__title--brutalist,
+  .main_s_with_secondary--compact .store-selector-drawer .accordion__title--brutalist {
+    font: var(--base-heading-s-font);
+    letter-spacing: normal;
+  }
+}
+
+/* Sidebars: Main M and white space Compact */
+/* Mobile */
+@media screen and (max-width: 1024px) and (min-width: 921px) {
+  .main_m--compact .section-product-details .accordion__title--brutalist,
+  .main_m--compact .section-collapsible-tabs .accordion__title--brutalist,
+  .main_m--compact .store-selector-drawer .accordion__title--brutalist {
+    font: var(--base-heading-s-font);
+    letter-spacing: normal;
+  }
+}
+
+/* Sidebars: Main M with secondary */
+/* Mobile */
+@media screen and (max-width: 1152px) and (min-width: 921px) {
+  .main_m_with_secondary .section-product-details .accordion__title--brutalist,
+  .main_m_with_secondary .section-collapsible-tabs .accordion__title--brutalist,
+  .main_m_with_secondary .store-selector-drawer .accordion__title--brutalist {
+    font: var(--base-heading-s-font);
+    letter-spacing: normal;
+  }
+}
+
+/* Sidebars: Main L */
+/* Mobile */
+@media screen and (max-width: 1536px) and (min-width: 921px) {
+  .main_l .section-product-details .accordion__title--brutalist,
+  .main_l .section-collapsible-tabs .accordion__title--brutalist,
+  .main_l .store-selector-drawer .accordion__title--brutalist {
+    font: var(--base-heading-s-font);
+    letter-spacing: normal;
+  }
+}

@@ -1,0 +1,87 @@
+.card__title--minimal_uppercase {
+    font: var(--base-body-s-font);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+.card__title--minimal_basic,
+.card__short-description--duet {
+    font: var(--base-body-m-font);
+}
+.card__title--minimal_heavy {
+    font: var(--base-heading-xs-font);
+}
+.card__title--classic,
+.card__title--contrast {
+    font: var(--accent-body-l-font);
+}
+.card__title--avant_garde {
+    font: var(--base-body-m-font);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+.card__title--brutalist,
+.card__short-description--brutalist {
+    font: var(--base-body-l-font);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+.card__title--duet {
+    font: var(--accent-body-m-font);
+}
+.card__title--custom {
+    font: var(--body-s-font);
+    letter-spacing: var(--body-s-letter-spacing);
+}
+.card__short-description--minimal_uppercase,
+.card__short-description--classic {
+    font: var(--base-label-font);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+.card__short-description--minimal_basic {
+    font: var(--base-body-s-font);
+}
+.card__short-description--minimal_heavy {
+    font: var(--base-body-l-font);
+}
+.card__short-description--avant_garde {
+    font: var(--accent-body-s-font);
+}
+.card__short-description--contrast {
+    font: var(--base-label-font);
+}
+.features__card-text.card__short-description--custom {
+    font: var(--body-m-font);
+    letter-spacing: var(--body-m-letter-spacing);
+}
+
+.features__media, .features__media video {
+    display: flex;
+    border-radius: var(--card-image-radius);
+    -webkit-border-radius: var(--card-image-radius);
+    overflow: clip;
+    max-width: 100%;
+    z-index: 1;
+}
+.features__image, .features__media video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.features__card.card {
+    gap: 0;
+}
+.features__card .features__media,
+.features__card .features__card-text {
+    margin-bottom: var(--content-gap);
+}
+.features__card .features__card-title {
+    margin-bottom: 8px;
+}
+.features__card.center .features__card-button {
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+}
+.featured-products .slider__grid .features__card.card {
+    cursor: default!important;
+}

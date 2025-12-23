@@ -1,0 +1,188 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "hide_heading": false,
+        "heading_size": "default",
+        "heading_tag": "h2",
+        "section_width": "wide",
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0
+      }
+    },
+    "44c0eeee-5eb8-4608-930e-1c59003f157a": {
+      "type": "rich-text",
+      "blocks": {
+        "template--19235367223602__44c0eeee-5eb8-4608-930e-1c59003f157a-1685371335bc1cbdcc-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "FAQ",
+            "heading_size": "heading_m_uppercase",
+            "heading_tag": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--19235367223602__44c0eeee-5eb8-4608-930e-1c59003f157a-1685371335bc1cbdcc-1"
+      ],
+      "settings": {
+        "section_width": "narrow",
+        "center_text": false,
+        "color_type": "default",
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": -160,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0
+      }
+    },
+    "46adb6af-230f-483e-9a2a-640b3354c2f1": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "template--19235367223602__46adb6af-230f-483e-9a2a-640b3354c2f1-168537123473b0750f-0": {
+          "type": "topic",
+          "settings": {
+            "heading": "Orders & Shipping",
+            "text": "<p>Questions related to submitting orders and shipping.</p>",
+            "dim_text": true,
+            "button_label": "",
+            "button_link": "",
+            "target_blank": false,
+            "button_style": "solid"
+          }
+        },
+        "template--19235367223602__46adb6af-230f-483e-9a2a-640b3354c2f1-168537123473b0750f-1": {
+          "type": "tab",
+          "settings": {
+            "heading": "How long does shipping usually take?",
+            "text": "<p>We currently ship from Poland. By default, your order will be delivered using trackable ECONOMY shipping via the national post for €18-50 (rate depends on the order volume), which normally takes about 2 weeks. You'll see the auto-calculated rate at checkout. </p><p>We DO NOT ship to Russia.</p><p>You can upgrade for 2 faster delivery options:</p><p>- REGULAR (EMS, available for selected countries): 4-7 days / €24-70 (rate depends on the order volume)</p><p>- EXPRESS (UPS or FedEx): 2-4 days / €35-180 (rate depends on the order volume)</p><p>If you wish to upgrade, please reach us at irinadzhus@gmail.com right after completion of your order and specify the preferable option - we will then manually generate an additional invoice with the rate difference. After your order has been shipped, it is no longer possible to change the delivery method.</p><p>If you have any questions about payment and shipping before making your purchase, feel free to contact us at irinadzhus@gmail.com or +380661267828 (WhatsApp, Telegram).</p>",
+            "icon": "none",
+            "page": ""
+          }
+        },
+        "template--19235367223602__46adb6af-230f-483e-9a2a-640b3354c2f1-168537123473b0750f-2": {
+          "type": "tab",
+          "settings": {
+            "heading": "How to place an order?",
+            "text": "<p>Please follow the instruction below to place your order:</p><p>1. Please choose products on the website, add them to the basket and complete your purchase at checkout.</p><p>2. We will immediately send you an automatic notification that your order has been processed.</p><p>3. If you decide to upgrade the shipping method (please see shipping info below), you will be emailed with an additional invoice for the remaining amount.</p><p>4. Products that are in stock by the moment of purchase will be dispatched within 3 business days since we've received your payment. Unfortunately, made-to-order options are currently unavailable, as our manufacturing processes are on pause.</p>",
+            "icon": "none",
+            "page": ""
+          }
+        },
+        "template--19235367223602__46adb6af-230f-483e-9a2a-640b3354c2f1-168537123473b0750f-3": {
+          "type": "tab",
+          "settings": {
+            "heading": "Where items are produced?",
+            "text": "<p>All items are produced in Ukraine. Please allow up to 30 days for made-to-order products from previous collections and 40-50 days for new collections. </p>",
+            "icon": "none",
+            "page": ""
+          }
+        },
+        "ad58450b-5c53-4cae-8964-acb0174bd2fa": {
+          "type": "tab",
+          "settings": {
+            "heading": "Are your products cruelty-free?",
+            "text": "<p>Yes, they are. At DZHUS, we stand for an ethical and cruelty-free approach to fashion. All our products have always been vegetarian-friendly.</p>",
+            "icon": "none",
+            "page": ""
+          }
+        },
+        "template--19235367223602__46adb6af-230f-483e-9a2a-640b3354c2f1-168537123473b0750f-4": {
+          "type": "topic",
+          "settings": {
+            "heading": "Payments",
+            "text": "<p>Questions related to payments.</p>",
+            "dim_text": true,
+            "button_label": "",
+            "button_link": "",
+            "target_blank": false,
+            "button_style": "solid"
+          }
+        },
+        "template--19235367223602__46adb6af-230f-483e-9a2a-640b3354c2f1-168537123473b0750f-5": {
+          "type": "tab",
+          "settings": {
+            "heading": "How can I pay for my order?",
+            "text": "<p>By default, we accept payment via PayPal. Wire transfer is also possible, please review the instructions below. Credit card payments are not available at the moment. </p>",
+            "icon": "none",
+            "page": ""
+          }
+        },
+        "template--19235367223602__46adb6af-230f-483e-9a2a-640b3354c2f1-168537123473b0750f-6": {
+          "type": "tab",
+          "settings": {
+            "heading": "Do you accept wire transfers?",
+            "text": "<p>Collapsible tab conteWe do accept payment via a bank transfer or Western Union / Money Gram. Until March 31, 2022, transfers to Ukrainians (like us) within these systems are commission-free. If you prefer one of these payment methods, please follow the instructions below:</p><p>1. Instead of confirming your order on the website, please send your order enquiry to irinadzhus@gmail.com.</p><p>2. Within 24 hours (normally, sooner), we will contact you back to clarify your order details and then manually generate an invoice for you.</p><p>3. Please pay the invoice during 2 business days. Otherwise, your order will be annulled.</p><p>4. Stock items will be dispatched within 3 business days since we've received your payment.</p><p>If you haven't received our reply within 1 day from your inquiry (kindly check your 'spam' and 'promotions' folders), please reach out to us.</p>",
+            "icon": "none",
+            "page": ""
+          }
+        },
+        "template--19235367223602__46adb6af-230f-483e-9a2a-640b3354c2f1-168537123473b0750f-7": {
+          "type": "tab",
+          "settings": {
+            "heading": "Do you accept credit cards?",
+            "text": "<p>Credit card payments are not available at the moment, however it  will be available again soon - stay tuned.</p>",
+            "icon": "none",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19235367223602__46adb6af-230f-483e-9a2a-640b3354c2f1-168537123473b0750f-0",
+        "template--19235367223602__46adb6af-230f-483e-9a2a-640b3354c2f1-168537123473b0750f-1",
+        "template--19235367223602__46adb6af-230f-483e-9a2a-640b3354c2f1-168537123473b0750f-2",
+        "template--19235367223602__46adb6af-230f-483e-9a2a-640b3354c2f1-168537123473b0750f-3",
+        "ad58450b-5c53-4cae-8964-acb0174bd2fa",
+        "template--19235367223602__46adb6af-230f-483e-9a2a-640b3354c2f1-168537123473b0750f-4",
+        "template--19235367223602__46adb6af-230f-483e-9a2a-640b3354c2f1-168537123473b0750f-5",
+        "template--19235367223602__46adb6af-230f-483e-9a2a-640b3354c2f1-168537123473b0750f-6",
+        "template--19235367223602__46adb6af-230f-483e-9a2a-640b3354c2f1-168537123473b0750f-7"
+      ],
+      "settings": {
+        "subheading": "",
+        "heading": "",
+        "text": "",
+        "dim_text": false,
+        "button_label": "",
+        "button_link": "",
+        "target_blank": false,
+        "button_style": "solid",
+        "section_width": "narrow",
+        "subheading_size": "default",
+        "subheading_tag": "h3",
+        "heading_size": "default",
+        "heading_tag": "h2",
+        "collapsible_tabs_size": "default",
+        "topic_heading_size": "heading_xs_uppercase",
+        "text_size": "body_l",
+        "color_type": "default",
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "44c0eeee-5eb8-4608-930e-1c59003f157a",
+    "46adb6af-230f-483e-9a2a-640b3354c2f1"
+  ]
+}

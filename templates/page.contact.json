@@ -1,0 +1,205 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "tabs_MPxjFg": {
+      "type": "tabs",
+      "blocks": {
+        "tab_WJ8VHp": {
+          "type": "tab",
+          "settings": {
+            "custom_heading": "OUR STORY",
+            "text": "",
+            "text_size": "default",
+            "page": "our-story"
+          }
+        },
+        "tab_7KPqiw": {
+          "type": "tab",
+          "settings": {
+            "custom_heading": "FLAGSHIP STORE",
+            "text": "",
+            "text_size": "default",
+            "page": "flagship-store"
+          }
+        },
+        "tab_qjdeX4": {
+          "type": "tab",
+          "settings": {
+            "custom_heading": "CONTACT US",
+            "text": "",
+            "text_size": "default",
+            "page": "contact"
+          }
+        }
+      },
+      "block_order": [
+        "tab_WJ8VHp",
+        "tab_7KPqiw",
+        "tab_qjdeX4"
+      ],
+      "name": "t:sections.tabs.name",
+      "settings": {
+        "subheading": "",
+        "heading": "",
+        "center_text": true,
+        "section_width": "narrow",
+        "tab_heading_size": "default",
+        "subheading_size": "default",
+        "subheading_tag": "h3",
+        "heading_size": "default",
+        "heading_tag": "h2",
+        "color_type": "default",
+        "background_color": "#FFFFFF",
+        "text_color": "#000000",
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": -24,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": -24
+      }
+    },
+    "83462665-e357-4caf-9a75-170b1ba75762": {
+      "type": "contact-form",
+      "blocks": {
+        "template--15091190628467__83462665-e357-4caf-9a75-170b1ba75762-168362428402bf1696-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "FLAGSHIP STORE",
+            "heading_size": "heading_s_uppercase",
+            "heading_tag": "h3"
+          }
+        },
+        "text_zkXnHg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>ADDRESS</p><p>House No.12, Alley 84, Ngoc Khanh Street, Ba Dinh District, Hanoi.  <br/></p><p>OPENING HOURS</p><p>Mon-Sun: 9:00 – 21:00 (GMT+7)</p><p></p><p><a href=\"/pages/flagship-store\" title=\"Flagship Store\">View Flagship Store</a></p>",
+            "dim_text": false,
+            "text_size": "default"
+          }
+        },
+        "empty_space_hFaYCx": {
+          "type": "empty_space",
+          "settings": {
+            "desktop_height": 24,
+            "mobile_height": 16
+          }
+        },
+        "heading_KHyJaw": {
+          "type": "heading",
+          "settings": {
+            "heading": "CONTACT INFO",
+            "heading_size": "heading_s_uppercase",
+            "heading_tag": "h3"
+          }
+        },
+        "template--15091190628467__83462665-e357-4caf-9a75-170b1ba75762-168362428402bf1696-2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>EMAIL: huyenpham@lalee.com</p><p>CLIENT SUPPORT t: <a href=\"https://wa.me/+84963271383\">+84-963-271-383</a></p><p>WHOLESALE AND PARTNERSHIP :<a href=\"https://wa.me/+84989293965\">+84989293965</a></p>",
+            "dim_text": false,
+            "text_size": "default"
+          }
+        },
+        "2cca0ed0-35ae-4827-8f70-c85b75943ebe": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5445.531852302012!2d-122.40733128805128!3d37.78928521248307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858089ce1b5ea9%3A0xd114369f1c32541e!2sShopify%20San%20Francisco%20Office!5e0!3m2!1sen!2spl!4v1686302012498!5m2!1sen!2spl\" width=\"100%\" height=\"400\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+          }
+        },
+        "empty_space_LjhYfe": {
+          "type": "empty_space",
+          "settings": {
+            "desktop_height": 24,
+            "mobile_height": 16
+          }
+        },
+        "70c6565c-0451-426e-8eda-fe6422f41c8d": {
+          "type": "social_media",
+          "settings": {
+            "social_media_heading": "Follow us",
+            "social_media_heading_size": "heading_xs_uppercase",
+            "social_media_style": "logo_in_circle",
+            "use_accent_color": false
+          }
+        }
+      },
+      "block_order": [
+        "template--15091190628467__83462665-e357-4caf-9a75-170b1ba75762-168362428402bf1696-1",
+        "text_zkXnHg",
+        "empty_space_hFaYCx",
+        "heading_KHyJaw",
+        "template--15091190628467__83462665-e357-4caf-9a75-170b1ba75762-168362428402bf1696-2",
+        "2cca0ed0-35ae-4827-8f70-c85b75943ebe",
+        "empty_space_LjhYfe",
+        "70c6565c-0451-426e-8eda-fe6422f41c8d"
+      ],
+      "settings": {
+        "swap_position": false,
+        "narrow_content": true,
+        "heading": "Get in touch",
+        "heading_size": "heading_s_uppercase",
+        "heading_tag": "h3",
+        "show_container": false,
+        "name_placeholder": "",
+        "email_placeholder": "",
+        "show_phone": true,
+        "phone_placeholder": "",
+        "show_message": true,
+        "message_placeholder": "",
+        "enable_checkbox": false,
+        "make_required": false,
+        "checkbox_label": "",
+        "color_type": "custom",
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "desktop_padding_top": 32,
+        "desktop_padding_bottom": 60,
+        "mobile_padding_top": 32,
+        "mobile_padding_bottom": 60
+      }
+    },
+    "video_banner_HRJLP8": {
+      "type": "video-banner",
+      "disabled": true,
+      "name": "t:sections.video-banner.name",
+      "settings": {
+        "content_on_hover": false,
+        "video_load": "shopify://files/videos/L allée day.mp4",
+        "desktop_height": 70,
+        "section_link": "",
+        "target_blank": false,
+        "section_width": "wide",
+        "center_text": true,
+        "vertical_content_position": "center",
+        "horizontal_content_position": "center",
+        "narrow_content": true,
+        "fill_content": false,
+        "overlay_color": "#000000",
+        "overlay_gradient": "",
+        "video_overlay_opacity": 10,
+        "mobile_height": 60,
+        "content_under_video": false,
+        "color_type": "invert",
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "tabs_MPxjFg",
+    "83462665-e357-4caf-9a75-170b1ba75762",
+    "video_banner_HRJLP8"
+  ]
+}

@@ -1,0 +1,35 @@
+.shopify-model-viewer-ui .shopify-model-viewer-ui__button--poster {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--other-buttons-radius);
+  background-color: rgb(var(--base-button-color));
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.shopify-model-viewer-ui .shopify-model-viewer-ui__button--poster svg use,
+.shopify-model-viewer-ui__button--control svg use {
+  color: rgb(var(--accent-button-color));
+}
+
+.shopify-model-viewer-ui__poster-control-icon {
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+  fill: none;
+}
+
+.shopify-model-viewer-ui .shopify-model-viewer-ui__button--control:not(:last-child):after {
+  display: none;
+}
+
+.shopify-model-viewer-ui .shopify-model-viewer-ui__controls-area {
+  border: none;
+}
+
+@media (hover: hover) {
+  .shopify-model-viewer-ui .shopify-model-viewer-ui__button--poster:hover svg use,
+  .shopify-model-viewer-ui__button--control:hover svg use {
+    color: rgb(var(--hover-button-color));
+  }
+}
+  

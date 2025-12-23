@@ -1,0 +1,62 @@
+<custom-options class="section-block custom-options flex--column product-form__input product-form__input--dropdown {% if settings.stretch_dropdowns %}product-form__input--dropdown--stretched{% endif %}" style="--spacing: {{ block.settings.top_spacing }}; --mobile-spacing: {{ block.settings.mobile_top_spacing }};" {{ block.shopify_attributes }}>
+    {% liquid 
+      assign product_form_id = 'product-form-' | append: section.id
+      assign options = block.settings.options | split: ','
+    %}
+    {% style %}
+        .tooltip__icon svg {
+            width: {{ 20 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+            height: {{ 20 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+        }
+        @media screen and (max-width: 920px) {
+            .tooltip__icon svg {
+                width: {{ 20 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+                height: {{ 20 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+            }
+        }
+    {% endstyle %}
+    {% if block.settings.option_label != blank %}
+        <label class="form__label label--{{ settings.typography_preset }}" for="Option-{{ block.id }}-{{ forloop.index0 }}">
+            <tooltip-component class="tooltip form__label-name">
+                <span class="{% if block.settings.label_size != 'default' %}{{ block.settings.label_size }}{% else %}{% if settings.typography_preset == 'custom' %}{% if settings.uppercase_body_s %} uppercase{% endif %}{% if settings.bolder_font_body_s %} bolder-font{% endif %}{% endif %}{% endif %} {% if settings.dim_text %}dim{% endif %}">{{ block.settings.option_label }}</span>
+                {% if block.settings.info_tooltip != blank %}
+                    <span class="tooltip__icon{% if settings.dim_text %} tooltip__icon--dim{% endif %}">
+                        {% if weight_accordion_title == 'regular' %}
+                            {% render 'icon-accordion', icon: 'help-regular' %}
+                        {% elsif weight_accordion_title == 'medium' %}
+                            {% render 'icon-accordion', icon: 'help-medium' %}
+                        {% elsif weight_accordion_title == 'bold' %}
+                            {% render 'icon-accordion', icon: 'help-bold' %}
+                        {% endif %}
+                        <span class="tooltip__text color__swatch-tooltip--{{ settings.typography_preset }}">{{ block.settings.info_tooltip }}</span>
+                    </span>
+                {% endif %}
+            </tooltip-component>
+        </label>
+    {% endif %}
+    {% if options.size > 0 %}
+        <div class="select">
+            <select id="Option-{{ block.id }}-{{ forloop.index0 }}"
+            class="select__select input--{{ settings.typography_preset }} {% if block.settings.text_size != 'default' %}{{ block.settings.text_size }}{% else %}{% if settings.typography_preset == 'custom' %}{% if settings.uppercase_body_s %} uppercase{% endif %}{% if settings.bolder_font_body_s %} bolder-font{% endif %}{% endif %}{% endif %}"
+            name="properties[{{ block.settings.option_name }}]"
+            form="{{ product_form_id }}"
+            >
+            {%- for option in options -%}
+                <option class="input--{{ settings.typography_preset }} {% if block.settings.text_size != 'default' %}{{ block.settings.text_size }}{% else %}{% if settings.typography_preset == 'custom' %}{% if settings.uppercase_body_s %} uppercase{% endif %}{% if settings.bolder_font_body_s %} bolder-font{% endif %}{% endif %}{% endif %}" id="{{ block.id }}-{{ block.settings.option_name }}-{{ forloop.index0 }}"
+                    value="{{ option | escape }}" {% if forloop.first %}selected="selected"{% endif %}>
+                    {{- option -}}
+                </option>
+            {%- endfor -%}
+            </select>
+            <div class="select-icon ">
+                {% if weight_accordion_title == 'regular' %}
+                        {% render 'icon', icon: 'close-chevron-regular' %}
+                {% elsif weight_accordion_title == 'medium' %}
+                        {% render 'icon', icon: 'close-chevron-medium' %}
+                {% elsif weight_accordion_title == 'bold' %}
+                        {% render 'icon', icon: 'close-chevron-bold' %}
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+</custom-options>

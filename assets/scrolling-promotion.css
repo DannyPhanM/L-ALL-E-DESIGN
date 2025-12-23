@@ -1,0 +1,286 @@
+.section-scrolling-promotion {
+    max-width: 100%;
+}
+.section-scrolling-promotion--hover {
+    z-index: 4;
+}
+.scrolling-promotion, .scrolling-promotion .promotion, .promotion__item {
+    display: flex;
+    align-items: center;
+}
+.scrolling-promotion {
+    max-width: 100%;
+    overflow-x: clip;
+}
+.scrolling-promotion .promotion {
+    flex: 0 0 auto;
+}
+.promotion__item {
+    position: relative;
+    cursor: default;
+}
+a.promotion__item {
+    cursor: pointer;
+}
+.promotion__item .lazy-image  {
+    aspect-ratio: var(--desktop-asp-rat);
+}
+
+.scrolling-promotion .hover-reveal__inner {
+    display: flex;
+    border-radius: var(--image-radius);
+    -webkit-border-radius: var(--image-radius);
+    overflow: clip;
+    background-color: rgb(var(--layout-background-color));
+}
+.hover-reveal__inner, .hover-reveal__img {
+    position: relative;
+    width: 100%;
+}
+.hover-reveal--hover .hover-reveal__img {
+    height: 100%;
+}
+.ratio-original .hover-reveal__img {
+    width: 100%;
+    height: auto;
+}
+.scrolling-promotion .hover-reveal {
+    display: flex;
+    position: static;
+    width: auto;
+    pointer-events: all;
+    opacity: 1;
+    z-index: 1;
+    margin-inline-end: 24px;
+    align-items: center;
+}
+.scrolling-promotion .hover-reveal.hover-reveal--hover {
+	position: fixed;
+	width: var(--hover-image-width);
+	top: 0;
+	left: 0;
+    height: fit-content;
+	pointer-events: none;
+	opacity: 0;
+    z-index: 7;
+    transition: top calc(var(--animation-duration) / 4) linear, left calc(var(--animation-duration) / 4) linear;
+    margin-inline-end: 0;
+}
+
+.line-top .scrolling-promotion,
+.line-both .scrolling-promotion {
+    border-top: var(--line-width) solid rgba(var(--layout-text-color), var(--line-opacity));
+    padding-top: var(--line-paddings);
+}
+.line-bottom .scrolling-promotion,
+.line-both .scrolling-promotion {
+    border-bottom: var(--line-width) solid rgba(var(--layout-text-color), var(--line-opacity));
+    padding-bottom: var(--line-paddings);
+}
+.image-visible.promotion__item:not(.disabled) .promotion__image {
+    transition: transform calc(var(--animation-duration) / 2) var(--transition-timing-function);
+}
+
+.hover-reveal:not(.hover-reveal--hover) .promotion__image {
+    width: auto;
+}
+
+
+@media (hover: hover) {
+    .promotion__item:not(.disabled):hover {
+        color: rgb(var(--accent-button-color));
+        transition: color var(--animation-duration) var(--transition-timing-function);
+    }
+    .no-default-color .promotion__item:not(.disabled):hover {
+        color: rgba(var(--layout-text-color), 0.7);
+    }
+    .promotion__wrapper .promotion__item:hover .promotion__info {
+        position: relative;
+        z-index: 9;
+    }
+    .image-visible.promotion__item:not(.disabled):hover .promotion__image {
+        transform: scale(1.03);
+        /* will-change: transform; */
+        transition: transform var(--animation-duration) var(--transition-timing-function);
+    }
+}
+
+.hover-reveal--static .promotion__image {
+    min-height: 24px!important;
+}
+.scrolling-promotion .promotion--animated {
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: var(--duration);
+    animation-play-state: running;
+    width: max-content;
+    /* will-change: inset-inline-start, width; */
+    position: relative;
+}
+.scrolling-promotion--left .promotion--animated {
+    animation-name: scrolling-left;
+}
+.scrolling-promotion--right .promotion--animated {
+    animation-name: scrolling-right;
+}
+@media screen and (hover: hover) {
+    scrolling-promotion.scrolling-promotion:hover .promotion--animated {
+      animation-play-state: paused;
+    }
+}
+scrolling-promotion.scrolling-promotion--paused .promotion--animated {
+    animation-play-state: paused;
+}
+
+@keyframes scrolling-left {
+    0% {
+      inset-inline-start: 0;
+      visibility: visible;
+    }
+    100% {
+        inset-inline-start: var(--left-position);
+    }
+}
+
+@keyframes scrolling-right {
+    0% {
+        inset-inline-start: var(--left-position);
+        visibility: visible;
+    }
+    100% {
+        inset-inline-start: 0;
+    }
+} 
+
+.promotion__item {
+    padding: 0 calc(var(--gap-items) / 2);
+}
+.promotion__text--mobile {
+    display: none; 
+}
+
+/* Styles for full-width page without sidebars */
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .promotion__text--mobile,
+    .promotion__text--desktop.promotion__text--all {
+        display: block;
+    }
+    .promotion__text--desktop {
+        display: none;
+    }
+    .scrolling-promotion {
+        overflow-x: clip;
+    }
+    @keyframes scrolling-left {
+        0% {
+          transform: translateX(0);
+          visibility: visible;
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+    }
+    
+    @keyframes scrolling-right {
+        0% {
+            transform: translateX(-100%);
+            visibility: visible;
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+}
+/* Sidebars: Main XS,S,M and white space Spacious */
+/* Mobile */
+@media screen and (max-width: 1048px) and (min-width: 921px) {
+    .main_xs--spacious .promotion__text--mobile,
+    .main_xs--spacious .promotion__text--desktop.promotion__text--all,
+    .main_s--spacious .promotion__text--mobile,
+    .main_s--spacious .promotion__text--desktop.promotion__text--all,
+    .main_m--spacious .promotion__text--mobile,
+    .main_m--spacious .promotion__text--desktop.promotion__text--all {
+        display: block;
+    }
+    .main_xs--spacious .promotion__text--desktop,
+    .main_s--spacious .promotion__text--desktop,
+    .main_m--spacious .promotion__text--desktop {
+        display: none;
+    }
+}
+/* Sidebars: Main XS,S and white space Compact */
+/* Mobile */
+@media screen and (max-width: 968px) and (min-width: 921px) {
+    .main_xs--compact .promotion__text--mobile,
+    .main_xs--compact .promotion__text--desktop.promotion__text--all,
+    .main_s--compact .promotion__text--mobile,
+    .main_s--compact .promotion__text--desktop.promotion__text--all {
+        display: block;
+    }
+    .main_s--compact .promotion__text--desktop,
+    .main_s--compact .promotion__text--desktop {
+        display: none;
+    }
+}
+/* Sidebars: Main XS,S with secondary and white space Spacious */
+/* Mobile */
+@media screen and (max-width: 1144px) and (min-width: 921px) {
+    .main_xs_with_secondary--spacious .promotion__text--mobile,
+    .main_xs_with_secondary--spacious .promotion__text--desktop.promotion__text--all,
+    .main_s_with_secondary--spacious .promotion__text--mobile,
+    .main_s_with_secondary--spacious .promotion__text--desktop.promotion__text--all {
+        display: block;
+    }
+    .main_xs_with_secondary--spacious .promotion__text--desktop,
+    .main_s_with_secondary--spacious .promotion__text--desktop {
+        display: none;
+    }
+}
+/* Sidebars: Main XS,S with secondary and white space Compact */
+/* Mobile */
+@media screen and (max-width: 1064px) and (min-width: 921px) {
+    .main_xs_with_secondary--compact .promotion__text--mobile,
+    .main_xs_with_secondary--compact .promotion__text--desktop.promotion__text--all,
+    .main_s_with_secondary--compact .promotion__text--mobile,
+    .main_s_with_secondary--compact .promotion__text--desktop.promotion__text--all {
+        display: block;
+    }
+    .main_xs_with_secondary--compact .promotion__text--desktop,
+    .main_s_with_secondary--compact .promotion__text--desktop {
+        display: none;
+    }
+}
+/* Sidebars: Main M and white space Compact */
+/* Mobile */
+@media screen and (max-width: 1024px) and (min-width: 921px) {
+    .main_m--compact .promotion__text--mobile,
+    .main_m--compact .promotion__text--desktop.promotion__text--all{
+        display: block;
+    }
+    .main_m--compact .promotion__text--desktop {
+        display: none;
+    }
+}
+/* Sidebars: Main M with secondary */
+/* Mobile */
+@media screen and (max-width: 1152px) and (min-width: 921px) {
+    .main_m_with_secondary .promotion__text--mobile,
+    .main_m_with_secondary .promotion__text--desktop.promotion__text--all {
+        display: block;
+    }
+    .main_m_with_secondary .promotion__text--desktop {
+        display: none;
+    }
+}
+/* Sidebars: Main L */
+/* Mobile */
+@media screen and (max-width: 1536px) and (min-width: 921px) {
+    .main_l .promotion__text--mobile,
+    .main_l .promotion__text--desktop.promotion__text--all {
+        display: block;
+    }
+    .main_l .promotion__text--desktop {
+        display: none;
+    }
+}

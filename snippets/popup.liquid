@@ -1,0 +1,620 @@
+{% if popup_settings.page != blank or popup_settings.text != blank %}
+      <modal-opener
+        class="product-popup-modal__opener no-js-hidden quick-add-hidden popup{% if product_block %} section-block{% endif %}"
+        {% if product_block %}style="--spacing: {{ popup_settings.top_spacing }}; --mobile-spacing: {{ popup_settings.mobile_top_spacing }};"{% endif %}
+        data-modal="#PopupModal-{{ block.id }}"
+        {{ block.shopify_attributes }}
+      >
+      {% style %}
+        .popup__icon {
+            height: {{ 24 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+        }
+        .heading_s .popup__icon,
+        .heading_s_uppercase .popup__icon {
+          height: {{ 46 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px;
+        }
+        .heading_xs .popup__icon,
+        .heading_xs_uppercase .popup__icon {
+          height: {{ 36 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px;
+        }
+        .body_l .popup__icon,
+        .body_l_uppercase .popup__icon {
+            height: {{ 28 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+        }
+        .body_m .popup__icon,
+        .body_m_uppercase .popup__icon {
+            height: {{ 26 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+        }
+        .label_font .popup__icon,
+        .label_font_uppercase .popup__icon {
+            height: {{ 16 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+        }
+        .custom-type-preset .popup__icon {
+          height: max(24px, calc(var(--body-s-font-size) * var(--body-s-line-height)));
+        }
+        .custom-type-preset .heading_s .popup__icon,
+        .custom-type-preset .heading_s_uppercase .popup__icon {
+          height: max(16px, calc(var(--heading-s-font-size) * var(--heading-s-line-height)));	
+        }
+        .custom-type-preset .heading_xs .popup__icon,
+        .custom-type-preset .heading_xs_uppercase .popup__icon {
+          height: max(16px, calc(var(--heading-xs-font-size) * var(--heading-xs-line-height)));	
+        }
+        .custom-type-preset .body_l .popup__icon,
+        .custom-type-preset .body_l_uppercase .popup__icon {
+            height: max(16px, calc(var(--body-l-font-size) * var(--body-l-line-height)));
+        }
+        .custom-type-preset .body_m .popup__icon,
+        .custom-type-preset .body_m_uppercase .popup__icon {
+            height: max(16px, calc(var(--body-m-font-size) * var(--body-m-line-height)));
+        }
+        .custom-type-preset .label_font .popup__icon,
+        .custom-type-preset .label_font_uppercase .popup__icon {
+            height: max(16px, calc(var(--label-font-size) * var(--label-line-height)));
+        }
+        @media screen and (max-width: 920px) {
+          .popup__icon {
+            height: {{ 24 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+          }
+          .heading_s .popup__icon,
+          .heading_s_uppercase .popup__icon {
+            height: {{ 46 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px;
+          }
+          .heading_xs .popup__icon,
+          .heading_xs_uppercase .popup__icon {
+            height: {{ 36 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px;
+          }
+          .body_l .popup__icon,
+          .body_l_uppercase .popup__icon {
+              height: {{ 28 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+          }
+          .body_m .popup__icon,
+          .body_m_uppercase .popup__icon {
+              height: {{ 26 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+          }
+          .label_font .popup__icon,
+          .label_font_uppercase .popup__icon {
+              height: {{ 16 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+          }
+        }
+  {% endstyle %}
+
+      {%- liquid 
+          if settings.typography_preset == 'avant_garde'
+            assign weight = settings.accent_icon_weight
+            if settings.swap_fonts
+                assign weight = settings.base_icon_weight
+            endif
+        else 
+            assign weight =  settings.base_icon_weight
+            if settings.swap_fonts
+                assign weight = settings.accent_icon_weight
+            endif
+        endif
+        if settings.typography_preset == 'custom'
+        assign weight = settings.custom_icon_weight
+      endif
+      -%}
+      
+        <button aria-haspopup="dialog" type="button" id="ProductPopup-{{ block.id }}" class="popup-button hover-opacity open-popup popup-button--{{ settings.typography_preset }} {% if block.settings.link_size != 'default' %}{{ block.settings.link_size }}{% else %}{% if settings.typography_preset == 'custom' %}{% if settings.uppercase_body_s %} uppercase{% endif %}{% if settings.bolder_font_body_s %} bolder-font{% endif %}{% endif %}{% endif %}">
+          {% unless popup_settings.icon == 'none' %}
+          <div class="popup__icon popup__icon--{{ settings.typography_preset }}">
+                  {% if popup_settings.icon == 'arrow_down' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'arrow-down-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'arrow-down-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'arrow-down-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'arrow_left' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'arrow-left-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'arrow-left-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'arrow-left-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'arrow_right' %}       
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'arrow-right-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'arrow-right-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'arrow-right-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'arrow_up' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'arrow-up-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'arrow-up-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'arrow-up-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'bank' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'bank-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'bank-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'bank-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'bank_card' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'bank-card-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'bank-card-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'bank-card-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'bill' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'bill-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'bill-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'bill-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'bottle' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'bottle-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'bottle-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'bottle-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'chat' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'chat-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'chat-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'chat-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'chat_empty' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'chat-empty-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'chat-empty-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'chat-empty-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'checked_box' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'checked-box-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'checked-box-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'checked-box-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'checkmark' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'checkmark-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'checkmark-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'checkmark-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'close' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'close-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'close-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'close-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'clothes' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'clothes-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'clothes-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'clothes-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'clothes_hanger' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'clothes-hanger-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'clothes-hanger-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'clothes-hanger-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'copy' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'copy-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'copy-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'copy-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'cotton' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'cotton-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'cotton-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'cotton-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'envelope' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'envelope-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'envelope-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'envelope-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'eye' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon', icon: 'eye-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon', icon: 'eye-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon', icon: 'eye-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'globe' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'globe-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'globe-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'globe-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'hand_washing' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'hand-washing-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'hand-washing-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'hand-washing-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'heart' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'heart-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'heart-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'heart-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'help' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'help-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'help-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'help-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'laundry_dryer' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'laundry-dryer-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'laundry-dryer-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'laundry-dryer-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'laundry_washer' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'laundry-washer-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'laundry-washer-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'laundry-washer-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'layers' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'layers-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'layers-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'layers-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'leaf' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'leaf-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'leaf-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'leaf-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'link' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'link-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'link-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'link-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'lipstick' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'lipstick-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'lipstick-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'lipstick-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'loop' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'loop-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'loop-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'loop-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'measuring_tape' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'measuring-tape-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'measuring-tape-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'measuring-tape-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'model_silhouette' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'model-silhouette-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'model-silhouette-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'model-silhouette-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'money_bills' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'money-bills-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'money-bills-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'money-bills-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'moving_truck' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'moving-truck-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'moving-truck-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'moving-truck-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'package_closed' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'package-closed-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'package-closed-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'package-closed-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'package_open' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'package-open-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'package-open-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'package-open-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'padlock' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'padlock-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'padlock-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'padlock-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'paper_airplane' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'paper-airplane-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'paper-airplane-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'paper-airplane-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'paw_print' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'paw-print-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'paw-print-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'paw-print-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'pencil' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'pencil-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'pencil-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'pencil-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'planet' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'planet-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'planet-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'planet-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'plant' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'plant-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'plant-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'plant-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'play' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'play-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'play-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'play-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'price_tag' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'price-tag-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'price-tag-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'price-tag-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'question_mark' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'question-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'question-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'question-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'recycled_symbol' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'recycled-symbol-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'recycled-symbol-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'recycled-symbol-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'ruler' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion', icon: 'ruler-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion', icon: 'ruler-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion', icon: 'ruler-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'scissors' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion-2', icon: 'scissors-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion-2', icon: 'scissors-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion-2', icon: 'scissors-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'search' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon', icon: 'search-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon', icon: 'search-medium' %}
+                      {% elsif _weight == 'bold' %}
+                        {% render 'icon', icon: 'search-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'security_badge' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion-2', icon: 'security-badge-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion-2', icon: 'security-badge-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion-2', icon: 'security-badge-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'settings' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon', icon: 'filter-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon', icon: 'filter-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon', icon: 'filter-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'share' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion-2', icon: 'share-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion-2', icon: 'share-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion-2', icon: 'share-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'shopping_cart' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon', icon: 'cart-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon', icon: 'cart-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon', icon: 'cart-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'stiletto' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion-2', icon: 'stiletto-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion-2', icon: 'stiletto-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion-2', icon: 'stiletto-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'stop_watch' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion-2', icon: 'stop-watch-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion-2', icon: 'stop-watch-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion-2', icon: 'stop-watch-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'sunflower' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion-2', icon: 'sunflower-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion-2', icon: 'sunflower-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion-2', icon: 'sunflower-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 't_shirt' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion-2', icon: 't-shirt-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion-2', icon: 't-shirt-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion-2', icon: 't-shirt-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'trash' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion-2', icon: 'trash-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion-2', icon: 'trash-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion-2', icon: 'trash-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'truck' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion-2', icon: 'truck-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion-2', icon: 'truck-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion-2', icon: 'truck-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'user' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon', icon: 'account-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon', icon: 'account-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon', icon: 'account-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'washing_symbol' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion-2', icon: 'washing-symbol-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion-2', icon: 'washing-symbol-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion-2', icon: 'washing-symbol-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'water_bottle' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion-2', icon: 'water-bottle-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion-2', icon: 'water-bottle-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion-2', icon: 'water-bottle-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'zoom_in' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion-2', icon: 'zoom-in-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion-2', icon: 'zoom-in-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion-2', icon: 'zoom-in-bold' %}
+                      {% endif %}
+                  {% elsif popup_settings.icon == 'zoom_out' %}
+                      {% if weight == 'regular' %}
+                        {% render 'icon-accordion-2', icon: 'zoom-out-regular' %}
+                      {% elsif weight == 'medium' %}
+                        {% render 'icon-accordion-2', icon: 'zoom-out-medium' %}
+                      {% elsif weight == 'bold' %}
+                        {% render 'icon-accordion-2', icon: 'zoom-out-bold' %}
+                      {% endif %}
+                  {% endif %}
+          </div>
+          {% endunless %}
+          {{ popup_settings.link_text }}
+        </button>
+      </modal-opener>
+{% endif %}

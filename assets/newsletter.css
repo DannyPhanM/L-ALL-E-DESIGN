@@ -1,0 +1,289 @@
+.subheading.error-color {
+    color: rgb(var(--error-color));
+}
+.subheading.success-color {
+    color: rgb(var(--success-color));
+}
+.newsletter:not(.color-default) .subheading.error-color,
+.newsletter:not(.color-default) .subheading.success-color  {
+    color: rgb(var(--layout-text-color));
+}
+
+.newsletter .subheading {
+    margin-bottom: 8px;
+}
+.newsletter .subheading[autofocus] {
+    outline: none;
+}
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: var(--newsletter-vertical-alignment);
+    align-items: var(--newsletter-horizontal-alignment);
+    color: rgb(var(--layout-text-color));
+    width: 360px;
+    max-width: 100%;
+}
+
+.newsletter-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: var(--newsletter-vertical-alignment);
+    align-items: var(--newsletter-horizontal-alignment);
+}
+
+.newsletter-container--center .newsletter__text {
+    text-align: center;
+}
+.newsletter-form,
+.newsletter-container--3.newsletter-container--short .newsletter__form,
+.newsletter-container--2.newsletter-container--short .newsletter__form,
+.newsletter-container--3.newsletter-container--short .newsletter,
+.newsletter-container--2.newsletter-container--short .newsletter,
+.newsletter-container .newsletter__form,
+.newsletter-container--main-sidebar .newsletter {
+    width: 100%;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: var(--newsletter-horizontal-alignment);
+}
+
+.newsletter__form + .field--checkbox {
+    margin-top: 24px;
+}
+
+.shopify-section:not(.main-sidebar-section) .newsletter .scroll-color input[type=checkbox],
+.shopify-section.main-sidebar-section .main-sidebar:not(.overlap-slide-out-menu-opened) .newsletter .scroll-color input[type=checkbox] {
+    border-color: rgb(var(--layout-text-color))
+}
+
+.shopify-section:not(.main-sidebar-section) .newsletter .scroll-color input[type=checkbox]:checked:after,
+.shopify-section.main-sidebar-section .main-sidebar:not(.overlap-slide-out-menu-opened) .newsletter .scroll-color input[type=checkbox]:checked:after {
+    background-color: rgb(var(--layout-background-color));
+}
+
+.newsletter__form {
+    max-width: 360px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    border-bottom: 2px solid rgb(var(--layout-text-color));
+}
+
+.newsletter__text {
+    max-width: 360px;
+}
+
+.newsletter__field {
+    width: 100%;
+    min-height: 42px;
+}
+
+.newsletter__field-icon {
+    height: 100%;
+    cursor: pointer;
+}
+
+.newsletter__field-icon svg {
+    fill: rgb(var(--layout-text-color));
+    height: 100%;
+    width: auto;
+}
+
+.newsletter__text a {
+    color: rgb(var(--accent-button-color));
+    /* will-change: opacity; */
+    transition: opacity var(--animation-duration) var(--transition-timing-function);
+}
+
+.shopify-section:not(.main-sidebar-section) .scroll-color.newsletter__text a,
+.shopify-section.main-sidebar-section .main-sidebar:not(.overlap-slide-out-menu-opened) .scroll-color.newsletter__text a {
+    color: rgb(var(--layout-text-color));
+
+}
+
+.newsletter .no-default-color .richtext a {
+    transition: none;
+}
+
+@media (hover: hover) {
+    .newsletter__text a:hover {
+        opacity: .7;
+    }
+}
+.newsletter__title {
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    text-align: var(--newsletter-horizontal-alignment);
+}
+
+.newsletter__field,
+.shopify-section:not(.main-sidebar-section) .newsletter__title.scroll-color, 
+.shopify-section:not(.main-sidebar-section) .newsletter__text.scroll-color,
+.shopify-section.main-sidebar-section .main-sidebar:not(.overlap-slide-out-menu-opened) .newsletter__title.scroll-color, 
+.shopify-section.main-sidebar-section .main-sidebar:not(.overlap-slide-out-menu-opened) .newsletter__text.scroll-color {
+    color: rgb(var(--layout-text-color));
+}
+
+.newsletter__field::placeholder {
+    color: rgb(var(--layout-text-color));
+    opacity: .5;
+}
+
+.newsletter-container--2.newsletter-container--medium,
+.newsletter-container--2.newsletter-container--wide,
+.newsletter-container--3.newsletter-container--medium {
+    grid-column: span 2;
+}
+
+.newsletter-container--3.newsletter-container--wide {
+    grid-column: span 3;
+}
+
+.newsletter-container--1.newsletter-container--short .newsletter,
+.newsletter-container--1.newsletter-container--medium .newsletter,
+.newsletter-container--1.newsletter-container--wide .newsletter {
+    width: 100%;
+    max-width: 360px;
+}
+
+.newsletter-container {
+    flex-direction: column;
+}
+
+.newsletter-container--menu-drawer.newsletter-container--space-between,
+.newsletter-container--footer.newsletter-container--space-between {
+    align-items: center;
+}
+
+.newsletter-container--center .richtext ul,
+.newsletter-container--center .richtext ol {
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+}
+
+/* Fonts */
+
+.newsletter__title--minimal_uppercase,
+.newsletter__field--minimal_uppercase .newsletter__field::placeholder,
+.newsletter__field--minimal_uppercase {
+    font: var(--base-body-s-font);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.newsletter__title--minimal_basic,
+.newsletter__title--classic,
+.newsletter__title--avant_garde {
+    font: var(--base-label-font);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.newsletter__title--minimal_heavy,
+.newsletter .subheading--minimal_heavy {
+    font: var(--base-heading-xs-font);
+}
+.newsletter__title--contrast,
+.newsletter__text--brutalist,
+.newsletter__text--duet {
+    font: var(--accent-heading-xs-font);
+}
+
+.newsletter__title--brutalist,
+.newsletter__field--brutalist .newsletter__field::placeholder,
+.newsletter__field--brutalist {
+    font: var(--base-body-l-font);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.newsletter__title--duet,
+.newsletter .subheading--classic,
+.newsletter .subheading--contrast {
+    font: var(--accent-body-l-font);
+}
+
+.newsletter__field--minimal_basic .newsletter__field::placeholder,
+.newsletter__field--minimal_basic,
+.newsletter__field--classic .newsletter__field::placeholder,
+.newsletter__field--classic,
+.newsletter .subheading--minimal_uppercase {
+    font: var(--base-body-s-font);
+}
+
+.newsletter__field--minimal_heavy .newsletter__field::placeholder,
+.newsletter__field--minimal_heavy,
+.newsletter__text--minimal_heavy,
+.newsletter .subheading--brutalist {
+    font: var(--base-body-l-font);
+}
+
+.newsletter__field--avant_garde .newsletter__field::placeholder,
+.newsletter__field--avant_garde {
+    font: var(--accent-body-s-font);
+}
+
+.newsletter__field--contrast .newsletter__field::placeholder,
+.newsletter__field--contrast {
+    font: var(--base-label-font);
+}
+
+.newsletter__field--duet .newsletter__field::placeholder,
+.newsletter__field--duet,
+.newsletter__text--minimal_uppercase,
+.newsletter__text--minimal_basic,
+.newsletter__text--classic,
+.newsletter__text--contrast,
+.newsletter .subheading--minimal_basic,
+.newsletter .subheading--avant_garde {
+    font: var(--base-body-m-font);
+}
+
+.newsletter__text--avant_garde,
+.newsletter .subheading--duet {
+    font: var(--accent-body-m-font);
+}
+
+.newsletter .subheading--custom,
+.newsletter__title--custom,
+.newsletter__field--custom,
+.newsletter__field--custom::placeholder {
+    font: var(--body-s-font);
+    letter-spacing: var(--body-s-letter-spacing);
+}
+
+.newsletter__field--custom.uppercase::placeholder {
+    text-transform: uppercase;
+}
+.newsletter__field--custom.bolder-font::placeholder {
+    font-weight: bold;
+}
+
+.newsletter__text--custom {
+    font: var(--label-font);
+    letter-spacing: var(--label-letter-spacing);
+}
+
+@media screen and (max-width: 768px) {
+    .newsletter-container--1.newsletter-container--short .newsletter,
+    .newsletter-container--1.newsletter-container--medium .newsletter {
+        width: 100%;
+    } 
+}
+
+@media screen and (max-width: 500px) {
+    .newsletter__form,
+    .newsletter__text {
+        max-width: 100%;
+        width: 100%;
+    }
+}

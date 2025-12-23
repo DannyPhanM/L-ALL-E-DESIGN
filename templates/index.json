@@ -1,0 +1,433 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "68cfae61-0ab2-4c3d-b51a-004ac5bd258b": {
+      "type": "slideshow-with-media",
+      "blocks": {
+        "image_slide_aUi8kp": {
+          "type": "image_slide",
+          "settings": {
+            "block_link": "shopify://collections/all",
+            "block_target_blank": false,
+            "desktop_image": "shopify://shop_images/banner_hero2.jpg",
+            "mobile_image": "shopify://shop_images/543362100_1202849878546278_7498736316341031551_n.jpg",
+            "fill_content": false,
+            "overlay_color": "#000000",
+            "overlay_gradient": "",
+            "overlay_opacity": 10,
+            "center_text": false,
+            "vertical_content_position": "end",
+            "horizontal_content_position": "center",
+            "narrow_content": true,
+            "context_image_width": 120,
+            "image_ratio": "original",
+            "context_image_radius": "default",
+            "context_image_link": "",
+            "context_image_target_blank": false,
+            "subheading": "",
+            "heading": "",
+            "text": "",
+            "dim_text": false,
+            "button_label_1": "",
+            "button_link_1": "",
+            "target_blank_1": false,
+            "button_style_1": "link",
+            "button_label_2": "",
+            "button_link_2": "#",
+            "target_blank_2": false,
+            "button_style_2": "link",
+            "countdown_enable": false,
+            "countdown_end_date": "2024-12-15",
+            "countdown_end_time": "23:59",
+            "countdown_expiration_action": "hide_timer",
+            "countdown_complete_message": "",
+            "countdown_text": "base",
+            "countdown_text_size": "heading_m",
+            "countdown_text_color": "#000000",
+            "countdown_show_background": true,
+            "countdown_background_color": "#e8e8e8",
+            "countdown_background_gradient": "linear-gradient(180deg, rgba(235, 235, 235, 1), rgba(255, 255, 255, 1) 100%)",
+            "countdown_corner_radius": 2,
+            "countdown_show_outline": true,
+            "countdown_outline_color": "#dcdcdc",
+            "countdown_show_labels": true,
+            "countdown_labels_color": "#b9b9b9",
+            "countdown_enable_animation": true,
+            "subheading_size": "default",
+            "subheading_tag": "p",
+            "heading_size": "heading_l_uppercase",
+            "heading_tag": "h2",
+            "main_text_size": "default"
+          }
+        },
+        "image_slide_bQTmT7": {
+          "type": "image_slide",
+          "settings": {
+            "block_link": "shopify://collections/all",
+            "block_target_blank": false,
+            "desktop_image": "shopify://shop_images/banner_hero.jpg",
+            "mobile_image": "shopify://shop_images/543362100_1202849878546278_7498736316341031551_n.jpg",
+            "fill_content": false,
+            "overlay_color": "#000000",
+            "overlay_gradient": "",
+            "overlay_opacity": 10,
+            "center_text": false,
+            "vertical_content_position": "end",
+            "horizontal_content_position": "center",
+            "narrow_content": true,
+            "context_image_width": 120,
+            "image_ratio": "original",
+            "context_image_radius": "default",
+            "context_image_link": "",
+            "context_image_target_blank": false,
+            "subheading": "",
+            "heading": "",
+            "text": "",
+            "dim_text": false,
+            "button_label_1": "",
+            "button_link_1": "",
+            "target_blank_1": false,
+            "button_style_1": "link",
+            "button_label_2": "",
+            "button_link_2": "#",
+            "target_blank_2": false,
+            "button_style_2": "link",
+            "countdown_enable": false,
+            "countdown_end_date": "2024-12-15",
+            "countdown_end_time": "23:59",
+            "countdown_expiration_action": "hide_timer",
+            "countdown_complete_message": "",
+            "countdown_text": "base",
+            "countdown_text_size": "heading_m",
+            "countdown_text_color": "#000000",
+            "countdown_show_background": true,
+            "countdown_background_color": "#e8e8e8",
+            "countdown_background_gradient": "linear-gradient(180deg, rgba(235, 235, 235, 1), rgba(255, 255, 255, 1) 100%)",
+            "countdown_corner_radius": 2,
+            "countdown_show_outline": true,
+            "countdown_outline_color": "#dcdcdc",
+            "countdown_show_labels": true,
+            "countdown_labels_color": "#b9b9b9",
+            "countdown_enable_animation": true,
+            "subheading_size": "default",
+            "subheading_tag": "p",
+            "heading_size": "heading_l_uppercase",
+            "heading_tag": "h2",
+            "main_text_size": "default"
+          }
+        },
+        "template--18483371475218__68cfae61-0ab2-4c3d-b51a-004ac5bd258b-1681990871ddb39b7e-0": {
+          "type": "image_slide",
+          "settings": {
+            "block_link": "shopify://collections/all",
+            "block_target_blank": false,
+            "desktop_image": "shopify://shop_images/banner_hero3.jpg",
+            "mobile_image": "shopify://shop_images/543362100_1202849878546278_7498736316341031551_n.jpg",
+            "fill_content": false,
+            "overlay_color": "#000000",
+            "overlay_gradient": "",
+            "overlay_opacity": 10,
+            "center_text": false,
+            "vertical_content_position": "end",
+            "horizontal_content_position": "center",
+            "narrow_content": true,
+            "context_image_width": 120,
+            "image_ratio": "original",
+            "context_image_radius": "default",
+            "context_image_link": "",
+            "context_image_target_blank": false,
+            "subheading": "",
+            "heading": "",
+            "text": "",
+            "dim_text": false,
+            "button_label_1": "",
+            "button_link_1": "",
+            "target_blank_1": false,
+            "button_style_1": "link",
+            "button_label_2": "",
+            "button_link_2": "#",
+            "target_blank_2": false,
+            "button_style_2": "link",
+            "countdown_enable": false,
+            "countdown_end_date": "2024-12-15",
+            "countdown_end_time": "23:59",
+            "countdown_expiration_action": "hide_timer",
+            "countdown_complete_message": "",
+            "countdown_text": "base",
+            "countdown_text_size": "heading_m",
+            "countdown_text_color": "#000000",
+            "countdown_show_background": true,
+            "countdown_background_color": "#e8e8e8",
+            "countdown_background_gradient": "linear-gradient(180deg, rgba(235, 235, 235, 1), rgba(255, 255, 255, 1) 100%)",
+            "countdown_corner_radius": 2,
+            "countdown_show_outline": true,
+            "countdown_outline_color": "#dcdcdc",
+            "countdown_show_labels": true,
+            "countdown_labels_color": "#b9b9b9",
+            "countdown_enable_animation": true,
+            "subheading_size": "default",
+            "subheading_tag": "p",
+            "heading_size": "heading_l_uppercase",
+            "heading_tag": "h2",
+            "main_text_size": "default"
+          }
+        }
+      },
+      "block_order": [
+        "image_slide_aUi8kp",
+        "image_slide_bQTmT7",
+        "template--18483371475218__68cfae61-0ab2-4c3d-b51a-004ac5bd258b-1681990871ddb39b7e-0"
+      ],
+      "settings": {
+        "desktop_height": 100,
+        "mobile_height": 90,
+        "section_width": "overlap",
+        "controls": "classic_arrows",
+        "fill_controls": false,
+        "enable_autoplay": true,
+        "autoplay_speed": 5,
+        "color_type": "invert",
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "desktop_padding_top": 24,
+        "desktop_padding_bottom": 0,
+        "mobile_padding_top": -12,
+        "mobile_padding_bottom": 0
+      }
+    },
+    "featured_collection_tabs_DrKmCz": {
+      "type": "featured-collection-tabs",
+      "blocks": {
+        "collection_mQ6hWD": {
+          "type": "collection",
+          "settings": {
+            "collection": "a-poem-title-spring",
+            "custom_tab_heading": "NEW ARRIVALS"
+          }
+        },
+        "collection_hzcLtQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "a-poem-title-spring",
+            "custom_tab_heading": "BEST SELLERS"
+          }
+        }
+      },
+      "block_order": [
+        "collection_mQ6hWD",
+        "collection_hzcLtQ"
+      ],
+      "name": "t:sections.featured-collection-tabs.name",
+      "settings": {
+        "items_per_batch": 4,
+        "infinite_scroll": "disable",
+        "media_style": "hide",
+        "subheading": "",
+        "heading": "",
+        "tab_heading_size": "default",
+        "center_text": true,
+        "max_columns": "4",
+        "mobile_layout": "2",
+        "image_ratio": "original",
+        "focal_point": "center center",
+        "image_radius": "0px",
+        "subheading_size": "default",
+        "subheading_tag": "h3",
+        "heading_size": "default",
+        "heading_tag": "h2",
+        "card_image_ratio": "original",
+        "card_focal_point": "center center",
+        "hover_behavior": "slider",
+        "show_bullets": true,
+        "enable_add_to_cart": false,
+        "enable_quick_view": true,
+        "price_position": "bottom",
+        "show_vendor": false,
+        "max_product_name_characters": 100,
+        "show_rating": true,
+        "show_short_description": false,
+        "enable_color_pills": true,
+        "show_pickup_availability": false,
+        "color_type": "default",
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0
+      }
+    },
+    "shoppable_media_slider_awjHbw": {
+      "type": "shoppable-media-slider",
+      "blocks": {
+        "product_L7RJDm": {
+          "type": "product",
+          "settings": {
+            "product": "mystique-hooded-lace-evening-gown",
+            "image": "shopify://shop_images/anh_san_pham_7b93fc4d-b41c-49fb-ad9c-9e92c2097fd9.jpg"
+          }
+        },
+        "product_XXiXrg": {
+          "type": "product",
+          "settings": {
+            "product": "mystique-hooded-lace-evening-gown",
+            "image": "shopify://shop_images/anh_san_pham_7b93fc4d-b41c-49fb-ad9c-9e92c2097fd9.jpg"
+          }
+        },
+        "product_QmWRp6": {
+          "type": "product",
+          "settings": {
+            "product": "mystique-hooded-lace-evening-gown",
+            "image": "shopify://shop_images/anh_san_pham_7b93fc4d-b41c-49fb-ad9c-9e92c2097fd9.jpg"
+          }
+        },
+        "product_cRgnHn": {
+          "type": "product",
+          "settings": {
+            "product": "mystique-hooded-lace-evening-gown",
+            "image": "shopify://shop_images/anh_san_pham_7b93fc4d-b41c-49fb-ad9c-9e92c2097fd9.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "product_L7RJDm",
+        "product_XXiXrg",
+        "product_QmWRp6",
+        "product_cRgnHn"
+      ],
+      "disabled": true,
+      "name": "t:sections.shoppable-media-slider.name",
+      "settings": {
+        "heading": "OUR STANDING",
+        "heading_size": "heading_m_uppercase",
+        "heading_tag": "h4",
+        "center_text": true,
+        "center_slides": true,
+        "media_ratio": "vertical",
+        "media_radius": "default",
+        "enable_pause": true,
+        "enable_mute": true,
+        "image_ratio": "original",
+        "focal_point": "center center",
+        "show_vendor": false,
+        "show_price": true,
+        "enable_add_to_cart_button": true,
+        "max_product_name_characters": 100,
+        "color_type": "default",
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "desktop_padding_top": 32,
+        "desktop_padding_bottom": 32,
+        "mobile_padding_top": 32,
+        "mobile_padding_bottom": 32
+      }
+    },
+    "banner_grid_hqN9h4": {
+      "type": "banner-grid",
+      "blocks": {
+        "image_ejkfbP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/11-featurecollection.jpg",
+            "link": "",
+            "target_blank": false,
+            "banner_size": "big_square",
+            "overlay_color": "#000000",
+            "overlay_gradient": "",
+            "overlay_opacity": 15,
+            "heading": "AW COLLECTION 25",
+            "heading_size": "default",
+            "button_label": "Discover",
+            "show_button_on_mobile": true,
+            "button_style": "outlined",
+            "center_text": true,
+            "vertical_content_position": "space-between",
+            "narrow_content": true,
+            "color_type": "invert",
+            "background_color": "#ffffff",
+            "text_color": "#000000"
+          }
+        },
+        "image_BdXbqY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/12-featurecollection.jpg",
+            "link": "",
+            "target_blank": false,
+            "banner_size": "big_square",
+            "overlay_color": "#000000",
+            "overlay_gradient": "",
+            "overlay_opacity": 15,
+            "heading": "AW COLLECTION 25",
+            "heading_size": "default",
+            "button_label": "Discover",
+            "show_button_on_mobile": true,
+            "button_style": "outlined",
+            "center_text": true,
+            "vertical_content_position": "space-between",
+            "narrow_content": true,
+            "color_type": "invert",
+            "background_color": "#ffffff",
+            "text_color": "#000000"
+          }
+        },
+        "loop_video_4YpYbP": {
+          "type": "loop_video",
+          "settings": {
+            "video_load": "shopify://files/videos/video tổng.mp4",
+            "link": "",
+            "target_blank": false,
+            "banner_size": "wide",
+            "overlay_color": "#000000",
+            "overlay_gradient": "",
+            "overlay_opacity": 15,
+            "heading": "AW COLLECTION 24",
+            "heading_size": "default",
+            "button_label": "Discover",
+            "show_button_on_mobile": true,
+            "button_style": "outlined",
+            "center_text": true,
+            "vertical_content_position": "space-between",
+            "narrow_content": true,
+            "color_type": "invert",
+            "background_color": "#ffffff",
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_ejkfbP",
+        "image_BdXbqY",
+        "loop_video_4YpYbP"
+      ],
+      "name": "t:sections.banner-grid.name",
+      "settings": {
+        "content_on_hover": false,
+        "grid_gap": 2,
+        "mobile_grid_gap": 2,
+        "section_width": "wide",
+        "image_radius": "0px",
+        "color_type": "default",
+        "background_color": "#ffffff",
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 60,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "68cfae61-0ab2-4c3d-b51a-004ac5bd258b",
+    "featured_collection_tabs_DrKmCz",
+    "shoppable_media_slider_awjHbw",
+    "banner_grid_hqN9h4"
+  ]
+}

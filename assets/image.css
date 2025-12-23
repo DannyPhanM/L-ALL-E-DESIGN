@@ -1,0 +1,96 @@
+.image {
+    overflow: clip;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--context-image-radius);
+    -webkit-border-radius: var(--context-image-radius);
+}
+
+.image__item {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: var(--focal-point);
+}
+
+.footer .image-container .image,
+.menu-drawer .image-container .image,
+.ratio-original .image__item {
+    height: fit-content;
+    max-height: 100%;
+}
+
+.footer .image-container,
+.menu-drawer .image-container {
+    display: flex;
+    justify-content: var(--image-horizontal-alignment);
+    align-items: var(--image-vertical-alignment);
+}
+
+.image-container .lazy-image {
+    height: 100%;
+}
+
+.image-container--2.image-container--medium,
+.image-container--2.image-container--wide,
+.image-container--3.image-container--medium {
+    grid-column: span 2;
+}
+
+.image-container--3.image-container--wide {
+    grid-column: span 3;
+}
+
+.image-container--1.image-container--short .image {
+    width: calc(100% / 3);
+}
+
+.image-container--1.image-container--medium .image {
+    width: calc(100% / 3 * 2);
+}
+
+.image-container--width .image__item,
+.image-container--width .placeholder-svg {
+    max-width: 100%;
+    width: var(--block-image-width);
+}
+
+.image-container {
+    display: flex;
+    justify-content: var(--image-alignment);
+}
+
+.image-container.image-container--width {
+    width: fit-content;
+}
+
+.image-block {
+    display: flex;
+    width: fit-content;
+}
+
+.image img, .image .placeholder-svg {
+    border-radius: var(--context-image-radius);
+    -webkit-border-radius: var(--context-image-radius);
+}
+a.image-block, 
+a.image .image__item {
+    /* will-change: opacity; */
+    transition: opacity var(--animation-duration) var(--transition-timing-function);
+}
+a.image .image__item {
+    opacity: 1;
+}
+@media (hover: hover) {
+    a.image-block:hover, a.image:hover .image__item {
+        opacity: 0.7;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .image-container--1.image-container--short .image,
+    .image-container--1.image-container--medium .image {
+        width: 100%;
+    }
+}

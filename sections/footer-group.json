@@ -1,0 +1,216 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "e5503907-d5c9-4c95-ac94-2f31a8b2decb": {
+          "type": "image",
+          "settings": {
+            "block_width": "short",
+            "image": "shopify://shop_images/logo-B.png",
+            "image_ratio": "original",
+            "context_image_radius": "0px",
+            "block_image_link": "https://lalee-fashion.myshopify.com/",
+            "image_target_blank": false,
+            "image_horizontal_alignment": "center",
+            "image_vertical_alignment": "center"
+          }
+        },
+        "newsletter_kLwjEC": {
+          "type": "newsletter",
+          "settings": {
+            "block_width": "short",
+            "newsletter_label": "",
+            "heading_size": "default",
+            "newsletter_placeholder": "SUBSCRIBE TO THE NEWSLETTER",
+            "newsletter_caption": "",
+            "caption_size": "heading_xs_uppercase",
+            "enable_checkbox": false,
+            "make_required": false,
+            "checkbox_label": "<p>I have read and agreed to the <a href=\"/policies/privacy-policy\">Terms and Conditions</a>.</p>",
+            "text_size": "heading_xs_uppercase",
+            "newsletter_horizontal_alignment": "center",
+            "newsletter_vertical_alignment": "center"
+          }
+        },
+        "social_media_qYQz6i": {
+          "type": "social_media",
+          "settings": {
+            "block_width": "short",
+            "social_media_heading": "",
+            "social_media_heading_size": "default",
+            "social_media_style": "logo_in_circle",
+            "use_accent_color": false,
+            "social_media_horizontal_alignment": "center",
+            "social_media_vertical_alignment": "center"
+          }
+        },
+        "edb9fa05-cd47-4c0b-91ff-fa4d5e70f543": {
+          "type": "secondary_menu",
+          "settings": {
+            "block_width": "wide",
+            "menu_view": "column",
+            "dim_text": false,
+            "menu_1_heading": "",
+            "menu_1": "footer",
+            "menu_2_heading": "",
+            "menu_2": "footer-support",
+            "menu_3_heading": "",
+            "menu_3": "footer-policy",
+            "menu_4_heading": "",
+            "menu_4": "",
+            "menu_5_heading": "",
+            "menu_5": "",
+            "highlight_menu_item": "",
+            "highlight_menu_item_color": "#ff0000",
+            "heading_size": "default",
+            "link_size": "default",
+            "menu_horizontal_alignment": "center",
+            "menu_vertical_alignment": "flex-start"
+          }
+        },
+        "payment_zCzhhX": {
+          "type": "payment",
+          "disabled": true,
+          "settings": {
+            "block_width": "short",
+            "payment_heading": "PAYMENT METHOD",
+            "payment_heading_size": "label_font_uppercase",
+            "payment_horizontal_alignment": "center",
+            "payment_vertical_alignment": "center"
+          }
+        },
+        "da3e2ebf-99c9-4c89-bc29-58ff593d223f": {
+          "type": "line",
+          "settings": {
+            "block_width": "wide",
+            "line_alignment": "center"
+          }
+        },
+        "country_and_language_eg6MHz": {
+          "type": "country_and_language",
+          "settings": {
+            "block_width": "short",
+            "enable_country": true,
+            "short_country_name": false,
+            "enable_language": true,
+            "short_language_name": false,
+            "country_and_language_horizontal_alignment": "center",
+            "country_and_language_vertical_alignment": "center"
+          }
+        },
+        "fb1cf31d-db03-4d2d-804b-105607547184": {
+          "type": "legal",
+          "settings": {
+            "block_width": "wide",
+            "legal_content": "<p>All Rights Reserved, HUYEN PHAM DESIGN COMPANY LIMITED</p>",
+            "enable_back_to_top": false,
+            "back_to_top_style": "text",
+            "back_to_top_label": "Back to top",
+            "legal_horizontal_alignment": "center",
+            "legal_vertical_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "e5503907-d5c9-4c95-ac94-2f31a8b2decb",
+        "newsletter_kLwjEC",
+        "social_media_qYQz6i",
+        "edb9fa05-cd47-4c0b-91ff-fa4d5e70f543",
+        "payment_zCzhhX",
+        "da3e2ebf-99c9-4c89-bc29-58ff593d223f",
+        "country_and_language_eg6MHz",
+        "fb1cf31d-db03-4d2d-804b-105607547184"
+      ],
+      "settings": {
+        "show_top_line": false,
+        "section_width": "overlap",
+        "grid_columns": "1",
+        "color_type": "default",
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "desktop_vertical_gap": 0.5,
+        "desktop_horizontal_gap": 0.5,
+        "mobile_vertical_gap": 0.5,
+        "mobile_horizontal_gap": 0.5,
+        "desktop_padding_top": 16,
+        "desktop_padding_bottom": -40,
+        "mobile_padding_top": 16,
+        "mobile_padding_bottom": -40
+      }
+    },
+    "5e4c609f-0f97-42f1-aa28-a2a6051a49e5": {
+      "type": "popup",
+      "blocks": {
+        "sections--15141006508147__5e4c609f-0f97-42f1-aa28-a2a6051a49e5-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Popup heading",
+            "heading_size": "default",
+            "heading_tag": "h2"
+          }
+        },
+        "sections--15141006508147__5e4c609f-0f97-42f1-aa28-a2a6051a49e5-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Add an optional description to a promotion, product, or collection.</p>",
+            "text_size": "default",
+            "dim_text": false
+          }
+        },
+        "sections--15141006508147__5e4c609f-0f97-42f1-aa28-a2a6051a49e5-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Discover",
+            "button_link": "",
+            "target_blank": false,
+            "button_style": "outlined"
+          }
+        },
+        "sections--15141006508147__5e4c609f-0f97-42f1-aa28-a2a6051a49e5-close_button-1": {
+          "type": "close_button",
+          "settings": {
+            "button_label": "Close",
+            "button_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "sections--15141006508147__5e4c609f-0f97-42f1-aa28-a2a6051a49e5-heading-1",
+        "sections--15141006508147__5e4c609f-0f97-42f1-aa28-a2a6051a49e5-text-1",
+        "sections--15141006508147__5e4c609f-0f97-42f1-aa28-a2a6051a49e5-button-1",
+        "sections--15141006508147__5e4c609f-0f97-42f1-aa28-a2a6051a49e5-close_button-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "delay": "0",
+        "frequency": "0",
+        "only_homepage": true,
+        "disable_for_registered_users": true,
+        "center_text": true,
+        "show_image_on_mobile": false,
+        "image_ratio": "wide",
+        "image_link": "",
+        "target_blank": false,
+        "color_type": "default",
+        "background_color": "#ffffff",
+        "text_color": "#000000"
+      }
+    }
+  },
+  "order": [
+    "footer",
+    "5e4c609f-0f97-42f1-aa28-a2a6051a49e5"
+  ]
+}

@@ -1,0 +1,225 @@
+.component-tabs__tab--minimal_uppercase,
+.component-tabs__tab--avant_garde {
+    font: var(--base-body-l-font);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+.component-tabs__tab--minimal_basic {
+    font: var(--base-body-l-font);
+}
+.component-tabs__tab--minimal_heavy {
+    font: var(--base-heading-xs-font);
+}
+.component-tabs__tab--classic,
+.component-tabs__tab--duet{
+    font: var(--accent-body-l-font);
+}
+.component-tabs__tab--contrast {
+    font: var(--accent-heading-s-font);
+}
+.component-tabs__tab--brutalist {
+    font: var(--base-heading-m-font);
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+}
+.component-tabs__tab--custom {
+    font: var(--body-l-font);
+    letter-spacing: var(--body-l-letter-spacing);
+}
+
+.component-tabs__tab {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 48px;
+    border-bottom: var(--line-width) solid transparent;
+    color: rgba(var(--layout-text-color), 0.7);
+    cursor: pointer;
+}
+.component-tabs__tab.active {
+    border-bottom: var(--line-width) solid rgb(var(--layout-text-color));
+    color: rgb(var(--layout-text-color));
+    cursor: default;
+    /* will-change: opacity; */
+    transition: opacity var(--animation-duration) var(--transition-timing-function), border-color var(--animation-duration) var(--transition-timing-function);
+}
+.component-tabs__tab {
+    /* will-change: opacity; */
+    transition: opacity calc(var(--animation-duration) / 2) var(--transition-timing-function), border-color calc(var(--animation-duration) / 2) var(--transition-timing-function);
+    min-width: max-content;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.color-default .component-tabs__tab {
+    /* will-change: opacity; */
+    transition: opacity calc(var(--animation-duration) / 2) var(--transition-timing-function), color calc(var(--animation-duration) / 2) var(--transition-timing-function), border-color calc(var(--animation-duration) / 2) var(--transition-timing-function);
+}
+.component-tabs {
+    padding: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    -webkit-scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.component-tabs__wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+}
+.component-tabs::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+    display: none;
+}
+
+.component-tabs::-moz-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+    display: none;
+    scrollbar-width: none;
+}
+
+@media (hover: hover) {
+    .component-tabs__tab:not(.active):hover {
+        opacity: 1;
+        color: rgb(var(--accent-button-color));
+        /* will-change: opacity; */
+        transition: opacity var(--animation-duration) var(--transition-timing-function), color var(--animation-duration) var(--transition-timing-function);
+    }
+    .no-default-color .component-tabs__tab:not(.active):hover {
+        color: rgb(var(--layout-text-color));
+        /* will-change: opacity; */
+        transition: opacity var(--animation-duration) var(--transition-timing-function);
+    }
+}
+
+.component-tabs__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    /* will-change: opacity; */
+    transition: opacity calc(var(--animation-duration) / 2) var(--transition-timing-function);
+    overflow: clip;
+}
+.component-tabs__content.active {
+    opacity: 1;
+    position: relative;
+    z-index: 3;
+    /* will-change: opacity; */
+    transition: opacity var(--animation-duration) var(--transition-timing-function);
+}
+
+/* Styles for full-width page without sidebars */
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .component-tabs__tab--brutalist {
+        font: var(--base-heading-s-font);
+        letter-spacing: normal;
+    }
+    .component-tabs__tab {
+        padding: 16px 24px;
+    }
+}
+
+/* Sidebars: Main XS, S, M and white space Spacious */
+/* Mobile */
+@media screen and (max-width: 1048px) and (min-width: 921px) {
+    .main_xs--spacious .component-tabs__tab--brutalist,
+    .main_s--spacious .component-tabs__tab--brutalist,
+    .main_m--spacious .component-tabs__tab--brutalist {
+        font: var(--base-heading-s-font);
+        letter-spacing: normal;
+    }
+    .main_xs--spacious .component-tabs__tab,
+    .main_s--spacious .component-tabs__tab,
+    .main_m--spacious .component-tabs__tab {
+        padding: 16px 24px;
+    }
+}
+
+/* Sidebars: Main XS, S and white space Compact */
+/* Mobile */
+@media screen and (max-width: 968px) and (min-width: 921px) {
+    .main_xs--compact .component-tabs__tab--brutalist,
+    .main_s--compact .component-tabs__tab--brutalist {
+        font: var(--base-heading-s-font);
+        letter-spacing: normal;
+    }
+    .main_xs--compact .component-tabs__tab,
+    .main_s--compact .component-tabs__tab {
+        padding: 16px 24px;
+    }
+}
+
+/* Sidebars: Main XS, S with secondary and white space Spacious */
+/* Mobile */
+@media screen and (max-width: 1144px) and (min-width: 921px) {
+    .main_xs_with_secondary--spacious .component-tabs__tab--brutalist,
+    .main_s_with_secondary--spacious .component-tabs__tab--brutalist {
+        font: var(--base-heading-s-font);
+        letter-spacing: normal;
+    }
+    .main_xs_with_secondary--spacious .component-tabs__tab,
+    .main_s_with_secondary--spacious .component-tabs__tab {
+        padding: 16px 24px;
+    }
+}
+
+/* Sidebars: Main XS, S with secondary and white space Compact */ 
+/* Mobile */
+@media screen and (max-width: 1064px) and (min-width: 921px) {
+    .main_xs_with_secondary--compact .component-tabs__tab--brutalist,
+    .main_s_with_secondary--compact .component-tabs__tab--brutalist {
+        font: var(--base-heading-s-font);
+        letter-spacing: normal;
+    }
+    .main_xs_with_secondary--compact .component-tabs__tab,
+    .main_s_with_secondary--compact .component-tabs__tab {
+        padding: 16px 24px;
+    }
+}
+
+/* Sidebars: Main M and white space Compact */
+/* Mobile */
+@media screen and (max-width: 1024px) and (min-width: 921px) {
+    .main_m--compact .component-tabs__tab--brutalist {
+        font: var(--base-heading-s-font);
+        letter-spacing: normal;
+    }
+    .main_m--compact .component-tabs__tab {
+        padding: 16px 24px;
+    }
+}
+
+/* Sidebars: Main M with secondary */
+/* Mobile */
+@media screen and (max-width: 1152px) and (min-width: 921px) {
+    .main_m_with_secondary .component-tabs__tab--brutalist {
+        font: var(--base-heading-s-font);
+        letter-spacing: normal;
+    }
+    .main_m_with_secondary .component-tabs__tab {
+        padding: 16px 24px;
+    }
+}
+
+/* Sidebars: Main L */
+/* Mobile */
+@media screen and (max-width: 1536px) and (min-width: 921px) {
+    .main_l .component-tabs__tab--brutalist {
+        font: var(--base-heading-s-font);
+        letter-spacing: normal;
+    }
+    .main_l .component-tabs__tab {
+        padding: 16px 24px;
+    }
+}

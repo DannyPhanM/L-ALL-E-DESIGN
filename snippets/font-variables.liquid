@@ -1,0 +1,1226 @@
+{% style %}
+    :root {
+        {% if settings.swap_fonts %}
+          --base-font-family: {{ settings.accent_font.family }}, {{ settings.accent_font.fallback_families }};
+          --base-font-style: {{ settings.accent_font.style }};
+          --base-font-weight: {{ settings.accent_font.weight }};
+          --accent-font-family: {{ settings.base_font.family }}, {{ settings.base_font.fallback_families }};
+          --accent-font-style: {{ settings.base_font.style }};
+          --accent-font-weight: {{ settings.base_font.weight }};
+        {% else %}
+          --base-font-family: {{ settings.base_font.family }}, {{ settings.base_font.fallback_families }};
+          --base-font-style: {{ settings.base_font.style }};
+          --base-font-weight: {{ settings.base_font.weight }};
+          --accent-font-family: {{ settings.accent_font.family }}, {{ settings.accent_font.fallback_families }};
+          --accent-font-style: {{ settings.accent_font.style }};
+          --accent-font-weight: {{ settings.accent_font.weight }};
+        {% endif %}
+        --custom-font-family: {{ settings.custom_font.family }}, {{ settings.custom_font.fallback_families }};
+        --custom-font-style: {{ settings.custom_font.style }};
+        --custom-font-weight: {{ settings.custom_font.weight }};
+
+        {% if settings.typography_preset != 'custom' %}
+        --base-heading-xl-font-height: {{ 128 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+        --base-heading-l-font-height: {{ 80 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+        --base-heading-m-font-height: {{ 48 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+        --base-heading-s-font-height: {{ 32 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+        --base-heading-xs-font-height: {{ 24 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+        --base-body-l-font-height: {{ 18 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 }}px;
+        --base-body-m-font-height: {{ 16 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 }}px; 
+        --base-body-s-font-height: {{ 14 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 }}px;
+        --base-label-font-height: {{ 12 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 }}px;
+
+        --accent-heading-xl-font-height: {{ 128 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+        --accent-heading-l-font-height: {{ 80 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+        --accent-heading-m-font-height: {{ 48 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+        --accent-heading-s-font-height: {{ 32 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+        --accent-heading-xs-font-height: {{ 24 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+        --accent-body-l-font-height: {{ 18 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 }}px;
+        --accent-body-m-font-height: {{ 16 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 }}px;
+        --accent-body-s-font-height: {{ 14 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 }}px;
+        --accent-label-font-height: {{ 12 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 }}px;
+
+        --base-heading-xl-font: var(--base-font-style) var(--base-font-weight) var(--base-heading-xl-font-height)/{{ 128 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px var(--base-font-family);
+        --base-heading-l-font: var(--base-font-style) var(--base-font-weight) var(--base-heading-l-font-height)/{{ 96 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px var(--base-font-family);
+        --base-heading-m-font: var(--base-font-style) var(--base-font-weight) var(--base-heading-m-font-height)/{{ 64 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px var(--base-font-family);
+        --base-heading-s-font: var(--base-font-style) var(--base-font-weight) var(--base-heading-s-font-height)/{{ 46 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px var(--base-font-family);
+        --base-heading-xs-font: var(--base-font-style) var(--base-font-weight) var(--base-heading-xs-font-height)/{{ 36 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px var(--base-font-family);
+        --base-body-l-font: var(--base-font-style) var(--base-font-weight) var(--base-body-l-font-height)/{{ 28 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px var(--base-font-family);
+        --base-body-m-font: var(--base-font-style) var(--base-font-weight) var(--base-body-m-font-height)/{{ 26 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px var(--base-font-family);
+        --base-body-s-font: var(--base-font-style) var(--base-font-weight) var(--base-body-s-font-height)/{{ 24 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px var(--base-font-family);
+        --base-label-font: var(--base-font-style) var(--base-font-weight) var(--base-label-font-height)/{{ 16 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px var(--base-font-family);
+
+        --accent-heading-xl-font: var(--accent-font-style) var(--accent-font-weight) var(--accent-heading-xl-font-height)/{{ 128 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px var(--accent-font-family);
+        --accent-heading-l-font: var(--accent-font-style) var(--accent-font-weight) var(--accent-heading-l-font-height)/{{ 96 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px var(--accent-font-family);
+        --accent-heading-m-font: var(--accent-font-style) var(--accent-font-weight) var(--accent-heading-m-font-height)/{{ 64 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px var(--accent-font-family);
+        --accent-heading-s-font: var(--accent-font-style) var(--accent-font-weight) var(--accent-heading-s-font-height)/{{ 46 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px var(--accent-font-family);
+        --accent-heading-xs-font: var(--accent-font-style) var(--accent-font-weight) var(--accent-heading-xs-font-height)/{{ 36 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px var(--accent-font-family);
+        --accent-body-l-font: var(--accent-font-style) var(--accent-font-weight) var(--accent-body-l-font-height)/{{ 28 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px var(--accent-font-family);
+        --accent-body-m-font: var(--accent-font-style) var(--accent-font-weight) var(--accent-body-m-font-height)/{{ 26 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px var(--accent-font-family);
+        --accent-body-s-font: var(--accent-font-style) var(--accent-font-weight) var(--accent-body-s-font-height)/{{ 24 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px var(--accent-font-family);
+        --accent-label-font: var(--accent-font-style) var(--accent-font-weight) var(--accent-label-font-height)/{{ 16 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px var(--accent-font-family);
+        {% else %}
+          --heading-xl-font-size: {{ settings.heading_xl_desktop_size }}px;
+          --heading-xl-line-height: {{ settings.heading_xl_line_height }};
+          --heading-xl-letter-spacing: {{ settings.heading_xl_letter_spacing | divided_by: 1000.0 }}em;
+          --heading-l-font-size: {{ settings.heading_l_desktop_size }}px;
+          --heading-l-line-height: {{ settings.heading_l_line_height }};
+          --heading-l-letter-spacing: {{ settings.heading_l_letter_spacing | divided_by: 1000.0 }}em;
+          --heading-m-font-size: {{ settings.heading_m_desktop_size }}px;
+          --heading-m-line-height: {{ settings.heading_m_line_height }};
+          --heading-m-letter-spacing: {{ settings.heading_m_letter_spacing | divided_by: 1000.0 }}em;
+          --heading-s-font-size: {{ settings.heading_s_desktop_size }}px;
+          --heading-s-line-height: {{ settings.heading_s_line_height }};
+          --heading-s-letter-spacing: {{ settings.heading_s_letter_spacing | divided_by: 1000.0 }}em;
+          --heading-xs-font-size: {{ settings.heading_xs_desktop_size }}px;
+          --heading-xs-line-height: {{ settings.heading_xs_line_height }};
+          --heading-xs-letter-spacing: {{ settings.heading_xs_letter_spacing | divided_by: 1000.0 }}em;
+          --body-l-font-size: {{ settings.body_l_desktop_size }}px;
+          --body-l-line-height: {{ settings.body_l_line_height }};
+          --body-l-letter-spacing: {{ settings.body_l_letter_spacing | divided_by: 1000.0 }}em;
+          --body-m-font-size: {{ settings.body_m_desktop_size }}px;
+          --body-m-line-height: {{ settings.body_m_line_height }};
+          --body-m-letter-spacing: {{ settings.body_m_letter_spacing | divided_by: 1000.0 }}em;
+          --body-s-font-size: {{ settings.body_s_desktop_size }}px;
+          --body-s-line-height: {{ settings.body_s_line_height }};
+          --body-s-letter-spacing: {{ settings.body_s_letter_spacing | divided_by: 1000.0 }}em;
+          --label-font-size: {{ settings.label_desktop_size }}px;
+          --label-line-height: {{ settings.label_line_height }};
+          --label-letter-spacing: {{ settings.label_letter_spacing | divided_by: 1000.0 }}em;
+
+          {% if settings.font_heading_xl == 'base' %}
+            --heading-xl-font: var(--base-font-style) var(--base-font-weight) var(--heading-xl-font-size)/var(--heading-xl-line-height) var(--base-font-family);
+          {% else %}
+            --heading-xl-font: var(--accent-font-style) var(--accent-font-weight) var(--heading-xl-font-size)/var(--heading-xl-line-height) var(--accent-font-family);
+          {% endif %}
+          {% if settings.font_heading_l == 'base' %}
+            --heading-l-font: var(--base-font-style) var(--base-font-weight) var(--heading-l-font-size)/var(--heading-l-line-height) var(--base-font-family);
+          {% else %}
+            --heading-l-font: var(--accent-font-style) var(--accent-font-weight) var(--heading-l-font-size)/var(--heading-l-line-height) var(--accent-font-family);
+          {% endif %}
+          {% if settings.font_heading_m == 'base' %}
+            --heading-m-font: var(--base-font-style) var(--base-font-weight) var(--heading-m-font-size)/var(--heading-m-line-height) var(--base-font-family);
+          {% else %}
+            --heading-m-font: var(--accent-font-style) var(--accent-font-weight) var(--heading-m-font-size)/var(--heading-m-line-height) var(--accent-font-family);
+          {% endif %}
+          {% if settings.font_heading_s == 'base' %}
+            --heading-s-font: var(--base-font-style) var(--base-font-weight) var(--heading-s-font-size)/var(--heading-s-line-height) var(--base-font-family);
+          {% else %}
+            --heading-s-font: var(--accent-font-style) var(--accent-font-weight) var(--heading-s-font-size)/var(--heading-s-line-height) var(--accent-font-family);
+          {% endif %}
+          {% if settings.font_heading_xs == 'base' %}
+            --heading-xs-font: var(--base-font-style) var(--base-font-weight) var(--heading-xs-font-size)/var(--heading-xs-line-height) var(--base-font-family);
+          {% else %}
+            --heading-xs-font: var(--accent-font-style) var(--accent-font-weight) var(--heading-xs-font-size)/var(--heading-xs-line-height) var(--accent-font-family);
+          {% endif %}
+          {% if settings.font_body_l == 'base' %}
+            --body-l-font: var(--base-font-style) var(--base-font-weight) var(--body-l-font-size)/var(--body-l-line-height) var(--base-font-family);
+          {% else %}
+            --body-l-font: var(--accent-font-style) var(--accent-font-weight) var(--body-l-font-size)/var(--body-l-line-height) var(--accent-font-family);
+          {% endif %}
+          {% if settings.font_body_m == 'base' %}
+            --body-m-font: var(--base-font-style) var(--base-font-weight) var(--body-m-font-size)/var(--body-m-line-height) var(--base-font-family);
+          {% else %}
+            --body-m-font: var(--accent-font-style) var(--accent-font-weight) var(--body-m-font-size)/var(--body-m-line-height) var(--accent-font-family);
+          {% endif %}
+          {% if settings.font_body_s == 'base' %}
+            --body-s-font: var(--base-font-style) var(--base-font-weight) var(--body-s-font-size)/var(--body-s-line-height) var(--base-font-family);
+          {% else %}
+            --body-s-font: var(--accent-font-style) var(--accent-font-weight) var(--body-s-font-size)/var(--body-s-line-height) var(--accent-font-family);
+          {% endif %}
+          {% if settings.font_label == 'base' %}
+            --label-font: var(--base-font-style) var(--base-font-weight) var(--label-font-size)/var(--label-line-height) var(--base-font-family);
+          {% else %}
+            --label-font: var(--accent-font-style) var(--accent-font-weight) var(--label-font-size)/var(--label-line-height) var(--accent-font-family);
+          {% endif %}
+        {% endif %}
+    }
+
+    {% if settings.typography_preset == 'custom' %}
+        @media screen and (max-width: 1440px) {
+          :root {
+            --heading-xl-font-size: {{ settings.heading_xl_desktop_size | times: settings.desktop_heading_xl_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            --heading-l-font-size: {{ settings.heading_l_desktop_size | times: settings.desktop_heading_l_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            --heading-m-font-size: {{ settings.heading_m_desktop_size | times: settings.desktop_heading_m_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+          }
+        }
+        {% if settings.max_page_width == '1400' or settings.max_page_width == '1200' %}
+          @media screen and (min-width: 1200px) {
+            :root {
+              --heading-xl-font-size: {{ settings.heading_xl_desktop_size | times: settings.desktop_heading_xl_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+              --heading-l-font-size: {{ settings.heading_l_desktop_size | times: settings.desktop_heading_l_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+              --heading-m-font-size: {{ settings.heading_m_desktop_size | times: settings.desktop_heading_m_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            }
+          }
+        {% endif %}
+    {% endif %}
+
+    {% if settings.typography_preset != 'custom' %}
+      .rating-star {
+          --font-size: {{ 17 | times: settings.desktop_font_scale | divided_by: 100.0 | round: 1 | at_least: 17 | divided_by: 10.0 }};
+      }
+
+      .shopify-challenge__message {
+          line-height: {{ 36 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+          font-size: {{ 24 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 }}px;
+      }
+
+      .heading_xl {
+          line-height: {{ 128 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+          font-size: {{ 128 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+          letter-spacing: -0.02em;
+          text-transform: none !important;
+      }
+      .heading_xl_uppercase {
+          line-height: {{ 128 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+          font-size: {{ 128 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+          letter-spacing: -0.02em !important;
+          text-transform: uppercase !important;
+      }
+      .heading_l {
+          line-height: {{ 96 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+          font-size: {{ 80 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+          letter-spacing: -0.02em !important;
+          text-transform: none !important;
+      }
+      .heading_l_uppercase {
+          line-height: {{ 96 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+          font-size: {{ 80 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+          letter-spacing: -0.02em !important;
+          text-transform: uppercase !important;
+      }
+      .heading_m {
+          line-height: {{ 64 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+          font-size: {{ 48 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+          letter-spacing: -0.01em !important;
+          text-transform: none !important;
+      }
+      .heading_m_uppercase {
+          line-height: {{ 64 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+          font-size: {{ 48 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+          letter-spacing: -0.01em !important;
+          text-transform: uppercase !important;
+      }
+      .heading_s {
+          line-height: {{ 46 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+          font-size: {{ 32 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+          text-transform: none !important;
+          letter-spacing: normal !important;
+      }
+      .heading_s_uppercase {
+          line-height: {{ 46 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+          font-size: {{ 32 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+          text-transform: uppercase !important;
+          letter-spacing: normal !important;
+      }
+      .heading_xs {
+          line-height: {{ 36 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+          font-size: {{ 24 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+          text-transform: none !important;
+          letter-spacing: normal !important;
+      }
+      .heading_xs_uppercase {
+          line-height: {{ 36 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+          font-size: {{ 24 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+          text-transform: uppercase !important;
+          letter-spacing: normal !important;
+      }
+      .body_l {
+          line-height: {{ 28 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px !important;
+          font-size: {{ 18 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 }}px !important;
+          text-transform: none !important;
+          letter-spacing: normal !important;
+      }
+      .body_l_uppercase {
+          line-height: {{ 28 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px !important;
+          font-size: {{ 18 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 }}px !important;
+          letter-spacing: 0.02em !important;
+          text-transform: uppercase !important;
+      }
+      .body_m {
+          line-height: {{ 26 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px !important;
+          font-size: {{ 16 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 }}px !important;
+          text-transform: none !important;
+          letter-spacing: normal !important;
+      }
+      .body_m_uppercase {
+          line-height: {{ 26 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px !important;
+          font-size: {{ 16 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 }}px !important;
+          letter-spacing: 0.02em !important;
+          text-transform: uppercase !important;
+      }
+      .body_s {
+          line-height: {{ 24 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px !important;
+          font-size: {{ 14 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 }}px !important;
+          text-transform: none !important;
+          letter-spacing: normal !important;
+      }
+      .body_s_uppercase {
+          line-height: {{ 24 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px !important;
+          font-size: {{ 14 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 }}px !important;
+          letter-spacing: 0.02em !important;
+          text-transform: uppercase !important;
+      }
+      .label_font {
+          line-height: {{ 16 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px !important;
+          font-size: {{ 12 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 }}px !important;
+          text-transform: none !important;
+          letter-spacing: normal !important;
+      }
+      .label_font_uppercase {
+          line-height: {{ 16 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px !important;
+          font-size: {{ 12 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 }}px !important;
+          letter-spacing: 0.02em !important;
+          text-transform: uppercase !important;
+      }
+    {% else %}
+      .rating-star {
+        --font-size: var(--body-s-line-height);
+      }
+      .shopify-challenge__message {
+        line-height: var(--heading-xs-line-height);
+        font-size: var(--heading-xs-font-size);
+      }
+      .heading_xl,
+      .heading_xl .price-inside-button .price--custom {
+        font: var(--heading-xl-font) !important;
+        letter-spacing: var(--heading-xl-letter-spacing) !important;
+        text-transform: none !important;
+        {% if settings.bolder_font_heading_xl %}
+          font-weight: bold !important;
+        {% endif %}
+      }
+      .heading_xl_uppercase,
+      .heading_xl_uppercase .price-inside-button .price--custom {
+        font: var(--heading-xl-font) !important;
+        letter-spacing: var(--heading-xl-letter-spacing) !important;
+        text-transform: uppercase !important;
+        {% if settings.bolder_font_heading_xl %}
+          font-weight: bold !important;
+        {% endif %}
+      }
+      .heading_l,
+      .heading_l .price-inside-button .price--custom {
+        font: var(--heading-l-font) !important;
+        letter-spacing: var(--heading-l-letter-spacing) !important;
+        text-transform: none !important;
+        {% if settings.bolder_font_heading_l %}
+          font-weight: bold !important;
+        {% endif %}
+      }
+      .heading_l_uppercase,
+      .heading_l_uppercase .price-inside-button .price--custom {
+        font: var(--heading-l-font) !important;
+        letter-spacing: var(--heading-l-letter-spacing) !important;
+        text-transform: uppercase !important;
+        {% if settings.bolder_font_heading_l %}
+          font-weight: bold !important;
+        {% endif %}
+      }
+      .heading_m,
+      .heading_m .price-inside-button .price--custom {
+        font: var(--heading-m-font) !important;
+        letter-spacing: var(--heading-m-letter-spacing) !important;
+        text-transform: none !important;
+        {% if settings.bolder_font_heading_m %}
+          font-weight: bold !important;
+        {% endif %}
+      }
+      .heading_m_uppercase,
+      .heading_m_uppercase .price-inside-button .price--custom {
+        font: var(--heading-m-font) !important;
+        letter-spacing: var(--heading-m-letter-spacing) !important;
+        text-transform: uppercase !important;
+        {% if settings.bolder_font_heading_m %}
+          font-weight: bold !important;
+        {% endif %}
+      }
+      .heading_s,
+      .heading_s .price-inside-button .price--custom {
+        font: var(--heading-s-font) !important;
+        letter-spacing: var(--heading-s-letter-spacing) !important;
+        text-transform: none !important;
+        {% if settings.bolder_font_heading_s %}
+          font-weight: bold !important;
+        {% endif %}
+      }
+      .heading_s_uppercase,
+      .heading_s_uppercase .price-inside-button .price--custom {
+        font: var(--heading-s-font) !important;
+        letter-spacing: var(--heading-s-letter-spacing) !important;
+        text-transform: uppercase !important;
+        {% if settings.bolder_font_heading_s %}
+          font-weight: bold !important;
+        {% endif %}
+      }
+      .heading_xs,
+      .heading_xs .price-inside-button .price--custom {
+        font: var(--heading-xs-font) !important;
+        letter-spacing: var(--heading-xs-letter-spacing) !important;
+        text-transform: none !important;
+        {% if settings.bolder_font_heading_xs %}
+          font-weight: bold !important;
+        {% endif %}
+      }
+      .heading_xs_uppercase,
+      .heading_xs_uppercase .price-inside-button .price--custom {
+        font: var(--heading-xs-font) !important;
+        letter-spacing: var(--heading-xs-letter-spacing) !important;
+        text-transform: uppercase !important;
+        {% if settings.bolder_font_heading_xs %}
+          font-weight: bold !important;
+        {% endif %}
+      }
+      .body_l,
+      .body_l .price-inside-button .price--custom {
+        font: var(--body-l-font) !important;
+        letter-spacing: var(--body-l-letter-spacing) !important;
+        text-transform: none !important;
+        {% if settings.bolder_font_body_l %}
+          font-weight: bold !important;
+        {% endif %}
+      }
+      .body_l_uppercase,
+      .body_l_uppercase .price-inside-button .price--custom {
+        font: var(--body-l-font) !important;
+        letter-spacing: var(--body-l-letter-spacing) !important;
+        text-transform: uppercase !important;
+        {% if settings.bolder_font_body_l %}
+          font-weight: bold !important;
+        {% endif %}
+      }
+      .body_m,
+      .body_m .price-inside-button .price--custom {
+        font: var(--body-m-font) !important;
+        letter-spacing: var(--body-m-letter-spacing) !important;
+        text-transform: none !important;
+        {% if settings.bolder_font_body_m %}
+          font-weight: bold !important;
+        {% endif %}
+      }
+      .body_m_uppercase,
+      .body_m_uppercase .price-inside-button .price--custom {
+        font: var(--body-m-font) !important;
+        letter-spacing: var(--body-m-letter-spacing) !important;
+        text-transform: uppercase !important;
+        {% if settings.bolder_font_body_m %}
+          font-weight: bold !important;
+        {% endif %}
+      }
+      .body_s,
+      .body_s .price-inside-button .price--custom {
+        font: var(--body-s-font) !important;
+        letter-spacing: var(--body-s-letter-spacing) !important;
+        text-transform: none !important;
+        {% if settings.bolder_font_body_s %}
+          font-weight: bold !important;
+        {% endif %}
+      }
+      .body_s_uppercase,
+      .body_s_uppercase .price-inside-button .price--custom {
+        font: var(--body-s-font) !important;
+        letter-spacing: var(--body-s-letter-spacing) !important;
+        text-transform: uppercase !important;
+        {% if settings.bolder_font_body_s %}
+          font-weight: bold !important;
+        {% endif %}
+      }
+      .label_font,
+      .label_font .price-inside-button .price--custom {
+        font: var(--label-font) !important;
+        letter-spacing: var(--label-letter-spacing) !important;
+        text-transform: none !important;
+        {% if settings.bolder_font_label %}
+          font-weight: bold !important;
+        {% endif %}
+      }
+      .label_font_uppercase,
+      .label_font_uppercase .price-inside-button .price--custom {
+        font: var(--label-font) !important;
+        letter-spacing: var(--label-letter-spacing) !important;
+        text-transform: uppercase !important;
+        {% if settings.bolder_font_label %}
+          font-weight: bold !important;
+        {% endif %}
+      }
+    {% endif %}
+
+    {% if settings.typography_preset != 'custom' %}
+      @media screen and (max-width: 1440px) {
+          .heading_xl, .heading_xl_uppercase {
+            line-height: {{ 96 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+            font-size: {{ 80 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+          }
+      }
+
+      @media screen and (min-width: 1200px) {
+          .page-width .heading_xl, .page-width .heading_xl_uppercase {
+            line-height: {{ 96 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+            font-size: {{ 80 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+          }
+      }
+
+      @media screen and (max-width: 1024px) {
+          .heading_xl, .heading_l,
+          .heading_xl_uppercase, .heading_l_uppercase {
+            line-height: {{ 64 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+            font-size: {{ 48 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+            letter-spacing: -0.01em !important;
+          }
+      }
+    {% endif %}
+    
+    @media screen and (max-width: 920px) {
+        :root {
+          {% if settings.typography_preset != 'custom' %}
+            --base-heading-xl-font: var(--base-font-style) var(--base-font-weight) {{ 48 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px/{{ 64 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px var(--base-font-family);
+            --base-heading-l-font: var(--base-font-style) var(--base-font-weight) {{ 48 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px/{{ 64 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px var(--base-font-family);
+            --base-heading-m-font: var(--base-font-style) var(--base-font-weight) {{ 48 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px/{{ 64 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px var(--base-font-family);
+            --base-heading-s-font: var(--base-font-style) var(--base-font-weight) {{ 32 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px/{{ 46 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px var(--base-font-family);
+            --base-heading-xs-font: var(--base-font-style) var(--base-font-weight) {{ 24 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px/{{ 36 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px var(--base-font-family);
+            --base-body-l-font: var(--base-font-style) var(--base-font-weight) {{ 18 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 12 }}px/{{ 28 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 }}px var(--base-font-family);
+            --base-body-m-font: var(--base-font-style) var(--base-font-weight) {{ 16 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 12 }}px/{{ 26 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 }}px var(--base-font-family);
+            --base-body-s-font: var(--base-font-style) var(--base-font-weight) {{ 14 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 12 }}px/{{ 24 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 }}px var(--base-font-family);
+            --base-label-font: var(--base-font-style) var(--base-font-weight) {{ 12 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 12 }}px/{{ 16 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 }}px var(--base-font-family);
+
+            --accent-heading-xl-font: var(--accent-font-style) var(--accent-font-weight) {{ 48 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px/{{ 64 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px var(--accent-font-family);
+            --accent-heading-l-font: var(--accent-font-style) var(--accent-font-weight) {{ 48 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px/{{ 64 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px var(--accent-font-family);
+            --accent-heading-m-font: var(--accent-font-style) var(--accent-font-weight) {{ 48 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px/{{ 64 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px var(--accent-font-family);
+            --accent-heading-s-font: var(--accent-font-style) var(--accent-font-weight) {{ 32 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px/{{ 46 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px var(--accent-font-family);
+            --accent-heading-xs-font: var(--accent-font-style) var(--accent-font-weight) {{ 24 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px/{{ 36 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px var(--accent-font-family);
+            --accent-body-l-font: var(--accent-font-style) var(--accent-font-weight) {{ 18 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 12 }}px/{{ 28 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 }}px var(--accent-font-family);
+            --accent-body-m-font: var(--accent-font-style) var(--accent-font-weight) {{ 16 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 12 }}px/{{ 26 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 }}px var(--accent-font-family);
+            --accent-body-s-font: var(--accent-font-style) var(--accent-font-weight) {{ 14 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 12 }}px/{{ 24 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 }}px var(--accent-font-family);
+            --accent-label-font: var(--accent-font-style) var(--accent-font-weight) {{ 12 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 12 }}px/{{ 16 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 }}px var(--accent-font-family);
+          {% else %}
+            --heading-xl-font-size: {{ settings.heading_xl_mobile_size }}px;
+            --heading-l-font-size: {{ settings.heading_l_mobile_size }}px;
+            --heading-m-font-size: {{ settings.heading_m_mobile_size }}px;
+            --heading-s-font-size: {{ settings.heading_s_mobile_size }}px;
+            --heading-xs-font-size: {{ settings.heading_xs_mobile_size }}px;
+            --body-l-font-size: {{ settings.body_l_mobile_size }}px;
+            --body-m-font-size: {{ settings.body_m_mobile_size }}px;
+            --body-s-font-size: {{ settings.body_s_mobile_size }}px;
+            --label-font-size: {{ settings.label_mobile_size }}px;
+          {% endif %}
+        }
+
+        .shopify-challenge__message {
+          line-height: {{ 36 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+          font-size: {{ 24 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 12 }}px;
+        }
+        {% if settings.typography_preset != 'custom' %}
+          .product .rating-star {
+            --font-size: {{ 17 | times: settings.mobile_font_scale | divided_by: 100.0 | round: 1 | at_least: 17 | divided_by: 10.0 }};
+          }
+          .heading_xl, .heading_l, .heading_m {
+            line-height: {{ 64 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+            font-size: {{ 48 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+            letter-spacing: -0.01em !important;
+            text-transform: none !important;
+          }
+          .heading_xl_uppercase, .heading_l_uppercase, .heading_m_uppercase {
+            line-height: {{ 64 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+            font-size: {{ 48 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+            letter-spacing: -0.01em !important;
+          }
+          .heading_s, .heading_s_uppercase {
+            line-height: {{ 46 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+            font-size: {{ 32 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+          }
+          .heading_xs, .heading_xs_uppercase {
+            line-height: {{ 36 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+            font-size: {{ 24 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+          }
+          .body_l, .body_l_uppercase {
+            line-height: {{ 28 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 }}px !important;
+            font-size: {{ 18 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 12 }}px !important;
+          }
+          .body_m, .body_m_uppercase {
+            line-height: {{ 26 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 }}px !important;
+            font-size: {{ 16 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 12 }}px !important;
+          }
+          .body_s, .body_s_uppercase {
+            line-height: {{ 24 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 }}px !important;
+            font-size: {{ 14 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 12 }}px !important;
+          }
+          .label_font, .label_font_uppercase {
+            line-height: {{ 16 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 }}px !important;
+            font-size: {{ 12 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 12 }}px !important;
+          }
+        {% endif %}
+    }
+    {% if settings.typography_preset != 'custom' %}
+      @media screen and (max-width: 768px) {
+          .heading_xl, .heading_l, .heading_m,
+          .heading_xl_uppercase, .heading_l_uppercase, .heading_m_uppercase {
+            line-height: {{ 46 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+            font-size: {{ 32 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+            letter-spacing: normal !important;
+          }
+      }
+    {% endif %}
+
+    {% if settings.navigation_layout == 'sidebar_based' and settings.typography_preset != 'custom' %}
+      /* Sidebars: Main XS and white space Spacious */
+        /* Laptop */
+        @media screen and (max-width: 1720px) and (min-width: 921px) {
+            .main_xs--spacious .heading_xl,
+            .main_xs--spacious .heading_xl_uppercase {
+              line-height: {{ 96 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+              font-size: {{ 80 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+            }
+        }
+          /* Max page width 1200px or 1400px */
+        @media screen and (min-width: 1480px) {
+            .main_xs--spacious .page-width .heading_xl,
+            .main_xs--spacious .page-width .heading_xl_uppercase {
+              line-height: {{ 96 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+              font-size: {{ 80 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+            }
+        }
+          /* Tablet */
+        @media screen and (max-width: 1304px) and (min-width: 921px) {
+            .main_xs--spacious .heading_xl, 
+            .main_xs--spacious .heading_l,
+            .main_xs--spacious .heading_xl_uppercase,
+            .main_xs--spacious .heading_l_uppercase {
+                line-height: {{ 64 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+                font-size: {{ 48 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+                letter-spacing: -0.01em !important;
+            }
+        }
+        /* Mobile */
+        @media screen and (max-width: 1048px) and (min-width: 921px) {
+          .main_xs--spacious .heading_xl,
+          .main_xs--spacious .heading_l,
+          .main_xs--spacious .heading_m,
+          .main_xs--spacious .heading_xl_uppercase,
+          .main_xs--spacious .heading_l_uppercase,
+          .main_xs--spacious .heading_m_uppercase {
+            line-height: {{ 46 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+            font-size: {{ 32 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+            letter-spacing: normal !important;
+          }
+        }
+
+      /* Sidebars: Main XS and white space Compact */
+          /* Laptop */
+          @media screen and (max-width: 1646px) and (min-width: 921px) {
+            .main_xs--compact .heading_xl,
+            .main_xs--compact .heading_xl_uppercase {
+              line-height: {{ 96 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+              font-size: {{ 80 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+            }
+          }
+          /* Max page width 1200px or 1400px */
+          @media screen and (min-width: 1400px) {
+            .main_xs--compact .page-width .heading_xl,
+            .main_xs--compact .page-width .heading_xl_uppercase {
+              line-height: {{ 96 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+              font-size: {{ 80 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+            }
+          }
+          /* Tablet */
+          @media screen and (max-width: 1224px) and (min-width: 921px) {
+              .main_xs--compact .heading_xl, 
+              .main_xs--compact .heading_l,
+              .main_xs--compact .heading_xl_uppercase,
+              .main_xs--compact .heading_l_uppercase {
+                line-height: {{ 64 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+                font-size: {{ 48 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+                letter-spacing: -0.01em !important;
+              }
+          }
+          /* Mobile */
+          @media screen and (max-width: 968px) and (min-width: 921px) {
+            .main_xs--compact .heading_xl,
+            .main_xs--compact .heading_l,
+            .main_xs--compact .heading_m,
+            .main_xs--compact .heading_xl_uppercase,
+            .main_xs--compact .heading_l_uppercase,
+            .main_xs--compact .heading_m_uppercase {
+              line-height: {{ 46 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+              font-size: {{ 32 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+              letter-spacing: normal !important;
+            }
+          }
+
+      /* Sidebars: Main XS with secondary and white space Spacious */
+          /* Laptop */
+          @media screen and (max-width: 1816px) and (min-width: 921px) {
+            .main_xs_with_secondary--spacious .heading_xl,
+            .main_xs_with_secondary--spacious .heading_xl_uppercase {
+              line-height: {{ 96 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+              font-size: {{ 80 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+            }
+          }
+          /* Max page width 1200px or 1400px */
+          @media screen and (min-width: 1576px) {
+            .main_xs_with_secondary--spacious .page-width .heading_xl,
+            .main_xs_with_secondary--spacious .page-width .heading_xl_uppercase {
+              line-height: {{ 96 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+              font-size: {{ 80 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+            }
+          }
+          /* Tablet */
+          @media screen and (max-width: 1400px) and (min-width: 921px) {
+              .main_xs_with_secondary--spacious .heading_xl, 
+              .main_xs_with_secondary--spacious .heading_l,
+              .main_xs_with_secondary--spacious .heading_xl_uppercase,
+              .main_xs_with_secondary--spacious .heading_l_uppercase {
+                line-height: {{ 64 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+                font-size: {{ 48 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+                letter-spacing: -0.01em !important;
+              }
+          }
+          /* Mobile */
+          @media screen and (max-width: 1144px) and (min-width: 921px) {
+            .main_xs_with_secondary--spacious .heading_xl,
+            .main_xs_with_secondary--spacious .heading_l,
+            .main_xs_with_secondary--spacious .heading_m,
+            .main_xs_with_secondary--spacious .heading_xl_uppercase,
+            .main_xs_with_secondary--spacious .heading_l_uppercase,
+            .main_xs_with_secondary--spacious .heading_m_uppercase {
+              line-height: {{ 46 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+              font-size: {{ 32 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+              letter-spacing: normal !important;
+            }
+          }
+
+      /* Sidebars: Main XS with secondary and white space Compact */
+          /* Laptop */
+          @media screen and (max-width: 1755px) and (min-width: 921px) {
+            .main_xs_with_secondary--compact .heading_xl,
+            .main_xs_with_secondary--compact .heading_xl_uppercase {
+              line-height: {{ 96 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+              font-size: {{ 80 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+            }
+          }
+          /* Max page width 1200px or 1400px */
+          @media screen and (min-width: 1496px) {
+            .main_xs_with_secondary--compact .page-width .heading_xl,
+            .main_xs_with_secondary--compact .page-width .heading_xl_uppercase {
+              line-height: {{ 96 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+              font-size: {{ 80 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+            }
+          }
+          /* Tablet */
+          @media screen and (max-width: 1320px) and (min-width: 921px) {
+              .main_xs_with_secondary--compact .heading_xl, 
+              .main_xs_with_secondary--compact .heading_l,
+              .main_xs_with_secondary--compact .heading_xl_uppercase,
+              .main_xs_with_secondary--compact .heading_l_uppercase {
+                line-height: {{ 64 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+                font-size: {{ 48 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+                letter-spacing: -0.01em !important;
+              }
+          }
+          /* Mobile */
+          @media screen and (max-width: 1064px) and (min-width: 921px) {
+            .main_xs_with_secondary--compact .heading_xl,
+            .main_xs_with_secondary--compact .heading_l,
+            .main_xs_with_secondary--compact .heading_m,
+            .main_xs_with_secondary--compact .heading_xl_uppercase,
+            .main_xs_with_secondary--compact .heading_l_uppercase,
+            .main_xs_with_secondary--compact .heading_m_uppercase {
+              line-height: {{ 46 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+              font-size: {{ 32 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+              letter-spacing: normal !important;
+            }
+          }
+
+      /* Sidebars: Main S and white space Spacious */
+          /* Laptop */
+          @media screen and (max-width: 1772px) and (min-width: 921px) {
+              .main_s--spacious .heading_xl,
+              .main_s--spacious .heading_xl_uppercase {
+                line-height: {{ 96 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+                font-size: {{ 80 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+              }
+          }
+          /* Max page width 1200px or 1400px */
+          @media screen and (min-width: 1480px) {
+              .main_s--spacious .page-width .heading_xl,
+              .main_s--spacious .page-width .heading_xl_uppercase {
+                line-height: {{ 96 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+                font-size: {{ 80 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+              }
+          }
+          /* Tablet */
+          @media screen and (max-width: 1304px) and (min-width: 921px) {
+              .main_s--spacious .heading_xl, 
+              .main_s--spacious .heading_l,
+              .main_s--spacious .heading_xl_uppercase,
+              .main_s--spacious .heading_l_uppercase {
+                  line-height: {{ 64 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+                  font-size: {{ 48 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+                  letter-spacing: -0.01em !important;
+              }
+          }
+          /* Mobile */
+          @media screen and (max-width: 1048px) and (min-width: 921px) {
+            .main_s--spacious .heading_xl,
+            .main_s--spacious .heading_l,
+            .main_s--spacious .heading_m,
+            .main_s--spacious .heading_xl_uppercase,
+            .main_s--spacious .heading_l_uppercase,
+            .main_s--spacious .heading_m_uppercase {
+              line-height: {{ 46 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+              font-size: {{ 32 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+              letter-spacing: normal !important;
+            }
+          }
+
+      /* Sidebars: Main S and white space Compact */
+          /* Laptop */
+          @media screen and (max-width: 1772px) and (min-width: 921px) {
+              .main_s--compact .heading_xl,
+              .main_s--compact .heading_xl_uppercase {
+                line-height: {{ 96 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+                font-size: {{ 80 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+              }
+          }
+          /* Max page width 1200px or 1400px */
+          @media screen and (min-width: 1477px) {
+              .main_s--compact .page-width .heading_xl,
+              .main_s--compact .page-width .heading_xl_uppercase {
+                line-height: {{ 96 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+                font-size: {{ 80 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+              }
+          }
+          /* Tablet */
+          @media screen and (max-width: 1260px) and (min-width: 921px) {
+            .main_s--compact .heading_xl, 
+            .main_s--compact .heading_l,
+            .main_s--compact .heading_xl_uppercase,
+            .main_s--compact .heading_l_uppercase {
+              line-height: {{ 64 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+              font-size: {{ 48 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+              letter-spacing: -0.01em !important;
+            }
+          }
+          /* Mobile */
+          @media screen and (max-width: 968px) and (min-width: 921px) {
+            .main_s--compact .heading_xl,
+            .main_s--compact .heading_l,
+            .main_s--compact .heading_m,
+            .main_s--compact .heading_xl_uppercase,
+            .main_s--compact .heading_l_uppercase,
+            .main_s--compact .heading_m_uppercase {
+              line-height: {{ 46 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+              font-size: {{ 32 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+              letter-spacing: normal !important;
+            }
+          }
+
+      /* Sidebars: Main S with secondary */
+          /* Laptop */
+          @media screen and (max-width: 1890px) and (min-width: 921px) {
+              .main_s_with_secondary .heading_xl,
+              .main_s_with_secondary .heading_xl_uppercase {
+                line-height: {{ 96 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+                font-size: {{ 80 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+              }
+          }
+          /* Max page width 1200px or 1400px */
+          @media screen and (min-width: 1595px) {
+              .main_s_with_secondary .page-width .heading_xl,
+              .main_s_with_secondary .page-width .heading_xl_uppercase {
+                line-height: {{ 96 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+                font-size: {{ 80 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+              }
+          }
+          /* Tablet white space Spacious */
+          @media screen and (max-width: 1400px) and (min-width: 921px) {
+              .main_s_with_secondary--spacious .heading_xl, 
+              .main_s_with_secondary--spacious .heading_l,
+              .main_s_with_secondary--spacious .heading_xl_uppercase,
+              .main_s_with_secondary--spacious .heading_l_uppercase {
+                line-height: {{ 64 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+                font-size: {{ 48 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+                letter-spacing: -0.01em !important;
+              }
+          }
+          /* Tablet white space Compact */
+          @media screen and (max-width: 1378px) and (min-width: 921px) {
+            .main_s_with_secondary--compact .heading_xl, 
+            .main_s_with_secondary--compact .heading_l,
+            .main_s_with_secondary--compact .heading_xl_uppercase,
+            .main_s_with_secondary--compact .heading_l_uppercase {
+              line-height: {{ 64 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+              font-size: {{ 48 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+              letter-spacing: -0.01em !important;
+            }
+          }
+          /* Mobile white space Spacious */
+          @media screen and (max-width: 1144px) and (min-width: 921px) {
+            .main_s_with_secondary--spacious .heading_xl,
+            .main_s_with_secondary--spacious .heading_l,
+            .main_s_with_secondary--spacious .heading_m,
+            .main_s_with_secondary--spacious .heading_xl_uppercase,
+            .main_s_with_secondary--spacious .heading_l_uppercase,
+            .main_s_with_secondary--spacious .heading_m_uppercase {
+              line-height: {{ 46 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+              font-size: {{ 32 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+              letter-spacing: normal !important;
+            }
+          }
+          /* Mobile white space Compact */
+          @media screen and (max-width: 1064px) and (min-width: 921px) {
+            .main_s_with_secondary--compact .heading_xl,
+            .main_s_with_secondary--compact .heading_l,
+            .main_s_with_secondary--compact .heading_m,
+            .main_s_with_secondary--compact .heading_xl_uppercase,
+            .main_s_with_secondary--compact .heading_l_uppercase,
+            .main_s_with_secondary--compact .heading_m_uppercase {
+              line-height: {{ 46 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+              font-size: {{ 32 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+              letter-spacing: normal !important;
+            }
+          }
+
+      /* Sidebars: Main M */
+          /* Laptop */
+          @media screen and (max-width: 1920px) and (min-width: 921px) {
+              .main_m .heading_xl,
+              .main_m .heading_xl_uppercase {
+                line-height: {{ 96 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+                font-size: {{ 80 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+              }
+          }
+          /* Max page width 1200px or 1400px */
+          @media screen and (min-width: 1600px) {
+              .main_m .page-width .heading_xl,
+              .main_m .page-width .heading_xl_uppercase {
+                line-height: {{ 96 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+                font-size: {{ 80 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+              }
+          }
+          /* Tablet */
+          @media screen and (max-width: 1365px) and (min-width: 921px) {
+              .main_m .heading_xl, 
+              .main_m .heading_l,
+              .main_m .heading_xl_uppercase,
+              .main_m .heading_l_uppercase {
+                line-height: {{ 64 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+                font-size: {{ 48 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+                letter-spacing: -0.01em !important;
+              }
+          }
+          /* Mobile white space Spacious */
+          @media screen and (max-width: 1048px) and (min-width: 921px) {
+            .main_m--spacious .heading_xl,
+            .main_m--spacious .heading_l,
+            .main_m--spacious .heading_m,
+            .main_m--spacious .heading_xl_uppercase,
+            .main_m--spacious .heading_l_uppercase,
+            .main_m--spacious .heading_m_uppercase {
+              line-height: {{ 46 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+              font-size: {{ 32 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+              letter-spacing: normal !important;
+            }
+          }
+          /* Mobile white space Compact */
+          @media screen and (max-width: 1024px) and (min-width: 921px) {
+            .main_m--compact .heading_xl,
+            .main_m--compact .heading_l,
+            .main_m--compact .heading_m,
+            .main_m--compact .heading_xl_uppercase,
+            .main_m--compact .heading_l_uppercase,
+            .main_m--compact .heading_m_uppercase {
+              line-height: {{ 46 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+              font-size: {{ 32 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+              letter-spacing: normal !important;
+            }
+          }
+
+      /* Sidebars: Main M with secondary */
+          /* Laptop */
+          @media screen and (max-width: 2048px) and (min-width: 921px) {
+              .main_m_with_secondary .heading_xl,
+              .main_m_with_secondary .heading_xl_uppercase {
+                line-height: {{ 96 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+                font-size: {{ 80 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+                letter-spacing: -0.02em !important;
+              }
+          }
+          /* Max page width 1200px or 1400px */
+          @media screen and (min-width: 1728px) {
+              .main_m_with_secondary .page-width .heading_xl,
+              .main_m_with_secondary .page-width .heading_xl_uppercase {
+                line-height: {{ 96 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+                font-size: {{ 80 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+              }
+          }
+          /* Tablet */
+          @media screen and (max-width: 1493px) and (min-width: 921px) {
+              .main_m_with_secondary .heading_xl, 
+              .main_m_with_secondary .heading_l,
+              .main_m_with_secondary .heading_xl_uppercase,
+              .main_m_with_secondary .heading_l_uppercase {
+                line-height: {{ 64 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+                font-size: {{ 48 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+                letter-spacing: -0.01em !important;
+              }
+          }
+          /* Mobile */
+          @media screen and (max-width: 1152px) and (min-width: 921px) {
+            .main_m_with_secondary .heading_xl,
+            .main_m_with_secondary .heading_l,
+            .main_m_with_secondary .heading_m,
+            .main_m_with_secondary .heading_xl_uppercase,
+            .main_m_with_secondary .heading_l_uppercase,
+            .main_m_with_secondary .heading_m_uppercase {
+              line-height: {{ 46 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+              font-size: {{ 32 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+              letter-spacing: normal !important;
+            }
+          }
+
+      /* Sidebars: Main L */
+          /* Laptop */
+          @media screen and (max-width: 2880px) and (min-width: 921px) {
+              .main_l .heading_xl,
+              .main_l .heading_xl_uppercase {
+                line-height: {{ 96 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+                font-size: {{ 80 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+              }
+          }
+          /* Max page width 1200px or 1400px */
+          @media screen and (min-width: 2400px) {
+              .main_l .page-width .heading_xl,
+              .main_l .page-width .heading_xl_uppercase {
+                line-height: {{ 96 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+                font-size: {{ 80 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+              }
+          }
+          /* Tablet */
+          @media screen and (max-width: 2048px) and (min-width: 921px) {
+              .main_l .heading_xl, 
+              .main_l .heading_l,
+              .main_l .heading_xl_uppercase,
+              .main_l .heading_l_uppercase {
+                line-height: {{ 64 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+                font-size: {{ 48 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+                letter-spacing: -0.01em !important;
+              }
+          }
+          /* Mobile */
+          @media screen and (max-width: 1536px) and (min-width: 921px) {
+            .main_l .heading_xl,
+            .main_l .heading_l,
+            .main_l .heading_m,
+            .main_l .heading_xl_uppercase,
+            .main_l .heading_l_uppercase,
+            .main_l .heading_m_uppercase {
+              line-height: {{ 46 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 | at_most: 128 }}px !important;
+              font-size: {{ 32 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px !important;
+              letter-spacing: normal !important;
+            }
+          }
+    {% endif %}
+
+    {% if settings.navigation_layout == 'sidebar_based' and settings.typography_preset == 'custom' %}
+      {% if settings.sidebar_template == 'main_xs' and settings.white_space == 'spacious' %}
+        /* Laptop */
+        @media screen and (max-width: 1720px) and (min-width: 921px) {
+          :root {
+            --heading-xl-font-size: {{ settings.heading_xl_desktop_size | times: settings.desktop_heading_xl_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            --heading-l-font-size: {{ settings.heading_l_desktop_size | times: settings.desktop_heading_l_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            --heading-m-font-size: {{ settings.heading_m_desktop_size | times: settings.desktop_heading_m_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+          }
+        }
+        {% if settings.max_page_width == '1400' or settings.max_page_width == '1200' %}
+          /* Max page width 1200px or 1400px */
+          @media screen and (min-width: 1480px) {
+            :root {
+              --heading-xl-font-size: {{ settings.heading_xl_desktop_size | times: settings.desktop_heading_xl_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+              --heading-l-font-size: {{ settings.heading_l_desktop_size | times: settings.desktop_heading_l_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+              --heading-m-font-size: {{ settings.heading_m_desktop_size | times: settings.desktop_heading_m_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            }
+          }
+        {% endif %}
+      {% endif %}
+      {% if settings.sidebar_template == 'main_xs' and settings.white_space == 'compact' %}
+        /* Laptop */
+        @media screen and (max-width: 1646px) and (min-width: 921px) {
+          :root {
+            --heading-xl-font-size: {{ settings.heading_xl_desktop_size | times: settings.desktop_heading_xl_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            --heading-l-font-size: {{ settings.heading_l_desktop_size | times: settings.desktop_heading_l_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            --heading-m-font-size: {{ settings.heading_m_desktop_size | times: settings.desktop_heading_m_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+          }
+        }
+        {% if settings.max_page_width == '1400' or settings.max_page_width == '1200' %}
+          /* Max page width 1200px or 1400px */
+          @media screen and (min-width: 1400px) {
+            :root {
+              --heading-xl-font-size: {{ settings.heading_xl_desktop_size | times: settings.desktop_heading_xl_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+              --heading-l-font-size: {{ settings.heading_l_desktop_size | times: settings.desktop_heading_l_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+              --heading-m-font-size: {{ settings.heading_m_desktop_size | times: settings.desktop_heading_m_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            }
+          }
+        {% endif %}
+      {% endif %}
+      {% if settings.sidebar_template == 'main_xs_with_secondary' and settings.white_space == 'spacious' %}
+        /* Laptop */
+        @media screen and (max-width: 1816px) and (min-width: 921px) {
+          :root {
+            --heading-xl-font-size: {{ settings.heading_xl_desktop_size | times: settings.desktop_heading_xl_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            --heading-l-font-size: {{ settings.heading_l_desktop_size | times: settings.desktop_heading_l_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            --heading-m-font-size: {{ settings.heading_m_desktop_size | times: settings.desktop_heading_m_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+          }
+        }
+        {% if settings.max_page_width == '1400' or settings.max_page_width == '1200' %}
+          /* Max page width 1200px or 1400px */
+          @media screen and (min-width: 1576px) {
+            :root {
+              --heading-xl-font-size: {{ settings.heading_xl_desktop_size | times: settings.desktop_heading_xl_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+              --heading-l-font-size: {{ settings.heading_l_desktop_size | times: settings.desktop_heading_l_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+              --heading-m-font-size: {{ settings.heading_m_desktop_size | times: settings.desktop_heading_m_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            }
+          }
+        {% endif %}
+      {% endif %}
+      {% if settings.sidebar_template == 'main_xs_with_secondary' and settings.white_space == 'compact' %}
+        /* Laptop */
+        @media screen and (max-width: 1755px) and (min-width: 921px) {
+          :root {
+            --heading-xl-font-size: {{ settings.heading_xl_desktop_size | times: settings.desktop_heading_xl_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            --heading-l-font-size: {{ settings.heading_l_desktop_size | times: settings.desktop_heading_l_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            --heading-m-font-size: {{ settings.heading_m_desktop_size | times: settings.desktop_heading_m_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+          }
+        }
+        {% if settings.max_page_width == '1400' or settings.max_page_width == '1200' %}
+          /* Max page width 1200px or 1400px */
+          @media screen and (min-width: 1496px) {
+            :root {
+              --heading-xl-font-size: {{ settings.heading_xl_desktop_size | times: settings.desktop_heading_xl_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+              --heading-l-font-size: {{ settings.heading_l_desktop_size | times: settings.desktop_heading_l_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+              --heading-m-font-size: {{ settings.heading_m_desktop_size | times: settings.desktop_heading_m_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            }
+          }
+        {% endif %}
+      {% endif %}
+      {% if settings.sidebar_template == 'main_s' and settings.white_space == 'spacious' %}
+        /* Laptop */
+        @media screen and (max-width: 1772px) and (min-width: 921px) {
+          :root {
+            --heading-xl-font-size: {{ settings.heading_xl_desktop_size | times: settings.desktop_heading_xl_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            --heading-l-font-size: {{ settings.heading_l_desktop_size | times: settings.desktop_heading_l_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            --heading-m-font-size: {{ settings.heading_m_desktop_size | times: settings.desktop_heading_m_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+          }
+        }
+        {% if settings.max_page_width == '1400' or settings.max_page_width == '1200' %}
+          /* Max page width 1200px or 1400px */
+          @media screen and (min-width: 1480px) {
+            :root {
+              --heading-xl-font-size: {{ settings.heading_xl_desktop_size | times: settings.desktop_heading_xl_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+              --heading-l-font-size: {{ settings.heading_l_desktop_size | times: settings.desktop_heading_l_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+              --heading-m-font-size: {{ settings.heading_m_desktop_size | times: settings.desktop_heading_m_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            }
+          }
+        {% endif %}
+      {% endif %}
+      {% if settings.sidebar_template == 'main_s' and settings.white_space == 'compact' %}
+        /* Laptop */
+        @media screen and (max-width: 1772px) and (min-width: 921px) {
+          :root {
+            --heading-xl-font-size: {{ settings.heading_xl_desktop_size | times: settings.desktop_heading_xl_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            --heading-l-font-size: {{ settings.heading_l_desktop_size | times: settings.desktop_heading_l_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            --heading-m-font-size: {{ settings.heading_m_desktop_size | times: settings.desktop_heading_m_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+          }
+        }
+        {% if settings.max_page_width == '1400' or settings.max_page_width == '1200' %}
+          /* Max page width 1200px or 1400px */
+          @media screen and (min-width: 1477px) {
+            :root {
+              --heading-xl-font-size: {{ settings.heading_xl_desktop_size | times: settings.desktop_heading_xl_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+              --heading-l-font-size: {{ settings.heading_l_desktop_size | times: settings.desktop_heading_l_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+              --heading-m-font-size: {{ settings.heading_m_desktop_size | times: settings.desktop_heading_m_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            }
+          }
+        {% endif %}
+      {% endif %}
+      {% if settings.sidebar_template == 'main_s_with_secondary' %}
+        /* Laptop */
+        @media screen and (max-width: 1890px) and (min-width: 921px) {
+          :root {
+            --heading-xl-font-size: {{ settings.heading_xl_desktop_size | times: settings.desktop_heading_xl_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            --heading-l-font-size: {{ settings.heading_l_desktop_size | times: settings.desktop_heading_l_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            --heading-m-font-size: {{ settings.heading_m_desktop_size | times: settings.desktop_heading_m_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+          }
+        }
+        {% if settings.max_page_width == '1400' or settings.max_page_width == '1200' %}
+          /* Max page width 1200px or 1400px */
+          @media screen and (min-width: 1595px) {
+            :root {
+              --heading-xl-font-size: {{ settings.heading_xl_desktop_size | times: settings.desktop_heading_xl_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+              --heading-l-font-size: {{ settings.heading_l_desktop_size | times: settings.desktop_heading_l_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+              --heading-m-font-size: {{ settings.heading_m_desktop_size | times: settings.desktop_heading_m_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            }
+          }
+        {% endif %}
+      {% endif %}
+      {% if settings.sidebar_template == 'main_m' %}
+        /* Laptop */
+        @media screen and (max-width: 1920px) and (min-width: 921px) {
+          :root {
+            --heading-xl-font-size: {{ settings.heading_xl_desktop_size | times: settings.desktop_heading_xl_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            --heading-l-font-size: {{ settings.heading_l_desktop_size | times: settings.desktop_heading_l_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            --heading-m-font-size: {{ settings.heading_m_desktop_size | times: settings.desktop_heading_m_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+          }
+        }
+        {% if settings.max_page_width == '1400' or settings.max_page_width == '1200' %}
+          /* Max page width 1200px or 1400px */
+          @media screen and (min-width: 1600px) {
+            :root {
+              --heading-xl-font-size: {{ settings.heading_xl_desktop_size | times: settings.desktop_heading_xl_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+              --heading-l-font-size: {{ settings.heading_l_desktop_size | times: settings.desktop_heading_l_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+              --heading-m-font-size: {{ settings.heading_m_desktop_size | times: settings.desktop_heading_m_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            }
+          }
+        {% endif %}
+      {% endif %}
+      {% if settings.sidebar_template == 'main_m_with_secondary' %}
+        /* Laptop */
+        @media screen and (max-width: 2048px) and (min-width: 921px) {
+          :root {
+            --heading-xl-font-size: {{ settings.heading_xl_desktop_size | times: settings.desktop_heading_xl_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            --heading-l-font-size: {{ settings.heading_l_desktop_size | times: settings.desktop_heading_l_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            --heading-m-font-size: {{ settings.heading_m_desktop_size | times: settings.desktop_heading_m_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+          }
+        }
+        {% if settings.max_page_width == '1400' or settings.max_page_width == '1200' %}
+          /* Max page width 1200px or 1400px */
+          @media screen and (min-width: 1728px) {
+            :root {
+              --heading-xl-font-size: {{ settings.heading_xl_desktop_size | times: settings.desktop_heading_xl_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+              --heading-l-font-size: {{ settings.heading_l_desktop_size | times: settings.desktop_heading_l_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+              --heading-m-font-size: {{ settings.heading_m_desktop_size | times: settings.desktop_heading_m_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            }
+          }
+        {% endif %}
+      {% endif %}
+      {% if settings.sidebar_template == 'main_l' %}
+        /* Laptop */
+        @media screen and (max-width: 2880px) and (min-width: 921px) {
+          :root {
+            --heading-xl-font-size: {{ settings.heading_xl_desktop_size | times: settings.desktop_heading_xl_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            --heading-l-font-size: {{ settings.heading_l_desktop_size | times: settings.desktop_heading_l_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            --heading-m-font-size: {{ settings.heading_m_desktop_size | times: settings.desktop_heading_m_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+          }
+        }
+        {% if settings.max_page_width == '1400' or settings.max_page_width == '1200' %}
+          /* Max page width 1200px or 1400px */
+          @media screen and (min-width: 2400px) {
+            :root {
+              --heading-xl-font-size: {{ settings.heading_xl_desktop_size | times: settings.desktop_heading_xl_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+              --heading-l-font-size: {{ settings.heading_l_desktop_size | times: settings.desktop_heading_l_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+              --heading-m-font-size: {{ settings.heading_m_desktop_size | times: settings.desktop_heading_m_scale | divided_by: 100.0 | round | at_least: 12 | at_most: 128 }}px;
+            }
+          }
+        {% endif %}
+      {% endif %}
+    {% endif %}
+{% endstyle %}

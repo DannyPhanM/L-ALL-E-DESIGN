@@ -1,0 +1,121 @@
+.share:not(.page-width) {
+    max-width: 100%;
+}
+
+.share-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+}
+
+.share__button {
+    width: fit-content;
+    max-width: 100%;
+    color: rgb(var(--layout-text-color));
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.share__icon,
+.share__button,
+.share-list__link {
+    display: flex;
+    align-items: center;
+}
+
+.share__icon svg {
+    fill: rgb(var(--layout-text-color));
+    height: 100%;
+    width: auto;
+}
+
+.share__icon-close,
+.share__icon-open {
+    height: 100%;
+}
+
+.share-toggle {
+    max-width: fit-content;
+}
+
+.share-toggle .share__icon-open,
+.share-toggle[open] .share__icon-close,
+.copy-success {
+    display: none;
+}
+
+.share-toggle[open] .share__icon-open,
+.share-list__icon {
+    display: block;
+}
+
+.share__button,
+.share-list__link {
+    gap: 10px;
+    cursor: pointer;
+}
+
+.share-list__icon svg {
+    fill: rgb(var(--layout-text-color));
+    height: 100%;
+    width: auto;
+}
+
+.share-items {
+    padding-top: 20px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Fonts */
+.share__button--minimal_uppercase {
+    font: var(--base-body-s-font);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+.share__button--minimal_basic,
+.share-list--minimal_basic,
+.share-list--classic {
+    font: var(--base-body-s-font);
+}
+.share__button--minimal_heavy,
+.share-list--minimal_heavy {
+    font: var(--base-body-l-font);
+}
+.share__button--classic,
+.share__button--contrast,
+.share-list--duet {
+    font: var(--base-body-m-font);
+}
+.share__button--avant_garde,
+.share__button--duet {
+    font: var(--accent-body-m-font);
+}
+.share__button--brutalist {
+    font: var(--base-heading-xs-font);
+    text-transform: uppercase;
+}
+.share__button--custom {
+    font: var(--body-s-font);
+    letter-spacing: var(--body-s-letter-spacing);
+}
+.share-list--minimal_uppercase {
+    font: var(--base-label-font);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+.share-list--avant_garde {
+    font: var(--accent-body-s-font);
+}
+.share-list--contrast {
+    font: var(--base-label-font);
+}
+.share-list--brutalist {
+    font: var(--base-body-l-font);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+.share-list--custom {
+    font: var(--label-font);
+    letter-spacing: var(--label-letter-spacing);
+}

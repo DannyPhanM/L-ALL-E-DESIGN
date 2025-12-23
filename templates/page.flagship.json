@@ -1,0 +1,273 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "hide_heading": true,
+        "heading_size": "default",
+        "heading_tag": "h2",
+        "text_size": "default",
+        "section_width": "wide",
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0
+      }
+    },
+    "tabs_ctKmWL": {
+      "type": "tabs",
+      "blocks": {
+        "tab_4CPWrE": {
+          "type": "tab",
+          "settings": {
+            "custom_heading": "OUR STORY",
+            "text": "",
+            "text_size": "default",
+            "page": "our-story"
+          }
+        },
+        "tab_GCkBTc": {
+          "type": "tab",
+          "settings": {
+            "custom_heading": "FLAGSHIP STORE",
+            "text": "",
+            "text_size": "default",
+            "page": "flagship-store"
+          }
+        },
+        "tab_7Ecnzn": {
+          "type": "tab",
+          "settings": {
+            "custom_heading": "CONTACT US",
+            "text": "",
+            "text_size": "default",
+            "page": "contact"
+          }
+        }
+      },
+      "block_order": [
+        "tab_4CPWrE",
+        "tab_GCkBTc",
+        "tab_7Ecnzn"
+      ],
+      "name": "t:sections.tabs.name",
+      "settings": {
+        "subheading": "",
+        "heading": "",
+        "center_text": true,
+        "section_width": "narrow",
+        "tab_heading_size": "default",
+        "subheading_size": "default",
+        "subheading_tag": "h3",
+        "heading_size": "default",
+        "heading_tag": "h2",
+        "color_type": "default",
+        "background_color": "#FFFFFF",
+        "text_color": "#000000",
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": -24,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": -24
+      }
+    },
+    "banners_hipDRF": {
+      "type": "banners",
+      "blocks": {
+        "image_BUDzcg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/STORE_17.jpg",
+            "heading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "target_blank": false
+          }
+        },
+        "image_xAkN9C": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/STORE_18.jpg",
+            "heading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "target_blank": false
+          }
+        },
+        "image_4KwAwX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/store.jpg",
+            "heading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "target_blank": false
+          }
+        },
+        "image_NCrGTb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/STORE16.jpg",
+            "heading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "target_blank": false
+          }
+        },
+        "image_Qjb7ia": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/STORE15.jpg",
+            "heading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "target_blank": false
+          }
+        },
+        "image_wBpiRL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/STORE12.jpg",
+            "heading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "target_blank": false
+          }
+        },
+        "image_UJnKGf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/STORE9.jpg",
+            "heading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "target_blank": false
+          }
+        },
+        "image_qnTJV8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/STORE13.jpg",
+            "heading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "target_blank": false
+          }
+        },
+        "image_GncpDk": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/STORE_19.jpg",
+            "heading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "target_blank": false
+          }
+        },
+        "image_HbQUYn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Store5.jpg",
+            "heading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "target_blank": false
+          }
+        },
+        "image_bYiLgw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/store6_94e3f11f-f2fc-4b8b-bc49-edbb09725e76.jpg",
+            "heading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "target_blank": false
+          }
+        },
+        "image_FP4mef": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/STORE20.jpg",
+            "heading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "target_blank": false
+          }
+        }
+      },
+      "block_order": [
+        "image_BUDzcg",
+        "image_xAkN9C",
+        "image_4KwAwX",
+        "image_NCrGTb",
+        "image_Qjb7ia",
+        "image_wBpiRL",
+        "image_UJnKGf",
+        "image_qnTJV8",
+        "image_GncpDk",
+        "image_HbQUYn",
+        "image_bYiLgw",
+        "image_FP4mef"
+      ],
+      "name": "t:sections.editorial-banners.name",
+      "settings": {
+        "sticky_offset": 120,
+        "subheading": "IN VIETNAM",
+        "heading": "FLAGSHIP STORE",
+        "text": "<p>House No.12, Alley 84, Ngoc Khanh Street<br/>Ba Dinh District, Hanoi</p><p>OPENING HOURS</p><p>Mon-Sun: 9:00 – 21:00 (GMT+7)</p>",
+        "button_label": "",
+        "button_link": "",
+        "target_blank": false,
+        "button_style": "solid",
+        "enable_grid_mobile": true,
+        "mobile_layout": "1",
+        "mobile_navigation": "arrows",
+        "subheading_size": "default",
+        "subheading_tag": "h3",
+        "heading_size": "default",
+        "heading_tag": "h2",
+        "main_text_size": "default",
+        "media_ratio": "original",
+        "center_text": false,
+        "item_heading_size": "default",
+        "text_size": "default",
+        "image_radius": "0px",
+        "card_button_style": "outlined",
+        "color_type": "default",
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "desktop_padding_top": 32,
+        "desktop_padding_bottom": 60,
+        "mobile_padding_top": 32,
+        "mobile_padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "tabs_ctKmWL",
+    "banners_hipDRF"
+  ]
+}

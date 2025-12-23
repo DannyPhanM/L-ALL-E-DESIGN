@@ -1,0 +1,171 @@
+.rich-text {
+    --buttons-gap: 24px;
+}
+.rich-text--spacious {
+    --rich-text-gap: 24px;
+}
+.rich-text--compact {
+    --rich-text-gap: 16px;
+}
+.rich-text__wrapper--narrow,
+.rich-text__wrapper.center .context-image {
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+}
+.rich-text__wrapper--narrow {
+    max-width: 960px;
+}
+.lines.rich-text::before {
+    display: block;
+    content: '';
+    height: var(--line-width);
+    width: 100%;
+    background-color: rgba(var(--layout-text-color),var(--line-opacity));
+}
+.lines.rich-text--spacious.rich-text::before {
+    margin-bottom: 48px;
+}
+.lines.rich-text--compact.rich-text::before {
+    margin-bottom: 24px;
+}
+main > section:first-child .lines.rich-text::before {
+    display: none;
+}
+.rich-text__wrapper > *:not(:first-child) {
+    margin-top: var(--rich-text-gap);
+}
+.rich-text__wrapper > .spacer,
+.rich-text__wrapper > .line-container,
+.rich-text__wrapper > .line-container + *,
+.rich-text__wrapper > .spacer + * {
+    margin-top: 0;
+}
+
+.rich-text .flex-start .block__button,
+.rich-text .flex-start .video-button-block {
+    margin-inline-end: var(--buttons-gap);
+    margin-inline-start: 0;
+}
+.rich-text .center .block__button,
+.rich-text .center .video-button-block {
+    margin-inline-start: calc(var(--buttons-gap) / 2);
+    margin-inline-end: calc(var(--buttons-gap) / 2);
+}
+.rich-text .social-media__title {
+    min-height: auto;
+}
+.rich-text .social-media-container,
+.rich-text .contacts-block {
+    gap: 16px;
+}
+.rich-text .contacts-block .contacts {
+    flex-direction: column;
+}
+.rich-text .contacts__description {
+    margin-top: 8px;
+}
+.rich-text__wrapper.center .social-media-container {
+    align-items: center;
+}
+.rich-text.no-default-color .contacts-block.color-accent .contacts__item,
+.rich-text.no-default-color .social-media.color-accent .social-media__link {
+    color: rgb(var(--layout-text-color));
+}
+
+.rich-text.no-default-color .social-media.color-accent .social-media__link svg {
+    fill: rgb(var(--layout-text-color));
+}
+
+@media screen and (max-width: 920px) {
+    .media-with-text--full-width.media-with-text--spacious {
+        --default-padding: 24px;
+    }
+}
+
+/* Styles for full-width page without sidebars */
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .rich-text--spacious {
+        --rich-text-gap: 16px;
+    }
+    .lines.rich-text--spacious.rich-text::before {
+        margin-bottom: 32px;
+    }
+    .rich-text {
+        --buttons-gap: 12px;
+    }
+}
+/* Sidebars: Main XS,S,M and white space Spacious */
+/* Mobile */
+@media screen and (max-width: 1048px) and (min-width: 921px) {
+    .main_xs--spacious .rich-text--spacious,
+    .main_s--spacious .rich-text--spacious,
+    .main_m--spacious .rich-text--spacious {
+        --rich-text-gap: 16px;
+        --buttons-gap: 12px;
+    }
+    .main_xs--spacious .lines.rich-text--spacious.rich-text::before,
+    .main_s--spacious .lines.rich-text--spacious.rich-text::before,
+    .main_m--spacious .lines.rich-text--spacious.rich-text::before {
+        margin-bottom: 32px;
+    }
+}
+/* Sidebars: Main XS, Main S and white space Compact */
+/* Mobile */
+@media screen and (max-width: 968px) and (min-width: 921px)  {
+    .main_xs--compact .rich-text--compact,
+    .main_s--compact .rich-text--compact {
+        --buttons-gap: 12px;
+    }
+}
+/* Sidebars: Main XS,S with secondary and white space Spacious */
+/* Mobile */
+@media screen and (max-width: 1191px) and (min-width: 921px) {
+    .main_xs_with_secondary--spacious .rich-text--spacious,
+    .main_s_with_secondary--spacious .rich-text--spacious {
+        --rich-text-gap: 16px;
+        --buttons-gap: 12px;
+    }
+    .main_xs_with_secondary--spacious .lines.rich-text--spacious.rich-text::before,
+    .main_s_with_secondary--spacious .lines.rich-text--spacious.rich-text::before  {
+        margin-bottom: 32px;
+    }
+}
+/* Sidebars: Main XS with secondary and Main S with secondary and white space Compact */
+/* Mobile */
+@media screen and (max-width: 1064px) and (min-width: 921px) {
+    .main_xs_with_secondary--compact .rich-text--compact,
+    .main_s_with_secondary--compact .rich-text--compact {
+        --buttons-gap: 12px;
+    }
+}
+/* Sidebars: Main M and white space Compact */
+/* Mobile */
+@media screen and (max-width: 1024px) and (min-width: 921px)  {
+    .main_m--compact .rich-text--compact {
+        --buttons-gap: 12px;
+    }
+}
+/* Sidebars: Main M with secondary */
+/* Mobile */
+@media screen and (max-width: 1152px) and (min-width: 921px) {
+    .main_m_with_secondary .rich-text {
+        --rich-text-gap: 16px;
+        --buttons-gap: 12px;
+    }
+    .main_m_with_secondary--spacious .lines.rich-text--spacious.rich-text::before {
+        margin-bottom: 32px;
+    }
+}
+
+/* Sidebars: Main L */
+/* Mobile */
+@media screen and (max-width: 1536px) and (min-width: 921px) {
+    .main_l .rich-text {
+        --rich-text-gap: 16px;
+        --buttons-gap: 12px;
+    }
+    .main_l--spacious .lines.rich-text--spacious.rich-text::before {
+        margin-bottom: 32px;
+    }
+}

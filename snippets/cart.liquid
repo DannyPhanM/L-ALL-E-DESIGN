@@ -1,0 +1,137 @@
+{{ 'cart.css' | asset_url | stylesheet_tag }}
+
+{% unless section.id contains 'menu-drawer' %}
+    {% style %}
+		#shopify-section-{{ section.id }} {
+			--cart-vertical-alignment: {{ cart_settings.cart_vertical_alignment }};
+			--cart-horizontal-alignment: {{ cart_settings.cart_horizontal_alignment }};
+		}
+    {% endstyle %}
+{% endunless %}
+
+{% style %}
+.cart-container .cart__icon {
+    height: {{ 24 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+}
+.cart-container .cart__count--circle {
+	min-width: {{ 24 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+    height: {{ 24 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+}
+.custom-type-preset .cart-container .cart__icon {
+    height: max(24px, calc(var(--body-s-font-size) * var(--body-s-line-height)));
+}
+.custom-type-preset .cart-container .cart__count--circle {
+	min-width: max(24px, calc(var(--body-s-font-size) * var(--body-s-line-height)));
+    height: max(24px, calc(var(--body-s-font-size) * var(--body-s-line-height)));
+}
+.custom-type-preset.navigations-body-l .cart-container .cart__icon {
+    height: max(24px, calc(var(--body-l-font-size) * var(--body-l-line-height)));
+}
+.custom-type-preset.navigations-body-l .cart-container .cart__count--circle {
+	min-width: max(24px, calc(var(--body-l-font-size) * var(--body-l-line-height)));
+    height: max(24px, calc(var(--body-l-font-size) * var(--body-l-line-height)));
+}
+.custom-type-preset.navigations-body-m .cart-container .cart__icon {
+    height: max(24px, calc(var(--body-m-font-size) * var(--body-m-line-height)));
+}
+.custom-type-preset.navigations-body-m .cart-container .cart__count--circle {
+	min-width: max(24px, calc(var(--body-m-font-size) * var(--body-m-line-height)));
+    height: max(24px, calc(var(--body-m-font-size) * var(--body-m-line-height)));
+}
+.custom-type-preset.navigations-label .cart-container .cart__icon {
+    height: max(24px, calc(var(--label-font-size) * var(--label-line-height)));
+}
+.custom-type-preset.navigations-label .cart-container .cart__count--circle {
+	min-width: max(24px, calc(var(--label-font-size) * var(--label-line-height)));
+    height: max(24px, calc(var(--label-font-size) * var(--label-line-height)));
+}
+
+
+@media screen and (max-width: 920px) {
+	.cart-container .cart__icon {
+		height: {{ 24 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+	}
+	.cart-container .cart__count--circle {
+		width: {{ 24 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+		height: {{ 24 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+	}
+}
+{% endstyle %}
+
+{%- liquid 
+	if settings.typography_preset == 'avant_garde'
+			assign weight = settings.accent_icon_weight
+			if settings.swap_fonts
+					assign weight = settings.base_icon_weight
+			endif
+	else 
+			assign weight =  settings.base_icon_weight
+			if settings.swap_fonts
+					assign weight = settings.accent_icon_weight
+			endif
+	endif
+
+	assign uppercase_font = false
+    assign bolder_font = false
+    if settings.typography_preset == 'custom'
+        assign weight = settings.custom_icon_weight
+        if settings.uppercase_body_s and settings.navigation_item_size == 'default'
+            assign uppercase_font = true
+        endif
+        if settings.bolder_font_body_s and settings.navigation_item_size == 'default'
+            assign bolder_font = true
+        endif
+    endif
+-%}
+
+<div class="cart-block {% if section.id contains 'footer' %}cart-block--footer{% else %}cart-block--{{ section.id }}{% endif %} cart-block--{{ cart_settings.cart_alignment }}" {{ block.shopify_attributes }}>
+	<div class="cart-container
+				cart-container--{{ settings.typography_preset }} {% if settings.navigation_item_size != 'default' and settings.typography_preset == 'custom' %}{{ settings.navigation_item_size }}{% else %}{% if uppercase_font %} uppercase{% endif %}{% if bolder_font %} bolder-font{% endif %}{% endif %}">
+		<a class="cart cart--{{ cart_settings.cart_style }} hover-opacity {% if settings.allow_transparent_navigation and settings.navigation_layout == 'sidebar_based' and section.id contains 'sidebar' and section.settings.color_type == 'default' %}scroll-color{% endif %} {% if section.settings.color_type == 'custom' %}color-custom{% elsif section.settings.color_type == 'invert' %}color-invert{% endif %}" href="{{ routes.cart_url }}" id="cart-link">
+			{%- if cart_settings.cart_style == 'text' or cart_settings.miscellaneous_cart_style == 'text' -%}
+				<span class="cart__title">{%- if settings.cart_name == 'cart' -%}{{ 'cart.title_cart' | t }}{% elsif settings.cart_name == 'basket' %}{{ 'cart.title_basket' | t }}{%- else -%}{{ 'cart.title_bag' | t }}{%- endif -%}</span>
+				<div class="cart__count" id="cart-icon-bubble-{{ section.id }}"><span class="cart-icon-bubble-count">{{ cart.item_count }}</span></div>
+			{%- elsif cart_settings.cart_style == 'icon' or cart_settings.cart_style == 'icon_with_text' -%}
+				<span class="cart__icon">
+					{% if settings.cart_name == 'basket' %}
+						{% if weight == 'light' %}
+							{% render 'icon', icon: 'basket-light' %}
+						{% elsif weight == 'regular' %}
+							{% render 'icon', icon: 'basket-regular' %}
+						{% elsif weight == 'medium' %}
+							{% render 'icon', icon: 'basket-medium' %}
+						{% elsif weight == 'bold' %}
+							{% render 'icon', icon: 'basket-bold' %}
+						{% endif %}
+					{% elsif settings.cart_name == 'cart' %}
+						{% if weight == 'light' %}
+							{% render 'icon', icon: 'cart-light' %}
+						{% elsif weight == 'regular' %}
+							{% render 'icon', icon: 'cart-regular' %}
+						{% elsif weight == 'medium' %}
+							{% render 'icon', icon: 'cart-medium' %}
+						{% elsif weight == 'bold' %}
+							{% render 'icon', icon: 'cart-bold' %}
+						{% endif %}
+					{% elsif settings.cart_name == 'bag' %}
+						{% if weight == 'light' %}
+							{% render 'icon-accordion-2', icon: 'bag-light' %}
+						{% elsif weight == 'regular' %}
+							{% render 'icon-accordion-2', icon: 'bag-regular' %}
+						{% elsif weight == 'medium' %}
+							{% render 'icon-accordion-2', icon: 'bag-medium' %}
+						{% elsif weight == 'bold' %}
+							{% render 'icon-accordion-2', icon: 'bag-bold' %}
+						{% endif %}
+					{% endif %}
+				</span>
+				{%- if cart_settings.cart_style == 'icon_with_text' -%}
+				<span class="cart__title cart__title--text">{%- if settings.cart_name == 'cart' -%}{{ 'cart.title_cart' | t }}{% elsif settings.cart_name == 'basket' %}{{ 'cart.title_basket' | t }}{%- else -%}{{ 'cart.title_bag' | t }}{%- endif -%}</span>
+				{%- endif -%}
+				<div class="cart__count" id="cart-icon-bubble-{{ section.id }}"><span class="cart-icon-bubble-count">{{ cart.item_count }}</span></div>
+			{%- elsif cart_settings.cart_style == 'circle' -%}
+				<div class="cart__count cart__count--circle" id="cart-icon-bubble-{{ section.id }}"><span class="cart-icon-bubble-count">{{ cart.item_count }}</span></div>
+			{%- endif -%}
+		</a>
+	</div>
+</div>

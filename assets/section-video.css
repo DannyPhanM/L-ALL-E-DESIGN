@@ -1,0 +1,229 @@
+.section-video__wrapper {
+    background-color: rgb(var(--layout-background-color));
+}
+.section-video__media {
+    position: relative;
+    display: flex;
+    width: 100%;
+    border-radius: var(--images-and-section-radius);
+    -webkit-border-radius: var(--images-and-section-radius);
+    overflow: clip;
+}
+.section-video--full-width .section-video__media {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+}
+.section-video__poster {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    position: relative;
+    z-index: 2;
+    /* will-change: opacity; */
+    transition: opacity 1s var(--transition-timing-function);
+    border-radius: var(--images-and-section-radius);
+    -webkit-border-radius: var(--images-and-section-radius);
+    outline-offset: -1px;
+}
+.section-video__media .template-video, .section-video__media iframe,
+.section-video__media video-section,
+.section-video__media[loaded] .section-video__poster {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    /* will-change: opacity; */
+    transition: opacity 1s var(--transition-timing-function);
+}
+.section-video .placeholder-svg {
+    object-position: center;
+    height: 100%;
+    width: 100%;
+}
+.section-video__poster .deferred-media__poster-button svg {
+    fill: rgb(var(--accent-button-color));
+    transition: fill var(--animation-duration) var(--transition-timing-function);
+}
+@media (hover: hover) {
+    .section-video__poster .deferred-media__poster-button:hover svg {
+        fill: rgb(var(--hover-button-color));
+    }
+}
+.section-video__media[loaded] .template-video, .section-video__media[loaded] iframe,
+.section-video__media[loaded] video-section {
+    display: block;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    position: relative;
+    z-index: 2;
+    /* will-change: opacity; */
+    transition: opacity 1s var(--transition-timing-function);
+}
+.section-video__image {
+    width: 100%;
+    height: 100%;
+}
+.section-video__image--mobile {
+    display: none;
+}
+
+.page-width.section-video--full-width,
+.page-width--1700.section-video--full-width {
+    max-width: none;
+}
+.section-video--narrow .section-video__wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+}
+.section-video__image--desktop {
+    object-position: var(--image-focal-point-desktop);
+}
+.section-video__image--mobile {
+    object-position: var(--image-focal-point-mobile);
+}
+
+/* Styles for full-width page without sidebars */
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .section-video__image--desktop,
+    .section-video .placeholder-svg {
+        display: none;
+    }
+    .section-video__image--desktop.section-video__image--all,
+    .section-video__image--mobile,
+    .section-video__view-placeholder .placeholder-svg {
+        display: flex;
+    }
+}
+
+/* Sidebars: Main XS, S and white space Spacious */
+/* Mobile */
+@media screen and (max-width: 1048px) and (min-width: 921px) {
+    .main_xs--spacious .section-video__image--desktop,
+    .main_xs--spacious .section-video .placeholder-svg,
+    .main_s--spacious .section-video__image--desktop,
+    .main_s--spacious .section-video .placeholder-svg {
+        display: none;
+    }
+    .main_xs--spacious .section-video__image--desktop.section-video__image--all,
+    .main_xs--spacious .section-video__image--mobile,
+    .main_xs--spacious .section-video__view-placeholder .placeholder-svg,
+    .main_s--spacious .section-video__image--desktop.section-video__image--all,
+    .main_s--spacious .section-video__image--mobile,
+    .main_s--spacious .section-video__view-placeholder .placeholder-svg {
+        display: flex;
+    }
+}
+/* Sidebars: Main XS, S and white space Compact */
+/* Mobile */
+@media screen and (max-width: 968px) and (min-width: 921px) {
+    .main_xs--compact .section-video__image--desktop,
+    .main_xs--compact .section-video .placeholder-svg,
+    .main_s--compact .section-video__image--desktop,
+    .main_s--compact .section-video .placeholder-svg {
+        display: none;
+    }
+    .main_xs--compact .section-video__image--desktop.section-video__image--all,
+    .main_xs--compact .section-video__image--mobile,
+    .main_xs--compact .section-video__view-placeholder .placeholder-svg,
+    .main_s--compact .section-video__image--desktop.section-video__image--all,
+    .main_s--compact .section-video__image--mobile,
+    .main_s--compact .section-video__view-placeholder .placeholder-svg {
+        display: flex;
+    }
+}
+/* Sidebars: Main XS, S with secondary and white space Spacious */
+/* Mobile */
+@media screen and (max-width: 1144px) and (min-width: 921px) {
+    .main_xs_with_secondary--spacious .section-video__image--desktop,
+    .main_xs_with_secondary--spacious .section-video .placeholder-svg,
+    .main_s_with_secondary--spacious .section-video__image--desktop,
+    .main_s_with_secondary--spacious .section-video .placeholder-svg {
+        display: none;
+    }
+    .main_xs_with_secondary--spacious .section-video__image--desktop.section-video__image--all,
+    .main_xs_with_secondary--spacious .section-video__image--mobile,
+    .main_xs_with_secondary--spacious .section-video__view-placeholder .placeholder-svg,
+    .main_s_with_secondary--spacious .section-video__image--desktop.section-video__image--all,
+    .main_s_with_secondary--spacious .section-video__image--mobile,
+    .main_s_with_secondary--spacious .section-video__view-placeholder .placeholder-svg {
+        display: flex;
+    }
+}
+/* Sidebars: Main XS, S with secondary and white space Compact */
+/* Mobile */
+@media screen and (max-width: 1064px) and (min-width: 921px) {
+    .main_xs_with_secondary--compact .section-video__image--desktop,
+    .main_xs_with_secondary--compact .section-video .placeholder-svg,
+    .main_s_with_secondary--compact .section-video__image--desktop,
+    .main_s_with_secondary--compact .section-video .placeholder-svg {
+        display: none;
+    }
+    .main_xs_with_secondary--compact .section-video__image--desktop.section-video__image--all,
+    .main_xs_with_secondary--compact .section-video__image--mobile,
+    .main_xs_with_secondary--compact .section-video__view-placeholder .placeholder-svg,
+    .main_s_with_secondary--compact .section-video__image--desktop.section-video__image--all,
+    .main_s_with_secondary--compact .section-video__image--mobile,
+    .main_s_with_secondary--compact .section-video__view-placeholder .placeholder-svg {
+        display: flex;
+    }
+}
+
+/* Sidebars: Main M and white space Spacious */
+/* Mobile */
+@media screen and (max-width: 1048px) and (min-width: 921px) {
+    .main_m--spacious .section-video__image--desktop,
+    .main_m--spacious .section-video .placeholder-svg {
+        display: none;
+    }
+    .main_m--spacious .section-video__image--desktop.section-video__image--all,
+    .main_m--spacious .section-video__image--mobile,
+    .main_m--spacious .section-video__view-placeholder .placeholder-svg {
+        display: flex;
+    }
+}
+/* Sidebars: Main M and white space Compact */
+/* Mobile */
+@media screen and (max-width: 1024px) and (min-width: 921px) {
+    .main_m--compact .section-video__image--desktop,
+    .main_m--compact .section-video .placeholder-svg {
+        display: none;
+    }
+    .main_m--compact .section-video__image--desktop.section-video__image--all,
+    .main_m--compact .section-video__image--mobile,
+    .main_m--compact .section-video__view-placeholder .placeholder-svg {
+        display: flex;
+    }
+}
+/* Sidebars: Main M with secondary */
+/* Mobile */
+@media screen and (max-width: 1152px) and (min-width: 921px) {
+    .main_m_with_secondary .section-video__image--desktop,
+    .main_m_with_secondary .section-video .placeholder-svg {
+        display: none;
+    }
+    .main_m_with_secondary .section-video__image--desktop.section-video__image--all,
+    .main_m_with_secondary .section-video__image--mobile,
+    .main_m_with_secondary .section-video__view-placeholder .placeholder-svg {
+        display: flex;
+    }
+}
+
+/* Sidebars: Main L */
+/* Mobile */
+@media screen and (max-width: 1536px) and (min-width: 921px) {
+    .main_l .section-video__image--desktop,
+    .main_l .section-video .placeholder-svg {
+        display: none;
+    }
+    .main_l .section-video__image--desktop.section-video__image--all,
+    .main_l .section-video__image--mobile,
+    .main_l .section-video__view-placeholder .placeholder-svg {
+        display: flex;
+    }
+}

@@ -1,0 +1,329 @@
+.pagination__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination__pages {
+    display: flex;
+    gap: 8px;
+}
+
+.pagination-wrapper--spacious.lines,
+.pagination-wrapper--compact.lines {
+    border-top: var(--line-width) solid rgba(var(--layout-text-color), var(--line-opacity));
+}
+
+.section-original.tablet .pagination-wrapper--spacious.lines {
+    padding-top: 96px;
+}
+
+.section-original.mobile .pagination-wrapper--spacious.lines,
+.section-original.mobile-mini .pagination-wrapper--spacious.lines,
+.pagination-wrapper--spacious.lines {
+    padding-top: 64px;
+}
+
+.pagination-wrapper--compact.lines {
+    padding-top: 48px;
+}
+
+.pagination__pages .pagination__item {
+    display: flex;
+    gap: 8px;
+    width: 44px;
+    height: 44px;
+}
+
+.pagination__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    -webkit-user-select: none;
+    color: rgb(var(--layout-text-color));
+    font: var(--base-body-s-font);
+    border: var(--outline-thickness) solid transparent;
+    border-radius: var(--field-radius);
+    -webkit-border-radius: var(--field-radius);
+    transition: border var(--animation-duration) var(--transition-timing-function), background-color var(--animation-duration) var(--transition-timing-function);
+}
+
+.custom-type-preset .pagination__item {
+    font: var(--body-s-font);
+    letter-spacing: var(--body-s-letter-spacing);
+}
+
+.pagination__item-arrow {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    overflow: clip;
+}
+
+.pagination__item--current {
+    border-radius: var(--field-radius);
+    --webkit-border-radius: var(--field-radius);
+    border: var(--outline-thickness) solid rgb(var(--layout-text-color));
+}
+
+.pagination__item svg {
+    fill: rgb(var(--layout-text-color));
+}
+
+.pagination__item--disable {
+    cursor: auto;
+    pointer-events: none;
+}
+
+.pagination__item--disable svg {
+    fill: rgb(var(--layout-text-color), .63);
+}
+
+.pagination__item--next svg, 
+.pagination__item--prev svg {
+    transform:translateX(0px);
+    transition: transform 0.15s var(--transition-timing-function);
+}
+
+.mobile-display {
+    display: none;
+}
+
+.infinite-scroll {
+    display: flex;
+    justify-content: center;
+}
+
+@media (hover: hover) {
+    .pagination__item:hover {
+        background-color: rgba(var(--layout-text-color), 0.05);
+    }
+    .pagination__item--current:hover {
+        opacity: 1;
+        color: rgb(var(--layout-text-color));
+        background-color: rgb(var(--layout-background-color));
+        border: var(--outline-thickness) solid rgb(var(--layout-text-color));
+    }
+    .pagination__item--disable:hover,
+    .pagination__item--dots:hover,
+    .pagination__item-arrow:hover  {
+        opacity: 1;
+        background-color: rgb(var(--layout-background-color));
+    }
+    .pagination__item--next:not([disabled]):hover svg {
+        transform:translateX(-8px);
+        transition: transform var(--animation-duration) var(--transition-timing-function);
+
+        [dir="rtl"] & {
+            transform: translateX(8px);
+        }
+    }
+    .pagination__item--prev:not([disabled]):hover svg {
+        transform: translateX(8px);
+        transition: transform var(--animation-duration) var(--transition-timing-function);
+
+        [dir="rtl"] & {
+            transform: translateX(-8px);
+        }
+    }
+}
+/* Styles for full-width page without sidebars */
+/* Tablet */
+@media screen and (max-width: 1024px) {
+    .pagination-wrapper--spacious.lines {
+        padding-top: 48px;
+    }
+    .pagination-wrapper--compact.lines {
+        padding-top: 32px;
+    }
+    .pagination__pages {
+        flex-wrap: wrap;
+    }
+}
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .pagination-wrapper--spacious.lines {
+        padding-top: 32px;
+    }
+}
+/* Mobile-mini */
+@media screen and (max-width: 500px) {
+    .pagination__li {
+        display: none;
+    }
+    .pagination__li.pagination__li--previous,
+    .pagination__li.pagination__li--current,
+    .pagination__li.pagination__li--current + .pagination__li {
+        display: block;
+    }
+}
+
+/* Sidebars: Main XS and Main S and white space Spacious */
+    /* Tablet */
+    @media screen and (max-width: 1304px) and (min-width: 921px) {
+        .main_xs--spacious .pagination-wrapper--spacious.lines,
+        .main_s--spacious .pagination-wrapper--spacious.lines {
+            padding-top: 48px;
+        }
+        .main_xs--spacious .pagination__pages,
+        .main_s--spacious .pagination__pages {
+            flex-wrap: wrap;
+        }
+    }
+    /* Mobile */
+    @media screen and (max-width: 1048px) and (min-width: 921px) {
+        .main_xs--spacious .pagination-wrapper--spacious.lines,
+        .main_s--spacious .pagination-wrapper--spacious.lines {
+            padding-top: 32px;
+        }
+    }
+/* Sidebars: Main XS and white space Compact */
+    /* Tablet */
+    @media screen and (max-width: 1224px) and (min-width: 921px) {
+        .main_xs--compact .pagination-wrapper--compact.lines {
+            padding-top: 32px;
+        }
+        .main_xs--compact .pagination__pages {
+            flex-wrap: wrap;
+        }
+    }
+
+/* Sidebars: Main XS with secondary and white space Spacious */ 
+    /* Tablet */
+    @media screen and (max-width: 1400px) and (min-width: 921px) {
+        .main_xs_with_secondary--spacious .pagination-wrapper--spacious.lines {
+            padding-top: 48px;
+        }
+        .main_xs_with_secondary--spacious .pagination__pages {
+            flex-wrap: wrap;
+        }
+    }
+    /* Mobile */
+    @media screen and (max-width: 1144px) and (min-width: 921px) {
+        .main_xs_with_secondary--spacious .pagination-wrapper--spacious.lines {
+            padding-top: 32px;
+        }
+    }
+/* Sidebars: Main XS with secondary and white space Compact */
+    /* Tablet */
+    @media screen and (max-width: 1320px) and (min-width: 921px) {
+        .main_xs_with_secondary--compact .pagination-wrapper--compact.lines {
+            padding-top: 32px;
+        }
+        .main_xs_with_secondary--compact .pagination__pages {
+            flex-wrap: wrap;
+        }
+    }
+/* Sidebars: Main S and white space Compact */ 
+    /* Tablet */
+    @media screen and (max-width: 1260px) and (min-width: 921px) {
+        .main_s--compact .pagination-wrapper--compact.lines {
+            padding-top: 32px;
+        }
+        .main_s--compact .pagination__pages {
+            flex-wrap: wrap;
+        }
+    }
+
+/* Sidebars: Main S with secondary and white space Spacious */
+    /* Tablet */
+    @media screen and (max-width: 1400px) and (min-width: 921px) {
+        .main_s_with_secondary--spacious .pagination-wrapper--spacious.lines {
+            padding-top: 48px;
+        }
+        .main_s_with_secondary--spacious .pagination__pages {
+            flex-wrap: wrap;
+        }
+    }
+    /* Mobile */
+    @media screen and (max-width: 1144px) and (min-width: 921px) {
+        .main_s_with_secondary--spacious .pagination-wrapper--spacious.lines {
+            padding-top: 32px;
+        }
+    }
+/* Sidebars: Main S with secondary and white space Compact */
+    /* Tablet */
+    @media screen and (max-width: 1378px) and (min-width: 921px) {
+        .main_s_with_secondary--compact .pagination-wrapper--compact.lines {
+            padding-top: 32px;
+        }
+        .main_s_with_secondary--compact .pagination__pages {
+            flex-wrap: wrap;
+        }
+    }
+
+/* Sidebars: Main M */
+    /* Tablet */
+    @media screen and (max-width: 1365px) and (min-width: 921px) {
+        .main_m .pagination-wrapper--spacious.lines {
+            padding-top: 48px;
+        }
+        .main_m .pagination-wrapper--compact.lines {
+            padding-top: 32px;
+        }
+        .main_m .pagination__pages {
+            flex-wrap: wrap;
+        }
+    }
+    /* Mobile */
+    @media screen and (max-width: 1048px) and (min-width: 921px) {
+        .main_m .pagination-wrapper--spacious.lines {
+            padding-top: 32px;
+        }
+    }
+
+/* Sidebars: Main M with secondary */
+    /* Tablet */
+    @media screen and (max-width: 1493px) and (min-width: 921px) {
+        .main_m_with_secondary .pagination-wrapper--spacious.lines {
+            padding-top: 48px;
+        }
+        .main_m_with_secondary .pagination-wrapper--compact.lines {
+            padding-top: 32px;
+        }
+        .main_m_with_secondary .pagination__pages {
+            flex-wrap: wrap;
+        }
+    }
+    /* Mobile */
+    @media screen and (max-width: 1152px) and (min-width: 921px) {
+        .main_m_with_secondary .pagination-wrapper--spacious.lines {
+            padding-top: 32px;
+        }
+    }
+
+/* Sidebars: Main L */
+    /* Tablet */
+    @media screen and (max-width: 2048px) and (min-width: 921px) {
+        .main_l .pagination-wrapper--spacious.lines {
+            padding-top: 48px;
+        }
+        .main_l .pagination-wrapper--compact.lines {
+            padding-top: 32px;
+        }
+        .main_l .pagination__pages {
+            flex-wrap: wrap;
+        }
+    }
+    /* Mobile */
+    @media screen and (max-width: 1536px) and (min-width: 921px) {
+        .main_l .pagination-wrapper--spacious.lines {
+            padding-top: 32px;
+        }
+    }
+    /* Mobile-mini */
+    @media screen and (max-width: 1000px) and (min-width: 921px) {
+        .main_l .pagination__li {
+            display: none;
+        }
+        .main_l .pagination__li.pagination__li--previous,
+        .main_l .pagination__li.pagination__li--current,
+        .main_l .pagination__li.pagination__li--current + .pagination__li {
+            display: block;
+        }
+    }

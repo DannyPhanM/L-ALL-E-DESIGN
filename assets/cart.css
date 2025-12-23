@@ -1,0 +1,125 @@
+.cart-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: var(--cart-vertical-alignment);
+    align-items: var(--cart-horizontal-alignment);
+}
+
+.cart-container {
+    display: flex;
+    overflow-y: clip;
+    align-items: center;
+    justify-content: var(--cart-horizontal-alignment);
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    min-height: 44px;
+    color: rgb(var(--layout-text-color));
+    word-break: normal;
+}
+
+.cart {
+    padding: 0 10px;
+}
+
+.cart-container {
+    margin: 0 -10px;
+}
+
+.miscellaneous__subblock .cart-container {
+    margin: 0px;
+}
+
+.cart--icon {
+    justify-content: center;
+}
+
+.cart--icon_with_text {
+    min-width: 44px;
+}
+
+.cart:focus {
+    outline-offset: -2px;
+}
+
+.cart__icon,
+.cart__icon svg {
+    display: block;
+    width: auto;
+    aspect-ratio: 1/1;
+}
+
+.cart__icon svg {
+    height: 100%;
+    width: 100%;
+    fill: rgb(var(--layout-text-color));
+}
+
+.cart__count--circle {
+    display: flex;
+    border-radius: 2000px;
+    color: rgb(var(--layout-background-color));
+    background-color: rgb(var(--layout-text-color));
+    justify-content: center;
+    align-items: center;
+}
+.transparent-header.transparent .cart__count--circle,
+.transparent-sidebar:not(.overlap-slide-out-menu-opened) .cart__count--circle {
+    color: rgb(var(--layout-background-color));
+    background-color: rgb(var(--layout-text-color));
+}
+.no-default-color .cart__count--circle {
+    background-color: rgb(var(--layout-text-color));
+}
+
+.cart__count--circle .cart-icon-bubble-count {
+    font: var(--base-body-s-font);
+    padding: 0 4px;
+}
+.custom-type-preset .cart__count--circle .cart-icon-bubble-count {
+    font: var(--body-s-font);
+    letter-spacing: var(--body-s-letter-spacing);
+}
+
+/* Fonts */
+
+.cart-container--minimal_uppercase {
+    font: var(--base-body-s-font);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.cart-container--minimal_basic,
+.cart-container--classic {
+    font: var(--base-body-s-font);
+}
+
+.cart-container--minimal_heavy {
+    font: var(--base-body-l-font);
+}
+
+.cart-container--avant_garde {
+    font: var(--accent-body-s-font);
+}
+
+.cart-container--contrast {
+    font: var(--base-label-font);
+}
+
+.cart-container--brutalist {
+    font: var(--base-body-l-font);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.cart-container--duet {
+    font: var(--base-body-m-font);
+}
+
+.cart-container--custom {
+    font: var(--body-s-font);
+    letter-spacing: var(--body-s-letter-spacing);
+}

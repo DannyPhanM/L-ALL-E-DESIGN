@@ -1,0 +1,108 @@
+.back-to-top-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: var(--back-to-top-vertical-alignment);
+    align-items: var(--back-to-top-horizontal-alignment);
+}
+
+.back-to-top-block--secondary-sidebar.back-to-top-container {
+    overflow-y: auto;
+}
+
+.back-to-top-block--secondary-sidebar .back-to-top__title {
+    writing-mode: vertical-rl;
+    min-height: fit-content;
+    max-height: max-content;
+    white-space: nowrap;
+
+    [dir="rtl"] & {
+        writing-mode: sideways-rl;
+    }
+}
+
+.back-to-top-block--secondary-sidebar .back-to-top {
+    flex-direction: column;
+ }
+
+.back-to-top-container {
+    display: flex;
+    overflow-y: clip;
+    align-items: center;
+    justify-content: var(--back-to-top-horizontal-alignment);
+}
+
+.back-to-top {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    color: rgb(var(--layout-text-color));
+    min-height: 32px;
+    justify-content: center;
+    min-width: 44px;
+}
+
+.back-to-top:not(:has( .back-to-top__title)) {
+    justify-content: var(--back-to-top-horizontal-alignment);
+}
+
+.back-to-top:focus {
+    outline-offset: -1px;
+}
+
+.back-to-top__title {
+    color: rgb(var(--layout-text-color));
+}
+
+.back-to-top__item {
+    display: flex;
+    align-items: center;
+    min-height: 32px;
+}
+
+.back-to-top span {
+    display: block;
+    height: 100%;
+}
+
+.back-to-top__icon svg {
+    display: block;
+    width: auto;
+    height: 100%;
+    fill: rgb(var(--layout-text-color));
+}
+
+/* Fonts */
+.back-to-top-container--minimal_uppercase {
+    font: var(--base-body-s-font);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.back-to-top-container--minimal_basic,
+.back-to-top-container--classic,
+.back-to-top-container--avant_garde,
+.back-to-top-container--contrast {
+    font: var(--base-label-font);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.back-to-top-container--minimal_heavy {
+    font: var(--base-body-l-font);
+}
+
+.back-to-top-container--brutalist {
+    font: var(--base-body-l-font);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.back-to-top-container--duet {
+    font: var(--base-body-m-font);
+}
+
+.back-to-top-container--custom {
+    font: var(--body-s-font);
+    letter-spacing: var(--body-s-letter-spacing);
+}

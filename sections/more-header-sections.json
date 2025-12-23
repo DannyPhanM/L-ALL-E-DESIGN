@@ -1,0 +1,106 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "More header sections",
+  "sections": {
+    "news_drawer_KCCH4G": {
+      "type": "news-drawer",
+      "blocks": {
+        "promo_code_Bbw7Pz": {
+          "type": "promo_code",
+          "settings": {
+            "image_ratio": "original",
+            "image_radius": "default",
+            "heading": "Flash Sale",
+            "heading_size": "default",
+            "text": "<p>Only 48H, Hurry up!</p>",
+            "dim_text": true,
+            "text_size": "default",
+            "promo_code": "FLASH-25",
+            "top_spacing": 2,
+            "mobile_top_spacing": 2
+          }
+        },
+        "line_4KWxdC": {
+          "type": "line",
+          "settings": {
+            "top_spacing": 2,
+            "mobile_top_spacing": 2
+          }
+        },
+        "text_8N9Nyn": {
+          "type": "text",
+          "settings": {
+            "image_ratio": "landscape",
+            "image_radius": "default",
+            "subheading": "Blog Post",
+            "subheading_size": "default",
+            "heading": "SEE NEW DZHUS COLLECTION AT BERLIN FASHION WEEK THIS JULY",
+            "heading_size": "default",
+            "text": "",
+            "dim_text": false,
+            "text_size": "default",
+            "button_label": "Read more",
+            "block_link": "",
+            "target_blank": false,
+            "button_style": "solid",
+            "top_spacing": 2,
+            "mobile_top_spacing": 2
+          }
+        },
+        "line_NjGUEf": {
+          "type": "line",
+          "settings": {
+            "top_spacing": 2,
+            "mobile_top_spacing": 2
+          }
+        },
+        "products_V3GRcg": {
+          "type": "products",
+          "settings": {
+            "title": "Hot New",
+            "title_size": "default",
+            "text": "",
+            "dim_text": false,
+            "text_size": "default",
+            "product_list": [],
+            "image_ratio": "narrow_portrait",
+            "focal_point": "center center",
+            "show_vendor": false,
+            "show_price": true,
+            "max_product_name_characters": 100,
+            "top_spacing": 2,
+            "mobile_top_spacing": 2
+          }
+        }
+      },
+      "block_order": [
+        "promo_code_Bbw7Pz",
+        "line_4KWxdC",
+        "text_8N9Nyn",
+        "line_NjGUEf",
+        "products_V3GRcg"
+      ],
+      "disabled": true,
+      "name": "t:sections.news-drawer.name",
+      "settings": {
+        "heading": "News & Offers",
+        "heading_size": "default",
+        "color_type": "invert",
+        "background_color": "#ffffff",
+        "text_color": "#000000"
+      }
+    }
+  },
+  "order": [
+    "news_drawer_KCCH4G"
+  ]
+}

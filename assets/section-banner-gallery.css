@@ -1,0 +1,180 @@
+.banner-gallery__title--minimal_uppercase {
+    font: var(--base-body-s-font);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+.banner-gallery__title--minimal_basic {
+    font: var(--base-body-m-font);
+}
+.banner-gallery__title--minimal_heavy {
+    font: var(--base-heading-xs-font);
+}
+.banner-gallery__title--classic,
+.banner-gallery__title--contrast {
+    font: var(--accent-body-l-font);
+}
+.banner-gallery__title--avant_garde {
+    font: var(--base-body-m-font);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+.banner-gallery__title--brutalist {
+    font: var(--base-body-l-font);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+.banner-gallery__title--duet {
+    font: var(--accent-body-m-font);
+}
+.banner-gallery__title--custom {
+    font: var(--body-s-font);
+    letter-spacing: var(--body-s-letter-spacing);
+}
+.banner-gallery__image {
+    width: 100%;
+    height: 100%;
+}
+.banner-gallery__card {
+    display: flex;
+    border-radius: var(--image-radius);
+    -webkit-border-radius: var(--image-radius);
+    overflow: clip;
+    position: relative;
+    cursor: default;
+}
+a.banner-gallery__card {
+    cursor: pointer;
+}
+a.banner-gallery__card:focus-visible {
+    outline-offset: -2px;
+}
+.banner-gallery__info {
+    position: absolute;
+    inset: 0;
+    padding: 16px;
+    display: flex;
+    align-items: var(--vertical-position);
+    justify-content: var(--horizontal-position);
+    z-index: 3;
+    background-color: transparent;
+    /* will-change: opacity; */
+    transition: opacity calc(var(--animation-duration) / 2) var(--transition-timing-function);
+}
+.banner-gallery__card::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    opacity: var(--overlay-opacity);
+    border-radius: var(--image-radius);
+    -webkit-border-radius: var(--image-radius);
+    overflow: clip;
+}
+.banner-gallery__card.hover-content .banner-gallery__info {
+    transform: translateY(20px);
+}
+.banner-gallery__card.hover-content .banner-gallery__info,
+.banner-gallery__card.hover-content::after {
+    opacity: 0!important;
+    pointer-events: none;
+    /* will-change: opacity; */
+    transition: opacity calc(var(--animation-duration) / 2) var(--transition-timing-function), transform calc(var(--animation-duration) / 2) var(--transition-timing-function);
+}
+a.banner-gallery__card.hover-content .banner-gallery__info,
+a.banner-gallery__card.hover-content::after {
+    cursor: pointer;
+    /* will-change: opacity; */
+    transition: opacity calc(var(--animation-duration) / 2) var(--transition-timing-function), transform calc(var(--animation-duration) / 2) var(--transition-timing-function);
+}
+a.banner-gallery__card .banner-gallery__image,
+a.banner-gallery__card .placeholder-svg {
+    transition: transform calc(var(--animation-duration) / 2) var(--transition-timing-function);
+}
+
+/* #region Simulate hover on touch */
+
+a.banner-gallery__card.hover-content.active-by-tap .banner-gallery__info  {
+    opacity: 1!important;
+    pointer-events: auto;
+    /* will-change: opacity; */
+    transition: opacity var(--animation-duration) var(--transition-timing-function), transform var(--animation-duration) var(--transition-timing-function);
+    transform: translateY(0px);
+}
+a.banner-gallery__card.hover-content.active-by-tap::after {
+    opacity: var(--overlay-opacity)!important;
+    pointer-events: auto;
+    /* will-change: opacity; */
+    transition: opacity var(--animation-duration) var(--transition-timing-function);
+}
+
+.banner-gallery__card:not(a):hover .banner-gallery__image,
+.banner-gallery__card:not(a):hover .placeholder-svg {
+    transform: scale(1.03);
+    transition: transform var(--animation-duration) var(--transition-timing-function);
+}
+.banner-gallery__card:not(a):hover .banner-gallery__info {
+    opacity: .7;
+}
+.banner-gallery__card:not(a).hover-content:hover .banner-gallery__info,
+.banner-gallery__card:not(a).hover-content:focus-visible .banner-gallery__info  {
+    opacity: 1!important;
+    pointer-events: auto;
+    /* will-change: opacity; */
+    transition: opacity var(--animation-duration) var(--transition-timing-function), transform var(--animation-duration) var(--transition-timing-function);
+    transform: translateY(0px);
+}
+.banner-gallery__card:not(a).hover-content:hover::after,
+.banner-gallery__card:not(a).hover-content:focus-visible::after {
+    opacity: var(--overlay-opacity)!important;
+    pointer-events: auto;
+    /* will-change: opacity; */
+    transition: opacity var(--animation-duration) var(--transition-timing-function);
+}
+
+/* #endregion  */
+
+@media (hover: hover) {
+    a.banner-gallery__card:hover .banner-gallery__image,
+    a.banner-gallery__card:hover .placeholder-svg {
+        transform: scale(1.03);
+        transition: transform var(--animation-duration) var(--transition-timing-function);
+    }
+    a.banner-gallery__card:hover .banner-gallery__info {
+        opacity: .7;
+    }
+    .banner-gallery__card.hover-content:hover .banner-gallery__info,
+    a.banner-gallery__card.hover-content:focus-visible .banner-gallery__info  {
+        opacity: 1!important;
+        pointer-events: auto;
+        /* will-change: opacity; */
+        transition: opacity var(--animation-duration) var(--transition-timing-function), transform var(--animation-duration) var(--transition-timing-function);
+        transform: translateY(0px);
+    }
+    .banner-gallery__card.hover-content:hover::after,
+    a.banner-gallery__card.hover-content:focus-visible::after {
+        opacity: var(--overlay-opacity)!important;
+        pointer-events: auto;
+        /* will-change: opacity; */
+        transition: opacity var(--animation-duration) var(--transition-timing-function);
+    }
+}
+
+/* Styles for full-width page without sidebars */
+/* Tablet */
+@media screen and (max-width: 1024px) {
+    .banner-gallery__card.hover-content .banner-gallery__info,
+    a.banner-gallery__card.hover-content .banner-gallery__info {
+        opacity: 1!important;
+        pointer-events: auto;
+        transform: translateY(0px);
+    }
+    .banner-gallery__card.hover-content::after,
+    a.banner-gallery__card.hover-content::after {
+        opacity: var(--overlay-opacity)!important;
+        pointer-events: auto;
+    }
+}

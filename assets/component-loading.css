@@ -1,0 +1,61 @@
+.loading-overlay__spinner {
+    width: 24px;
+    position: absolute;
+    z-index: 1;
+    inset-inline-end: 0;
+    top: 0;
+    height: 24px;
+}
+.spinner {
+    animation: rotator 1.8s linear infinite;
+}
+@keyframes rotator {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(270deg);
+    }
+}
+.spinner .path,
+.solid-button .spinner .path,
+.big-button .spinner .path {
+    stroke-dasharray: 187;
+    stroke-dashoffset: 0;
+    transform-origin: center;
+}
+.spinner .path{
+    animation: dash 1.8s ease-in-out infinite,
+    colors 3.6s ease-in-out infinite;
+}
+.solid-button .spinner .path,
+.big-button .spinner .path {
+    stroke: rgb(var(--layout-background-color));
+    animation: dash 1.8s ease-in-out infinite;
+}
+
+@keyframes colors {
+	0% { stroke: rgb(var(--layout-text-color)); }
+  100% { stroke: rgb(var(--accent-button-color)); }
+}
+
+@keyframes dash {
+ 0% { stroke-dashoffset: 187; }
+ 50% {
+   stroke-dashoffset: 20.8;
+   transform:rotate(135deg);
+ }
+ 100% {
+   stroke-dashoffset: 187;
+   transform:rotate(450deg);
+ }
+}
+
+.loading-overlay__spinner:not(.hidden) + .cart-item__price-wrapper,
+.loading-overlay__spinner:not(.hidden) ~ cart-remove-button {
+    opacity: 50%;
+}
+.loading-overlay__spinner:not(.hidden) ~ cart-remove-button {
+    pointer-events: none;
+    cursor: default;
+}

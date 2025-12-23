@@ -1,0 +1,995 @@
+.lines.contact-form .media-with-text__wrapper::before {
+    display: block;
+    content: '';
+    height: var(--line-width);
+    width: 100%;
+    background-color: rgba(var(--layout-text-color),var(--line-opacity));
+}
+.subheading.error-color {
+    color: rgb(var(--error-color));
+}
+.subheading.success-color {
+    color: rgb(var(--success-color));
+}
+.contact-form.color-default .show_container .subheading.error-color,
+.contact-form.color-default .show_container .subheading.success-color,
+.contact-form.color-invert .media-with-text__media:not(.show_container) .subheading.error-color,
+.contact-form.color-invert .media-with-text__media:not(.show_container) .subheading.success-color,
+.contact-form.color-custom .subheading.error-color,
+.contact-form.color-custom .subheading.success-color  {
+    color: rgb(var(--layout-text-color));
+}
+.contact-form__wrapper .subheading {
+    margin-bottom: var(--banner-gap);
+}
+.contact-form__wrapper .subheading--minimal_heavy {
+    font: var(--base-heading-xs-font);
+}
+.contact-form__wrapper .subheading--brutalist {
+    font: var(--base-body-l-font);
+}
+.contact-form__wrapper .subheading--classic,
+.contact-form__wrapper .subheading--contrast {
+    font: var(--accent-body-l-font);
+}
+.contact-form__wrapper .subheading--minimal_uppercase {
+    font: var(--base-body-s-font);
+}
+.contact-form__wrapper .subheading--minimal_basic,
+.contact-form__wrapper .subheading--avant_garde {
+    font: var(--base-body-m-font);
+}
+.contact-form__wrapper .subheading--duet {
+    font: var(--accent-body-m-font);
+}
+.contact-form__wrapper .subheading--custom {
+    font: var(--body-s-font);
+    letter-spacing: var(--body-s-letter-spacing);
+}
+
+.contact-form.media-with-text--spacious {
+    --form-gap: 32px;
+}
+.contact-form.media-with-text--compact {
+    --form-gap: 24px;
+}
+.contact-form .show_container .contact-form__wrapper {
+    padding: var(--contact-gap);
+}
+.contact-form__wrapper {
+    width: 100%;
+}
+.popup-content .contact-form__wrapper {
+    max-width: 480px;
+    margin: 0 auto;
+}
+.product-popup-modal.form-submitted .page__content.contact-form__wrapper:has(.form-status) .content-heading,
+.product-popup-modal.form-submitted .page__content.contact-form__wrapper:has(.form-status) form > *:not(.form-status),
+.product-popup-modal:not(.form-submitted) .page__content.contact-form__wrapper .form-status {
+    display: none;
+}
+.form-submitted .page__content.contact-form__wrapper:has(.form-status) form .form-status {
+    text-align: center;
+}
+.contact-form.no-fill-section.exclude-lines.image-left .media-with-text__content-wrapper,
+.contact-form.no-fill-section.exclude-lines.image-right .media-with-text__content-wrapper {
+    padding: 0;
+}
+.contact-form .show_container.media-with-text__media {
+    border-radius: var(--images-and-section-radius);
+    -webkit-border-radius: var(--images-and-section-radius);
+    overflow: clip;
+}
+.contact-form__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--form-gap);
+}
+.contact-form .form-status {
+    margin-bottom: var(--form-gap);
+}
+.contact__button, .contact__button + .rte {
+    margin-top: var(--form-gap);
+}
+.contact__button .button {
+    width: 100%;
+}
+.contact-form.no-default-color.no-fill-section .media-with-text__card {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+}
+.contact-form .social-media__title {
+    min-height: auto;
+}
+.contact-form .social-media-container,
+.contact-form .contacts-block {
+    gap: 16px;
+}
+.contact-form .contacts-block .contacts {
+    flex-direction: column;
+}
+.contact-form .contacts__description {
+    margin-top: 8px;
+}
+.contact-form .text-area {
+    height: 117px;
+    resize: vertical;
+    width: 100%;
+    border: var(--outline-thickness) solid rgb(var(--layout-text-color));
+    -webkit-appearance: none;
+    appearance: none;
+    -moz-appearance: none;
+    padding: 10px 12px;
+    min-height: 110px;
+}
+.contact-form .form-centered.media-with-text__card {
+    justify-content: center;
+}
+.contact-form .form-centered .media-with-text__content {
+    display: none;
+}
+.contact-form .form-centered .media-with-text__media {
+    max-width: 440px;
+}
+.contact-form .form-centered .media-with-text__media.show_container  {
+    max-width: calc(440px + (var(--contact-gap) * 2));
+}
+
+.contact-form .media-with-text__card,
+.exclude-lines.lines.contact-form .media-with-text__card {
+    --contact-gap: 120px;
+}
+.include-lines.lines.contact-form .media-with-text__card {
+    --contact-gap: 60px;
+}
+.contact-form .media-with-text__card.half,
+.media-with-text--narrow .media-with-text__wrapper .media-with-text__card {
+    --contact-gap: 80px;
+}
+.include-lines.lines.contact-form .media-with-text__card.half.big-button,
+.include-lines.media-with-text--narrow.lines .media-with-text__wrapper .media-with-text__card {
+    --contact-gap: 40px;
+}
+.contact-form.exclude-lines .half .media-with-text__content {
+    flex: 0 0 calc(50% - calc(var(--gap) / 2));
+}
+.contact-form--spacious {
+    --banner-gap: 24px;
+}
+.contact-form--compact {
+    --banner-gap: 16px;
+}
+
+.contact-form.no-default-color .contacts-block.color-accent .contacts__item,
+.contact-form.no-default-color .social-media.color-accent .social-media__link {
+    color: rgb(var(--layout-text-color));
+}
+
+.contact-form.no-default-color .social-media.color-accent .social-media__link svg {
+    fill: rgb(var(--layout-text-color));
+}
+
+.contact-form.no-default-color .media-with-text__card {
+    overflow: visible;
+}
+
+/* Styles for full-width page without sidebars */
+/* Laptop */
+@media screen and (max-width: 1440px) {
+    .contact-form .media-with-text__card {
+        --contact-gap: 96px;
+    }
+    .exclude-lines.lines.contact-form .media-with-text__card,
+    .contact-form .media-with-text__card.half {
+        --contact-gap: 64px;
+    }
+    .include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 32px;
+    }
+    .include-lines.lines.contact-form .media-with-text__card.half {
+        --contact-gap: 24px;
+    }
+}
+/* Max page width 1200px or 1400px */
+@media screen and (min-width: 1200px) {
+    .page-width.contact-form .media-with-text__card {
+        --contact-gap: 96px;
+    }
+    .page-width.exclude-lines.lines.contact-form .media-with-text__card,
+    .page-width.contact-form .media-with-text__card.half {
+        --contact-gap: 64px;
+    }
+    .page-width.include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 32px;
+    }
+    .page-width.include-lines.lines.contact-form .media-with-text__card.half {
+        --contact-gap: 24px;
+    }
+}
+/* Tablet */
+@media screen and (max-width: 1024px) {
+    .exclude-lines.lines.contact-form .media-with-text__card,
+    .contact-form .media-with-text__card.half {
+        --contact-gap: 48px;
+    }
+    .include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 24px;
+    }
+    .contact-form .media-with-text__card {
+        --contact-gap: 64px;
+    }
+}
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .contact-form--spacious {
+        --banner-gap: 16px;
+    }
+    .contact-form.media-with-text--spacious {
+        --form-gap: 24px;
+    }
+    .contact-form .media-with-text__card.half,
+    .exclude-lines.lines.contact-form .media-with-text__card,
+    .include-lines.lines.contact-form .media-with-text__card,
+    .include-lines.lines.contact-form .media-with-text__card.half
+    .contact-form .media-with-text__card {
+        --contact-gap: 24px;
+    }
+    .contact-form .form-centered .media-with-text__media {
+        flex: 1 1 100%;
+    }
+    .contact-form .form-centered.media-with-text__card {
+        align-items: center;
+    }
+}
+
+/* Sidebars: Main XS and white space Spacious */
+/* Laptop */
+@media screen and (max-width: 1720px) and (min-width: 921px) {
+    .main_xs--spacious .contact-form .media-with-text__card {
+        --contact-gap: 96px;
+    }
+    .main_xs--spacious .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_xs--spacious .contact-form .media-with-text__card.half {
+        --contact-gap: 64px;
+    }
+    .main_xs--spacious .include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 32px;
+    }
+    .main_xs--spacious .include-lines.lines.contact-form .media-with-text__card.half {
+        --contact-gap: 24px;
+    }
+}
+/* Max page width 1200px or 1400px */
+@media screen and (min-width: 1480px) {
+    .main_xs--spacious .page-width.contact-form .media-with-text__card {
+        --contact-gap: 96px;
+    }
+    .main_xs--spacious .page-width.exclude-lines.lines.contact-form .media-with-text__card,
+    .main_xs--spacious .page-width.contact-form .media-with-text__card.half {
+        --contact-gap: 64px;
+    }
+    .main_xs--spacious .page-width.include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 32px;
+    }
+    .main_xs--spacious .page-width.include-lines.lines.contact-form .media-with-text__card.half {
+        --contact-gap: 24px;
+    }
+}
+/* Tablet */
+@media screen and (max-width: 1304px) and (min-width: 921px) {
+    .main_xs--spacious .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_xs--spacious .contact-form .media-with-text__card.half {
+        --contact-gap: 48px;
+    }
+    .main_xs--spacious .include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 24px;
+    }
+    .main_xs--spacious .contact-form .media-with-text__card {
+        --contact-gap: 64px;
+    }
+}
+/* Mobile */
+@media screen and (max-width: 1048px) and (min-width: 921px) {
+    .main_xs--spacious .contact-form--spacious {
+        --banner-gap: 16px;
+    }
+    .main_xs--spacious .contact-form.media-with-text--spacious {
+        --form-gap: 24px;
+    }
+    .main_xs--spacious .contact-form .media-with-text__card.half
+    .main_xs--spacious .exclude-lines.lines.contact-form .media-with-text__card
+    .main_xs--spacious .include-lines.lines.contact-form .media-with-text__card,
+    .main_xs--spacious .include-lines.lines.contact-form .media-with-text__card.half
+    .main_xs--spacious .contact-form .media-with-text__card {
+        --contact-gap: 24px;
+    }
+    .main_xs--spacious .contact-form .form-centered .media-with-text__media {
+        flex: 1 1 100%;
+    }
+    .main_xs--spacious .contact-form .form-centered.media-with-text__card {
+        align-items: center;
+    }
+}
+
+/* Sidebars: Main XS and white space Compact */
+/* Laptop */
+@media screen and (max-width: 1646px) and (min-width: 921px) {
+    .main_xs--compact .contact-form .media-with-text__card {
+        --contact-gap: 96px;
+    }
+    .main_xs--compact .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_xs--compact .contact-form .media-with-text__card.half {
+        --contact-gap: 64px;
+    }
+    .main_xs--compact .include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 32px;
+    }
+    .main_xs--compact .include-lines.lines.contact-form .media-with-text__card.half {
+        --contact-gap: 24px;
+    }
+}
+/* Max page width 1200px or 1400px */
+@media screen and (min-width: 1400px) {
+    .main_xs--compact .page-width.contact-form .media-with-text__card {
+        --contact-gap: 96px;
+    }
+    .main_xs--compact .page-width.exclude-lines.lines.contact-form .media-with-text__card,
+    .main_xs--compact .page-width.contact-form .media-with-text__card.half {
+        --contact-gap: 64px;
+    }
+    .main_xs--compact .page-width.include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 32px;
+    }
+    .main_xs--compact .page-width.include-lines.lines.contact-form .media-with-text__card.half {
+        --contact-gap: 24px;
+    }
+}
+/* Tablet */
+@media screen and (max-width: 1224px) and (min-width: 921px) {
+    .main_xs--compact .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_xs--compact .contact-form .media-with-text__card.half {
+        --contact-gap: 48px;
+    }
+    .main_xs--compact .include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 24px;
+    }
+    .main_xs--compact .contact-form .media-with-text__card {
+        --contact-gap: 64px;
+    }
+}
+/* Mobile */
+@media screen and (max-width: 968px) and (min-width: 921px) {
+    .main_xs--compact .contact-form .media-with-text__card.half,
+    .main_xs--compact .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_xs--compact .include-lines.lines.contact-form .media-with-text__card,
+    .main_xs--compact .include-lines.lines.contact-form .media-with-text__card.half,
+    .main_xs--compact .contact-form .media-with-text__card  {
+        --contact-gap: 24px;
+    }
+    .main_xs--compact .contact-form .form-centered .media-with-text__media {
+        flex: 1 1 100%;
+    }
+    .main_xs--compact .contact-form .form-centered.media-with-text__card {
+        align-items: center;
+    }
+}
+
+/* Sidebars: Main XS with secondary and white space Spacious */
+/* Laptop */
+@media screen and (max-width: 1816px) and (min-width: 921px) {
+    .main_xs_with_secondary--spacious .contact-form .media-with-text__card {
+        --contact-gap: 96px;
+    }
+    .main_xs_with_secondary--spacious .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_xs_with_secondary--spacious .contact-form .media-with-text__card.half {
+        --contact-gap: 64px;
+    }
+    .main_xs_with_secondary--spacious .include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 32px;
+    }
+    .main_xs_with_secondary--spacious .include-lines.lines.contact-form .media-with-text__card.half {
+        --contact-gap: 24px;
+    }
+}
+/* Max page width 1200px or 1400px */
+@media screen and (min-width: 1576px) {
+    .main_xs_with_secondary--spacious .page-width.contact-form .media-with-text__card {
+        --contact-gap: 96px;
+    }
+    .main_xs_with_secondary--spacious .page-width.exclude-lines.lines.contact-form .media-with-text__card,
+    .main_xs_with_secondary--spacious .page-width.contact-form .media-with-text__card.half {
+        --contact-gap: 64px;
+    }
+    .main_xs_with_secondary--spacious .page-width.include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 32px;
+    }
+    .main_xs_with_secondary--spacious .page-width.include-lines.lines.contact-form .media-with-text__card.half {
+        --contact-gap: 24px;
+    }
+}
+/* Tablet */
+@media screen and (max-width: 1400px) and (min-width: 921px) {
+    .main_xs_with_secondary--spacious .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_xs_with_secondary--spacious .contact-form .media-with-text__card.half {
+        --contact-gap: 48px;
+    }
+    .main_xs_with_secondary--spacious .include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 24px;
+    }
+    .main_xs_with_secondary--spacious .contact-form .media-with-text__card {
+        --contact-gap: 64px;
+    }
+}
+/* Mobile */
+@media screen and (max-width: 1144px) and (min-width: 921px) {
+    .main_xs_with_secondary--spacious .contact-form--spacious {
+        --banner-gap: 16px;
+    }
+    .main_xs_with_secondary--spacious .contact-form.media-with-text--spacious {
+        --form-gap: 24px;
+    }
+    .main_xs_with_secondary--spacious .contact-form .media-with-text__card.half,
+    .main_xs_with_secondary--spacious .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_xs_with_secondary--spacious .include-lines.lines.contact-form .media-with-text__card,
+    .main_xs_with_secondary--spacious .include-lines.lines.contact-form .media-with-text__card.half,
+    .main_xs_with_secondary--spacious .contact-form .media-with-text__card {
+        --contact-gap: 24px;
+    }
+    .main_xs_with_secondary--spacious .contact-form .form-centered .media-with-text__media {
+        flex: 1 1 100%;
+    }
+    .main_xs_with_secondary--spacious .contact-form .form-centered.media-with-text__card {
+        align-items: center;
+    }
+}
+
+/* Sidebars: Main XS with secondary and white space Compact */
+/* Laptop */
+@media screen and (max-width: 1755px) and (min-width: 921px) {
+    .main_xs_with_secondary--compact .contact-form .media-with-text__card {
+        --contact-gap: 96px;
+    }
+    .main_xs_with_secondary--compact .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_xs_with_secondary--compact .contact-form .media-with-text__card.half {
+        --contact-gap: 64px;
+    }
+    .main_xs_with_secondary--compact .include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 32px;
+    }
+    .main_xs_with_secondary--compact .include-lines.lines.contact-form .media-with-text__card.half {
+        --contact-gap: 24px;
+    }
+}
+/* Max page width 1200px or 1400px */
+@media screen and (min-width: 1496px) {
+    .main_xs_with_secondary--compact .page-width.contact-form .media-with-text__card {
+        --contact-gap: 96px;
+    }
+    .main_xs_with_secondary--compact .page-width.exclude-lines.lines.contact-form .media-with-text__card,
+    .main_xs_with_secondary--compact .page-width.contact-form .media-with-text__card.half {
+        --contact-gap: 64px;
+    }
+    .main_xs_with_secondary--compact .page-width.include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 32px;
+    }
+    .main_xs_with_secondary--compact .page-width.include-lines.lines.contact-form .media-with-text__card.half {
+        --contact-gap: 24px;
+    }
+}
+/* Tablet */
+@media screen and (max-width: 1320px) and (min-width: 921px) {
+    .main_xs_with_secondary--compact .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_xs_with_secondary--compact .contact-form .media-with-text__card.half {
+        --contact-gap: 48px;
+    }
+    .main_xs_with_secondary--compact .include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 24px;
+    }
+    .main_xs_with_secondary--compact .contact-form .media-with-text__card {
+        --contact-gap: 64px;
+    }
+}
+/* Mobile */
+@media screen and (max-width: 1064px) and (min-width: 921px) {
+    .main_xs_with_secondary--compact .contact-form .media-with-text__card.half,
+    .main_xs_with_secondary--compact .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_xs_with_secondary--compact .include-lines.lines.contact-form .media-with-text__card,
+    .main_xs_with_secondary--compact .include-lines.lines.contact-form .media-with-text__card.half,
+    .main_xs_with_secondary--compact .contact-form .media-with-text__card {
+        --contact-gap: 24px;
+    }
+    .main_xs_with_secondary--compact .contact-form .form-centered .media-with-text__media {
+        flex: 1 1 100%;
+    }
+    .main_xs_with_secondary--compact .contact-form .form-centered.media-with-text__card {
+        align-items: center;
+    }
+}
+
+/* Sidebars: Main S and white space Spacious */
+/* Laptop */
+@media screen and (max-width: 1772px) and (min-width: 921px) {
+    .main_s--spacious .contact-form .media-with-text__card {
+        --contact-gap: 96px;
+    }
+    .main_s--spacious .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_s--spacious .contact-form .media-with-text__card.half {
+        --contact-gap: 64px;
+    }
+    .main_s--spacious .include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 32px;
+    }
+    .main_s--spacious .include-lines.lines.contact-form .media-with-text__card.half {
+        --contact-gap: 24px;
+    }
+}
+/* Max page width 1200px or 1400px */
+@media screen and (min-width: 1480px) {
+    .main_s--spacious .page-width.contact-form .media-with-text__card {
+        --contact-gap: 96px;
+    }
+    .main_s--spacious .page-width.exclude-lines.lines.contact-form .media-with-text__card,
+    .main_s--spacious .page-width.contact-form .media-with-text__card.half {
+        --contact-gap: 64px;
+    }
+    .main_s--spacious .page-width.include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 32px;
+    }
+    .main_s--spacious .page-width.include-lines.lines.contact-form .media-with-text__card.half {
+        --contact-gap: 24px;
+    }
+}
+/* Tablet */
+@media screen and (max-width: 1304px) and (min-width: 921px) {
+    .main_s--spacious .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_s--spacious .contact-form .media-with-text__card.half {
+        --contact-gap: 48px;
+    }
+    .main_s--spacious .include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 24px;
+    }
+    .main_s--spacious .contact-form .media-with-text__card {
+        --contact-gap: 64px;
+    }
+}
+/* Mobile */
+@media screen and (max-width: 1048px) and (min-width: 921px) {
+    .main_s--spacious .contact-form--spacious {
+        --banner-gap: 16px;
+    }
+    .main_s--spacious .contact-form.media-with-text--spacious {
+        --form-gap: 24px;
+    }
+    .main_s--spacious .contact-form .media-with-text__card.half,
+    .main_s--spacious .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_s--spacious .include-lines.lines.contact-form .media-with-text__card,
+    .main_s--spacious .include-lines.lines.contact-form .media-with-text__card.half,
+    .main_s--spacious .contact-form .media-with-text__card {
+        --contact-gap: 24px;
+    }
+    .main_s--spacious .contact-form .form-centered .media-with-text__media {
+        flex: 1 1 100%;
+    }
+    .main_s--spacious .contact-form .form-centered.media-with-text__card {
+        align-items: center;
+    }
+}
+
+/* Sidebars: Main S and white space Compact */
+/* Laptop */
+@media screen and (max-width: 1772px) and (min-width: 921px) {
+    .main_s--compact .contact-form .media-with-text__card {
+        --contact-gap: 96px;
+    }
+    .main_s--compact .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_s--compact .contact-form .media-with-text__card.half {
+        --contact-gap: 64px;
+    }
+    .main_s--compact .include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 32px;
+    }
+    .main_s--compact .include-lines.lines.contact-form .media-with-text__card.half {
+        --contact-gap: 24px;
+    }
+}
+/* Max page width 1200px or 1400px */
+@media screen and (min-width: 1477px) {
+    .main_s--compact .page-width.contact-form .media-with-text__card {
+        --contact-gap: 96px;
+    }
+    .main_s--compact .page-width.exclude-lines.lines.contact-form .media-with-text__card,
+    .main_s--compact .page-width.contact-form .media-with-text__card.half {
+        --contact-gap: 64px;
+    }
+    .main_s--compact .page-width.include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 32px;
+    }
+    .main_s--compact .page-width.include-lines.lines.contact-form .media-with-text__card.half {
+        --contact-gap: 24px;
+    }
+}
+/* Tablet */
+@media screen and (max-width: 1260px) and (min-width: 921px) {
+    .main_s--compact .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_s--compact .contact-form .media-with-text__card.half {
+        --contact-gap: 48px;
+    }
+    .main_s--compact .include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 24px;
+    }
+    .main_s--compact .contact-form .media-with-text__card {
+        --contact-gap: 64px;
+    }
+}
+/* Mobile */
+@media screen and (max-width: 968px) and (min-width: 921px) {
+    .main_s--compact .contact-form .media-with-text__card.half,
+    .main_s--compact .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_s--compact .include-lines.lines.contact-form .media-with-text__card,
+    .main_s--compact .include-lines.lines.contact-form .media-with-text__card.half,
+    .main_s--compact .contact-form .media-with-text__card {
+        --contact-gap: 24px;
+    }
+    .main_s--compact .contact-form .form-centered .media-with-text__media {
+        flex: 1 1 100%;
+    }
+    .main_s--compact .contact-form .form-centered.media-with-text__card {
+        align-items: center;
+    }
+}
+
+/* Sidebars: Main S with secondary and white space Spacious */
+/* Laptop */
+@media screen and (max-width: 1890px) and (min-width: 921px) {
+    .main_s_with_secondary--spacious .contact-form .media-with-text__card {
+        --contact-gap: 96px;
+    }
+    .main_s_with_secondary--spacious .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_s_with_secondary--spacious .contact-form .media-with-text__card.half {
+        --contact-gap: 64px;
+    }
+    .main_s_with_secondary--spacious .include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 32px;
+    }
+    .main_s_with_secondary--spacious .include-lines.lines.contact-form .media-with-text__card.half {
+        --contact-gap: 24px;
+    }
+}
+/* Max page width 1200px or 1400px */
+@media screen and (min-width: 1595px) {
+    .main_s_with_secondary--spacious .page-width.contact-form .media-with-text__card {
+        --contact-gap: 96px;
+    }
+    .main_s_with_secondary--spacious .page-width.exclude-lines.lines.contact-form .media-with-text__card,
+    .main_s_with_secondary--spacious .page-width.contact-form .media-with-text__card.half {
+        --contact-gap: 64px;
+    }
+    .main_s_with_secondary--spacious .page-width.include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 32px;
+    }
+    .main_s_with_secondary--spacious .page-width.include-lines.lines.contact-form .media-with-text__card.half {
+        --contact-gap: 24px;
+    }
+}
+/* Tablet */
+@media screen and (max-width: 1400px) and (min-width: 921px) {
+    .main_s_with_secondary--spacious .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_s_with_secondary--spacious .contact-form .media-with-text__card.half {
+        --contact-gap: 48px;
+    }
+    .main_s_with_secondary--spacious .include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 24px;
+    }
+    .main_s_with_secondary--spacious .contact-form .media-with-text__card {
+        --contact-gap: 64px;
+    }
+}
+/* Mobile */
+@media screen and (max-width: 1144px) and (min-width: 921px) {
+    .main_s_with_secondary--spacious .contact-form--spacious {
+        --banner-gap: 16px;
+    }
+    .main_s_with_secondary--spacious .contact-form.media-with-text--spacious {
+        --form-gap: 24px;
+    }
+    .main_s_with_secondary--spacious .contact-form .media-with-text__card.half,
+    .main_s_with_secondary--spacious .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_s_with_secondary--spacious .include-lines.lines.contact-form .media-with-text__card,
+    .main_s_with_secondary--spacious .include-lines.lines.contact-form .media-with-text__card.half,
+    .main_s_with_secondary--spacious .contact-form .media-with-text__card {
+        --contact-gap: 24px;
+    }
+    .main_s_with_secondary--spacious .contact-form .form-centered .media-with-text__media {
+        flex: 1 1 100%;
+    }
+    .main_s_with_secondary--spacious .contact-form .form-centered.media-with-text__card {
+        align-items: center;
+    }
+}
+
+/* Sidebars: Main S with secondary and white space Compact */
+/* Laptop */
+@media screen and (max-width: 1890px) and (min-width: 921px) {
+    .main_s_with_secondary--compact .contact-form .media-with-text__card {
+        --contact-gap: 96px;
+    }
+    .main_s_with_secondary--compact .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_s_with_secondary--compact .contact-form .media-with-text__card.half {
+        --contact-gap: 64px;
+    }
+    .main_s_with_secondary--compact .include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 32px;
+    }
+    .main_s_with_secondary--compact .include-lines.lines.contact-form .media-with-text__card.half {
+        --contact-gap: 24px;
+    }
+}
+/* Max page width 1200px or 1400px */
+@media screen and (min-width: 1595px) {
+    .main_s_with_secondary--compact .page-width.contact-form .media-with-text__card {
+        --contact-gap: 96px;
+    }
+    .main_s_with_secondary--compact .page-width.exclude-lines.lines.contact-form .media-with-text__card,
+    .main_s_with_secondary--compact .page-width.contact-form .media-with-text__card.half {
+        --contact-gap: 64px;
+    }
+    .main_s_with_secondary--compact .page-width.include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 32px;
+    }
+    .main_s_with_secondary--compact .page-width.include-lines.lines.contact-form .media-with-text__card.half {
+        --contact-gap: 24px;
+    }
+}
+/* Tablet */
+@media screen and (max-width: 1378px) and (min-width: 921px) {
+    .main_s_with_secondary--compact .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_s_with_secondary--compact .contact-form .media-with-text__card.half {
+        --contact-gap: 48px;
+    }
+    .main_s_with_secondary--compact .include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 24px;
+    }
+    .main_s_with_secondary--compact .contact-form .media-with-text__card {
+        --contact-gap: 64px;
+    }
+}
+/* Mobile */
+@media screen and (max-width: 1064px) and (min-width: 921px) {
+    .main_s_with_secondary--compact .contact-form .media-with-text__card.half,
+    .main_s_with_secondary--compact .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_s_with_secondary--compact .include-lines.lines.contact-form .media-with-text__card,
+    .main_s_with_secondary--compact .include-lines.lines.contact-form .media-with-text__card.half,
+    .main_s_with_secondary--compact .contact-form .media-with-text__card {
+        --contact-gap: 24px;
+    }
+    .main_s_with_secondary--compact .contact-form .form-centered .media-with-text__media {
+        flex: 1 1 100%;
+    }
+    .main_s_with_secondary--compact .contact-form .form-centered.media-with-text__card {
+        align-items: center;
+    }
+}
+
+
+/* Sidebars: Main M */
+/* Laptop */
+@media screen and (max-width: 1920px) and (min-width: 921px) {
+    .main_m .contact-form .media-with-text__card {
+        --contact-gap: 96px;
+    }
+    .main_m .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_m .contact-form .media-with-text__card.half {
+        --contact-gap: 64px;
+    }
+    .main_m .include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 32px;
+    }
+    .main_m .include-lines.lines.contact-form .media-with-text__card.half {
+        --contact-gap: 24px;
+    }
+}
+/* Max page width 1200px or 1400px */
+@media screen and (min-width: 1600px) {
+    .main_m .page-width.contact-form .media-with-text__card {
+        --contact-gap: 96px;
+    }
+    .main_m .page-width.exclude-lines.lines.contact-form .media-with-text__card,
+    .main_m .page-width.contact-form .media-with-text__card.half {
+        --contact-gap: 64px;
+    }
+    .main_m .page-width.include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 32px;
+    }
+    .main_m .page-width.include-lines.lines.contact-form .media-with-text__card.half {
+        --contact-gap: 24px;
+    }
+}
+/* Tablet */
+@media screen and (max-width: 1365px) and (min-width: 921px) {
+    .main_m .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_m .contact-form .media-with-text__card.half {
+        --contact-gap: 48px;
+    }
+    .main_m .include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 24px;
+    }
+    .main_m .contact-form .media-with-text__card {
+        --contact-gap: 64px;
+    }
+}
+/* Mobile white space Spacious */
+@media screen and (max-width: 1048px) and (min-width: 921px) {
+    .main_m--spacious .contact-form--spacious {
+        --banner-gap: 16px;
+    }
+    .main_m--spacious .contact-form.media-with-text--spacious {
+        --form-gap: 24px;
+    }
+    .main_m--spacious .contact-form .media-with-text__card.half,
+    .main_m--spacious .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_m--spacious .include-lines.lines.contact-form .media-with-text__card,
+    .main_m--spacious .include-lines.lines.contact-form .media-with-text__card.half,
+    .main_m--spacious .contact-form .media-with-text__card {
+        --contact-gap: 24px;
+    }
+    .main_m--spacious .contact-form .form-centered .media-with-text__media {
+        flex: 1 1 100%;
+    }
+    .main_m--spacious .contact-form .form-centered.media-with-text__card {
+        align-items: center;
+    }
+}
+/* Mobile white space Compact */
+@media screen and (max-width: 1024px) and (min-width: 921px) {
+    .main_m--compact .contact-form .media-with-text__card.half,
+    .main_m--compact .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_m--compact .include-lines.lines.contact-form .media-with-text__card,
+    .main_m--compact .include-lines.lines.contact-form .media-with-text__card.half,
+    .main_m--compact .contact-form .media-with-text__card {
+        --contact-gap: 24px;
+    }
+    .main_m--compact .contact-form .form-centered .media-with-text__media {
+        flex: 1 1 100%;
+    }
+    .main_m--compact .contact-form .form-centered.media-with-text__card {
+        align-items: center;
+    }
+}
+
+/* Sidebars: Main M with secondary */
+/* Laptop */
+@media screen and (max-width: 2048px) and (min-width: 921px) {
+    .main_m_with_secondary .contact-form .media-with-text__card {
+        --contact-gap: 96px;
+    }
+    .main_m_with_secondary .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_m_with_secondary .contact-form .media-with-text__card.half {
+        --contact-gap: 64px;
+    }
+    .main_m_with_secondary .include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 32px;
+    }
+    .main_m_with_secondary .include-lines.lines.contact-form .media-with-text__card.half {
+        --contact-gap: 24px;
+    }
+}
+/* Max page width 1200px or 1400px */
+@media screen and (min-width: 1728px) {
+    .main_m_with_secondary .page-width.contact-form .media-with-text__card {
+        --contact-gap: 96px;
+    }
+    .main_m_with_secondary .page-width.exclude-lines.lines.contact-form .media-with-text__card,
+    .main_m_with_secondary .page-width.contact-form .media-with-text__card.half {
+        --contact-gap: 64px;
+    }
+    .main_m_with_secondary .page-width.include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 32px;
+    }
+    .main_m_with_secondary .page-width.include-lines.lines.contact-form .media-with-text__card.half {
+        --contact-gap: 24px;
+    }
+}
+/* Tablet */
+@media screen and (max-width: 1493px) and (min-width: 921px) {
+    .main_m_with_secondary .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_m_with_secondary .contact-form .media-with-text__card.half {
+        --contact-gap: 48px;
+    }
+    .main_m_with_secondary .include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 24px;
+    }
+    .main_m_with_secondary .contact-form .media-with-text__card {
+        --contact-gap: 64px;
+    }
+}
+/* Mobile */
+@media screen and (max-width: 1152px) and (min-width: 921px) {
+    .main_m_with_secondary--spacious .contact-form--spacious {
+        --banner-gap: 16px;
+    }
+    .main_m_with_secondary--spacious .contact-form.media-with-text--spacious {
+        --form-gap: 24px;
+    }
+    .main_m_with_secondary .contact-form .media-with-text__card.half,
+    .main_m_with_secondary .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_m_with_secondary .include-lines.lines.contact-form .media-with-text__card,
+    .main_m_with_secondary .include-lines.lines.contact-form .media-with-text__card.half,
+    .main_m_with_secondary .contact-form .media-with-text__card {
+        --contact-gap: 24px;
+    }
+    .main_m_with_secondary .contact-form .form-centered .media-with-text__media {
+        flex: 1 1 100%;
+    }
+    .main_m_with_secondary .contact-form .form-centered.media-with-text__card {
+        align-items: center;
+    }
+}
+
+/* Sidebars: Main L */
+/* Laptop */
+@media screen and (max-width: 2880px) and (min-width: 921px) {
+    .main_l .contact-form .media-with-text__card {
+        --contact-gap: 96px;
+    }
+    .main_l .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_l .contact-form .media-with-text__card.half {
+        --contact-gap: 64px;
+    }
+    .main_l .include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 32px;
+    }
+    .main_l .include-lines.lines.contact-form .media-with-text__card.half {
+        --contact-gap: 24px;
+    }
+}
+/* Max page width 1200px or 1400px */
+@media screen and (min-width: 2400px) {
+    .main_l .page-width.contact-form .media-with-text__card {
+        --contact-gap: 96px;
+    }
+    .main_l .page-width.exclude-lines.lines.contact-form .media-with-text__card,
+    .main_l .page-width.contact-form .media-with-text__card.half {
+        --contact-gap: 64px;
+    }
+    .main_l .page-width.include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 32px;
+    }
+    .main_l .page-width.include-lines.lines.contact-form .media-with-text__card.half {
+        --contact-gap: 24px;
+    }
+}
+/* Tablet */
+@media screen and (max-width: 2048px) and (min-width: 921px) {
+    .main_l .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_l .contact-form .media-with-text__card.half {
+        --contact-gap: 48px;
+    }
+    .main_l .include-lines.lines.contact-form .media-with-text__card {
+        --contact-gap: 24px;
+    }
+    .main_l .contact-form .media-with-text__card {
+        --contact-gap: 64px;
+    }
+}
+/* Mobile */
+@media screen and (max-width: 1536px) and (min-width: 921px) {
+    .main_l--spacious .contact-form--spacious {
+        --banner-gap: 16px;
+    }
+    .main_l--spacious .contact-form.media-with-text--spacious {
+        --form-gap: 24px;
+    }
+    .main_l .contact-form .media-with-text__card.half,
+    .main_l .exclude-lines.lines.contact-form .media-with-text__card,
+    .main_l .include-lines.lines.contact-form .media-with-text__card,
+    .main_l .include-lines.lines.contact-form .media-with-text__card.half,
+    .main_l .contact-form .media-with-text__card {
+        --contact-gap: 24px;
+    }
+    .main_l .contact-form .form-centered .media-with-text__media {
+        flex: 1 1 100%;
+    }
+    .main_l .contact-form .form-centered.media-with-text__card {
+        align-items: center;
+    }
+}

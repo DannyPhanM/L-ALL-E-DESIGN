@@ -1,0 +1,264 @@
+.rte > *:not(:last-child) {
+    margin-bottom: 12px;
+}
+/* .rte > *:not(:last-child):not(.placeholder) {
+    margin-bottom: 32px;
+} */
+.rte-block > *:not(:last-child) {
+    margin-bottom: 8px;
+}
+.rte--large > *:not(:last-child) {
+    margin-bottom: 16px;
+}
+.rte h1 {
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: -0.01em;
+    font-weight: inherit;
+}
+.rte h2 {
+    font-size: 40px;
+    line-height: 54px;
+    letter-spacing: normal;
+    font-weight: inherit;
+}
+.rte h3 {
+    font-size: 32px;
+    line-height: 46px;
+    letter-spacing: normal;
+    font-weight: inherit;
+}
+.rte h4 {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: normal;
+    font-weight: inherit;
+}
+.rte h5 {
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: normal;
+    font-weight: inherit;
+}
+.rte h6 {
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: normal;
+    font-weight: inherit;
+}
+
+.custom-type-preset .rte:not(.rte-block) {
+    --coefficient: 0.85;
+}
+
+.custom-type-preset .rte:not(.rte-block) h1,
+.custom-type-preset .rte:not(.rte-block) h2,
+.custom-type-preset .rte:not(.rte-block) h3,
+.custom-type-preset .rte:not(.rte-block) h4,
+.custom-type-preset .rte:not(.rte-block) h5,
+.custom-type-preset .rte:not(.rte-block) h6 {
+    font: var(--heading-l-font);
+    letter-spacing: var(--heading-l-letter-spacing);
+}
+
+.custom-type-preset .rte:not(.rte-block) h1 {
+    font-size: max(var(--body-m-font-size), var(--heading-l-font-size));
+}
+.custom-type-preset .rte:not(.rte-block) h2 {
+    font-size: max(var(--body-m-font-size), calc(var(--heading-l-font-size) * var(--coefficient)));
+}
+.custom-type-preset .rte:not(.rte-block) h3 {
+    font-size: max(var(--body-m-font-size), calc(var(--heading-l-font-size) * var(--coefficient) * var(--coefficient)));
+}
+.custom-type-preset .rte:not(.rte-block) h4 {
+    font-size: max(var(--body-m-font-size), calc(var(--heading-l-font-size) * var(--coefficient) * var(--coefficient) * var(--coefficient)));
+}
+.custom-type-preset .rte:not(.rte-block) h5 {
+    font-size: max(var(--body-m-font-size), calc(var(--heading-l-font-size) * var(--coefficient) * var(--coefficient) * var(--coefficient) * var(--coefficient)));
+}
+.custom-type-preset .rte:not(.rte-block) h6 {
+    font-size: max(var(--body-m-font-size), calc(var(--heading-l-font-size) * var(--coefficient) * var(--coefficient) * var(--coefficient) * var(--coefficient) * var(--coefficient)));
+}
+
+.rte-block h1 {
+    font-size: 24px;
+    line-height: 34px;
+}
+.rte-block h2 {
+    font-size: 22px;
+    line-height: 28px;
+}
+.rte-block h3 {
+    font-size: 20px;
+    line-height: 26px;
+}
+.rte-block h4 {
+    font-size: 18px;
+    line-height: 24px;
+}
+.rte-block h5 {
+    font-size: 16px;
+    line-height: 20px;
+}
+.rte-block h6 {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.rte-block h1,
+.rte-block h2, 
+.rte-block h3,
+.rte-block h4,
+.rte-block h5,
+.rte-block h6 {
+  letter-spacing: 0.02em;
+  font-weight: inherit;
+}
+
+.custom-type-preset .rte-block {
+    --coefficient: 0.9;
+}
+
+.custom-type-preset .rte-block h1,
+.custom-type-preset .rte-block h2,
+.custom-type-preset .rte-block h3,
+.custom-type-preset .rte-block h4,
+.custom-type-preset .rte-block h5,
+.custom-type-preset .rte-block h6 {
+    font: var(--heading-s-font);
+    letter-spacing: var(--heading-s-letter-spacing);
+}
+
+.custom-type-preset .rte-block h1 {
+    font-size: max(var(--body-m-font-size), var(--heading-s-font-size));
+}
+.custom-type-preset .rte-block h2 {
+    font-size: max(var(--body-m-font-size), calc(var(--heading-s-font-size) * var(--coefficient)));
+}
+.custom-type-preset .rte-block h3 {
+    font-size: max(var(--body-m-font-size), calc(var(--heading-s-font-size) * var(--coefficient) * var(--coefficient)));
+}
+.custom-type-preset .rte-block h4 {
+    font-size: max(var(--body-m-font-size), calc(var(--heading-s-font-size) * var(--coefficient) * var(--coefficient) * var(--coefficient)));
+}
+.custom-type-preset .rte-block h5 {
+    font-size: max(var(--body-m-font-size), calc(var(--heading-s-font-size) * var(--coefficient) * var(--coefficient) * var(--coefficient) * var(--coefficient)));
+}
+.custom-type-preset .rte-block h6 {
+    font-size: max(var(--body-m-font-size), calc(var(--heading-s-font-size) * var(--coefficient) * var(--coefficient) * var(--coefficient) * var(--coefficient) * var(--coefficient)));
+}
+
+.rte:not(.richtext) a {
+    color: rgb(var(--accent-button-color));
+    text-decoration: underline;
+    text-decoration-skip-ink: auto;
+    text-underline-offset: 0.3em;
+    /* will-change: color; */
+    transition: color var(--animation-duration) var(--transition-timing-function);
+}
+.rte ul li {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+.rte ol li {
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+.rte img {
+    max-width: 100%;
+}
+@media (hover: hover) {
+    .rte a:hover {
+        color: rgb(var(--hover-button-color));
+    }
+}
+.rte blockquote {
+    position: relative;
+    display: flex;
+    padding: 16px 48px;
+    color: rgb(var(--accent-button-color));
+}
+.rte-block blockquote {
+    padding: 12px 24px;
+}
+.rte blockquote::after {
+    content: "";
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin-inline-end: 48px;
+    position: absolute;
+    background-color: rgb(var(--accent-button-color));
+}
+.rte-block blockquote::after {
+    margin-inline-end: 24px;
+}
+.color-custom .rte:not(.popup-content) blockquote,
+.color-invert .rte:not(.popup-content) blockquote {
+    color: rgb(var(--layout-text-color));
+}
+.color-custom .rte:not(.popup-content) blockquote::after,
+.color-invert .rte:not(.popup-content) blockquote::after  {
+    background-color: rgb(var(--layout-text-color));
+}
+.rte {
+    max-width: 100%;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+}
+.rte::-webkit-scrollbar { 
+    width: 0;
+    height: 0;
+    display: none;
+}
+.rte::-moz-scrollbar { 
+    width: 0;
+    height: 0;
+    display: none;
+    scrollbar-width: none;
+}
+.rte > *:not(table) {
+    max-width: calc(100vw - 16px*2);
+    position: sticky;
+    position: -webkit-sticky;
+    left: 0;
+}
+.rte table {
+    border-collapse: collapse;
+    width: max-content;
+}
+.rte table th {
+    padding: 12px;
+    text-align: start;
+}
+.rte table tr {
+    height: fit-content !important;
+    border-collapse: collapse;
+    border-top: var(--line-width) solid rgba(var(--layout-text-color), var(--line-opacity));
+}
+
+.rte table td {
+    height: fit-content !important;
+    padding: 12px;
+}
+.rte table tr:last-child {
+    border-bottom: var(--line-width) solid rgba(var(--layout-text-color), var(--line-opacity));
+}
+.rte iframe {
+    max-width: 100%;
+}
+.page__content.rte ul li {
+    list-style: none !important;
+    padding-left: 15px;
+    position: relative;
+}
+
+.page__content.rte ul li:not(:has(> ul))::before {
+    content: '-';
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+

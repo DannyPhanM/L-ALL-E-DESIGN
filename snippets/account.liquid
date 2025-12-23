@@ -1,0 +1,78 @@
+{{ 'account.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+{% unless section.id contains 'menu-drawer' %}
+    #shopify-section-{{ section.id }} {
+        --account-vertical-alignment: {{ account_settings.account_vertical_alignment }};
+        --account-horizontal-alignment: {{ account_settings.account_horizontal_alignment }};
+    }
+{% endunless %}
+.account-container .account__icon {
+    height: {{ 24 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+}
+.custom-type-preset .account-container .account__icon {
+    height: max(24px, calc(var(--body-s-font-size) * var(--body-s-line-height)));
+}
+.custom-type-preset.navigations-body-l .account-container .account__icon {
+    height: max(24px, calc(var(--body-l-font-size) * var(--body-l-line-height)));
+}
+.custom-type-preset.navigations-body-m .account-container .account__icon {
+    height: max(24px, calc(var(--body-m-font-size) * var(--body-m-line-height)));
+}
+.custom-type-preset.navigations-label .account-container .account__icon {
+    height: max(24px, calc(var(--label-font-size) * var(--label-line-height)));
+}
+@media screen and (max-width: 920px) {
+    .account-container .account__icon {
+        height: {{ 24 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 24 }}px;
+    }
+}
+{% endstyle %}
+
+
+{%- liquid 
+	if settings.typography_preset == 'avant_garde'
+			assign weight = settings.accent_icon_weight
+			if settings.swap_fonts
+					assign weight = settings.base_icon_weight
+			endif
+	else 
+			assign weight =  settings.base_icon_weight
+			if settings.swap_fonts
+					assign weight = settings.accent_icon_weight
+			endif
+	endif
+
+    assign uppercase_font = false
+    assign bolder_font = false
+    if settings.typography_preset == 'custom'
+        assign weight = settings.custom_icon_weight
+        if settings.uppercase_body_s and settings.navigation_item_size == 'default'
+            assign uppercase_font = true
+        endif
+        if settings.bolder_font_body_s and settings.navigation_item_size == 'default'
+            assign bolder_font = true
+        endif
+    endif
+-%}
+
+<div class="account-block {% if section.id contains 'footer' %}account-block--footer{% else %}account-block--{{ section.id }}{% endif %} account-block--{{ account_settings.account_alignment }}" {{ block_item.shopify_attributes }}>
+    <div class="account-container account-container--{{ account_settings.account_style }}
+                account-container--{{ settings.typography_preset }} {% if settings.navigation_item_size != 'default' and settings.typography_preset == 'custom' %}{{ settings.navigation_item_size }}{% else %}{% if uppercase_font %} uppercase{% endif %}{% if bolder_font %} bolder-font{% endif %}{% endif %}">
+        <a class="account account--{{ account_settings.account_style }} {% if settings.allow_transparent_navigation and settings.navigation_layout == 'sidebar_based' %}{% if settings.allow_transparent_navigation and settings.navigation_layout == 'sidebar_based' and section.id contains 'sidebar' and section.settings.color_type == 'default' %}scroll-color{% endif %}{% endif %} hover-opacity {% if section.settings.color_type == 'custom' %}color-custom{% elsif section.settings.color_type == 'invert' %}color-invert{% endif %}" href="{{ routes.account_url }}" aria-label="{{ 'customer.account.go_to_account' | t }}">
+            {%- if account_settings.account_style == 'text' -%}
+                <span class="account__title">{{ 'customer.account.title' | t }}</span>
+            {%- elsif account_settings.account_style == 'icon' -%}
+            <span class="account__icon">
+                {% if weight == 'regular' %}
+                    {% render 'icon', icon: 'account-regular' %}
+                {% elsif weight == 'medium' %}
+                    {% render 'icon', icon: 'account-medium' %}
+                {% elsif weight == 'bold' %}
+                    {% render 'icon', icon: 'account-bold' %}
+                {% endif %}
+            </span>
+            {%- endif -%}
+        </a>
+    </div>
+</div>

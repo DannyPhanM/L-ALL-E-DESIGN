@@ -1,0 +1,109 @@
+.news-block {
+    display: flex;
+    flex-direction: column;
+    align-items: var(--news-horizontal-alignment);
+}
+
+.news-container {
+    display: flex;
+    align-items: center;
+    justify-content: var(--news-horizontal-alignment);
+}
+
+.news-container--icon {
+    aspect-ratio: 1/1;
+    justify-content: center;
+}
+
+.news {
+    display: flex;
+    align-items: center;
+    color: rgb(var(--layout-text-color));
+    min-height: 44px;
+    min-width: 44px;
+    word-break: normal;
+    cursor: pointer;
+    position: relative;
+    padding: 0 10px;
+}
+
+.news-drawer-opener .news-indicator {
+    position: absolute;
+    top: 8px; 
+    right: 8px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: 0;
+    pointer-events: none;
+}
+  
+.news-drawer-opener.has-unread .news-indicator {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.news-container {
+    margin: 0 -10px;
+    width: fit-content;
+}
+
+.miscellaneous__subblock .news-container {
+    margin: 0px;
+}
+
+.news--icon {
+    justify-content: center;
+}
+
+.news:focus {
+    outline-offset: -1px;
+}
+
+.news__icon svg {
+    display: block;
+    width: auto;
+    height: 100%;
+    fill: rgb(var(--layout-text-color));
+}
+
+/* Fonts */
+
+.news-container--minimal_uppercase {
+    font: var(--base-body-s-font);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.news-container--minimal_basic,
+.news-container--classic {
+    font: var(--base-body-s-font);
+}
+
+.news-container--minimal_heavy {
+    font: var(--base-body-l-font);
+}
+
+.news-container--avant_garde {
+    font: var(--accent-body-s-font);
+}
+
+.news-container--contrast {
+    font: var(--base-label-font);
+}
+
+.news-container--brutalist {
+    font: var(--base-body-l-font);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.news-container--duet {
+    font: var(--base-body-m-font);
+}
+
+.news-container--custom {
+    font: var(--body-s-font);
+    letter-spacing: var(--body-s-letter-spacing);
+}

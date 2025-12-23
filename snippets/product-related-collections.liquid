@@ -1,0 +1,344 @@
+<div class="{% if product_block %}section-block{% endif %} related-collections related-collections--{{ settings.white_space }} {% if settings.show_lines %}related-collections--lines{% endif %}" {% if product_block %}style="--spacing: {{ related_collections_settings.top_spacing }}; --mobile-spacing: {{ related_collections_settings.mobile_top_spacing }};"{% endif %} {{ block_item.shopify_attributes }}>
+  {% style %}
+
+    .related-collections__icon svg {
+      height: {{ 20 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 20 }}px;
+      width: {{ 20 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 20 }}px;
+    }
+    .heading_s .related-collections__icon svg,
+    .heading_s_uppercase .related-collections__icon svg {
+      height: {{ 46 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 20 | at_most: 128 }}px;
+      width: {{ 46 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 20 | at_most: 128 }}px;
+    }
+    .heading_xs .related-collections__icon svg,
+    .heading_xs_uppercase .related-collections__icon svg {
+      height: {{ 36 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 20 | at_most: 128 }}px;
+      width: {{ 36 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 20 | at_most: 128 }}px;
+    }
+    .body_l .related-collections__icon svg,
+    .body_l_uppercase .related-collections__icon svg {
+        height: {{ 28 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 20 }}px;
+        width: {{ 28 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 20 }}px;
+    }
+    .body_m .related-collections__icon svg,
+    .body_m_uppercase .related-collections__icon svg {
+        height: {{ 26 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 20 }}px;
+        width: {{ 26 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 20 }}px;
+    }
+    .body_s .related-collections__icon svg,
+    .body_s_uppercase .related-collections__icon svg {
+      height: {{ 24 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 20 }}px;
+      width: {{ 24 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 20 }}px;
+    }
+    .custom-type-preset .related-collections__icon svg {
+      height: max(20px, calc(var(--body-s-font-size) * var(--body-s-line-height)));
+      width: max(20px, calc(var(--body-s-font-size) * var(--body-s-line-height)));
+    }
+    .custom-type-preset .heading_s .related-collections__icon svg,
+    .custom-type-preset .heading_s_uppercase .related-collections__icon svg {
+      height: max(20px, calc(var(--heading-s-font-size) * var(--heading-s-line-height)));	
+      width: max(20px, calc(var(--heading-s-font-size) * var(--heading-s-line-height)));	
+    }
+    .custom-type-preset .heading_xs .related-collections__icon svg,
+    .custom-type-preset .heading_xs_uppercase .related-collections__icon svg {
+      height: max(20px, calc(var(--heading-xs-font-size) * var(--heading-xs-line-height)));	
+      width: max(20px, calc(var(--heading-xs-font-size) * var(--heading-xs-line-height)));	
+    }
+    .custom-type-preset .body_l .related-collections__icon svg,
+    .custom-type-preset .body_l_uppercase .related-collections__icon svg {
+        height: max(20px, calc(var(--body-l-font-size) * var(--body-l-line-height)));
+        width: max(20px, calc(var(--body-l-font-size) * var(--body-l-line-height)));
+    }
+    .custom-type-preset .body_m .related-collections__icon svg,
+    .custom-type-preset .body_m_uppercase .related-collections__icon svg {
+        height: max(20px, calc(var(--body-m-font-size) * var(--body-m-line-height)));
+        width: max(20px, calc(var(--body-m-font-size) * var(--body-m-line-height)));
+    }
+    .custom-type-preset .label_font .related-collections__icon svg,
+    .custom-type-preset .label_font_uppercase .related-collections__icon svg {
+        height: max(20px, calc(var(--label-font-size) * var(--label-line-height)));
+        width: max(20px, calc(var(--label-font-size) * var(--label-line-height)));
+    }
+    @media screen and (max-width: 920px) {
+      .related-collections__icon svg {
+        height: {{ 20 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 20 }}px;
+        width: {{ 20 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 20 }}px;
+      }
+      .heading_s .related-collections__icon svg,
+      .heading_s_uppercase .related-collections__icon svg {
+        height: {{ 46 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 20 | at_most: 128 }}px;
+        width: {{ 46 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 20 | at_most: 128 }}px;
+      }
+      .heading_xs .related-collections__icon svg,
+      .heading_xs_uppercase .related-collections__icon svg {
+        height: {{ 36 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 20 | at_most: 128 }}px;
+        width: {{ 36 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 20 | at_most: 128 }}px;
+      }
+      .body_l .related-collections__icon svg,
+      .body_l_uppercase .related-collections__icon svg {
+          height: {{ 28 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 20 }}px;
+          width: {{ 28 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 20 }}px;
+      }
+      .body_m .related-collections__icon svg,
+      .body_m_uppercase .related-collections__icon svg {
+          height: {{ 26 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 20 }}px;
+          width: {{ 26 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 20 }}px;
+      }
+      .body_s .related-collections__icon svg,
+      .body_s_uppercase .related-collections__icon svg {
+        height: {{ 24 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 20 }}px;
+        width: {{ 24 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 20 }}px;
+      }
+    }
+  {% endstyle %}
+
+  {%- liquid 
+    if settings.typography_preset == 'avant_garde'
+        assign weight = settings.accent_icon_weight
+        if settings.swap_fonts
+            assign weight = settings.base_icon_weight
+        endif
+    else 
+        assign weight =  settings.base_icon_weight
+        if settings.swap_fonts
+            assign weight = settings.accent_icon_weight
+        endif
+    endif
+    if settings.typography_preset == 'custom'
+        assign weight = settings.custom_icon_weight
+    endif
+    assign num_collection_by_brand = 0 | times: 1
+    assign num_by_brand = 0 | times: 1
+    assign num_by_collection = 0 | times: 1
+    if related_collections_settings.collection_by_brand
+    assign num_collection_by_brand = 1 | times: 1
+    endif
+    if related_collections_settings.shop_by_brand 
+    assign num_by_brand = 1 | times: 1
+    endif
+    if related_collections_settings.shop_the_collection 
+    assign num_by_collection = 1 | times: 1 
+    endif
+    assign block_in_container = num_collection_by_brand | plus: num_by_brand | plus: num_by_collection
+  -%}
+  {% if related_collections_settings.heading != blank %}
+    {% liquid
+      assign heading_text = related_collections_settings.heading
+      assign final_text = ''
+      assign split_text_curly = heading_text | split: '{'
+      for part in split_text_curly
+          if part contains '}'
+              assign split_curly = part | split: '}'
+              assign styled_text = split_curly[0]
+              assign after_curly = split_curly[1]
+              assign final_text = final_text | append: '<span class="styled">' | append: styled_text | append: '</span>' | append: after_curly
+          else
+              assign final_text = final_text | append: part
+          endif
+      endfor
+    %}
+    <{% if section_content %}{{ related_collections_settings.heading_tag }}{% else %}h2{% endif %} class="related-collections__heading custom-heading {% if section_content %}{% if settings.accent_color_for_headings %}related-collections__heading--accent{% endif %}{% endif %} 
+      {% if section_content == false %}block-heading--{{ settings.typography_preset }}{% if settings.typography_preset == 'custom' %}{% if settings.uppercase_body_s %} uppercase{% endif %}{% if settings.bolder_font_body_s %} bolder-font{% endif %}{% endif %}{% else %}related-collections__heading--{{ settings.typography_preset }}{% endif %}{% if related_collections_settings.heading_size != 'default' %} {{ related_collections_settings.heading_size }}{% else %}{% if settings.uppercase_heading_xs %} uppercase{% endif %}{% if settings.bolder_font_heading_xs %} bolder-font{% endif %}{% endif %}
+      {% if settings.center_text %}center-elements{% endif %}">{{ final_text }}
+    </{% if section_content %}{{ related_collections_settings.heading_tag }}{% else %}h2{% endif %}>
+  {% endif %}
+  {% if related_collections_settings.collection_by_brand or related_collections_settings.shop_by_brand or related_collections_settings.shop_the_collection %}
+    <div class="related-collections__container related-collections__container--{{ block_in_container }} {% if settings.center_text %}center-elements{% endif %}" style="--related-collections-items: {{ block_in_container }}">
+      {% if related_collections_settings.collection_by_brand %}
+        <a class="related-collections__item" href="{{ product.collections.first.url }}?filter.p.vendor={{ product.vendor }}">
+          <div class="related-collections__image" {% if settings.disable_right_click %}oncontextmenu="return false"{% endif %}>
+            {% if product.collections.first.image %}
+            {% if settings.images_loading != 'disable' %}
+              <figure class="lazy-image lazy-image--{{ settings.images_loading }}">
+            {% endif %}
+              <img srcset="{%- if product.collections.first.image.width >= 165 -%}{{ product.collections.first.image | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if product.collections.first.image.width >= 375 -%}{{ product.collections.first.image | image_url: width: 375 }} 375w,{%- endif -%}
+              {%- if product.collections.first.image.width >= 550 -%}{{ product.collections.first.image | image_url: width: 550 }} 550w,{%- endif -%}
+              {%- if product.collections.first.image.width >= 750 -%}{{ product.collections.first.image | image_url: width: 750 }} 750w,{%- endif -%}
+              {%- if product.collections.first.image.width >= 1100 -%}{{ product.collections.first.image | image_url: width: 1100 }} 1100w,{%- endif -%}
+              {%- if product.collections.first.image.width >= 1500 -%}{{ product.collections.first.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                {{ product.collections.first.image | image_url }} {{ product.collections.first.image.width }}w" 
+                src="{{ product.collections.first.image | image_url: width: 48 }}" 
+                {% if settings.images_loading != 'disable' %}
+                  onload="this.parentNode.classList.add('lazyloaded');"
+                {% endif %}
+                sizes="calc(48px / 1)" alt="{{ product.collections.first.title | escape }}" draggable="false" loading="lazy" width="{{ product.collections.first.image.width }}" height="{{ product.collections.first.image.height }}" class="card__image">
+              {% if settings.images_loading != 'disable' %}
+                {% if settings.images_loading != 'fade_scale' %}
+                <div class="lazy-image__preloader lazy-image__preloader--full lazy-image__preloader-{{ settings.images_loading }}" aria-hidden="true">
+                  <img 
+                  alt="{{ product.collections.first.image.alt | escape }}" 
+                  src="{{ product.collections.first.image | image_url: width: 10 }}"
+                  draggable="false"
+                  width="10" 
+                  height="10">
+                </div>
+                {% endif %}
+            </figure>
+            {% endif %}
+            {% else %}
+              <div class="related-collections__image-alternative">
+                <span class="related-collections__image-icon">
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion-2', icon: 'price-tag-alternative-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion-2', icon: 'price-tag-alternative-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion-2', icon: 'price-tag-alternative-bold' %}
+                    {% endif %}
+                </span>
+              </div>
+            {% endif %}
+          </div>
+          <div class="related-collections__content">
+            <p class="related-collections__route related-collections__route--{{ settings.typography_preset }} {% if related_collections_settings.title_size != 'default' %}{{ related_collections_settings.title_size }}{% else %}{% if settings.typography_preset == 'custom' %}{% if settings.uppercase_body_s %} uppercase{% endif %}{% if settings.bolder_font_body_s %} bolder-font{% endif %}{% endif %}{% endif %}">{{ "products.product.all" | t }}
+              {{ product.vendor }}
+              {{ product.collections.first.title }}
+            </p>
+            <p class="related-collections__link related-collections__link--{{ settings.typography_preset }} {% if related_collections_settings.text_size != 'default' %}{{ related_collections_settings.text_size }}{% else %}{% if settings.typography_preset == 'custom' %}{% if settings.uppercase_body_s %} uppercase{% endif %}{% if settings.bolder_font_body_s %} bolder-font{% endif %}{% endif %}{% endif %} {% if settings.dim_text %}dim{% endif %}">{{ "products.product.collection_by_brand" | t }} 
+              <span class="related-collections__icon">
+                  {% if weight == 'regular' %}
+                    {% render 'icon-accordion-2', icon: 'arrow-right-up-regular' %}
+                  {% elsif weight == 'medium' %}
+                    {% render 'icon-accordion-2', icon: 'arrow-right-up-medium' %}
+                  {% elsif weight == 'bold' %}
+                    {% render 'icon-accordion-2', icon: 'arrow-right-up-bold' %}
+                  {% endif %}
+              </span>
+            </p>
+          </div>
+        </a>
+      {% endif %}
+      {% if related_collections_settings.shop_by_brand %}
+        <a class="related-collections__item" href="{{ product.vendor | url_for_vendor }}">
+          <div class="related-collections__image" {% if settings.disable_right_click %}oncontextmenu="return false"{% endif %}>
+            {% if collection.image %}
+            {% if settings.images_loading != 'disable' %}
+              <figure class="lazy-image lazy-image--{{ settings.images_loading }}">
+            {% endif %}
+              <img srcset="{%- if card_collection.featured_image.width >= 165 -%}{{ card_collection.featured_image | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if card_collection.featured_image.width >= 375 -%}{{ card_collection.featured_image | image_url: width: 375 }} 375w,{%- endif -%}
+              {%- if card_collection.featured_image.width >= 550 -%}{{ card_collection.featured_image | image_url: width: 550 }} 550w,{%- endif -%}
+              {%- if card_collection.featured_image.width >= 750 -%}{{ card_collection.featured_image | image_url: width: 750 }} 750w,{%- endif -%}
+              {%- if card_collection.featured_image.width >= 1100 -%}{{ card_collection.featured_image | image_url: width: 1100 }} 1100w,{%- endif -%}
+              {%- if card_collection.featured_image.width >= 1500 -%}{{ card_collection.featured_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                {{ card_collection.featured_image | image_url }} {{ card_collection.featured_image.width }}w" 
+                src="{{ card_collection.featured_image | image_url: width: card_collection.featured_image.width }}"
+                sizes="calc(48px * 1)"
+                {% if settings.images_loading != 'disable' %}
+                  onload="this.parentNode.classList.add('lazyloaded');"
+                {% endif %}
+                alt="{{ card_collection.title | escape }}" draggable="false" loading="lazy" width="{{ card_collection.featured_image.width }}" height="{{ card_collection.featured_image.height }}" class="card__image">
+              {% if settings.images_loading != 'disable' %}
+                {% if settings.images_loading != 'fade_scale' %}
+                <div class="lazy-image__preloader lazy-image__preloader--full lazy-image__preloader-{{ settings.images_loading }}" aria-hidden="true">
+                  <img 
+                  alt="{{ card_collection.featured_image.alt | escape }}" 
+                  src="{{ card_collection.featured_image | image_url: width: 10 }}"
+                  draggable="false"
+                  width="10" 
+                  height="10">
+                </div>
+                {% endif %}
+            </figure>
+            {% endif %}
+            {% else %}
+              <div class="related-collections__image-alternative">
+                <span class="related-collections__image-icon">
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion-2', icon: 'price-tag-alternative-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion-2', icon: 'price-tag-alternative-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion-2', icon: 'price-tag-alternative-bold' %}
+                    {% endif %}
+                </span>
+              </div>
+            {% endif %}
+          </div>
+          <div class="related-collections__content">
+            <p class="related-collections__route related-collections__route--{{ settings.typography_preset }} {% if related_collections_settings.title_size != 'default' %}{{ related_collections_settings.title_size }}{% else %}{% if settings.typography_preset == 'custom' %}{% if settings.uppercase_body_s %} uppercase{% endif %}{% if settings.bolder_font_body_s %} bolder-font{% endif %}{% endif %}{% endif %}">{{ "products.product.all" | t }}
+              {{ product.vendor }}
+            </p>
+            <p class="related-collections__link related-collections__link--{{ settings.typography_preset }} {% if related_collections_settings.text_size != 'default' %}{{ related_collections_settings.text_size }}{% else %}{% if settings.typography_preset == 'custom' %}{% if settings.uppercase_body_s %} uppercase{% endif %}{% if settings.bolder_font_body_s %} bolder-font{% endif %}{% endif %}{% endif %} {% if settings.dim_text %}dim{% endif %}">{{ "products.product.brand" | t }} 
+              <span class="related-collections__icon">
+                  {% if weight == 'regular' %}
+                    {% render 'icon-accordion-2', icon: 'arrow-right-up-regular' %}
+                  {% elsif weight == 'medium' %}
+                    {% render 'icon-accordion-2', icon: 'arrow-right-up-medium' %}
+                  {% elsif weight == 'bold' %}
+                    {% render 'icon-accordion-2', icon: 'arrow-right-up-bold' %}
+                  {% endif %}
+              </span>
+            </p>
+          </div>
+        </a>
+      {% endif %}
+      {% if related_collections_settings.shop_the_collection %}
+        <a class="related-collections__item" href="{{ product.collections.first.url }}">
+          <div class="related-collections__image" {% if settings.disable_right_click %}oncontextmenu="return false"{% endif %}>
+            {% if collection.image %}
+            {% if settings.images_loading != 'disable' %}
+              <figure class="lazy-image lazy-image--{{ settings.images_loading }}">
+            {% endif %}
+              <img srcset="{%- if card_collection.featured_image.width >= 165 -%}{{ card_collection.featured_image | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if card_collection.featured_image.width >= 375 -%}{{ card_collection.featured_image | image_url: width: 375 }} 375w,{%- endif -%}
+              {%- if card_collection.featured_image.width >= 550 -%}{{ card_collection.featured_image | image_url: width: 550 }} 550w,{%- endif -%}
+              {%- if card_collection.featured_image.width >= 750 -%}{{ card_collection.featured_image | image_url: width: 750 }} 750w,{%- endif -%}
+              {%- if card_collection.featured_image.width >= 1100 -%}{{ card_collection.featured_image | image_url: width: 1100 }} 1100w,{%- endif -%}
+              {%- if card_collection.featured_image.width >= 1500 -%}{{ card_collection.featured_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                {{ card_collection.featured_image | image_url }} {{ card_collection.featured_image.width }}w" 
+                src="{{ card_collection.featured_image | image_url: width: card_collection.featured_image.width }}"
+                sizes="calc(48px * 1)"
+                {% if settings.images_loading != 'disable' %}
+                  onload="this.parentNode.classList.add('lazyloaded');"
+                {% endif %}
+                alt="{{ card_collection.title | escape }}" draggable="false" loading="lazy" width="{{ card_collection.featured_image.width }}" height="{{ card_collection.featured_image.height }}" class="card__image">
+              {% if settings.images_loading != 'disable' %}
+                {% if settings.images_loading != 'fade_scale' %}
+                <div class="lazy-image__preloader lazy-image__preloader--full lazy-image__preloader-{{ settings.images_loading }}" aria-hidden="true">
+                  <img 
+                  alt="{{ card_collection.featured_image.alt | escape }}" 
+                  src="{{ card_collection.featured_image | image_url: width: 10 }}"
+                  draggable="false"
+                  width="10" 
+                  height="10">
+                </div>
+                {% endif %}
+            </figure>
+            {% endif %}
+            {% else %}
+              <div class="related-collections__image-alternative">
+                <span class="related-collections__image-icon">
+                    {% if weight == 'regular' %}
+                      {% render 'icon-accordion-2', icon: 'price-tag-alternative-regular' %}
+                    {% elsif weight == 'medium' %}
+                      {% render 'icon-accordion-2', icon: 'price-tag-alternative-medium' %}
+                    {% elsif weight == 'bold' %}
+                      {% render 'icon-accordion-2', icon: 'price-tag-alternative-bold' %}
+                    {% endif %}
+                </span>
+              </div>
+            {% endif %}
+          </div>
+          <div class="related-collections__content">
+            <p class="related-collections__route related-collections__route--{{ settings.typography_preset }} {% if related_collections_settings.title_size != 'default' %}{{ related_collections_settings.title_size }}{% else %}{% if settings.typography_preset == 'custom' %}{% if settings.uppercase_body_s %} uppercase{% endif %}{% if settings.bolder_font_body_s %} bolder-font{% endif %}{% endif %}{% endif %}">{{ "products.product.all" | t }}
+              {{ product.collections.first.title }}
+            </p>
+            <p class="related-collections__link related-collections__link--{{ settings.typography_preset }} {% if related_collections_settings.text_size != 'default' %}{{ related_collections_settings.text_size }}{% else %}{% if settings.typography_preset == 'custom' %}{% if settings.uppercase_body_s %} uppercase{% endif %}{% if settings.bolder_font_body_s %} bolder-font{% endif %}{% endif %}{% endif %} {% if settings.dim_text %}dim{% endif %}">{{ "products.product.related_collection" | t }} 
+              <span class="related-collections__icon">
+                  {% if weight == 'regular' %}
+                    {% render 'icon-accordion-2', icon: 'arrow-right-up-regular' %}
+                  {% elsif weight == 'medium' %}
+                    {% render 'icon-accordion-2', icon: 'arrow-right-up-medium' %}
+                  {% elsif weight == 'bold' %}
+                    {% render 'icon-accordion-2', icon: 'arrow-right-up-bold' %}
+                  {% endif %}
+              </span>
+            </p>
+          </div>
+        </a>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>

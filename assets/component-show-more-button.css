@@ -1,0 +1,20 @@
+.accordion__panel show-more-button {
+    display: block;
+    margin-top: -14px;
+    padding-bottom: 24px;
+}
+
+.button-show-more {
+    padding: 8px 0;
+    color: inherit;
+}
+
+.button-show-more .label-show {
+    transition: opacity var(--animation-duration) var(--transition-timing-function);
+}
+
+@media (hover: hover) {
+    .button-show-more .label-show:hover {
+        opacity: 1;
+    }
+}

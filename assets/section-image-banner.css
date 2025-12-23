@@ -1,0 +1,19 @@
+.image-banner__media-block {
+    flex: 0 0 50%;
+}
+.image-banner__media-block.one-child {
+    flex: 0 0 100%;
+}
+.image-banner__media-block img, .image-banner__media-block .placeholder-svg {
+    width: 100%;
+    height: 100%;
+}
+/* Styles for full-width page without sidebars */
+@media screen and (max-width: 768px) {
+    .image-banner__media-block.hidden-block {
+        display: none;
+    }
+    .image-banner__media-block.hidden-secondary-block {
+        flex: 0 0 100%;
+    }
+}

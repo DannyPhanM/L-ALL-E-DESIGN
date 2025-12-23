@@ -1,0 +1,102 @@
+.account-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: var(--account-vertical-alignment);
+    align-items: var(--account-horizontal-alignment);
+}
+
+.account-container {
+    display: flex;
+    align-items: center;
+    justify-content: var(--account-horizontal-alignment);
+}
+
+.miscellaneous-container--main-sidebar .account-container {
+    justify-content: var(--miscellaneous-horizontal-alignment);
+}
+
+.account-container--icon {
+    aspect-ratio: 1/1;
+    justify-content: center;
+}
+
+.account {
+    display: flex;
+    align-items: center;
+    color: rgb(var(--layout-text-color));
+    min-height: 44px;
+    min-width: 44px;
+    word-break: normal;
+}
+
+.account {
+    padding: 0 10px;
+}
+
+.account-container {
+    margin: 0 -10px;
+    width: fit-content;
+}
+
+.miscellaneous__subblock .account-container {
+    margin: 0px;
+}
+
+.account--icon {
+    justify-content: center;
+}
+
+.account:focus {
+    outline-offset: -1px;
+}
+
+.account__icon svg {
+    display: block;
+    width: auto;
+    height: 100%;
+    fill: rgb(var(--layout-text-color));
+}
+
+.account-block--footer .account-container--text .account {
+    min-height: 32px;
+}
+
+/* Fonts */
+
+.account-container--minimal_uppercase {
+    font: var(--base-body-s-font);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.account-container--minimal_basic,
+.account-container--classic {
+    font: var(--base-body-s-font);
+}
+
+.account-container--minimal_heavy {
+    font: var(--base-body-l-font);
+}
+
+.account-container--avant_garde {
+    font: var(--accent-body-s-font);
+}
+
+.account-container--contrast {
+    font: var(--base-label-font);
+}
+
+.account-container--brutalist {
+    font: var(--base-body-l-font);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.account-container--duet {
+    font: var(--base-body-m-font);
+}
+
+.account-container--custom {
+    font: var(--body-s-font);
+    letter-spacing: var(--body-s-letter-spacing);
+}

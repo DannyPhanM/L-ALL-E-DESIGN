@@ -1,0 +1,107 @@
+{{ 'back-to-top.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+#shopify-section-{{ section.id }} {
+    --back-to-top-vertical-alignment: {{ back-to-top_settings.back_to_top_vertical_alignment }};
+    --back-to-top-horizontal-alignment: {{ back-to-top_settings.back_to_top_horizontal_alignment }};
+}
+
+.back-to-top-container--minimal_uppercase .back-to-top__icon {
+    height: {{ 24 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+}
+.back-to-top-container--minimal_basic .back-to-top__icon,
+.back-to-top-container--classic .back-to-top__icon,
+.back-to-top-container--avant_garde .back-to-top__icon,
+.back-to-top-container--contrast .back-to-top__icon {
+    height: {{ 16 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+}
+.back-to-top-container--minimal_heavy .back-to-top__icon,
+.back-to-top-container--brutalist .back-to-top__icon {
+    height: {{ 28 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+}
+.back-to-top-container--duet .back-to-top__icon {
+    height: {{ 26 | times: settings.desktop_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+}
+.back-to-top-container--custom .back-to-top__icon {
+    height: max(16px, calc(var(--body-s-font-size) * var(--body-s-line-height)));
+}
+.custom-type-preset.navigations-body-l .back-to-top__icon {
+    height: max(16px, calc(var(--body-l-font-size) * var(--body-l-line-height)));
+}
+.custom-type-preset.navigations-body-m .back-to-top__icon {
+    height: max(16px, calc(var(--body-m-font-size) * var(--body-m-line-height)));
+}
+.custom-type-preset.navigations-label .back-to-top__icon {
+    height: max(16px, calc(var(--label-font-size) * var(--label-line-height)));
+}
+
+@media screen and (max-width: 920px) {
+    .back-to-top-container--minimal_uppercase .back-to-top__icon {
+        height: {{ 24 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+    }
+    .back-to-top-container--minimal_basic .back-to-top__icon,
+    .back-to-top-container--classic .back-to-top__icon,
+    .back-to-top-container--avant_garde .back-to-top__icon,
+    .back-to-top-container--contrast .back-to-top__icon {
+        height: {{ 16 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+    }
+    .back-to-top-container--minimal_heavy .back-to-top__icon,
+    .back-to-top-container--brutalist .back-to-top__icon {
+        height: {{ 28 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+    }
+    .back-to-top-container--duet .back-to-top__icon {
+        height: {{ 26 | times: settings.mobile_font_scale | divided_by: 100.0 | round | at_least: 16 }}px;
+    }
+}
+{% endstyle %}
+
+{%- liquid 
+    assign weight =  settings.base_icon_weight
+    if settings.swap_fonts
+        assign weight = settings.accent_icon_weight
+    endif
+    assign uppercase_font = false
+    assign bolder_font = false
+    if settings.typography_preset == 'custom'
+        assign weight = settings.custom_icon_weight
+        if settings.uppercase_body_s and settings.navigation_item_size == 'default'
+            assign uppercase_font = true
+        endif
+        if settings.bolder_font_body_s and settings.navigation_item_size == 'default'
+            assign bolder_font = true
+        endif
+    endif
+-%}
+
+<div class="back-to-top-block {% if section.id contains 'footer' %}back-to-top-block--footer{% else %}back-to-top-block--{{ section.id }}{% endif %} back-to-top-block--{% if section.id contains 'secondary-sidebar' %}vertical{% endif %} back-to-top-block--{{ back-to-top_settings.back_to_top_alignment }}" {{ block_item.shopify_attributes }}>
+    <div class="back-to-top-container back-to-top-container--{{ settings.typography_preset }} {% if settings.navigation_item_size != 'default' and settings.typography_preset == 'custom' %}{{ settings.navigation_item_size }}{% else %}{% if uppercase_font %} uppercase{% endif %}{% if bolder_font %} bolder-font{% endif %}{% endif %}">
+        <a class="back-to-top hover-opacity {% if section.settings.color_type == 'custom' %}color-custom{% elsif section.settings.color_type == 'invert' %}color-invert{% endif %}" href="#body" aria-label="{{ back-to-top_settings.back_to_top_label }}" tabindex="0">
+            {%- if back-to-top_settings.back_to_top_style == 'text' -%}
+                <span class="back-to-top__title {% if settings.allow_transparent_navigation and settings.navigation_layout == 'sidebar_based' and section.id contains 'sidebar' and section.settings.color_type == 'default' %}scroll-color{% endif %}">{% if back-to-top_settings.back_to_top_label != blank %}{{ back-to-top_settings.back_to_top_label }}{% else %}{{ back-to-top_settings.back_to_top_label }}{% endif %}</span> 
+            {%- elsif back-to-top_settings.back_to_top_style == 'icon' -%}
+                <div class="back-to-top__item">
+                    <span class="back-to-top__icon {% if settings.allow_transparent_navigation and settings.navigation_layout == 'sidebar_based' and section.id contains 'sidebar' and section.settings.color_type == 'default' %}scroll-color{% endif %}">
+                        {% if weight == 'regular' %}
+                            {% render 'icon', icon: 'chevron-in-circle-regular' %}
+                        {% elsif weight == 'medium' %}
+                            {% render 'icon', icon: 'chevron-in-circle-medium' %}
+                        {% elsif weight == 'bold' %}
+                            {% render 'icon', icon: 'chevron-in-circle-bold' %}
+                        {% endif %}
+                    </span>
+                </div>
+            {%- elsif back-to-top_settings.back_to_top_style == 'text_with_icon' -%}
+                <span class="back-to-top__title {% if settings.allow_transparent_navigation and settings.navigation_layout == 'sidebar_based' and section.id contains 'sidebar' and section.settings.color_type == 'default' %}scroll-color{% endif %}">{{ back-to-top_settings.back_to_top_label }}</span>
+                <span class="back-to-top__icon {% if settings.allow_transparent_navigation and settings.navigation_layout == 'sidebar_based' and section.id contains 'sidebar' and section.settings.color_type == 'default' %}scroll-color{% endif %}">
+                    {% if weight == 'regular' %}
+                        {% render 'icon', icon: 'chevron-in-circle-regular' %}
+                    {% elsif weight == 'medium' %}
+                        {% render 'icon', icon: 'chevron-in-circle-medium' %}
+                    {% elsif weight == 'bold' %}
+                        {% render 'icon', icon: 'chevron-in-circle-bold' %}
+                    {% endif %}
+                </span>
+            {%- endif -%}
+        </a>
+    </div>
+</div>

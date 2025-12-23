@@ -1,0 +1,525 @@
+.banner {
+    --vertical-gap: 48px;
+    --horizontal-gap: 48px;
+    --buttons-gap: 24px;
+}
+.banner__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: var(--vertical-position);
+    align-items: var(--horizontal-position);
+    flex-direction: column;
+    min-height: var(--section-height);
+    height: fit-content;
+    border-radius: var(--images-and-section-radius);
+    -webkit-border-radius: var(--images-and-section-radius);
+    overflow: clip;
+    background-color: rgb(var(--layout-background-color));
+}
+.overlapping-section .banner__wrapper {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    overflow: visible;
+}
+.hidden-radius.banner__wrapper,
+.banner--full-width .banner__wrapper {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+}
+.banner__media {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    inset: 0;
+    overflow: clip;
+    background-color: rgb(var(--layout-background-color));
+    color: rgb(var(--layout-text-color));
+}
+.banner__media::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.banner__content {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    padding: var(--vertical-gap) var(--horizontal-gap);
+    z-index: 5;
+}
+.banner__media .placeholder-svg, .banner__media video, .banner__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner__content-wrapper {
+    padding: 64px 120px;
+    background-color: rgb(var(--layout-background-color));
+    border-radius: var(--images-and-section-radius);
+    -webkit-border-radius: var(--images-and-section-radius);
+    overflow: clip;
+}
+.narrow-container .banner__content-wrapper {
+    max-width: 720px;
+}
+.wide-container .banner__content-wrapper {
+    max-width: 1200px;
+}
+.hidden-backgroud .banner__content-wrapper {
+    background-color: transparent;
+    padding: 0;
+}
+
+.banner--spacious {
+    --banner-gap: 24px;
+}
+.banner--compact {
+    --banner-gap: 16px;
+}
+.banner__content-wrapper > *:not(:first-child) {
+    margin-top: var(--banner-gap);
+}
+.banner__content-wrapper > .spacer,
+.banner__content-wrapper > .line-container,
+.banner__content-wrapper > .line-container + *,
+.banner__content-wrapper > .spacer + * {
+    margin-top: 0;
+}
+.block__button,
+.block__button > *,
+.block__button object > * {
+    contain: none!important;
+}
+
+.banner__content-wrapper:has( .video-button-block:not(.video-button-link)):not(:has(.block__button.block__button--link)) .block__button:not(.block__button--link),
+.banner__content-wrapper:has( .video-button-block:not(.video-button-link)):not(:has(.block__button.block__button--link)) .block__button:not(.block__button--link) * {
+    contain: layout style !important;
+}
+
+.banner__content-wrapper:has( .block__button.block__button--link):has(:not(.block__button.block__button--outlined)):has(:not(.block__button.block__button--solid)) .video-button-block:not(.video-button-link) *,
+.banner__content-wrapper:has( .video-button-block:not(.video-button-link)):has( .video-button-block.video-button-link):not(:has(.block__button.block__button--link)) .block__button:not(.block__button--link),
+.banner__content-wrapper:has( .video-button-block:not(.video-button-link)):has( .video-button-block.video-button-link):not(:has(.block__button.block__button--link)) .block__button:not(.block__button--link) * {
+    contain: none!important;
+}
+
+.banner__content-wrapper:not(:has(.block__button.block__button--outlined)):not(:has(.block__button.block__button--solid)) .video-button-block *,
+.banner__content-wrapper:not(:has(.block__button.block__button--link)) .video-button-block.video-button-link *,
+.banner__content-wrapper:not(:has(.block__button.block__button--link)):has(.video-button-block.video-button-link) .video-button-block * {
+    contain: none!important;
+}
+
+.banner .start .block__button,
+.banner .start .video-button-block {
+    margin-inline-end: var(--buttons-gap);
+    margin-inline-start: 0;
+}
+.banner .center .block__button,
+.banner .center .video-button-block {
+    margin-inline-start: calc(var(--buttons-gap) / 2);
+    margin-inline-end: calc(var(--buttons-gap) / 2);
+}
+.banner .center .context-image {
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+}
+.banner .outlined-button, .banner .link-button,
+.banner .solid-button {
+    text-align: center;
+}
+.hidden-backgroud .banner__content-wrapper {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    overflow: visible;
+}
+.banner__wrapper.hover-content .banner__content {
+    top: 20px;
+}
+.block__button object {
+    display: inline;
+}
+
+.banner__wrapper.hover-content .banner__content,
+.banner__wrapper.hover-content .banner__media::after {
+    opacity: 0!important;
+    pointer-events: none;
+    /* will-change: opacity; */
+    transition: opacity calc(var(--animation-duration) / 2) var(--transition-timing-function), top calc(var(--animation-duration) / 2) var(--transition-timing-function);
+}
+a.banner__wrapper.hover-content .banner__content,
+a.banner__wrapper.hover-content .banner__media::after {
+    cursor: pointer;
+}
+a.banner__wrapper:not(.not-scaled) .image-banner__media img,
+a.banner__wrapper:not(.not-scaled) .image-banner__media .placeholder-svg {
+    transition: transform calc(var(--animation-duration) / 2) var(--transition-timing-function);
+}
+
+/* #region Simulate hover on touch */
+
+a.banner__wrapper.hover-content.active-by-tap .banner__content {
+    opacity: 1!important;
+    pointer-events: auto;
+    /* will-change: opacity; */
+    transition: opacity var(--animation-duration) var(--transition-timing-function), top var(--animation-duration) var(--transition-timing-function);
+    top: 0;
+}
+a.banner__wrapper.hover-content.active-by-tap .banner__media::after {
+    opacity: var(--banner-overlay-opacity)!important;
+    pointer-events: auto;
+    /* will-change: opacity; */
+    transition: opacity var(--animation-duration) var(--transition-timing-function);
+}
+
+.banner__wrapper:not(a):not(.no-hover):not(.not-scaled):hover .image-banner__media img,
+.banner__wrapper:not(a):not(.no-hover):not(.not-scaled):hover .image-banner__media .placeholder-svg {
+    transform: scale(1.03);
+    transition: transform var(--animation-duration) var(--transition-timing-function);
+}
+.banner__wrapper:not(a).hover-content:hover .banner__content,
+.banner__wrapper:not(a).hover-content:focus-visible .banner__content {
+    opacity: 1!important;
+    pointer-events: auto;
+    /* will-change: opacity; */
+    transition: opacity var(--animation-duration) var(--transition-timing-function), top var(--animation-duration) var(--transition-timing-function);
+    top: 0;
+}
+.banner__wrapper:not(a).hover-content:hover .banner__media::after,
+.banner__wrapper:not(a).hover-content:focus-visible .banner__media::after {
+    opacity: var(--banner-overlay-opacity)!important;
+    pointer-events: auto;
+    /* will-change: opacity; */
+    transition: opacity var(--animation-duration) var(--transition-timing-function);
+}
+
+/* #endregion  */
+
+@media (hover: hover) {
+    a.banner__wrapper:not(.no-hover):not(.not-scaled):hover .image-banner__media img,
+    a.banner__wrapper:not(.no-hover):not(.not-scaled):hover .image-banner__media .placeholder-svg {
+        transform: scale(1.03);
+        transition: transform var(--animation-duration) var(--transition-timing-function);
+    }
+    .banner__wrapper.hover-content:hover .banner__content,
+    a.banner__wrapper.hover-content:focus-visible .banner__content {
+        opacity: 1!important;
+        pointer-events: auto;
+        /* will-change: opacity; */
+        transition: opacity var(--animation-duration) var(--transition-timing-function), top var(--animation-duration) var(--transition-timing-function);
+        top: 0;
+    }
+    .banner__wrapper.hover-content:hover .banner__media::after,
+    a.banner__wrapper.hover-content:focus-visible .banner__media::after {
+        opacity: var(--banner-overlay-opacity)!important;
+        pointer-events: auto;
+        /* will-change: opacity; */
+        transition: opacity var(--animation-duration) var(--transition-timing-function);
+    }
+}
+
+@media screen and (min-width: 921px) {
+    .overlapping-section.banner--compact {
+        --horizontal-gap: 24px;
+    }
+}
+
+/* Styles for full-width page without sidebars */
+/* Tablet */
+@media screen and (max-width: 1024px) {
+    .banner__wrapper.hover-content .banner__content {
+        opacity: 1!important;
+        pointer-events: auto;
+        transform: none;
+        top: 0px;
+    }
+    .banner__wrapper.hover-content .banner__media::after {
+        opacity: var(--banner-overlay-opacity)!important;
+        pointer-events: auto;
+    }
+}
+@media screen and (max-width: 920px) {
+    .banner__wrapper {
+        min-height: var(--video-mobile-height);
+    }
+    .banner__wrapper.below {
+        align-items: flex-start;
+    }
+    .banner__wrapper.below.banner__wrapper--center-content {
+        align-items: center;
+    }
+    .below.banner__wrapper .banner__media {
+        height: var(--video-mobile-height);
+        position: static;
+    }
+    .below.banner__wrapper {
+        min-height: none;
+        height: auto;
+    }
+    .banner__wrapper.hover-content .banner__content {
+        top: 0px;
+    }
+}
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .banner--spacious,
+    .banner--compact {
+        --horizontal-gap: 16px;
+        --vertical-gap: 24px;
+        --buttons-gap: 12px;
+    }
+    .below .banner__media {
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        overflow: clip;
+    }
+    .banner--full-width .below .banner__media,
+    .banner--overlap .below .banner__media {
+        border-radius: 0;
+        -webkit-border-radius: 0;
+    }
+    .banner--spacious {
+        --banner-gap: 16px;
+    }
+    .below .banner__media:not(.mobile-overlap-enable)::after {
+        display: none;
+    }
+    .below .banner__content {
+        padding: 0px;
+    }
+    .banner--full-width .below .banner__content,
+    .banner--overlap .below .banner__content {
+        padding: 0px 16px;
+    }
+    .banner__content-wrapper {
+        padding: 32px 24px;
+    }
+    .banner--spacious .below .banner__content-wrapper {
+        padding: 48px 0;
+    }
+    .banner--compact .below .banner__content-wrapper {
+        padding: 24px 0;
+    }
+    .banner.banner--wide.no-default-color .below .banner__content-wrapper {
+        padding-inline-start: 16px;
+        padding-inline-end: 16px;
+    }
+    .banner.color-invert-content .below .banner__content-wrapper {
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        color: rgb(var(--layout-text-color));
+        background-color: rgb(var(--layout-background-color));
+    }
+}
+
+/* Sidebars: Main XS, Main S, Main M and white space Spacious */
+/* Mobile */
+@media screen and (max-width: 1048px) and (min-width: 921px) {
+    .main_xs--spacious .banner--spacious,
+    .main_s--spacious .banner--spacious,
+    .main_m--spacious .banner--spacious {
+        --horizontal-gap: 16px;
+        --vertical-gap: 24px;
+        --buttons-gap: 12px;
+    }
+    .main_xs--spacious .banner--spacious,
+    .main_s--spacious .banner--spacious,
+    .main_m--spacious .banner--spacious {
+        --banner-gap: 16px;
+    }
+    .main_xs--spacious .banner__content,
+    .main_s--spacious .banner__content,
+    .main_m--spacious .banner__content {
+        padding: 64px 24px;
+    }
+    .main_xs--spacious section[id^="shopify-section-"]:first-of-type .banner--overlapping .banner__content,
+    .main_s--spacious section[id^="shopify-section-"]:first-of-type .banner--overlapping .banner__content,
+    .main_m--spacious section[id^="shopify-section-"]:first-of-type .banner--overlapping .banner__content {
+        padding-inline-start: 16px;
+        padding-inline-end: 16px;
+    }
+    .main_xs--spacious section[id^="shopify-section-"]:first-of-type .banner--overlapping .banner__content.hidden-backgroud,
+    .main_s--spacious section[id^="shopify-section-"]:first-of-type .banner--overlapping .banner__content.hidden-backgroud,
+    .main_m--spacious section[id^="shopify-section-"]:first-of-type .banner--overlapping .banner__content.hidden-backgroud {
+        padding-inline-start: 0px;
+        padding-inline-end: 0px;
+    }
+    .main_xs--spacious .banner__content-wrapper,
+    .main_s--spacious .banner__content-wrapper,
+    .main_m--spacious .banner__content-wrapper {
+        padding: 64px 16px;
+    }
+}
+/* Sidebars: Main XS, Main S and white space Compact */
+/* Mobile */
+@media screen and (max-width: 968px) and (min-width: 921px)  {
+    .main_xs--compact .banner--compact,
+    .main_s--compact .banner--compact {
+        --horizontal-gap: 16px;
+        --vertical-gap: 24px;
+        --buttons-gap: 12px;
+    }
+    .main_xs--compact .banner__content,
+    .main_s--compact .banner__content {
+        padding: 64px 24px;
+    }
+    .main_xs--compact section[id^="shopify-section-"]:first-of-type .banner--overlapping .banner__content,
+    .main_s--compact section[id^="shopify-section-"]:first-of-type .banner--overlapping .banner__content {
+        padding-inline-start: 16px;
+        padding-inline-end: 16px;
+    }
+    .main_xs--compact section[id^="shopify-section-"]:first-of-type .banner--overlapping .banner__content.hidden-backgroud,
+    .main_s--compact section[id^="shopify-section-"]:first-of-type .banner--overlapping .banner__content.hidden-backgroud {
+        padding-inline-start: 0px;
+        padding-inline-end: 0px;
+    }
+    .main_xs--compact .banner__content-wrapper,
+    .main_s--compact .banner__content-wrapper {
+        padding: 64px 16px;
+    }
+}
+/* Sidebars: Main XS with secondary, Main S with secondary and white space Spacious */
+/* Mobile */
+@media screen and (max-width: 1144px) and (min-width: 921px) {
+    .main_xs_with_secondary--spacious .banner--spacious,
+    .main_s_with_secondary--spacious .banner--spacious {
+        --horizontal-gap: 16px;
+        --vertical-gap: 24px;
+        --buttons-gap: 12px;
+    }
+    .main_xs_with_secondary--spacious .banner--spacious,
+    .main_s_with_secondary--spacious .banner--spacious {
+        --banner-gap: 16px;
+    }
+    .main_xs_with_secondary--spacious .banner__content,
+    .main_s_with_secondary--spacious .banner__content {
+        padding: 64px 24px;
+    }
+    .main_xs_with_secondary--spacious section[id^="shopify-section-"]:first-of-type .banner--overlapping .banner__content,
+    .main_s_with_secondary--spacious section[id^="shopify-section-"]:first-of-type .banner--overlapping .banner__content {
+        padding-inline-start: 16px;
+        padding-inline-end: 16px;
+    }
+    .main_xs_with_secondary--spacious section[id^="shopify-section-"]:first-of-type .banner--overlapping .banner__content.hidden-backgroud,
+    .main_s_with_secondary--spacious section[id^="shopify-section-"]:first-of-type .banner--overlapping .banner__content.hidden-backgroud {
+        padding-inline-start: 0px;
+        padding-inline-end: 0px;
+    }
+    .main_xs_with_secondary--spacious .banner__content-wrapper,
+    .main_s_with_secondary--spacious .banner__content-wrapper {
+        padding: 64px 16px;
+    }
+}
+/* Sidebars: Main XS with secondary and Main S with secondary and white space Compact */
+/* Mobile */
+@media screen and (max-width: 1064px) and (min-width: 921px) {
+    .main_xs_with_secondary--compact .banner--compact,
+    .main_s_with_secondary--compact .banner--compact {
+        --horizontal-gap: 16px;
+        --vertical-gap: 24px;
+        --buttons-gap: 12px;
+    }
+    .main_xs_with_secondary--compact .banner__content,
+    .main_s_with_secondary--compact .banner__content {
+        padding: 64px 24px;
+    }
+    .main_xs_with_secondary--compact section[id^="shopify-section-"]:first-of-type .banner--overlapping .banner__content,
+    .main_s_with_secondary--compact section[id^="shopify-section-"]:first-of-type .banner--overlapping .banner__content {
+        padding-inline-start: 16px;
+        padding-inline-end: 16px;
+    }
+    .main_xs_with_secondary--compact section[id^="shopify-section-"]:first-of-type .banner--overlapping .banner__content.hidden-backgroud,
+    .main_s_with_secondary--compact section[id^="shopify-section-"]:first-of-type .banner--overlapping .banner__content.hidden-backgroud {
+        padding-inline-start: 0px;
+        padding-inline-end: 0px;
+    }
+    .main_xs_with_secondary--compact .banner__content-wrapper,
+    .main_s_with_secondary--compact .banner__content-wrapper {
+        padding: 64px 16px;
+    }
+}
+
+/* Sidebars: Main M and white space Compact */
+/* Mobile */
+@media screen and (max-width: 1024px) and (min-width: 921px)  {
+    .main_m--compact .banner--compact {
+        --horizontal-gap: 16px;
+        --vertical-gap: 24px;
+        --buttons-gap: 12px;
+    }
+    .main_m--compact .banner__content {
+        padding: 64px 24px;
+    }
+    .main_m--compact section[id^="shopify-section-"]:first-of-type .banner--overlapping .banner__content {
+        padding-inline-start: 16px;
+        padding-inline-end: 16px;
+    }
+    .main_m--compact section[id^="shopify-section-"]:first-of-type .banner--overlapping .banner__content.hidden-backgroud {
+        padding-inline-start: 0px;
+        padding-inline-end: 0px;
+    }
+    .main_m--compact .banner__content-wrapper {
+        padding: 64px 16px;
+    }
+}
+/* Sidebars: Main M with secondary */
+/* Mobile */
+@media screen and (max-width: 1152px) and (min-width: 921px) {
+    .main_m_with_secondary .banner--spacious,
+    .main_m_with_secondary .banner--compact {
+        --horizontal-gap: 16px;
+        --vertical-gap: 24px;
+        --buttons-gap: 12px;
+    }
+    .main_m_with_secondary .banner--spacious {
+        --banner-gap: 16px;
+    }
+    .main_m_with_secondary .banner__content {
+        padding: 64px 24px;
+    }
+    .main_m_with_secondary section[id^="shopify-section-"]:first-of-type .banner--overlapping .banner__content {
+        padding-inline-start: 16px;
+        padding-inline-end: 16px;
+    }
+    .main_m_with_secondary section[id^="shopify-section-"]:first-of-type .banner--overlapping .banner__content.hidden-backgroud {
+        padding-inline-start: 0px;
+        padding-inline-end: 0px;
+    }
+    .main_m_with_secondary .banner__content-wrapper {
+        padding: 64px 16px;
+    }
+}
+
+/* Sidebars: Main L */
+/* Mobile */
+@media screen and (max-width: 1536px) and (min-width: 921px) {
+    .main_l .banner--spacious,
+    .main_l .banner--compact {
+        --horizontal-gap: 16px;
+        --vertical-gap: 24px;
+        --buttons-gap: 12px;
+    }
+    .main_l--spacious .banner--spacious {
+        --banner-gap: 16px;
+    }
+    .main_l .banner__content {
+        padding: 64px 24px;
+    }
+    .main_l section[id^="shopify-section-"]:first-of-type .banner--overlapping .banner__content {
+        padding-inline-start: 16px;
+        padding-inline-end: 16px;
+    }
+    .main_l section[id^="shopify-section-"]:first-of-type .banner--overlapping .banner__content.hidden-backgroud {
+        padding-inline-start: 0px;
+        padding-inline-end: 0px;
+    }
+    .main_l .banner__content-wrapper {
+        padding: 64px 16px;
+    }
+}

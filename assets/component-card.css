@@ -1,0 +1,301 @@
+.card-collection {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: fit-content;
+    flex-basis: 100%;
+    /* will-change: opacity; */
+    transition: opacity var(--animation-duration) var(--transition-timing-function);
+}
+
+.card-collection .card__image {
+    height: 100%;
+}
+
+.card__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: var(--focal-point);
+}
+
+.card__title {
+    color: rgb(var(--layout-text-color));
+}
+
+.card__title-text {
+    /* will-change: opacity; */
+    transition: opacity var(--animation-duration) var(--transition-timing-function);
+}
+
+.card__title.center {
+    text-align: center;
+}
+
+.card__media,
+.card__media-placeholder {
+    border-radius: var(--product-card-radius);
+    -webkit-border-radius: var(--product-card-radius);
+    overflow: clip;
+}
+
+.card__media img {
+    transition: transform var(--animation-duration) var(--transition-timing-function);
+}
+
+.card-collection .lazy-image,
+.card-collection .lazy-image img {
+    height: 100%;
+}
+
+@media (hover: hover) {
+    .card-collection:hover .card__title-text {
+        opacity: .7;
+    }
+    .card-collection:hover .card__media img {
+        transform: scale(1.03);
+        transition: transform var(--animation-duration) var(--transition-timing-function);
+    }
+}
+
+.heading--medium .heading__details {
+    line-height: 18px;
+}
+
+/* Fonts */
+.collection-list .card__title--minimal_uppercase {
+    font: var(--base-heading-xs-font);
+    text-transform: uppercase;
+}
+.collection-list .card__title--minimal_basic {
+    font: var(--base-heading-xs-font);
+}
+.collection-list .card__title--minimal_heavy {
+    font: var(--base-heading-s-font);
+}
+.collection-list .card__title--classic {
+    font: var(--accent-heading-s-font);
+}
+.collection-list .card__title--avant_garde {
+    font: var(--base-heading-xs-font);
+    text-transform: uppercase;
+}
+.collection-list .card__title--contrast {
+    font: var(--accent-heading-m-font);
+    letter-spacing: -0.01em;
+}
+.collection-list .card__title--brutalist {
+    text-transform: uppercase;
+    font: var(--base-heading-m-font);
+    letter-spacing: -0.01em;
+}
+.collection-list .card__title--duet {
+    font: var(--accent-body-l-font);
+}
+.collection-list .card__title--custom {
+    font: var(--heading-xs-font);
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+    .collection-list .card__title--minimal_uppercase,
+    .collection-list .card__title--avant_garde,
+    .collection-list .card__title--brutalist {
+        font: var(--base-body-l-font);
+        letter-spacing: 0.02em;
+    }
+    .collection-list .card__title--minimal_basic,
+    .collection-list .card__title--minimal_heavy {
+        font: var(--base-body-l-font);
+    }
+    .collection-list .card__title--classic,
+    .collection-list .card__title--contrast {
+        font: var(--accent-body-l-font);
+    }
+}
+
+
+/* Sidebars: Main XS, Main S and white space Spacious */
+    /* Tablet */
+    @media screen and (max-width: 1304px) and (min-width: 921px) {
+        .main_xs--spacious .collection-list .card__title--minimal_uppercase,
+        .main_xs--spacious .collection-list .card__title--avant_garde,
+        .main_xs--spacious .collection-list .card__title--brutalist,
+        .main_s--spacious .collection-list .card__title--minimal_uppercase,
+        .main_s--spacious .collection-list .card__title--avant_garde,
+        .main_s--spacious .collection-list .card__title--brutalist {
+            font: var(--base-body-l-font);
+            letter-spacing: 0.02em;
+        }
+        .main_xs--spacious .collection-list .card__title--minimal_basic,
+        .main_xs--spacious .collection-list .card__title--minimal_heavy,
+        .main_s--spacious .collection-list .card__title--minimal_basic,
+        .main_s--spacious .collection-list .card__title--minimal_heavy {
+            font: var(--base-body-l-font);
+        }
+        .main_xs--spacious .collection-list .card__title--classic,
+        .main_xs--spacious .collection-list .card__title--contrast,
+        .main_s--spacious .collection-list .card__title--classic,
+        .main_s--spacious .collection-list .card__title--contrast {
+            font: var(--accent-body-l-font);
+        }
+    }
+    
+/* Sidebars: Main XS and white space Compact */
+    /* Tablet */
+    @media screen and (max-width: 1224px) and (min-width: 921px) {
+        .main_xs--compact .collection-list .card__title--minimal_uppercase,
+        .main_xs--compact .collection-list .card__title--avant_garde,
+        .main_xs--compact .collection-list .card__title--brutalist {
+            font: var(--base-body-l-font);
+            letter-spacing: 0.02em;
+        }
+        .main_xs--compact .collection-list .card__title--minimal_basic,
+        .main_xs--compact .collection-list .card__title--minimal_heavy {
+            font: var(--base-body-l-font);
+        }
+        .main_xs--compact .collection-list .card__title--classic,
+        .main_xs--compact .collection-list .card__title--contrast {
+            font: var(--accent-body-l-font);
+        }
+    }
+
+/* Sidebars: Main XS with secondary, Main S with secondary and white space Spacious */
+    /* Tablet */
+    @media screen and (max-width: 1400px) and (min-width: 921px) {
+        .main_xs_with_secondary--spacious .collection-list .card__title--minimal_uppercase,
+        .main_xs_with_secondary--spacious .collection-list .card__title--avant_garde,
+        .main_xs_with_secondary--spacious .collection-list .card__title--brutalist,
+        .main_s_with_secondary--spacious .collection-list .card__title--minimal_uppercase,
+        .main_s_with_secondary--spacious .collection-list .card__title--avant_garde,
+        .main_s_with_secondary--spacious .collection-list .card__title--brutalist {
+            font: var(--base-body-l-font);
+            letter-spacing: 0.02em;
+        }
+        .main_xs_with_secondary--spacious .collection-list .card__title--minimal_basic,
+        .main_xs_with_secondary--spacious .collection-list .card__title--minimal_heavy,
+        .main_s_with_secondary--spacious .collection-list .card__title--minimal_basic,
+        .main_s_with_secondary--spacious .collection-list .card__title--minimal_heavy {
+            font: var(--base-body-l-font);
+        }
+        .main_xs_with_secondary--spacious .collection-list .card__title--classic,
+        .main_xs_with_secondary--spacious .collection-list .card__title--contrast,
+        .main_s_with_secondary--spacious .collection-list .card__title--classic,
+        .main_s_with_secondary--spacious .collection-list .card__title--contrast {
+            font: var(--accent-body-l-font);
+        }
+    }
+
+/* Sidebars: Main XS with secondary and white space Compact */
+    /* Tablet */
+    @media screen and (max-width: 1320px) and (min-width: 921px) {
+        .main_xs_with_secondary--compact .collection-list .card__title--minimal_uppercase,
+        .main_xs_with_secondary--compact .collection-list .card__title--avant_garde,
+        .main_xs_with_secondary--compact .collection-list .card__title--brutalist {
+            font: var(--base-body-l-font);
+            letter-spacing: 0.02em;
+        }
+        .main_xs_with_secondary--compact .collection-list .card__title--minimal_basic,
+        .main_xs_with_secondary--compact .collection-list .card__title--minimal_heavy {
+            font: var(--base-body-l-font);
+        }
+        .main_xs_with_secondary--compact .collection-list .card__title--classic,
+        .main_xs_with_secondary--compact .collection-list .card__title--contrast {
+            font: var(--accent-body-l-font);
+        }
+    }
+
+/* Sidebars: Main S and white space Compact */
+    /* Tablet */
+    @media screen and (max-width: 1260px) and (min-width: 921px) {
+        .main_s--compact .collection-list .card__title--minimal_uppercase,
+        .main_s--compact .collection-list .card__title--avant_garde,
+        .main_s--compact .collection-list .card__title--brutalist {
+            font: var(--base-body-l-font);
+            letter-spacing: 0.02em;
+        }
+        .main_s--compact .collection-list .card__title--minimal_basic,
+        .main_s--compact .collection-list .card__title--minimal_heavy {
+            font: var(--base-body-l-font);
+        }
+        .main_s--compact .collection-list .card__title--classic,
+        .main_s--compact .collection-list .card__title--contrast {
+            font: var(--accent-body-l-font);
+        }
+    }
+
+/* Sidebars: Main S with secondary and white space Compact */
+    /* Tablet */
+    @media screen and (max-width: 1378px) and (min-width: 921px) {
+        .main_s_with_secondary--compact .collection-list .card__title--minimal_uppercase,
+        .main_s_with_secondary--compact .collection-list .card__title--avant_garde,
+        .main_s_with_secondary--compact .collection-list .card__title--brutalist {
+            font: var(--base-body-l-font);
+            letter-spacing: 0.02em;
+        }
+        .main_s_with_secondary--compact .collection-list .card__title--minimal_basic,
+        .main_s_with_secondary--compact .collection-list .card__title--minimal_heavy {
+            font: var(--base-body-l-font);
+        }
+        .main_s_with_secondary--compact .collection-list .card__title--classic,
+        .main_s_with_secondary--compact .collection-list .card__title--contrast {
+            font: var(--accent-body-l-font);
+        }
+    }
+
+/* Sidebars: Main M */
+    /* Tablet */
+    @media screen and (max-width: 1365px) and (min-width: 921px) {
+        .main_m .collection-list .card__title--minimal_uppercase,
+        .main_m .collection-list .card__title--avant_garde,
+        .main_m .collection-list .card__title--brutalist {
+            font: var(--base-body-l-font);
+            letter-spacing: 0.02em;
+        }
+        .main_m .collection-list .card__title--minimal_basic,
+        .main_m .collection-list .card__title--minimal_heavy {
+            font: var(--base-body-l-font);
+        }
+        .main_m .collection-list .card__title--classic,
+        .main_m .collection-list .card__title--contrast {
+            font: var(--accent-body-l-font);
+        }
+    }
+
+/* Sidebars: Main M with secondary */
+      /* Tablet */
+    @media screen and (max-width: 1493px) and (min-width: 921px) {
+        .main_m_with_secondary .collection-list .card__title--minimal_uppercase,
+        .main_m_with_secondary .collection-list .card__title--avant_garde,
+        .main_m_with_secondary .collection-list .card__title--brutalist {
+            font: var(--base-body-l-font);
+            letter-spacing: 0.02em;
+        }
+        .main_m_with_secondary .collection-list .card__title--minimal_basic,
+        .main_m_with_secondary .collection-list .card__title--minimal_heavy {
+            font: var(--base-body-l-font);
+        }
+        .main_m_with_secondary .collection-list .card__title--classic,
+        .main_m_with_secondary .collection-list .card__title--contrast {
+            font: var(--accent-body-l-font);
+        }
+    }
+
+/* Sidebars: Main L */
+    /* Tablet */
+    @media screen and (max-width: 2048px) and (min-width: 921px) {
+        .main_l .collection-list .card__title--minimal_uppercase,
+        .main_l .collection-list .card__title--avant_garde,
+        .main_l .collection-list .card__title--brutalist {
+            font: var(--base-body-l-font);
+            letter-spacing: 0.02em;
+        }
+        .main_l .collection-list .card__title--minimal_basic,
+        .main_l .collection-list .card__title--minimal_heavy {
+            font: var(--base-body-l-font);
+        }
+        .main_l .collection-list .card__title--classic,
+        .main_l .collection-list .card__title--contrast {
+            font: var(--accent-body-l-font);
+        }
+    }
