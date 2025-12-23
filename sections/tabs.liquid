@@ -70,11 +70,12 @@
         <div class="component-tabs">
             <component-tabs class="component-tabs__wrapper {% if section.settings.center_text %}center{% endif %}">
                 {%- for block in section.blocks -%}
-                    {% if block.settings.page != blank or block.settings.custom_heading != blank %}
-                    <button {{ block.shopify_attributes }} id="{{ block.id }}" class="section-tab-js component-tabs__tab {% if forloop.first %}active{% endif %} component-tabs__tab--{{ settings.typography_preset }} {% if section.settings.tab_heading_size != 'default' %}{{ section.settings.tab_heading_size }}{% else %}{% if settings.typography_preset == 'custom' %}{% if settings.uppercase_body_l %} uppercase{% endif %}{% if settings.bolder_font_body_l %} bolder-font{% endif %}{% endif %}{% endif %}  tab-js tab-js-block-id--{{ block.id }}">
+                    {%- assign path_setting = block.settings.url_path | strip -%}
+                    <button {{ block.shopify_attributes }} id="{{ block.id }}" 
+                      class="section-tab-js component-tabs__tab {% if forloop.first %}active{% endif %} component-tabs__tab--{{ settings.typography_preset }} {% if section.settings.tab_heading_size != 'default' %}{{ section.settings.tab_heading_size }}{% else %}{% if settings.typography_preset == 'custom' %}{% if settings.uppercase_body_l %} uppercase{% endif %}{% if settings.bolder_font_body_l %} bolder-font{% endif %}{% endif %}{% endif %} tab-js tab-js-block-id--{{ block.id }}"
+                      {% if path_setting != blank %}data-auto-path="{{ path_setting }}"{% endif %}>
                         {% if block.settings.custom_heading != blank %}{{ block.settings.custom_heading }}{% else %}{{ block.settings.page.title | escape }}{% endif %}
                     </button>
-                    {% endif %}
                 {%- endfor -%}
             </component-tabs>
         </div>
@@ -103,46 +104,35 @@
 <script>
 
               (function () {
-  // 1. Check section tabs có tồn tại không
   const tabsContainer = document.querySelector('.tabs-container-js')
   if (!tabsContainer) return
 
   const tabs = tabsContainer.querySelectorAll('.section-tab-js')
   const contents = tabsContainer.querySelectorAll('.tab-content-js')
-
   if (!tabs.length || !contents.length) return
 
-  // 2. Map pathname → index tab
-  const path = window.location.pathname
+  const currentPath = window.location.pathname.replace(/\/$/, ""); // Normalize path
+  let targetIndex = -1;
 
-  const map = {
-    '/pages/shopping-guide': 0,
-    '/pages/privacy-policy': 1,
-    '/pages/privacy-policy-1': 2
-  }
+  // Find index by data-auto-path
+  tabs.forEach((tab, index) => {
+    const autoPath = tab.getAttribute('data-auto-path');
+    if (autoPath && autoPath.replace(/\/$/, "") === currentPath) {
+      targetIndex = index;
+    }
+  });
 
-  const activeIndex = map[path]
-  if (activeIndex === undefined) return
+  if (targetIndex === -1) return
 
-  // 3. Remove active cũ
-  tabs.forEach(tab => {
-    tab.classList.remove('active')
-    tab.setAttribute('aria-selected', 'false')
-  })
+  // Active logic
+  tabs.forEach((tab, i) => {
+    tab.classList.toggle('active', i === targetIndex);
+    tab.setAttribute('aria-selected', i === targetIndex ? 'true' : 'false');
+  });
 
-  contents.forEach(content => {
-    content.classList.remove('active')
-  })
-
-  // 4. Active tab + content tương ứng
-  if (tabs[activeIndex]) {
-    tabs[activeIndex].classList.add('active')
-    tabs[activeIndex].setAttribute('aria-selected', 'true')
-  }
-
-  if (contents[activeIndex]) {
-    contents[activeIndex].classList.add('active')
-  }
+  contents.forEach((content, i) => {
+    content.classList.toggle('active', i === targetIndex);
+  });
 })()
 
 
@@ -600,6 +590,12 @@
                     "label": "t:sections.collection-list.settings.custom_heading.label",
                     "info": "t:sections.tabs.blocks.tab.settings.custom_heading.info",
                     "default": "Page heading"
+                },
+                {
+                    "type": "text",
+                    "id": "url_path",
+                    "label": "Auto-open on Path",
+                    "info": "Example: /pages/about-us. The tab will open automatically if the URL matches."
                 },
                 {
                     "type": "richtext",
