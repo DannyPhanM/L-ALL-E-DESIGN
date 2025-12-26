@@ -3,7 +3,7 @@
 {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
 
 {% style %}
-  #shopify-section-{{ section.id }} {
+  /* #shopify-section-{{ section.id }} {
       --image-ratio: {{ section.settings.image_ratio }};
       --banner-focal-point: {{ section.settings.banner_focal_point }};
       --focal-point: {{ section.settings.focal_point }};
@@ -14,7 +14,7 @@
 
   #shopify-section-{{ section.id }} * {
     contain: none !important;
-  }
+  } */
 
   @media screen and (max-width: 920px) {
     #shopify-section-{{ section.id }} {
