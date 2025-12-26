@@ -9,72 +9,6 @@
  */
 {
   "sections": {
-    "tabs_hzUyEp": {
-      "type": "tabs",
-      "blocks": {
-        "tab_EDVfNM": {
-          "type": "tab",
-          "settings": {
-            "custom_heading": "Shopping Guide",
-            "text": "",
-            "text_size": "default",
-            "page": "shopping-guide"
-          }
-        },
-        "tab_m3ip8q": {
-          "type": "tab",
-          "settings": {
-            "custom_heading": "SHIPPING POLICY",
-            "text": "",
-            "text_size": "default",
-            "page": "shipping-policy"
-          }
-        },
-        "tab_rLXbYn": {
-          "type": "tab",
-          "settings": {
-            "custom_heading": "RETURN & EXCHANGES",
-            "text": "",
-            "text_size": "default",
-            "page": "privacy-policy"
-          }
-        },
-        "tab_UXnjEx": {
-          "type": "tab",
-          "settings": {
-            "custom_heading": "Privacy Policy",
-            "text": "",
-            "text_size": "default",
-            "page": "privacy-policy-1"
-          }
-        }
-      },
-      "block_order": [
-        "tab_EDVfNM",
-        "tab_m3ip8q",
-        "tab_rLXbYn",
-        "tab_UXnjEx"
-      ],
-      "name": "t:sections.tabs.name",
-      "settings": {
-        "subheading": "",
-        "heading": "L'ALLEE DESIGN POLICY",
-        "center_text": true,
-        "section_width": "narrow",
-        "tab_heading_size": "default",
-        "subheading_size": "default",
-        "subheading_tag": "h3",
-        "heading_size": "default",
-        "heading_tag": "h2",
-        "color_type": "default",
-        "background_color": "#ffffff",
-        "text_color": "#000000",
-        "desktop_padding_top": 0,
-        "desktop_padding_bottom": 0,
-        "mobile_padding_top": 0,
-        "mobile_padding_bottom": 0
-      }
-    },
     "main-page": {
       "type": "main-page",
       "disabled": true,
@@ -98,11 +32,31 @@
       "settings": {
         "anchor_link": "anchor-link"
       }
+    },
+    "17667744128bc4b7ac": {
+      "type": "apps",
+      "blocks": {
+        "xb_wishlist_wishlist_A6bYwk": {
+          "type": "shopify://apps/xb-wishlist/blocks/wishlist/cc07f1e9-907b-431d-99f8-4fce3efa75f1",
+          "settings": {
+            "container": 1100,
+            "heading": true,
+            "text_size": 32,
+            "price_color": "#ff0000"
+          }
+        }
+      },
+      "block_order": [
+        "xb_wishlist_wishlist_A6bYwk"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
-    "tabs_hzUyEp",
     "main-page",
-    "anchor_link_f9qnAN"
+    "anchor_link_f9qnAN",
+    "17667744128bc4b7ac"
   ]
 }
