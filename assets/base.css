@@ -3651,3 +3651,13 @@ xb-wishlist-button-collection .xb-wishlist-button-collection__remove-icon {
     --icon-size: 24px !important;
     --icon-color: #fff !important;
 }
+
+.template-index .xb-wishlist__header .xb-header__icon svg path {
+    stroke: #fff;
+}
+.template-index .xb-wishlist__header .xb-product-quantity {
+    background: #fff;
+    color: #111;
+    font-size: 12px;
+}
+
