@@ -32,7 +32,7 @@ if (!customElements.get("product-form")) {
             `input[form="${formId}"]:checked, select[form="${formId}"] option:checked, #${formId} input:checked, #${formId} option:checked`
           )
         ).some(
-          (el) => el.value && el.value.trim().toLowerCase() === "custom size"
+          (el) => el.value && el.value.trim().toLowerCase() === "customize size"
         );
 
         if (isCustomSize && !this.form.dataset.customSizeValidated) {
