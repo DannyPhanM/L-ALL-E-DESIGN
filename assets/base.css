@@ -3661,3 +3661,36 @@ xb-wishlist-button-collection .xb-wishlist-button-collection__remove-icon {
     font-size: 12px;
 }
 
+xb-wishlist-page .xb-wishlist-products__style {
+    display: none;
+}
+xb-wishlist-page .xb-wishlist-page {
+    max-width: 100%;
+}
+xb-wishlist-page .xb-wishlist-page .xb-wishlist-product__img img {
+    aspect-ratio: 4 / 5;
+    height: auto;
+}
+xb-wishlist-page .xb-wishlist-product__variant,
+xb-wishlist-page .xb-wishlist-product__select,
+xb-wishlist-page .xb-list-style__add-to-cart {
+    border-radius: 0;
+}
+xb-wishlist-page .xb-wishlist-product__content {
+    margin-bottom: 10px;
+}
+xb-wishlist-page .xb-wishlist-product__variant {
+    margin-bottom: 10px;
+}
+xb-wishlist-page .xb-wishlist-product__title a,
+xb-wishlist-page .xb-wishlist-product__price {
+    font-size: 12px;
+    color: #282828;
+    font-weight: 300;
+}
+xb-wishlist-page .xb-wishlist-product__title a .xb-wishlist-product__hasCompareAtPrice,
+xb-wishlist-page .xb-wishlist-product__price .xb-wishlist-product__hasCompareAtPrice {
+    color: #282828;
+    font-size: 12px;
+}
+
