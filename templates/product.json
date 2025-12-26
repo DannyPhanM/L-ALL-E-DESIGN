@@ -12,6 +12,21 @@
     "main-product": {
       "type": "main-product",
       "blocks": {
+        "xb_wishlist_button_wishlist_9fkMLf": {
+          "type": "shopify://apps/xb-wishlist/blocks/button_wishlist/cc07f1e9-907b-431d-99f8-4fce3efa75f1",
+          "settings": {
+            "btn_style": "style3",
+            "btn_width-type": "manual",
+            "btn_width": 440,
+            "btn_bg-color": "transparent",
+            "btn_border-color": "#000",
+            "btn_border-radius": 4,
+            "text_size": 16,
+            "text_color": "#000",
+            "icon_color": "#ff0000",
+            "icon_size": 2
+          }
+        },
         "sku_JL6Yfm": {
           "type": "sku",
           "settings": {
@@ -230,6 +245,7 @@
         }
       },
       "block_order": [
+        "xb_wishlist_button_wishlist_9fkMLf",
         "sku_JL6Yfm",
         "5dc5b007-724d-4c23-96b1-6555fc3ac5c4",
         "fb7e45ed-5850-43ba-8d9f-a9fb45354ca4",
