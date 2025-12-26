@@ -168,7 +168,8 @@
     {% endif %}" 
     draggable="false"
   >
-          <div class='xb-wishlist__btn-custom' id="wishlist-custom">
+    <div class="card__picture-wrapper" style="--total-slides: {{ init_slides_count }}; --speed: {{ autoplay_speed }}s;">
+      <div class='xb-wishlist__btn-custom' id="wishlist-custom">
         <div
           class='xb-wishlist__add'
           xb-product-id='{{product.id}}'
@@ -191,7 +192,6 @@
           </button>
         </div>
       </div>
-    <div class="card__picture-wrapper" style="--total-slides: {{ init_slides_count }}; --speed: {{ autoplay_speed }}s;">
 
       {% case hover_behavior  %}
         {% when 'slider', 'hover_gallery' %}
