@@ -39,6 +39,14 @@
                 {% if miscellaneous_settings.enable_store_selector and section.id == 'menu-drawer' or section.id == 'mega-menu-drawer'  %}
                     {%- render 'store-selector', store_selector_settings: miscellaneous_settings -%}
                 {% endif %}
+                <xb-wishlist-header class='xb-wishlist__header'>
+                    <div class='xb-header__icon'>
+                        <span class='svg-wrapper'>
+                        {{ 'icon-heart.svg' | inline_asset_content }}
+                        </span>
+                    </div>
+                    <span class='xb-product-quantity xb-product-quantity--bottom-right'></span>
+                </xb-wishlist-header>
                 {% if miscellaneous_settings.search_style != 'disable' %}
                     {%- render 'search', search_settings: miscellaneous_settings -%}
                 {% endif %}
