@@ -297,6 +297,7 @@
       {%- if template.name == 'index' or template.name == 'collection' %} body--contain {% endif -%}
       {% if settings.prevent_fields_scale %} prevent-fields-scale{% endif %}
       {%- if settings.typography_preset == 'custom' %} custom-type-preset {{ navigations_type }}{% if uppercase_buttons %} buttons-uppercase{% endif %}{% if bolder_font_buttons %} buttons-font-bolder{% endif %} {% endif -%}
+       template-{{ template.handle }}
     "
   >
     {% if settings.allow_transparent_navigation %}<overlap-navigation>{% endif %}
