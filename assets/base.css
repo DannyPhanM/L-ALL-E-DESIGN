@@ -3638,7 +3638,16 @@ input[type=checkbox] {
     justify-content: center;
 }
 
-.card-container .card__picture-wrapper div#wishlist-custom.xb-wishlist__btn-custom {
-    display: block !important;
-    contain: layout style !important;
+xb-wishlist-button-collection {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+xb-wishlist-button-collection .xb-wishlist-button-collection__add-icon,
+xb-wishlist-button-collection .xb-wishlist-button-collection__remove-icon {
+    --icon-size: 24px !important;
+    --icon-color: #fff !important;
 }
