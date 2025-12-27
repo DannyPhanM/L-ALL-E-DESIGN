@@ -12,6 +12,30 @@
     "main-product": {
       "type": "main-product",
       "blocks": {
+        "measurement_field_U74E6A": {
+          "type": "measurement_field",
+          "settings": {
+            "label": "Weight",
+            "required": true,
+            "description": ""
+          }
+        },
+        "measurement_field_jqMhKz": {
+          "type": "measurement_field",
+          "settings": {
+            "label": "Weight",
+            "required": true,
+            "description": ""
+          }
+        },
+        "measurement_field_RkAEiN": {
+          "type": "measurement_field",
+          "settings": {
+            "label": "Weight",
+            "required": true,
+            "description": ""
+          }
+        },
         "xb_wishlist_button_wishlist_9fkMLf": {
           "type": "shopify://apps/xb-wishlist/blocks/button_wishlist/cc07f1e9-907b-431d-99f8-4fce3efa75f1",
           "settings": {
@@ -51,21 +75,6 @@
             "show_label": true,
             "label_size": "default",
             "text_size": "label_font",
-            "top_spacing": 1,
-            "mobile_top_spacing": 1
-          }
-        },
-        "custom_options_measur_JqFnhM": {
-          "type": "custom_options_measur",
-          "settings": {
-            "label_size": "default",
-            "text_size": "default",
-            "option_name": "Measurement option name",
-            "option_label": "Measurement option",
-            "make_required": false,
-            "options": "Chest[cm], Waist[cm], Hip[cm], Chest[cm], Waist[cm], Hip[cm], Chest[cm], Waist[cm], Hip[cm], Chest[cm], Waist[cm], Hip[cm], Chest[cm], Waist[cm], Hip[cm]",
-            "info_tooltip": "",
-            "options_layout": "row",
             "top_spacing": 1,
             "mobile_top_spacing": 1
           }
@@ -260,11 +269,13 @@
         }
       },
       "block_order": [
+        "measurement_field_U74E6A",
+        "measurement_field_jqMhKz",
+        "measurement_field_RkAEiN",
         "xb_wishlist_button_wishlist_9fkMLf",
         "sku_JL6Yfm",
         "5dc5b007-724d-4c23-96b1-6555fc3ac5c4",
         "fb7e45ed-5850-43ba-8d9f-a9fb45354ca4",
-        "custom_options_measur_JqFnhM",
         "f4ca971a-5662-4f51-abc2-9ae805b35906",
         "ac52b7ff-a78f-40ff-9826-d1b661c098c9",
         "text_pKtMPh",
