@@ -55,21 +55,6 @@
             "mobile_top_spacing": 1
           }
         },
-        "custom_options_measur_zatiYU": {
-          "type": "custom_options_measur",
-          "settings": {
-            "label_size": "default",
-            "text_size": "default",
-            "option_name": "Measurement option name",
-            "option_label": "Measurement option",
-            "make_required": false,
-            "options": "Chest[cm], Waist[cm], Hip[cm]",
-            "info_tooltip": "",
-            "options_layout": "row",
-            "top_spacing": 1,
-            "mobile_top_spacing": 1
-          }
-        },
         "custom_options_measur_JqFnhM": {
           "type": "custom_options_measur",
           "settings": {
@@ -78,7 +63,7 @@
             "option_name": "Measurement option name",
             "option_label": "Measurement option",
             "make_required": false,
-            "options": "Chest[cm], Waist[cm], Hip[cm]",
+            "options": "Chest[cm], Waist[cm], Hip[cm], Chest[cm], Waist[cm], Hip[cm], Chest[cm], Waist[cm], Hip[cm], Chest[cm], Waist[cm], Hip[cm], Chest[cm], Waist[cm], Hip[cm]",
             "info_tooltip": "",
             "options_layout": "row",
             "top_spacing": 1,
@@ -279,7 +264,6 @@
         "sku_JL6Yfm",
         "5dc5b007-724d-4c23-96b1-6555fc3ac5c4",
         "fb7e45ed-5850-43ba-8d9f-a9fb45354ca4",
-        "custom_options_measur_zatiYU",
         "custom_options_measur_JqFnhM",
         "f4ca971a-5662-4f51-abc2-9ae805b35906",
         "ac52b7ff-a78f-40ff-9826-d1b661c098c9",
