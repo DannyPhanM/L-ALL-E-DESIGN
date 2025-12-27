@@ -4236,6 +4236,8 @@ xb-wishlist-page .xb-wishlist-product__price .xb-wishlist-product__hasCompareAtP
 .product__info-container .xb-wishlist-button__loading-style-3 {
   font-size: 0;
   min-width: 0;
+  height: 24px;
+  width: 24px;
 }
 
 .product__info-container .xb-wishlist-button__remove-style-3 svg,
