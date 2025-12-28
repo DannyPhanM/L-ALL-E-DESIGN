@@ -209,14 +209,14 @@
         "collection_mQ6hWD": {
           "type": "collection",
           "settings": {
-            "collection": "color-of-melody",
+            "collection": "monolith",
             "custom_tab_heading": "NEW ARRIVALS"
           }
         },
         "collection_w9JWyz": {
           "type": "collection",
           "settings": {
-            "collection": "color-of-melody",
+            "collection": "collection-name",
             "custom_tab_heading": "NEW ARRIVALS"
           }
         }
