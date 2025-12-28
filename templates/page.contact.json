@@ -9,62 +9,6 @@
  */
 {
   "sections": {
-    "tabs_MPxjFg": {
-      "type": "tabs",
-      "blocks": {
-        "tab_WJ8VHp": {
-          "type": "tab",
-          "settings": {
-            "custom_heading": "OUR STORY",
-            "text": "",
-            "text_size": "default",
-            "page": "our-story"
-          }
-        },
-        "tab_7KPqiw": {
-          "type": "tab",
-          "settings": {
-            "custom_heading": "FLAGSHIP STORE",
-            "text": "",
-            "text_size": "default",
-            "page": "flagship-store"
-          }
-        },
-        "tab_qjdeX4": {
-          "type": "tab",
-          "settings": {
-            "custom_heading": "CONTACT US",
-            "text": "",
-            "text_size": "default",
-            "page": "contact"
-          }
-        }
-      },
-      "block_order": [
-        "tab_WJ8VHp",
-        "tab_7KPqiw",
-        "tab_qjdeX4"
-      ],
-      "name": "t:sections.tabs.name",
-      "settings": {
-        "subheading": "",
-        "heading": "",
-        "center_text": true,
-        "section_width": "narrow",
-        "tab_heading_size": "default",
-        "subheading_size": "default",
-        "subheading_tag": "h3",
-        "heading_size": "default",
-        "heading_tag": "h2",
-        "color_type": "default",
-        "background_color": "#FFFFFF",
-        "text_color": "#000000",
-        "desktop_padding_top": 0,
-        "desktop_padding_bottom": -24,
-        "mobile_padding_top": 0,
-        "mobile_padding_bottom": -24
-      }
-    },
     "83462665-e357-4caf-9a75-170b1ba75762": {
       "type": "contact-form",
       "blocks": {
@@ -166,6 +110,65 @@
         "mobile_padding_bottom": 60
       }
     },
+    "tabs_NMbzrW": {
+      "type": "tabs",
+      "blocks": {
+        "tab_JYJ8tm": {
+          "type": "tab",
+          "settings": {
+            "custom_heading": "OUR STORY",
+            "url_path": "pages/our-story",
+            "text": "",
+            "text_size": "default",
+            "page": "our-story"
+          }
+        },
+        "tab_pBqR3t": {
+          "type": "tab",
+          "settings": {
+            "custom_heading": "FLAGSHIP STORE",
+            "url_path": "pages/flagship-store",
+            "text": "",
+            "text_size": "default",
+            "page": "flagship-store"
+          }
+        },
+        "tab_TXbQMz": {
+          "type": "tab",
+          "settings": {
+            "custom_heading": "CONTACT US",
+            "url_path": "pages/contact",
+            "text": "",
+            "text_size": "default",
+            "page": "contact"
+          }
+        }
+      },
+      "block_order": [
+        "tab_JYJ8tm",
+        "tab_pBqR3t",
+        "tab_TXbQMz"
+      ],
+      "name": "t:sections.tabs.name",
+      "settings": {
+        "subheading": "",
+        "heading": "",
+        "center_text": true,
+        "section_width": "narrow",
+        "tab_heading_size": "default",
+        "subheading_size": "default",
+        "subheading_tag": "h3",
+        "heading_size": "default",
+        "heading_tag": "h2",
+        "color_type": "default",
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": -24,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": -24
+      }
+    },
     "video_banner_HRJLP8": {
       "type": "video-banner",
       "disabled": true,
@@ -198,7 +201,7 @@
     }
   },
   "order": [
-    "tabs_MPxjFg",
+    "tabs_NMbzrW",
     "83462665-e357-4caf-9a75-170b1ba75762",
     "video_banner_HRJLP8"
   ]
