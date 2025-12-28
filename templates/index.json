@@ -209,21 +209,21 @@
         "collection_mQ6hWD": {
           "type": "collection",
           "settings": {
-            "collection": "a-poem-title-spring",
+            "collection": "color-of-melody",
             "custom_tab_heading": "NEW ARRIVALS"
           }
         },
-        "collection_hzcLtQ": {
+        "collection_w9JWyz": {
           "type": "collection",
           "settings": {
-            "collection": "a-poem-title-spring",
-            "custom_tab_heading": "BEST SELLERS"
+            "collection": "color-of-melody",
+            "custom_tab_heading": "NEW ARRIVALS"
           }
         }
       },
       "block_order": [
         "collection_mQ6hWD",
-        "collection_hzcLtQ"
+        "collection_w9JWyz"
       ],
       "name": "t:sections.featured-collection-tabs.name",
       "settings": {
