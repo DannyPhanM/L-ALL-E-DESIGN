@@ -25,31 +25,34 @@
         "mobile_padding_bottom": 0
       }
     },
-    "tabs_t9EU6a": {
+    "tabs_wHL3b6": {
       "type": "tabs",
       "blocks": {
-        "tab_rPcEDh": {
+        "tab_pqKBqJ": {
           "type": "tab",
           "settings": {
             "custom_heading": "OUR STORY",
+            "url_path": "pages/our-story",
             "text": "",
             "text_size": "default",
             "page": "our-story"
           }
         },
-        "tab_GAyWbf": {
+        "tab_ziaYXm": {
           "type": "tab",
           "settings": {
             "custom_heading": "FLAGSHIP STORE",
+            "url_path": "pages/flagship-store",
             "text": "",
             "text_size": "default",
             "page": "flagship-store"
           }
         },
-        "tab_qzCkzB": {
+        "tab_hb4EBL": {
           "type": "tab",
           "settings": {
             "custom_heading": "CONTACT US",
+            "url_path": "pages/contact",
             "text": "",
             "text_size": "default",
             "page": "contact"
@@ -57,9 +60,9 @@
         }
       },
       "block_order": [
-        "tab_rPcEDh",
-        "tab_GAyWbf",
-        "tab_qzCkzB"
+        "tab_pqKBqJ",
+        "tab_ziaYXm",
+        "tab_hb4EBL"
       ],
       "name": "t:sections.tabs.name",
       "settings": {
@@ -73,7 +76,7 @@
         "heading_size": "default",
         "heading_tag": "h2",
         "color_type": "default",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "text_color": "#000000",
         "desktop_padding_top": 0,
         "desktop_padding_bottom": -24,
@@ -154,7 +157,7 @@
         "enable_autoplay": true,
         "autoplay_speed": 7,
         "color_type": "invert",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "text_color": "#000000",
         "desktop_padding_top": -12,
         "desktop_padding_bottom": 0,
@@ -200,7 +203,7 @@
         "section_width": "narrow",
         "center_text": false,
         "color_type": "default",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "text_color": "#000000",
         "desktop_padding_top": -24,
         "desktop_padding_bottom": 60,
@@ -572,7 +575,7 @@
   },
   "order": [
     "main-page",
-    "tabs_t9EU6a",
+    "tabs_wHL3b6",
     "slideshow_with_media_9JiPbq",
     "rich_text_VPqrdX",
     "b833d0f2-b6b0-47c9-835d-0f3a2de746cd",
