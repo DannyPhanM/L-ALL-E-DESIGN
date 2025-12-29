@@ -189,7 +189,7 @@
       "settings": {
         "desktop_height": 100,
         "mobile_height": 100,
-        "section_width": "full-width",
+        "section_width": "overlap",
         "controls": "classic_arrows",
         "fill_controls": false,
         "enable_autoplay": true,
