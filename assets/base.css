@@ -4441,6 +4441,16 @@ xb-wishlist-page .xb-wishlist-product__price .xb-wishlist-product__hasCompareAtP
 }
 .card__picture-wrapper .xb-wishlist__btn-custom .xb-wishlist__add svg {
     stroke: #fff !important;
+    width: 18px;
+    height: 18px;
+}
+
+@media(max-width: 749px) {
+  .card__picture-wrapper .xb-wishlist__btn-custom .xb-wishlist__add svg {
+    stroke: #fff !important;
+    width: 15px;
+    height: 15px;
+}
 }
 
 
