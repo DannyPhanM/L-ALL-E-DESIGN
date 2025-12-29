@@ -977,8 +977,8 @@ input[type=checkbox]:checked.mobile-facets__thumbnail {
 .vertical-filter,
 .vertical-filter *,
 .horizontal-filter,
-.horizontal-filter * {
-    /* contain: none !important; */
+.horizontal-filter *:not(.collection.collection--compact ) {
+    contain: none !important;
 }
 
 /* Fonts */
