@@ -172,7 +172,7 @@
         "mobile_horizontal_gap": 0.5,
         "desktop_padding_top": 60,
         "desktop_padding_bottom": -40,
-        "mobile_padding_top": 16,
+        "mobile_padding_top": 60,
         "mobile_padding_bottom": -40
       }
     },
