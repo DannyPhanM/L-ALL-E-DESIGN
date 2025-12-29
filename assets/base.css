@@ -4420,3 +4420,17 @@ xb-wishlist-page .xb-wishlist-product__price .xb-wishlist-product__hasCompareAtP
     background: #000;
     color: #fff;
 }
+
+.card__picture-wrapper .xb-wishlist__btn-custom {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+}
+.card__picture-wrapper .xb-wishlist__btn-custom .xb-wishlist__remove svg {
+    stroke: #fff !important;
+    fill: #fff !important;
+}
+.card__picture-wrapper .xb-wishlist__btn-custom .xb-wishlist__add svg {
+    stroke: #fff !important;
+}
