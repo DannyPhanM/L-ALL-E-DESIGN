@@ -4341,6 +4341,13 @@ xb-wishlist-page .xb-wishlist-product__price .xb-wishlist-product__hasCompareAtP
     justify-content: center;
     align-items: center;
   }
+  .footer__content .column-desktop .image-container {
+    max-width: 80%;
+  }
+
+  .footer__content .column-desktop .newsletter-container input::placeholder {
+    text-align: center;
+  }
 
   .footer__content .column-desktop .newsletter {
     align-items: center;
