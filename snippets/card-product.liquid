@@ -172,11 +172,11 @@
 <div class='xb-wishlist__btn-custom'>
   <div
     class='xb-wishlist__add'
-    xb-product-id='{{product.id}}'
-    xb-product-title='{{ product.title }}'
-    xb-product-variant='{{ product.selected_or_first_available_variant.id }}'
-    xb-is-in-stock='{{ product.available }}'
-    xb-product-handle='{{ product.handle }}'
+    xb-product-id='{{card_product.id}}'
+    xb-product-title='{{ card_product.title }}'
+    xb-product-variant='{{ card_product.selected_or_first_available_variant.id }}'
+    xb-is-in-stock='{{ card_product.available }}'
+    xb-product-handle='{{ card_product.handle }}'
   >
     <button>
       <svg
@@ -198,7 +198,7 @@
      - optional
     <div class="xb-wishlist__loading" xb-product-id="{{product.id}}">Loading...</div>
   {% endcomment %}
-  <div class='xb-wishlist__remove' xb-product-id='{{product.id}}' xb-is-in-stock='{{ product.available }}'>
+  <div class='xb-wishlist__remove' xb-product-id='{{card_product.id}}' xb-is-in-stock='{{ card_product.available }}'>
     <button>
       <svg
         xmlns='http://www.w3.org/2000/svg'
