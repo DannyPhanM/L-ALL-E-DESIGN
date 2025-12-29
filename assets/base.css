@@ -4263,9 +4263,17 @@ xb-wishlist-page .xb-wishlist-product__price .xb-wishlist-product__hasCompareAtP
 .product__info-container .xb-wishlist-button__loading-style-3 svg {
   margin-right: 0;
   --icon-color: #000;
-  --icon-size: 2rem;
+  --icon-size: 24px;
 }
 
+@media(max-width: 749px) {
+  .product__info-container .xb-wishlist-button__remove-style-3 svg,
+.product__info-container .xb-wishlist-button__add-style-3 svg,
+.product__info-container .xb-wishlist-button__loading-style-3 svg {
+  
+  --icon-size: 18px;
+}
+}
 .xb-header__icon svg {
   stroke: #000;
   width: 24px;
