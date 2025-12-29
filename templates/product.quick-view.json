@@ -12,13 +12,11 @@
     "quick-view": {
       "type": "quick-view",
       "blocks": {
-        "ee2e7f66-29a4-4015-a135-3801cb95a030": {
-          "type": "subtitle",
+        "sku_7ENKm3": {
+          "type": "sku",
           "settings": {
-            "subtitle": "{{ product.vendor }}",
-            "dim_text": false,
-            "subtitle_size": "default",
-            "subtitle_tag": "h3",
+            "sku_heading": "SKU:",
+            "sku_size": "default",
             "top_spacing": 1,
             "mobile_top_spacing": 1
           }
@@ -38,26 +36,6 @@
             "text_size": "default",
             "top_spacing": 1,
             "mobile_top_spacing": 1
-          }
-        },
-        "e4bc293e-9414-405c-86a5-eda53856380b": {
-          "type": "subtitle",
-          "settings": {
-            "subtitle": "{{ product.vendor }}",
-            "dim_text": true,
-            "subtitle_size": "default",
-            "subtitle_tag": "h3",
-            "top_spacing": 1,
-            "mobile_top_spacing": 1
-          }
-        },
-        "fd0a5581-6add-4a8a-85af-9389823c7d69": {
-          "type": "line",
-          "settings": {
-            "desktop_padding_top": 24,
-            "desktop_padding_bottom": 24,
-            "mobile_padding_top": 16,
-            "mobile_padding_bottom": 16
           }
         },
         "63f93c87-7976-4d84-9caa-ec20c29b2cd6": {
@@ -108,7 +86,7 @@
         "86996f65-15ec-4314-b3ad-40413dbddb06": {
           "type": "text",
           "settings": {
-            "text": "<p>This is a demonstration store. You can purchase products like this from www.irinadzhus.com/shop</p>",
+            "text": "{{ product.description }}",
             "dim_text": true,
             "text_size": "body_s",
             "top_spacing": 1,
@@ -126,11 +104,9 @@
         }
       },
       "block_order": [
-        "ee2e7f66-29a4-4015-a135-3801cb95a030",
+        "sku_7ENKm3",
         "5e8c9327-e699-4289-b5d4-b055fc4f0862",
         "e8d14fca-ff07-4108-a172-9ef5277aecf6",
-        "e4bc293e-9414-405c-86a5-eda53856380b",
-        "fd0a5581-6add-4a8a-85af-9389823c7d69",
         "63f93c87-7976-4d84-9caa-ec20c29b2cd6",
         "67d18980-87f7-4387-855c-ca214f4f8fe8",
         "10bbe7f0-7c40-4f4c-8110-74a22653bbef",
