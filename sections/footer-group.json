@@ -62,7 +62,7 @@
         "edb9fa05-cd47-4c0b-91ff-fa4d5e70f543": {
           "type": "secondary_menu",
           "settings": {
-            "newsletter_placeholder": "Email",
+            "newsletter_placeholder": "SUBSCRIBE TO THE NEWSLETTER",
             "block_width_desktop": "short",
             "image": "shopify://shop_images/lallee-logo.png",
             "image_ratio": "original",
