@@ -301,7 +301,12 @@
           {% endfor %}
         {% endif %}
         {% if card_product.available and card_product.selected_or_first_available_variant.compare_at_price > card_product.selected_or_first_available_variant.price %}
-          <span class="card__badges-item card__badges-item--sale">{{ 'products.product.on_sale' | t }}</span>
+          {%- liquid
+            assign compare_at_price = card_product.selected_or_first_available_variant.compare_at_price | plus: 0
+            assign price = card_product.selected_or_first_available_variant.price | plus: 0
+            assign discount_percent = compare_at_price | minus: price | times: 100.0 | divided_by: compare_at_price | round
+          -%}
+          <span class="card__badges-item card__badges-item--sale">-{{ discount_percent }}%</span>
         {% endif %}
         {% unless card_product.available %}
           <span class="card__badges-item card__badges-item--sold">{{ 'products.product.sold_out' | t }}</span>
