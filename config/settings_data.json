@@ -208,7 +208,7 @@
               "menu": "main-menu",
               "use_accent_color": false,
               "highlight_menu_item": "HOLIDAY SALE",
-              "highlight_menu_item_color": "#ffe700",
+              "highlight_menu_item_color": "#e01d1d",
               "link_size": "default",
               "menu_horizontal_alignment": "flex-start"
             }
