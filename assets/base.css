@@ -4409,3 +4409,13 @@ xb-wishlist-page .xb-wishlist-product__price .xb-wishlist-product__hasCompareAtP
     margin-bottom: 10px;
   }
 }
+
+.header-section.colored .xb-header__icon svg path {
+    stroke: #000;
+}
+
+
+.template-index .header-section.colored .xb-wishlist__header .xb-product-quantity {
+    background: #000;
+    color: #fff;
+}
