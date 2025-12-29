@@ -1,0 +1,14 @@
+{
+    "editor.formatOnSave": false,
+    "editor.formatOnType": false,
+    "editor.formatOnPaste": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "never"
+    },
+    "shopifyLiquid.format.enable": false,
+    "editor.defaultFormatter": null,
+    "[liquid]": {
+        "editor.formatOnSave": false,
+        "editor.defaultFormatter": null
+    }
+}
