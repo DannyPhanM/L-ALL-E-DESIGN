@@ -4484,8 +4484,8 @@ xb-wishlist-page .xb-wishlist-product__price .xb-wishlist-product__hasCompareAtP
 }
 
 .xb-wishlist-product__remove-product svg {
-    width: 18px;
-    height: 18px;
+    width: 18px !important;
+    height: 18px !important;
 }
 .xb-wishlist-product__remove-product svg path {
     stroke-width: 0.5px;
