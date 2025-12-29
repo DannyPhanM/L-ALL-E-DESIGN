@@ -4408,8 +4408,7 @@ xb-wishlist-page .xb-wishlist-product__price .xb-wishlist-product__hasCompareAtP
     align-items: center !important;
     margin-bottom: 10px;
   }
-  .card__picture-wrapper .xb-wishlist__btn-custom .xb-wishlist__remove svg {
-    
+  .card__picture-wrapper .xb-wishlist__btn-custom .xb-wishlist__remove svg, .card__picture-wrapper .xb-wishlist__btn-custom .xb-wishlist__remove button {
     width: 15px !important;
     height: 15px !important;
 
@@ -4433,7 +4432,7 @@ xb-wishlist-page .xb-wishlist-product__price .xb-wishlist-product__hasCompareAtP
     right: 10px;
     z-index: 2;
 }
-.card__picture-wrapper .xb-wishlist__btn-custom .xb-wishlist__remove svg {
+.card__picture-wrapper .xb-wishlist__btn-custom .xb-wishlist__remove svg, .card__picture-wrapper .xb-wishlist__btn-custom .xb-wishlist__remove button {
     stroke: #fff !important;
     fill: #fff !important;
     width: 18px;
