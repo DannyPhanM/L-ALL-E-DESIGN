@@ -4254,3 +4254,132 @@ xb-wishlist-page .xb-wishlist-product__price .xb-wishlist-product__hasCompareAtP
   height: 24px;
   stroke-width: 1px;
 }
+
+.footer__content .menus.menus--center {
+  --menus-items: 4 !important;
+}
+
+.footer__content .column-desktop {
+  flex: 0 0 calc((100% - 32px * (var(--menus-items) - 1)) / var(--menus-items));
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 80px;
+}
+
+.footer__content .column-desktop .image-container {
+  margin-bottom: 15px;
+  max-width: 150px;
+}
+
+.footer__content .column-desktop .newsletter-container {
+  margin-bottom: 15px;
+}
+
+.footer__content .column-desktop .newsletter-container input::placeholder {
+  font-size: 10px;
+}
+
+.footer__content .column-desktop .social-media__title {
+  display: none;
+}
+
+.footer__content .legal-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.footer__content .legal-container .footer__copyright {
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-right: 15px;
+}
+
+.footer__content .legal-container .wp-image-61968 {
+  margin-top: 0;
+}
+
+.footer__content .legal-container>* {
+  width: 30%;
+}
+
+.footer__content .legal-container .legal {
+  order: 3;
+}
+
+.footer__content .legal-container>.footer {
+  order: 2;
+  display: flex;
+}
+
+.footer__content .legal-container .country-and-language {
+  order: 1;
+}
+
+.footer__content .legal-container .footer__copyright {
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+@media (min-width: 750px) and (max-width: 990px) {
+  .footer__content .legal-container>.footer {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    transform: translatex(-15%);
+  }
+}
+
+@media (max-width: 749px) {
+  .footer__content .column-desktop {
+    width: 100%;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer__content .column-desktop .newsletter {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .footer__content .menus.menus--center {
+    --menus-items: 3 !important;
+  }
+
+  .footer__content .legal-container {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .footer__content .legal-container>* {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer__content .legal-container .legal {
+    order: 1;
+  }
+
+  .footer__content .legal-container>.footer {
+    order: 2;
+    display: flex;
+  }
+
+  .footer__content .legal-container .country-and-language {
+    order: 3;
+    width: 100%;
+  }
+
+  .footer__content .legal-container .footer__copyright {
+    width: 100%;
+    align-items: center !important;
+    margin-bottom: 10px;
+  }
+}
