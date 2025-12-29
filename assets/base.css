@@ -4157,8 +4157,8 @@ input[type=checkbox] {
 }
 
 xb-wishlist-button-collection {
-  width: 24px;
-  height: 24px;
+  width: 15px;
+  height: 15px;
   position: absolute;
   top: 0;
   right: 0;
@@ -4167,8 +4167,21 @@ xb-wishlist-button-collection {
 
 xb-wishlist-button-collection .xb-wishlist-button-collection__add-icon,
 xb-wishlist-button-collection .xb-wishlist-button-collection__remove-icon {
-  --icon-size: 24px !important;
+  --icon-size: 15px !important;
   --icon-color: #fff !important;
+}
+
+@media(min-width: 768px) {
+  xb-wishlist-button-collection {
+  width: 18px;
+  height: 18px;
+}
+
+xb-wishlist-button-collection .xb-wishlist-button-collection__add-icon,
+xb-wishlist-button-collection .xb-wishlist-button-collection__remove-icon {
+  --icon-size: 18px !important;
+  --icon-color: #fff !important;
+}
 }
 
 .template-index .xb-wishlist__header .xb-header__icon svg path {
