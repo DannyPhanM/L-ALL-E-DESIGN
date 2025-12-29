@@ -4408,6 +4408,12 @@ xb-wishlist-page .xb-wishlist-product__price .xb-wishlist-product__hasCompareAtP
     align-items: center !important;
     margin-bottom: 10px;
   }
+  .card__picture-wrapper .xb-wishlist__btn-custom .xb-wishlist__remove svg {
+    
+    width: 15px !important;
+    height: 15px !important;
+
+}
 }
 
 .header-section.colored .xb-header__icon svg path, .mobile-header-section.colored .xb-header__icon svg path {
@@ -4430,7 +4436,12 @@ xb-wishlist-page .xb-wishlist-product__price .xb-wishlist-product__hasCompareAtP
 .card__picture-wrapper .xb-wishlist__btn-custom .xb-wishlist__remove svg {
     stroke: #fff !important;
     fill: #fff !important;
+    width: 18px;
+    height: 18px;
+
 }
 .card__picture-wrapper .xb-wishlist__btn-custom .xb-wishlist__add svg {
     stroke: #fff !important;
 }
+
+
