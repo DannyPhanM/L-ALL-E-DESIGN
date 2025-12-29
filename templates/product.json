@@ -120,11 +120,11 @@
         "ac52b7ff-a78f-40ff-9826-d1b661c098c9": {
           "type": "buy_buttons",
           "settings": {
-            "stretch_buy_buttons": true,
+            "stretch_buy_buttons": false,
             "display_in_a_row": false,
             "price_in_button": true,
             "compare_price_on_mobile": true,
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
             "hide_pickup_availability": false,
             "show_gift_card_recipient": false,
             "top_spacing": 1,
