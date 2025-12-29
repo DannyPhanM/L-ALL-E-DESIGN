@@ -972,14 +972,7 @@ input[type=checkbox]:checked.mobile-facets__thumbnail {
     }
 }
 
-.drawer-filter,
-.drawer-filter *,
-.vertical-filter,
-.vertical-filter *,
-.horizontal-filter,
-.horizontal-filter *:not(.collection.collection--compact ) * {
-    contain: none !important;
-}
+
 
 /* Fonts */
 .filter-group-label--minimal_uppercase {
