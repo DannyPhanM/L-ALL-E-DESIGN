@@ -4490,3 +4490,7 @@ xb-wishlist-page .xb-wishlist-product__price .xb-wishlist-product__hasCompareAtP
 .xb-wishlist-product__remove-product svg path {
     stroke-width: 0.5px;
 }
+
+.xo_c98c3d6d {
+  --xo-xs: 2 !important;
+}
