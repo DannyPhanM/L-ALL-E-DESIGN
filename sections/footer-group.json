@@ -16,6 +16,7 @@
       "blocks": {
         "e5503907-d5c9-4c95-ac94-2f31a8b2decb": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "block_width": "short",
             "image": "shopify://shop_images/logo-B.png",
@@ -29,6 +30,7 @@
         },
         "newsletter_kLwjEC": {
           "type": "newsletter",
+          "disabled": true,
           "settings": {
             "block_width": "short",
             "newsletter_label": "",
@@ -46,6 +48,7 @@
         },
         "social_media_qYQz6i": {
           "type": "social_media",
+          "disabled": true,
           "settings": {
             "block_width": "short",
             "social_media_heading": "",
@@ -59,6 +62,22 @@
         "edb9fa05-cd47-4c0b-91ff-fa4d5e70f543": {
           "type": "secondary_menu",
           "settings": {
+            "newsletter_placeholder": "Email",
+            "block_width_desktop": "short",
+            "image": "shopify://shop_images/logo-B.png",
+            "image_ratio": "original",
+            "context_image_radius": "default",
+            "block_image_link": "",
+            "image_target_blank": false,
+            "image_horizontal_alignment": "center",
+            "image_vertical_alignment": "flex-start",
+            "block_width_social": "short",
+            "social_media_heading": "Follow us",
+            "social_media_heading_size": "default",
+            "social_media_style": "logo_in_circle",
+            "use_accent_color": false,
+            "social_media_horizontal_alignment": "flex-start",
+            "social_media_vertical_alignment": "flex-start",
             "block_width": "wide",
             "menu_view": "column",
             "dim_text": false,
@@ -100,6 +119,7 @@
         },
         "country_and_language_eg6MHz": {
           "type": "country_and_language",
+          "disabled": true,
           "settings": {
             "block_width": "short",
             "enable_country": true,
@@ -119,7 +139,13 @@
             "back_to_top_style": "text",
             "back_to_top_label": "Back to top",
             "legal_horizontal_alignment": "center",
-            "legal_vertical_alignment": "center"
+            "legal_vertical_alignment": "center",
+            "enable_country": true,
+            "short_country_name": true,
+            "enable_language": true,
+            "short_language_name": true,
+            "country_and_language_horizontal_alignment": "flex-start",
+            "country_and_language_vertical_alignment": "flex-start"
           }
         }
       },
