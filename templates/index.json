@@ -197,7 +197,7 @@
         "color_type": "invert",
         "background_color": "#ffffff",
         "text_color": "#000000",
-        "desktop_padding_top": -160,
+        "desktop_padding_top": 0,
         "desktop_padding_bottom": 0,
         "mobile_padding_top": -12,
         "mobile_padding_bottom": 0
