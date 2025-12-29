@@ -208,7 +208,7 @@
               "menu": "main-menu",
               "use_accent_color": false,
               "highlight_menu_item": "HOLIDAY SALE",
-              "highlight_menu_item_color": "#f84141",
+              "highlight_menu_item_color": "#f00000",
               "link_size": "default",
               "menu_horizontal_alignment": "flex-start"
             }
@@ -1012,11 +1012,6 @@
           "icon_color": "#ba1d26",
           "custom_placement": ""
         }
-      },
-      "7800736727063894098": {
-        "type": "shopify://apps/rez-notify-me/blocks/rez/0da60196-81b6-4270-afac-c9294e1641ba",
-        "disabled": true,
-        "settings": {}
       },
       "5043070786800498925": {
         "type": "shopify://apps/es-back-in-stock/blocks/bis-switch/b190bced-3b7b-47da-a05f-6ea4821c3a77",
