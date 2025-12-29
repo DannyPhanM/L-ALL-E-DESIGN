@@ -4496,7 +4496,7 @@ xb-wishlist-page .xb-wishlist-product__price .xb-wishlist-product__hasCompareAtP
 }
 
 .xb-wishlist-product__item {
-  border-radius: 0;
+  border-radius: 0 !important;
 }
 
 @media(max-width: 749px) {
