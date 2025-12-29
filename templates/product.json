@@ -131,6 +131,10 @@
             "mobile_top_spacing": 1
           }
         },
+        "es_back_in_stock_product_restore_email_7FFJpd": {
+          "type": "shopify://apps/es-back-in-stock/blocks/product-restore-email/b190bced-3b7b-47da-a05f-6ea4821c3a77",
+          "settings": {}
+        },
         "text_pKtMPh": {
           "type": "text",
           "settings": {
@@ -305,6 +309,7 @@
         "fb7e45ed-5850-43ba-8d9f-a9fb45354ca4",
         "f4ca971a-5662-4f51-abc2-9ae805b35906",
         "ac52b7ff-a78f-40ff-9826-d1b661c098c9",
+        "es_back_in_stock_product_restore_email_7FFJpd",
         "text_pKtMPh",
         "c3416df0-fd61-4eb1-8dfb-146e2c82d415",
         "icons_with_text_7w3nmJ",
