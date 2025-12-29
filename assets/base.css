@@ -4482,3 +4482,11 @@ xb-wishlist-page .xb-wishlist-product__price .xb-wishlist-product__hasCompareAtP
 .xb-wishlist-products .xb-wishlist-product__content {
     padding-bottom: 15px;
 }
+
+.xb-wishlist-product__remove-product svg {
+    width: 18px;
+    height: 18px;
+}
+.xb-wishlist-product__remove-product svg path {
+    stroke-width: 0.5px;
+}
