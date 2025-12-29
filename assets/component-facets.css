@@ -973,6 +973,11 @@ input[type=checkbox]:checked.mobile-facets__thumbnail {
 }
 
 
+.collection .results-toast {
+    opacity: 0;
+    visibility: hidden;
+}
+
 
 /* Fonts */
 .filter-group-label--minimal_uppercase {
