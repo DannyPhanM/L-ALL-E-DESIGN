@@ -118,7 +118,7 @@
         "desktop_gallery_style": "thumbnails_left",
         "thumbnails_image_ratio": "original",
         "swap_position": false,
-        "image_ratio": "narrow_portrait",
+        "image_ratio": "original",
         "focal_point": "center center",
         "context_image_radius": "0px",
         "organize_images": true,
