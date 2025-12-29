@@ -4194,6 +4194,11 @@ xb-wishlist-button-collection .xb-wishlist-button-collection__remove-icon {
   font-size: 12px;
 }
 
+.xb-product-quantity.show {
+      font: var(--base-heading-xs-font) !important;
+    font-size: 10px !important;
+}
+
 xb-wishlist-page .xb-wishlist-products__style {
   display: none;
 }
