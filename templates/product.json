@@ -120,7 +120,7 @@
         "ac52b7ff-a78f-40ff-9826-d1b661c098c9": {
           "type": "buy_buttons",
           "settings": {
-            "stretch_buy_buttons": false,
+            "stretch_buy_buttons": true,
             "display_in_a_row": false,
             "price_in_button": true,
             "compare_price_on_mobile": true,
