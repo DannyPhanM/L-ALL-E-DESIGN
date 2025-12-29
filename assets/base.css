@@ -4131,7 +4131,7 @@ input[type=checkbox] {
   font-size: 8px;
 }
 
-.newsletter__field--minimal_uppercase::.placeholder {
+.newsletter__field--minimal_uppercase::placeholder {
   font-size: 12px;
 }
 
@@ -4270,6 +4270,7 @@ xb-wishlist-page .xb-wishlist-product__price .xb-wishlist-product__hasCompareAtP
 .footer__content .column-desktop .image-container {
   margin-bottom: 15px;
   max-width: 150px;
+  width: 100%;
 }
 
 .footer__content .column-desktop .newsletter-container {
