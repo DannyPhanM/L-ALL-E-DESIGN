@@ -991,11 +991,6 @@
           "notification_animation": "fade"
         }
       },
-      "5043070786800498925": {
-        "type": "shopify://apps/es-back-in-stock/blocks/bis-switch/b190bced-3b7b-47da-a05f-6ea4821c3a77",
-        "disabled": false,
-        "settings": {}
-      },
       "12342438634123318931": {
         "type": "shopify://apps/xb-wishlist/blocks/xo-wishlist/cc07f1e9-907b-431d-99f8-4fce3efa75f1",
         "disabled": false,
@@ -1022,6 +1017,16 @@
           "icon_color": "#ba1d26",
           "custom_placement": ""
         }
+      },
+      "7800736727063894098": {
+        "type": "shopify://apps/rez-notify-me/blocks/rez/0da60196-81b6-4270-afac-c9294e1641ba",
+        "disabled": false,
+        "settings": {}
+      },
+      "5043070786800498925": {
+        "type": "shopify://apps/es-back-in-stock/blocks/bis-switch/b190bced-3b7b-47da-a05f-6ea4821c3a77",
+        "disabled": true,
+        "settings": {}
       }
     }
   },
