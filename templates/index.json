@@ -188,8 +188,8 @@
       ],
       "settings": {
         "desktop_height": 100,
-        "mobile_height": 90,
-        "section_width": "overlap",
+        "mobile_height": 100,
+        "section_width": "full-width",
         "controls": "classic_arrows",
         "fill_controls": false,
         "enable_autoplay": true,
@@ -197,7 +197,7 @@
         "color_type": "invert",
         "background_color": "#ffffff",
         "text_color": "#000000",
-        "desktop_padding_top": 24,
+        "desktop_padding_top": -160,
         "desktop_padding_bottom": 0,
         "mobile_padding_top": -12,
         "mobile_padding_bottom": 0
