@@ -4509,6 +4509,10 @@ xb-wishlist-page .xb-wishlist-product__price .xb-wishlist-product__hasCompareAtP
 
 .xb-wishlist-product__remove-product {
 background: transparent !important;
+top: 5px !important;
+left: 5px !important;
+width: 20px !important;
+height: 20px !important;
 }
 .xb-wishlist-product__remove-product svg {
     display: none;
