@@ -4494,3 +4494,14 @@ xb-wishlist-page .xb-wishlist-product__price .xb-wishlist-product__hasCompareAtP
 .xo_c98c3d6d {
   --xo-xs: 2 !important;
 }
+
+.xb-wishlist-product__item {
+  border-radius: 0;
+}
+
+@media(max-width: 749px) {
+  .xo_c98c3d6d {
+    --xo-grid-col-gap: 4px;
+    --xo-grid-row-gap: 4px;
+   }
+}
