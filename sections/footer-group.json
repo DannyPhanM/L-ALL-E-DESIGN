@@ -64,9 +64,9 @@
           "settings": {
             "newsletter_placeholder": "Email",
             "block_width_desktop": "short",
-            "image": "shopify://shop_images/logo-B.png",
+            "image": "shopify://shop_images/lallee-logo.png",
             "image_ratio": "original",
-            "context_image_radius": "default",
+            "context_image_radius": "0px",
             "block_image_link": "",
             "image_target_blank": false,
             "image_horizontal_alignment": "center",
