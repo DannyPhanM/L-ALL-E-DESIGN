@@ -4231,6 +4231,7 @@ xb-wishlist-page .xb-wishlist-product__price {
   font-size: 12px;
   color: #282828;
   font-weight: 300;
+  text-transform: uppercase;
 }
 
 xb-wishlist-page .xb-wishlist-product__title a .xb-wishlist-product__hasCompareAtPrice,
