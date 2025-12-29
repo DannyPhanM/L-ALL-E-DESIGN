@@ -259,7 +259,7 @@
           "63f065f6-f1ee-4bf4-8383-2a4aea5a061e"
         ],
         "settings": {
-          "sticky_header": "stick_on_scroll",
+          "sticky_header": "always_stick",
           "show_bottom_line": false,
           "block_alignment": "stretched",
           "menu": "",
