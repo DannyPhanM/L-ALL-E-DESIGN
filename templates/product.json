@@ -16,14 +16,14 @@
           "type": "measurement_field",
           "settings": {
             "label": "WEIGHT",
-            "required": true,
+            "required": false,
             "description": ""
           }
         },
         "measurement_field_jqMhKz": {
           "type": "measurement_field",
           "settings": {
-            "label": "Height",
+            "label": "HEIGHT",
             "required": true,
             "description": ""
           }
@@ -31,7 +31,7 @@
         "measurement_field_RkAEiN": {
           "type": "measurement_field",
           "settings": {
-            "label": "Shoulder to shoulder",
+            "label": "SHOULDER TO SHOULDER",
             "required": true,
             "description": ""
           }
@@ -39,7 +39,7 @@
         "measurement_field_4AEyLc": {
           "type": "measurement_field",
           "settings": {
-            "label": "Shoulder to shoulder",
+            "label": "ARM LENGTH",
             "required": true,
             "description": ""
           }
@@ -47,7 +47,7 @@
         "measurement_field_zEcEy9": {
           "type": "measurement_field",
           "settings": {
-            "label": "Shoulder to shoulder",
+            "label": "ARM HOLE",
             "required": true,
             "description": ""
           }
@@ -55,7 +55,7 @@
         "measurement_field_EbWt47": {
           "type": "measurement_field",
           "settings": {
-            "label": "SHOULDER TO SHOULDER",
+            "label": "BICEP",
             "required": true,
             "description": ""
           }
@@ -325,7 +325,7 @@
       ],
       "settings": {
         "title_popup": "GUIDELINES FOR TAKING BODY MEASUREMENTS (UNIT: CM)",
-        "note_popup": "<p>NOTE: The body parameters marked with a red * are mandatory information. Please ensure to enter them completely and accurately, and select “Add to cart” to finish adding the product to your cart. If you have any questions, please contact us via: Telegram/WhatsApp: (+84) 989 293 965.</p>",
+        "note_popup": "<p><em>NOTE: The body parameters marked with a red * are mandatory information. Please ensure to enter them completely and accurately, and select “Add to cart” to finish adding the product to your cart. If you have any questions, please contact us via: Telegram/WhatsApp: </em><a href=\"https://wa.me/+84963271383\"><em>+84-963-271-383</em></a></p>",
         "enable_sticky_content": true,
         "sticky_offset": 92,
         "desktop_gallery_style": "two_columns_grid",
