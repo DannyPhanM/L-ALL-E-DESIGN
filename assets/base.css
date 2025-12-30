@@ -4610,4 +4610,8 @@ height: 20px !important;
   .measurement-inputs-scroll>* {
     width: calc(50% - 5px);
   }
+  .m-field__label {
+    font-size: 12px;
+    line-height: 18px;
+  }
 }
