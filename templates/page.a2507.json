@@ -144,10 +144,34 @@
             "full_block_clickable": false
           }
         },
-        "image_TkwrfC": {
+        "image_rfFQRa": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/fab29dbb-LEK9909-scaled.jpg",
+            "heading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "target_blank": false,
+            "full_block_clickable": false
+          }
+        },
+        "image_TkwrfC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LEK9751.jpg",
+            "heading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "target_blank": false,
+            "full_block_clickable": false
+          }
+        },
+        "image_8ijAHK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LEK9710.jpg",
             "heading": "",
             "text": "",
             "button_label": "",
@@ -283,7 +307,9 @@
         "image_ttkpMV",
         "image_q3XVnr",
         "image_hFA3ah",
+        "image_rfFQRa",
         "image_TkwrfC",
+        "image_8ijAHK",
         "image_gM6J3A",
         "image_84tpAH",
         "image_QRiGTD",
