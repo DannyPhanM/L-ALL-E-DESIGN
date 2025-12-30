@@ -498,7 +498,7 @@
       "settings": {
         "subheading": "",
         "heading": "",
-        "max_columns": "3",
+        "max_columns": "4",
         "mobile_layout": "2",
         "enable_masonry_grid": false,
         "subheading_size": "default",
