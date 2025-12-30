@@ -75,7 +75,65 @@
     "multicolumn_XnwDGi": {
       "type": "multicolumn",
       "blocks": {
-        "image_8bGgJT": {
+        "image_Grz9Ux": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_f0fbd633-bf58-4182-ab6c-b75b273f4cf3.jpg",
+            "heading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "target_blank": false,
+            "full_block_clickable": false
+          }
+        },
+        "image_MDBEta": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_f0fbd633-bf58-4182-ab6c-b75b273f4cf3.jpg",
+            "heading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "target_blank": false,
+            "full_block_clickable": false
+          }
+        }
+      },
+      "block_order": [
+        "image_Grz9Ux",
+        "image_MDBEta"
+      ],
+      "name": "t:sections.multicolumn.name",
+      "settings": {
+        "subheading": "",
+        "heading": "",
+        "max_columns": "2",
+        "mobile_layout": "1",
+        "enable_masonry_grid": false,
+        "subheading_size": "default",
+        "subheading_tag": "h3",
+        "heading_size": "default",
+        "heading_tag": "h2",
+        "media_ratio": "original",
+        "center_text": false,
+        "title_size": "default",
+        "text_size": "default",
+        "image_radius": "default",
+        "button_style": "outlined",
+        "color_type": "default",
+        "background_color": "#FFFFFF",
+        "text_color": "#000000",
+        "desktop_padding_top": -16,
+        "desktop_padding_bottom": -32,
+        "mobile_padding_top": -16,
+        "mobile_padding_bottom": -16
+      }
+    },
+    "multicolumn_AP4ghq": {
+      "type": "multicolumn",
+      "blocks": {
+        "image_4bnMzV": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/2026321f-LEK9819-scaled.jpg",
@@ -87,7 +145,7 @@
             "full_block_clickable": false
           }
         },
-        "image_k8Hbmk": {
+        "image_pRqYEb": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/ed45f244-LEK9767-scaled.jpg",
@@ -99,7 +157,7 @@
             "full_block_clickable": false
           }
         },
-        "image_ttkpMV": {
+        "image_mQFR3T": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/LEK9278_2.jpg",
@@ -111,7 +169,7 @@
             "full_block_clickable": false
           }
         },
-        "image_q3XVnr": {
+        "image_EpXqNU": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/LEK9335_2.jpg",
@@ -123,7 +181,7 @@
             "full_block_clickable": false
           }
         },
-        "image_hFA3ah": {
+        "image_NNeRXi": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/005866b5-LEK9976-scaled.jpg",
@@ -135,7 +193,7 @@
             "full_block_clickable": false
           }
         },
-        "image_rfFQRa": {
+        "image_4J9a7r": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/fab29dbb-LEK9909-scaled.jpg",
@@ -147,7 +205,7 @@
             "full_block_clickable": false
           }
         },
-        "image_TkwrfC": {
+        "image_zzgwKH": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/LEK9751.jpg",
@@ -159,7 +217,7 @@
             "full_block_clickable": false
           }
         },
-        "image_8ijAHK": {
+        "image_zXHCKD": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/LEK9710.jpg",
@@ -171,7 +229,7 @@
             "full_block_clickable": false
           }
         },
-        "image_9ykyH9": {
+        "image_6indxy": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/d67377c2-LEK1431-scaled.jpg",
@@ -183,7 +241,7 @@
             "full_block_clickable": false
           }
         },
-        "image_WEKEff": {
+        "image_yF7M9K": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/978e7f32-LEK1366-scaled.jpg",
@@ -195,7 +253,7 @@
             "full_block_clickable": false
           }
         },
-        "image_8mJBGz": {
+        "image_zJjWeU": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/1078504c-LEK1227-scaled.jpg",
@@ -207,7 +265,7 @@
             "full_block_clickable": false
           }
         },
-        "image_FA8iGE": {
+        "image_byBhDG": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/11edabce-LEK1251-scaled.jpg",
@@ -219,7 +277,7 @@
             "full_block_clickable": false
           }
         },
-        "image_bQBCea": {
+        "image_z6X4hp": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/LEK9682_2.jpg",
@@ -231,7 +289,7 @@
             "full_block_clickable": false
           }
         },
-        "image_d8PLG8": {
+        "image_wTrcUq": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/LEK9611_2.jpg",
@@ -243,7 +301,7 @@
             "full_block_clickable": false
           }
         },
-        "image_gM6J3A": {
+        "image_rjJdwR": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/LEK9809_2.jpg",
@@ -255,7 +313,7 @@
             "full_block_clickable": false
           }
         },
-        "image_84tpAH": {
+        "image_eyjjyi": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/LEK9743_2.jpg",
@@ -267,7 +325,7 @@
             "full_block_clickable": false
           }
         },
-        "image_QRiGTD": {
+        "image_D8LmCX": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/a8299de8-LEK9932-2-scaled.jpg",
@@ -279,7 +337,7 @@
             "full_block_clickable": false
           }
         },
-        "image_BjrQtR": {
+        "image_FHeTBX": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/37ece218-LEK9814-2-scaled.jpg",
@@ -291,7 +349,7 @@
             "full_block_clickable": false
           }
         },
-        "image_Nj9b9x": {
+        "image_LgxXG3": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/2cfb2ad4-LEK0575-scaled.jpg",
@@ -303,7 +361,7 @@
             "full_block_clickable": false
           }
         },
-        "image_aMfXxV": {
+        "image_3xaLjy": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/b42886e5-LEK0520-scaled.jpg",
@@ -315,7 +373,7 @@
             "full_block_clickable": false
           }
         },
-        "image_fU9KMq": {
+        "image_HFPaQY": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/9e09fc5c-LEK0950-scaled.jpg",
@@ -327,7 +385,7 @@
             "full_block_clickable": false
           }
         },
-        "image_xhJqAt": {
+        "image_3pBeeC": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/a63c2271-LEK0850-scaled.jpg",
@@ -339,7 +397,7 @@
             "full_block_clickable": false
           }
         },
-        "image_FNXiDy": {
+        "image_Pj43rL": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/22ffddc2-LEK0176-scaled.jpg",
@@ -351,7 +409,7 @@
             "full_block_clickable": false
           }
         },
-        "image_pmA3Dd": {
+        "image_QrnVnq": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/c3285b25-LEK0111-scaled.jpg",
@@ -363,7 +421,7 @@
             "full_block_clickable": false
           }
         },
-        "image_U9NFQt": {
+        "image_f3BfX6": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/fd7450da-LEK9632-scaled.jpg",
@@ -375,7 +433,7 @@
             "full_block_clickable": false
           }
         },
-        "image_DRmY6y": {
+        "image_pyLXy6": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/1e5a8379-LEK9560-scaled.jpg",
@@ -387,7 +445,7 @@
             "full_block_clickable": false
           }
         },
-        "image_wpRqgn": {
+        "image_TgrrNL": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/50570d63-LEK0240-2-scaled.jpg",
@@ -399,7 +457,7 @@
             "full_block_clickable": false
           }
         },
-        "image_9UArhj": {
+        "image_Waz6Xx": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/04574404-LEK0321-2-scaled.jpg",
@@ -411,7 +469,7 @@
             "full_block_clickable": false
           }
         },
-        "image_D3Fi9B": {
+        "image_4xyCPk": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/3b5d0491-LEK0336-2-scaled.jpg",
@@ -423,7 +481,7 @@
             "full_block_clickable": false
           }
         },
-        "image_Grz9Ux": {
+        "image_kmjXfA": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/d77be5b4-A2507DA01NA-4-scaled.jpg",
@@ -435,7 +493,7 @@
             "full_block_clickable": false
           }
         },
-        "image_hh4qJf": {
+        "image_gjeLzP": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/LEK0434.jpg",
@@ -447,7 +505,7 @@
             "full_block_clickable": false
           }
         },
-        "image_tCmf4D": {
+        "image_T6VfrP": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/LEK0444.jpg",
@@ -461,38 +519,38 @@
         }
       },
       "block_order": [
-        "image_8bGgJT",
-        "image_k8Hbmk",
-        "image_ttkpMV",
-        "image_q3XVnr",
-        "image_hFA3ah",
-        "image_rfFQRa",
-        "image_TkwrfC",
-        "image_8ijAHK",
-        "image_9ykyH9",
-        "image_WEKEff",
-        "image_8mJBGz",
-        "image_FA8iGE",
-        "image_bQBCea",
-        "image_d8PLG8",
-        "image_gM6J3A",
-        "image_84tpAH",
-        "image_QRiGTD",
-        "image_BjrQtR",
-        "image_Nj9b9x",
-        "image_aMfXxV",
-        "image_fU9KMq",
-        "image_xhJqAt",
-        "image_FNXiDy",
-        "image_pmA3Dd",
-        "image_U9NFQt",
-        "image_DRmY6y",
-        "image_wpRqgn",
-        "image_9UArhj",
-        "image_D3Fi9B",
-        "image_Grz9Ux",
-        "image_hh4qJf",
-        "image_tCmf4D"
+        "image_4bnMzV",
+        "image_pRqYEb",
+        "image_mQFR3T",
+        "image_EpXqNU",
+        "image_NNeRXi",
+        "image_4J9a7r",
+        "image_zzgwKH",
+        "image_zXHCKD",
+        "image_6indxy",
+        "image_yF7M9K",
+        "image_zJjWeU",
+        "image_byBhDG",
+        "image_z6X4hp",
+        "image_wTrcUq",
+        "image_rjJdwR",
+        "image_eyjjyi",
+        "image_D8LmCX",
+        "image_FHeTBX",
+        "image_LgxXG3",
+        "image_3xaLjy",
+        "image_HFPaQY",
+        "image_3pBeeC",
+        "image_Pj43rL",
+        "image_QrnVnq",
+        "image_f3BfX6",
+        "image_pyLXy6",
+        "image_TgrrNL",
+        "image_Waz6Xx",
+        "image_4xyCPk",
+        "image_kmjXfA",
+        "image_gjeLzP",
+        "image_T6VfrP"
       ],
       "name": "t:sections.multicolumn.name",
       "settings": {
@@ -524,6 +582,7 @@
   "order": [
     "main-page",
     "rich_text_eyKP7J",
-    "multicolumn_XnwDGi"
+    "multicolumn_XnwDGi",
+    "multicolumn_AP4ghq"
   ]
 }
