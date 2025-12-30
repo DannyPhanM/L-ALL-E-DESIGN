@@ -23,7 +23,7 @@
         "measurement_field_jqMhKz": {
           "type": "measurement_field",
           "settings": {
-            "label": "Weight",
+            "label": "Height",
             "required": true,
             "description": ""
           }
@@ -31,7 +31,7 @@
         "measurement_field_RkAEiN": {
           "type": "measurement_field",
           "settings": {
-            "label": "Weight",
+            "label": "Shoulder to shoulder",
             "required": true,
             "description": ""
           }
@@ -39,7 +39,7 @@
         "measurement_field_4AEyLc": {
           "type": "measurement_field",
           "settings": {
-            "label": "Weight",
+            "label": "Shoulder to shoulder",
             "required": true,
             "description": ""
           }
@@ -47,7 +47,7 @@
         "measurement_field_zEcEy9": {
           "type": "measurement_field",
           "settings": {
-            "label": "Weight",
+            "label": "Shoulder to shoulder",
             "required": true,
             "description": ""
           }
@@ -55,7 +55,7 @@
         "measurement_field_EbWt47": {
           "type": "measurement_field",
           "settings": {
-            "label": "Weight",
+            "label": "Shoulder to shoulder",
             "required": true,
             "description": ""
           }
