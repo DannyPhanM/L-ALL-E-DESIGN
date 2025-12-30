@@ -149,7 +149,9 @@
         const autoPath = tab.getAttribute('data-auto-path');
         if (autoPath) {
            e.preventDefault();
-           window.location.href = autoPath;
+           let normalizedPath = autoPath.trim();
+           if (!normalizedPath.startsWith('/')) normalizedPath = '/' + normalizedPath;
+           window.location.href = normalizedPath;
         } else {
            e.preventDefault();
            activateTab(index);
