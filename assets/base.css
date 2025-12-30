@@ -4536,3 +4536,55 @@ height: 20px !important;
 .xb-wishlist-products__no-product-desc p {
   font-size: 12px;
 }
+
+.custom-size-popup__content * {
+    font: var(--base-heading-xs-font);
+}
+.custom-size-popup__note-box {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+.custom-size-popup__note-box * {
+    font-size: 12px;
+}
+.custom-size-popup__title.heading_s {
+    font: var(--base-heading-xs-font);
+    margin-bottom: 10px;
+    font-size: 17px !important;
+}
+.custom-size-popup__footer {
+    justify-content: flex-end;
+    display: flex;
+}
+.custom-size-popup__footer button {
+    font-size: 12px;
+}
+.measurement-inputs-scroll {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.measurement-inputs-scroll > * {
+    width: calc(50% - 15px);
+}
+.measurement-inputs-scroll .m-field {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 0;
+}
+.measurement-inputs-scroll .m-field__header {
+    order: 2;
+    font-size: 10px;
+    margin-bottom: 0;
+}
+.measurement-inputs-scroll input {
+    border-radius: 0;
+    width: 50px;
+    height: 21px;
+    font-size: 10px;
+}
+.measurement-inputs-scroll input::placeholder {
+    font-size: 10px;
+}
