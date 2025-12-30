@@ -15,7 +15,7 @@
         "measurement_field_U74E6A": {
           "type": "measurement_field",
           "settings": {
-            "label": "WEIGHT",
+            "label": "1. WEIGHT",
             "required": false,
             "description": ""
           }
@@ -23,7 +23,7 @@
         "measurement_field_jqMhKz": {
           "type": "measurement_field",
           "settings": {
-            "label": "HEIGHT",
+            "label": "2. HEIGHT",
             "required": true,
             "description": ""
           }
@@ -31,7 +31,7 @@
         "measurement_field_RkAEiN": {
           "type": "measurement_field",
           "settings": {
-            "label": "SHOULDER TO SHOULDER",
+            "label": "3. SHOULDER TO SHOULDER",
             "required": true,
             "description": ""
           }
@@ -39,7 +39,7 @@
         "measurement_field_4AEyLc": {
           "type": "measurement_field",
           "settings": {
-            "label": "ARM LENGTH",
+            "label": "4. ARM LENGTH",
             "required": true,
             "description": ""
           }
@@ -47,7 +47,7 @@
         "measurement_field_zEcEy9": {
           "type": "measurement_field",
           "settings": {
-            "label": "ARM HOLE",
+            "label": "5. ARM HOLE",
             "required": true,
             "description": ""
           }
@@ -55,8 +55,96 @@
         "measurement_field_EbWt47": {
           "type": "measurement_field",
           "settings": {
-            "label": "BICEP",
+            "label": "6. BICEP",
             "required": true,
+            "description": ""
+          }
+        },
+        "measurement_field_yd9N7b": {
+          "type": "measurement_field",
+          "settings": {
+            "label": "7. BUST (BRA INCLUDED)",
+            "required": true,
+            "description": ""
+          }
+        },
+        "measurement_field_qBf3Vi": {
+          "type": "measurement_field",
+          "settings": {
+            "label": "9. SHOULDER TO BUST",
+            "required": false,
+            "description": ""
+          }
+        },
+        "measurement_field_eaE6LG": {
+          "type": "measurement_field",
+          "settings": {
+            "label": "10. SHOULDER TO UNDER BUST",
+            "required": false,
+            "description": ""
+          }
+        },
+        "measurement_field_XAa3Jn": {
+          "type": "measurement_field",
+          "settings": {
+            "label": "8. UNDER BUST",
+            "required": false,
+            "description": ""
+          }
+        },
+        "measurement_field_AhtTWe": {
+          "type": "measurement_field",
+          "settings": {
+            "label": "11. WAIST",
+            "required": true,
+            "description": ""
+          }
+        },
+        "measurement_field_AbPMhy": {
+          "type": "measurement_field",
+          "settings": {
+            "label": "12. WAISTBAND",
+            "required": false,
+            "description": ""
+          }
+        },
+        "measurement_field_dmYnEP": {
+          "type": "measurement_field",
+          "settings": {
+            "label": "13. SHOULDER TO WAIST",
+            "required": false,
+            "description": ""
+          }
+        },
+        "measurement_field_icK7VY": {
+          "type": "measurement_field",
+          "settings": {
+            "label": "14. FULL HIP",
+            "required": true,
+            "description": ""
+          }
+        },
+        "measurement_field_piV8hM": {
+          "type": "measurement_field",
+          "settings": {
+            "label": "15. CROTCH",
+            "required": false,
+            "description": ""
+          }
+        },
+        "measurement_field_N9cB9d": {
+          "type": "measurement_field",
+          "settings": {
+            "label": "16. THIGH",
+            "required": false,
+            "description": ""
+          }
+        },
+        "measurement_field_kTBiXf": {
+          "type": "measurement_field",
+          "settings": {
+            "label": "17. TROUSERS LENGTH",
+            "required": false,
             "description": ""
           }
         },
@@ -224,7 +312,7 @@
           "settings": {
             "heading": "CARE INSTRUCTIONS",
             "collapsible_tabs_size": "default",
-            "text": "<p>L’ALLÉE | CARE INSTRUCTIONS</p><p>Each L’ALLÉE creation is crafted from premium fabrics and delicate silhouettes. Adhering to these care instructions will ensure the longevity, structure, and timeless beauty of your garment.</p><p>CLEANING</p><p>- Professional Dry Clean Only: To preserve fabric integrity, do not hand wash or machine wash. Professional dry cleaning is strictly recommended.</p><p>- Color Separation: Always wash dark, red, and white garments separately to prevent color bleeding or transfer.</p><p>STEAMING & PRESSING </p><p>- Gentle Steaming: Use a steamer at medium heat for silk, pleated, or delicate fabrics.</p><p>- Detail Protection: Avoid direct high heat on structured elements, intricate embellishments, or draped silhouettes to prevent deformation.</p><p>DRYING & STORAGE </p><p>- Shape Preservation: Always hang garments vertically after use or cleaning to maintain their original form. Use padded hangers to protect the shoulder structure.</p><p>- Storage Environment: Store in a cool, dry place, shielded from direct sunlight to prevent color fading.</p><p>IMPORTANT NOTES </p><p>- Hardware & Accessories: Avoid contact with sharp objects (watches, jewelry, or nails) to prevent snagging or damaging the delicate fabric surface.</p><p>- Disclaimer: Damage or distortion resulting from improper care is not covered under our exchange policy.</p><p>OUR PHILOSOPHY </p><p><em>- Luxury deserves thoughtful care. </em>Please follow these instructions meticulously to preserve the integrity of your L’ALLÉE piece.</p><p></p><p>Contact Support/ Whatsapp: <a href=\"https://wa.me/+84963271383\">+84-963-271-383</a></p>",
+            "text": "<p>L’ALLÉE | CARE INSTRUCTIONS</p><p>Each L’ALLÉE creation is crafted from premium fabrics and delicate silhouettes. Adhering to these care instructions will ensure the longevity, structure, and timeless beauty of your garment.</p><p>CLEANING</p><p>- Professional Dry Clean Only: To preserve fabric integrity, do not hand wash or machine wash. Professional dry cleaning is strictly recommended.</p><p>- Color Separation: Always wash dark, red, and white garments separately to prevent color bleeding or transfer.</p><p>STEAMING & PRESSING </p><p>- Gentle Steaming: Use a steamer at medium heat for silk, pleated, or delicate fabrics.</p><p>- Detail Protection: Avoid direct high heat on structured elements, intricate embellishments, or draped silhouettes to prevent deformation.</p><p>DRYING & STORAGE </p><p>- Shape Preservation: Always hang garments vertically after use or cleaning to maintain their original form. Use padded hangers to protect the shoulder structure.</p><p>- Storage Environment: Store in a cool, dry place, shielded from direct sunlight to prevent color fading.</p><p>IMPORTANT NOTES </p><p>- Hardware & Accessories: Avoid contact with sharp objects (watches, jewelry, or nails) to prevent snagging or damaging the delicate fabric surface.</p><p>- Disclaimer: Damage or distortion resulting from improper care is not covered under our exchange policy.</p><p>OUR PHILOSOPHY </p><p><em>- Luxury deserves thoughtful care. </em>Please follow these instructions meticulously to preserve the integrity of your L’ALLÉE piece.</p><p></p><p>Contact Support/ Whatsapp: <a href=\"https://wa.me/+84963271383\" target=\"_blank\">+84-963-271-383</a></p>",
             "text_size": "default",
             "icon": "none",
             "page": "flagship-store",
@@ -304,6 +392,17 @@
         "measurement_field_4AEyLc",
         "measurement_field_zEcEy9",
         "measurement_field_EbWt47",
+        "measurement_field_yd9N7b",
+        "measurement_field_qBf3Vi",
+        "measurement_field_eaE6LG",
+        "measurement_field_XAa3Jn",
+        "measurement_field_AhtTWe",
+        "measurement_field_AbPMhy",
+        "measurement_field_dmYnEP",
+        "measurement_field_icK7VY",
+        "measurement_field_piV8hM",
+        "measurement_field_N9cB9d",
+        "measurement_field_kTBiXf",
         "xb_wishlist_button_wishlist_9fkMLf",
         "sku_JL6Yfm",
         "5dc5b007-724d-4c23-96b1-6555fc3ac5c4",
@@ -325,7 +424,7 @@
       ],
       "settings": {
         "title_popup": "GUIDELINES FOR TAKING BODY MEASUREMENTS (UNIT: CM)",
-        "note_popup": "<p><em>NOTE: The body parameters marked with a red * are mandatory information. Please ensure to enter them completely and accurately, and select “Add to cart” to finish adding the product to your cart. If you have any questions, please contact us via: Telegram/WhatsApp: </em><a href=\"https://wa.me/+84963271383\"><em>+84-963-271-383</em></a></p>",
+        "note_popup": "<p><em>NOTE: The body parameters marked with a red * are mandatory information. Please ensure to enter them completely and accurately, and select “Add to cart” to finish adding the product to your cart. If you have any questions, please contact us via: Telegram/WhatsApp: </em><a href=\"https://wa.me/+84963271383\" target=\"_blank\"><em>+84-963-271-383</em></a></p>",
         "enable_sticky_content": true,
         "sticky_offset": 92,
         "desktop_gallery_style": "two_columns_grid",
