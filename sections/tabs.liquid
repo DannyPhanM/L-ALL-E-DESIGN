@@ -146,8 +146,14 @@
     // 2. Handle manual clicks
     tabs.forEach((tab, index) => {
       tab.addEventListener('click', (e) => {
-        e.preventDefault();
-        activateTab(index);
+        const autoPath = tab.getAttribute('data-auto-path');
+        if (autoPath) {
+           e.preventDefault();
+           window.location.href = autoPath;
+        } else {
+           e.preventDefault();
+           activateTab(index);
+        }
       });
     });
   })()
