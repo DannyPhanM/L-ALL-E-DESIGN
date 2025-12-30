@@ -67,7 +67,7 @@
       "login_form_password_label": "Password",
       "login_form_submit": "Enter",
       "admin_link": "Are you the store owner?",
-      "admin_link_html": "Are you the store owner? <a href=\"\/admin\" class=\"link underlined-link\">Log in here<\/a>",
+      "admin_link_html": "Are you the store owner? <a href=\"/admin\" class=\"link underlined-link\">Log in here</a>",
       "login": "Log in here",
       "powered_by_shopify_html": "This shop will be powered by {{ shopify }}"
     },
@@ -98,7 +98,7 @@
         "one": "{{ count }} result for “{{ terms }}”",
         "other": "{{ count }} results for “{{ terms }}”"
       },
-      "use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">remove all<\/a>",
+      "use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">remove all</a>",
       "search_title": "Search",
       "placeholder": "Search",
       "clear": "Clear",
@@ -127,24 +127,24 @@
   "sections": {
     "cart": {
       "title_cart": "Your cart",
-      "title_basket": "Your basket",
+      "title_basket": "Your cart",
       "title_bag": "Your bag",
       "remove_title": "Remove {{ title }}",
       "subtotal": "Subtotal",
       "cart_total": "Cart total",
       "bag_total": "Bag total",
-      "basket_total": "Basket total",
+      "basket_total": "Cart total",
       "saved": "You saved",
       "checkout": "Checkout",
       "cart_error": "There was an error while updating your cart. Please try again.",
       "bag_error": "There was an error while updating your bag. Please try again.",
-      "basket_error": "There was an error while updating your basket. Please try again.",
+      "basket_error": "There was an error while updating your cart. Please try again.",
       "cart_quantity_error_html": "You can only add {{ quantity }} of this item to your bag.",
-      "bag_quantity_error_html": "You can only add {{ quantity }} of this item to your basket.",
+      "bag_quantity_error_html": "You can only add {{ quantity }} of this item to your cart.",
       "basket_quantity_error_html": "You can only add {{ quantity }} of this item to your cart.",
-      "taxes_and_shipping_policy_at_checkout_html": "Taxes and <a href=\"{{ link }}\">shipping<\/a> calculated at checkout",
+      "taxes_and_shipping_policy_at_checkout_html": "Taxes and <a href=\"{{ link }}\">shipping</a> calculated at checkout",
       "taxes_included_but_shipping_at_checkout": "Tax included and shipping calculated at checkout",
-      "taxes_included_and_shipping_policy_html": "Tax included. <a href=\"{{ link }}\">Shipping<\/a> calculated at checkout.",
+      "taxes_included_and_shipping_policy_html": "Tax included. <a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
       "taxes_and_shipping_at_checkout": "Taxes and shipping calculated at checkout",
       "estimate": "Estimate",
       "zip": "ZIP code",
@@ -158,7 +158,7 @@
       "update": "Update",
       "quick_add_to_cart": "Quick add to cart",
       "quick_add_to_bag": "Quick add to bag",
-      "quick_add_to_basket": "Quick add to basket"
+      "quick_add_to_basket": "Quick add to cart"
     },
     "featured_blog": {
       "onboarding_content": "Create your first post, or select blog with posts."
@@ -173,7 +173,7 @@
       "empty": "This collection does not contain any product.",
       "link": "Continue shopping",
       "no_products": "No products found.",
-      "use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">remove all<\/a>"
+      "use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">remove all</a>"
     },
     "video": {
       "load_video": "Load video: {{ description }}"
@@ -245,7 +245,7 @@
       "description_placeholder": "Once you add a product, the description will change.",
       "add_to_cart": "Add to cart",
       "add_to_bag": "Add to bag",
-      "add_to_basket": "Add to basket",
+      "add_to_basket": "Add to cart",
       "pre_order": "Pre-order",
       "color_swatch_tag": "Color",
       "on_sale": "Sale",
@@ -274,8 +274,8 @@
         "view_store_info": "View store information",
         "check_other_stores": "Check availability at other stores",
         "pick_up_available": "Pickup available",
-        "pick_up_available_at_html": "Pickup available at <span class=\"color-foreground\">{{ location_name }}<\/span>",
-        "pick_up_unavailable_at_html": "Pickup currently unavailable at <span class=\"color-foreground\">{{ location_name }}<\/span>",
+        "pick_up_available_at_html": "Pickup available at <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Pickup currently unavailable at <span class=\"color-foreground\">{{ location_name }}</span>",
         "unavailable": "Couldn't load pickup availability",
         "refresh": "Refresh",
         "available_to_pickup_at": "Available to pickup at {{ store_name }}",
@@ -311,7 +311,7 @@
       "xr_button": "View in your space",
       "xr_button_label": "View in your space, loads item in augmented reality window",
       "include_taxes": "Tax included.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping<\/a> calculated at checkout.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
       "change_button": "Change",
       "error_message_required": "This field is required.",
       "custom_error": "Please complete all required fields.",
@@ -362,7 +362,7 @@
       "details": "Account details",
       "return": "Return to account details",
       "go_to_account": "Go to account page",
-      "create_account": "Sign In \/ Create Account"
+      "create_account": "Sign In / Create Account"
     },
     "activate_account": {
       "title": "Activate account",
@@ -384,9 +384,9 @@
       "address1": "Address 1",
       "address2": "Address 2",
       "city": "City",
-      "country": "Country\/region",
+      "country": "Country/region",
       "province": "Province",
-      "zip": "Postal\/ZIP code",
+      "zip": "Postal/ZIP code",
       "phone": "Phone",
       "set_default": "Set as default address",
       "add": "Add address",
@@ -497,17 +497,17 @@
     "button_label": "Subscribe"
   },
   "cart": {
-    "title_basket": "Basket",
+    "title_basket": "Cart",
     "title_cart": "Cart",
     "title_bag": "Bag",
     "continue_shopping": "Continue shopping",
     "empty_cart": "Your cart is empty",
     "empty_bag": "Your bag is empty",
-    "empty_basket": "Your basket is empty",
+    "empty_basket": "Your cart is empty",
     "login": "Log in",
     "item_added_cart": "Item added to your cart",
     "item_added_bag": "Item added to your bag",
-    "item_added_basket": "Item added to your basket",
+    "item_added_basket": "Item added to your cart",
     "free_shipping_minimum": "Default"
   },
   "cart_drawer": {
