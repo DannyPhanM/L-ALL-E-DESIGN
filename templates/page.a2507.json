@@ -82,7 +82,7 @@
       ],
       "name": "t:sections.rich-text.name",
       "settings": {
-        "section_width": "narrow",
+        "section_width": "wide",
         "center_text": true,
         "color_type": "default",
         "background_color": "#FFFFFF",
