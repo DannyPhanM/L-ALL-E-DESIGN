@@ -167,7 +167,7 @@
                                 <p class="cart-item__vendor card__vendor--{{ settings.typography_preset }} {% if settings.product_text_size != 'default' and settings.typography_preset == 'custom' %}{{ settings.product_text_size }}{% else %}{% if uppercase_text %} uppercase{% endif %}{% if bolder_text_font %} bolder-font{% endif %}{% endif %} {% if settings.dim_text %}dim{% endif %}">{{ item.product.vendor }}</p>
                                 {%- endif -%}
                                     {%- if item.product.has_only_default_variant == false -%}
-                                    <dl>
+                                    <dl class="data-custom">
                                         {%- for option in item.options_with_values -%}
                                     <div class="product-option card__vendor--{{ settings.typography_preset }} {% if settings.product_text_size != 'default' and settings.typography_preset == 'custom' %}{{ settings.product_text_size }}{% else %}{% if uppercase_text %} uppercase{% endif %}{% if bolder_text_font %} bolder-font{% endif %}{% endif %} {% if settings.dim_text %}dim{% endif %}">
                                         <dt>{{ option.name }}: </dt>
