@@ -72,64 +72,6 @@
         "mobile_padding_bottom": 0
       }
     },
-    "multicolumn_XnwDGi": {
-      "type": "multicolumn",
-      "blocks": {
-        "image_Grz9Ux": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/2_f0fbd633-bf58-4182-ab6c-b75b273f4cf3.jpg",
-            "heading": "",
-            "text": "",
-            "button_label": "",
-            "button_link": "",
-            "target_blank": false,
-            "full_block_clickable": false
-          }
-        },
-        "image_MDBEta": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/2_f0fbd633-bf58-4182-ab6c-b75b273f4cf3.jpg",
-            "heading": "",
-            "text": "",
-            "button_label": "",
-            "button_link": "",
-            "target_blank": false,
-            "full_block_clickable": false
-          }
-        }
-      },
-      "block_order": [
-        "image_Grz9Ux",
-        "image_MDBEta"
-      ],
-      "name": "t:sections.multicolumn.name",
-      "settings": {
-        "subheading": "",
-        "heading": "",
-        "max_columns": "2",
-        "mobile_layout": "1",
-        "enable_masonry_grid": false,
-        "subheading_size": "default",
-        "subheading_tag": "h3",
-        "heading_size": "default",
-        "heading_tag": "h2",
-        "media_ratio": "original",
-        "center_text": false,
-        "title_size": "default",
-        "text_size": "default",
-        "image_radius": "default",
-        "button_style": "outlined",
-        "color_type": "default",
-        "background_color": "#FFFFFF",
-        "text_color": "#000000",
-        "desktop_padding_top": -16,
-        "desktop_padding_bottom": -32,
-        "mobile_padding_top": -16,
-        "mobile_padding_bottom": -16
-      }
-    },
     "multicolumn_AP4ghq": {
       "type": "multicolumn",
       "blocks": {
@@ -582,7 +524,6 @@
   "order": [
     "main-page",
     "rich_text_eyKP7J",
-    "multicolumn_XnwDGi",
     "multicolumn_AP4ghq"
   ]
 }
