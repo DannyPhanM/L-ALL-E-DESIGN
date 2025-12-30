@@ -217,7 +217,7 @@
           "type": "collection",
           "settings": {
             "collection": "collection-name",
-            "custom_tab_heading": "NEW ARRIVALS"
+            "custom_tab_heading": "BEST SELLERS"
           }
         }
       },
