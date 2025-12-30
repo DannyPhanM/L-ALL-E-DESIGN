@@ -15,7 +15,7 @@
         "measurement_field_U74E6A": {
           "type": "measurement_field",
           "settings": {
-            "label": "Weight",
+            "label": "WEIGHT",
             "required": true,
             "description": ""
           }
