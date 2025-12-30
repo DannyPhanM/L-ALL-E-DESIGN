@@ -4532,3 +4532,7 @@ height: 20px !important;
 .xb-wishlist__add, .xb-wishlist__remove {
   display: none;
 }
+
+.xb-wishlist-products__no-product-desc p {
+  font-size: 12px;
+}
