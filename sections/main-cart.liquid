@@ -476,7 +476,7 @@
                                       </dl>
                                       {%- endif -%}
                                       {% unless item.properties == empty %}
-                                      <dl>
+                                      <dl class="data-custom-properties">
                                       {%- for property in item.properties -%}
                                           {%- assign property_first_char = property.first | slice: 0 -%}
                                           {%- if property.last != blank and property_first_char != '_' -%}
