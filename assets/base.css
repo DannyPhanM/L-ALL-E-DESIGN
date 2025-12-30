@@ -4604,4 +4604,10 @@ height: 20px !important;
   .custom-size-popup__container {
     padding: 20px 16px;
   }
+  .measurement-inputs-scroll {
+    gap: 10px;
+  }
+  .measurement-inputs-scroll>* {
+    width: calc(50% - 5px);
+  }
 }
