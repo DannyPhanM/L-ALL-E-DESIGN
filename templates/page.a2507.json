@@ -111,19 +111,7 @@
         "image_ttkpMV": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/005866b5-LEK9976-scaled.jpg",
-            "heading": "",
-            "text": "",
-            "button_label": "",
-            "button_link": "",
-            "target_blank": false,
-            "full_block_clickable": false
-          }
-        },
-        "image_TkwrfC": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/005866b5-LEK9976-scaled.jpg",
+            "image": "shopify://shop_images/LEK9278_2.jpg",
             "heading": "",
             "text": "",
             "button_label": "",
@@ -136,6 +124,30 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/LEK9335_2.jpg",
+            "heading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "target_blank": false,
+            "full_block_clickable": false
+          }
+        },
+        "image_hFA3ah": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/005866b5-LEK9976-scaled.jpg",
+            "heading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "target_blank": false,
+            "full_block_clickable": false
+          }
+        },
+        "image_TkwrfC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/fab29dbb-LEK9909-scaled.jpg",
             "heading": "",
             "text": "",
             "button_label": "",
@@ -269,8 +281,9 @@
         "image_8bGgJT",
         "image_k8Hbmk",
         "image_ttkpMV",
-        "image_TkwrfC",
         "image_q3XVnr",
+        "image_hFA3ah",
+        "image_TkwrfC",
         "image_gM6J3A",
         "image_84tpAH",
         "image_QRiGTD",
