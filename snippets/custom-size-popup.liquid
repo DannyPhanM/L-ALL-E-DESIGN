@@ -73,7 +73,7 @@
                              name="properties[{{ block.settings.label }}]" 
                              class="m-input{% if block.settings.required %} required{% endif %}" 
                              placeholder="CM"
-                             {% if block.settings.required %}required aria-required="true"{% endif %}>
+                             {% if block.settings.required %}required {% endif %}>
                     </div>
                     {%- if block.settings.description != blank -%}
                       <p class="m-field__desc">{{ block.settings.description }}</p>
