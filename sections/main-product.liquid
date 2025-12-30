@@ -196,7 +196,7 @@
     <div class="product product--{{ section.settings.desktop_gallery_size }} product--{{ section.settings.desktop_gallery_style }} product--{{ settings.white_space }} {% if settings.show_lines %}product--lines{% endif %} {% if section.settings.swap_position and section.settings.desktop_gallery_size != 'full_width' %}product--reverse{% endif %}{% if section.settings.enable_image_zoom and section.settings.image_zoom_style == 'zoom-in' %} product-with-image-zoom-in{% endif %}">
       <product-recently-viewed data-product-id="{{ product.id }}" class="hidden-block"></product-recently-viewed>
     <div class="grid__item product__media-wrapper">
-        {% render 'custom-size-popup', custom_size_image: section.settings.custom_size_image %}
+        {% render 'custom-size-popup', custom_size_image: section.settings.custom_size_image, content_note: section.settings.note_popup, content_title: section.settings.title_popup %}
         <media-gallery id="MediaGallery-{{ section.id }}" role="region" {% if section.settings.enable_sticky_content %} class="container--sticky"{% endif %} aria-label="{{ 'products.product.media.gallery_viewer' | t }}" data-desktop-layout="{{ section.settings.desktop_gallery_style }}">
           <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
           <div class="slider-block slider-container-js {% if section.settings.desktop_gallery_style == 'side_thumbnails' %}slider-block--row{% else %}slider-block--column{% endif %}">
@@ -10000,11 +10000,27 @@
     }
   ],
   "settings": [
+    {
+      "type": "header",
+      "content": "Data Popup"
+    },
 						{
 					"type": "image_picker",
 					"id": "custom_size_image",
 					"label": "Custom Size Image"
 				},
+        {
+          "type": "text",
+          "id": "title_popup",
+          "label": "Title Popup",
+         
+        },
+        {
+          "type": "richtext",
+          "id": "note_popup",
+          "label": "Note Popup",
+          
+        },
     {
         "type": "checkbox",
         "id": "enable_sticky_content",
