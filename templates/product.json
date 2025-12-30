@@ -68,6 +68,14 @@
             "description": ""
           }
         },
+        "measurement_field_XAa3Jn": {
+          "type": "measurement_field",
+          "settings": {
+            "label": "8. UNDER BUST",
+            "required": false,
+            "description": ""
+          }
+        },
         "measurement_field_qBf3Vi": {
           "type": "measurement_field",
           "settings": {
@@ -80,14 +88,6 @@
           "type": "measurement_field",
           "settings": {
             "label": "10. SHOULDER TO UNDER BUST",
-            "required": false,
-            "description": ""
-          }
-        },
-        "measurement_field_XAa3Jn": {
-          "type": "measurement_field",
-          "settings": {
-            "label": "8. UNDER BUST",
             "required": false,
             "description": ""
           }
@@ -393,9 +393,9 @@
         "measurement_field_zEcEy9",
         "measurement_field_EbWt47",
         "measurement_field_yd9N7b",
+        "measurement_field_XAa3Jn",
         "measurement_field_qBf3Vi",
         "measurement_field_eaE6LG",
-        "measurement_field_XAa3Jn",
         "measurement_field_AhtTWe",
         "measurement_field_AbPMhy",
         "measurement_field_dmYnEP",
