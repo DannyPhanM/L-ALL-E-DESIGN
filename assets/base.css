@@ -4615,3 +4615,18 @@ height: 20px !important;
     line-height: 18px;
   }
 }
+
+.cart-item__details dl.data-custom-properties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.cart-item__details dl.data-custom-properties .product-option {
+    margin-top: 0;
+}
+.cart-item__details dl.data-custom-properties .product-option:not(:first-child):before {
+    content: '/';
+    padding-right: 2px;
+}
