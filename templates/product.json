@@ -324,6 +324,8 @@
         "f8c922ec-d527-49f4-81d7-e882bc9219a1"
       ],
       "settings": {
+        "title_popup": "GUIDELINES FOR TAKING BODY MEASUREMENTS (UNIT: CM)",
+        "note_popup": "<p>NOTE: The body parameters marked with a red * are mandatory information. Please ensure to enter them completely and accurately, and select “Add to cart” to finish adding the product to your cart. If you have any questions, please contact us via: Telegram/WhatsApp: (+84) 989 293 965.</p>",
         "enable_sticky_content": true,
         "sticky_offset": 92,
         "desktop_gallery_style": "two_columns_grid",
