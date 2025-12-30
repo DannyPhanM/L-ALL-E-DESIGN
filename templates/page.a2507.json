@@ -28,18 +28,10 @@
     "rich_text_eyKP7J": {
       "type": "rich-text",
       "blocks": {
-        "subheading_VV4fTg": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "Subheading",
-            "subheading_size": "default",
-            "subheading_tag": "h3"
-          }
-        },
         "heading_Cb6LzP": {
           "type": "heading",
           "settings": {
-            "heading": "Rich text heading",
+            "heading": "MIRAGE | PRE - FALL 2025 COLLECTION",
             "heading_size": "default",
             "heading_tag": "h2"
           }
@@ -47,7 +39,7 @@
         "text_hj86z3": {
           "type": "text",
           "settings": {
-            "text": "<p>Tell a story, describe your brand or share announcements. You can also use it as a section heading.</p>",
+            "text": "<p>Autumn–Winter inspiration weaves itself into every fold of fabric as “Mirage” reimagines a journey of warmth and light through a language of refined minimalism. Here, structure and softness find their equilibrium—where sculptural silhouettes meet fluid movement, expressing a beauty that is both poised and undeniably feminine.</p><p>Deep earth tones and cool, smoky hues evoke a sense of quiet stillness, inviting an emotional depth that lingers. Gently draped fabrics, paired with restrained draping and tailoring techniques, reveal subtle elegance in every motion—like wisps of morning mist drifting through a winter dawn.</p><p>More than a collection, “Mirage” is a feeling. It is where the L’ALLÉE woman emerges—graceful, seasoned, and softly radiant, glowing in silence between moments of calm.</p>",
             "dim_text": false,
             "text_size": "default"
           }
@@ -56,14 +48,13 @@
           "type": "button",
           "settings": {
             "button_label": "Discover",
-            "button_link": "",
+            "button_link": "shopify://collections/collection-name",
             "target_blank": false,
             "button_style": "outlined"
           }
         }
       },
       "block_order": [
-        "subheading_VV4fTg",
         "heading_Cb6LzP",
         "text_hj86z3",
         "button_gmfynd"
