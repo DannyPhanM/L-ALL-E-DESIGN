@@ -16,6 +16,7 @@
           "type": "tab",
           "settings": {
             "custom_heading": "Shopping Guide",
+            "url_path": "",
             "text": "",
             "text_size": "default",
             "page": "shopping-guide"
@@ -25,6 +26,7 @@
           "type": "tab",
           "settings": {
             "custom_heading": "SHIPPING POLICY",
+            "url_path": "",
             "text": "",
             "text_size": "default",
             "page": "shipping-policy"
@@ -34,6 +36,7 @@
           "type": "tab",
           "settings": {
             "custom_heading": "RETURN & EXCHANGES",
+            "url_path": "",
             "text": "",
             "text_size": "default",
             "page": "privacy-policy"
@@ -43,6 +46,7 @@
           "type": "tab",
           "settings": {
             "custom_heading": "Privacy Policy",
+            "url_path": "pages/privacy-policy-1",
             "text": "",
             "text_size": "default",
             "page": "privacy-policy-1"
