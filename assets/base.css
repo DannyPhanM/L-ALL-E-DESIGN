@@ -4594,3 +4594,14 @@ height: 20px !important;
     font-size: 10px;
     text-transform: lowercase;
 }
+
+@media(max-width: 749px) {
+  .measurement-inputs-scroll .m-field {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 0px;
+  }
+  .custom-size-popup__container {
+    padding: 20px 16px;
+  }
+}
