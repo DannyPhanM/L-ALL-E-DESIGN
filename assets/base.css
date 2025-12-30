@@ -4559,6 +4559,11 @@ height: 20px !important;
 }
 .custom-size-popup__footer button {
     font-size: 12px;
+    width: 184px;
+    height: 44px;
+    padding: 0;
+    min-height: 0;
+    font-weight: normal;
 }
 .measurement-inputs-scroll {
     display: flex;
