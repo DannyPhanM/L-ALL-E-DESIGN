@@ -73,7 +73,7 @@
                              name="properties[{{ block.settings.label }}]" 
                              class="m-input{% if block.settings.required %} required{% endif %}" 
                              placeholder="CM"
-                             {% if block.settings.required %}required {% endif %}>
+                             {% if block.settings.required %}required aria-required="true"{% endif %}>
                     </div>
                     {%- if block.settings.description != blank -%}
                       <p class="m-field__desc">{{ block.settings.description }}</p>
@@ -387,10 +387,10 @@ function openCustomSizePopup(form) {
   document.body.classList.add('overflow-hidden');
   
   // Autofocus first input
-  setTimeout(() => {
+  {% comment %} setTimeout(() => {
     const firstInput = popup.querySelector('.m-input');
     if (firstInput) firstInput.focus();
-  }, 400);
+  }, 400); {% endcomment %}
 }
 
 function submitCustomSizeForm() {
