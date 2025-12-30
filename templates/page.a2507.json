@@ -9,72 +9,6 @@
  */
 {
   "sections": {
-    "tabs_hzUyEp": {
-      "type": "tabs",
-      "blocks": {
-        "tab_EDVfNM": {
-          "type": "tab",
-          "settings": {
-            "custom_heading": "Shopping Guide",
-            "text": "",
-            "text_size": "default",
-            "page": "shopping-guide"
-          }
-        },
-        "tab_m3ip8q": {
-          "type": "tab",
-          "settings": {
-            "custom_heading": "SHIPPING POLICY",
-            "text": "",
-            "text_size": "default",
-            "page": "shipping-policy"
-          }
-        },
-        "tab_rLXbYn": {
-          "type": "tab",
-          "settings": {
-            "custom_heading": "RETURN & EXCHANGES",
-            "text": "",
-            "text_size": "default",
-            "page": "privacy-policy"
-          }
-        },
-        "tab_UXnjEx": {
-          "type": "tab",
-          "settings": {
-            "custom_heading": "Privacy Policy",
-            "text": "",
-            "text_size": "default",
-            "page": "privacy-policy-1"
-          }
-        }
-      },
-      "block_order": [
-        "tab_EDVfNM",
-        "tab_m3ip8q",
-        "tab_rLXbYn",
-        "tab_UXnjEx"
-      ],
-      "name": "t:sections.tabs.name",
-      "settings": {
-        "subheading": "",
-        "heading": "L'ALLEE DESIGN POLICY",
-        "center_text": true,
-        "section_width": "narrow",
-        "tab_heading_size": "default",
-        "subheading_size": "default",
-        "subheading_tag": "h3",
-        "heading_size": "default",
-        "heading_tag": "h2",
-        "color_type": "default",
-        "background_color": "#ffffff",
-        "text_color": "#000000",
-        "desktop_padding_top": 0,
-        "desktop_padding_bottom": 0,
-        "mobile_padding_top": 0,
-        "mobile_padding_bottom": 0
-      }
-    },
     "main-page": {
       "type": "main-page",
       "disabled": true,
@@ -91,18 +25,181 @@
         "mobile_padding_bottom": 0
       }
     },
-    "anchor_link_f9qnAN": {
-      "type": "anchor-link",
-      "disabled": true,
-      "name": "t:sections.anchor-link.name",
+    "image_banner_at3GTd": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.name",
       "settings": {
-        "anchor_link": "anchor-link"
+        "content_on_hover": false,
+        "first_image": "shopify://shop_images/1_f54f54dc-e3db-4b49-8197-b1bf1ac2b669.jpg",
+        "desktop_height": 100,
+        "section_link": "",
+        "target_blank": false,
+        "section_width": "wide",
+        "center_text": true,
+        "vertical_content_position": "center",
+        "horizontal_content_position": "center",
+        "narrow_content": true,
+        "fill_content": true,
+        "overlay_color": "#000000",
+        "overlay_gradient": "",
+        "overlay_opacity": 0,
+        "mobile_height": 70,
+        "content_under_image": false,
+        "only_first_image": false,
+        "color_type": "default",
+        "background_color": "#FFFFFF",
+        "text_color": "#000000",
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0
+      }
+    },
+    "rich_text_eyKP7J": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_VV4fTg": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Subheading",
+            "subheading_size": "default",
+            "subheading_tag": "h3"
+          }
+        },
+        "heading_Cb6LzP": {
+          "type": "heading",
+          "settings": {
+            "heading": "Rich text heading",
+            "heading_size": "default",
+            "heading_tag": "h2"
+          }
+        },
+        "text_hj86z3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tell a story, describe your brand or share announcements. You can also use it as a section heading.</p>",
+            "dim_text": false,
+            "text_size": "default"
+          }
+        },
+        "button_gmfynd": {
+          "type": "button",
+          "settings": {
+            "button_label": "Discover",
+            "button_link": "",
+            "target_blank": false,
+            "button_style": "outlined"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_VV4fTg",
+        "heading_Cb6LzP",
+        "text_hj86z3",
+        "button_gmfynd"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "section_width": "narrow",
+        "center_text": true,
+        "color_type": "default",
+        "background_color": "#FFFFFF",
+        "text_color": "#000000",
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0
+      }
+    },
+    "multicolumn_azphGL": {
+      "type": "multicolumn",
+      "blocks": {
+        "image_AHXXFP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3-mobile.jpg",
+            "heading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "target_blank": false,
+            "full_block_clickable": false
+          }
+        },
+        "image_krczaU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3-mobile.jpg",
+            "heading": "Image heading",
+            "text": "<p>Pair text with image or loop video to focus on your featured product, collection, or promotion. Tell a story, describe your brand or share announcements.</p>",
+            "button_label": "Discover",
+            "button_link": "",
+            "target_blank": false,
+            "full_block_clickable": false
+          }
+        },
+        "image_EyMBfB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3-mobile.jpg",
+            "heading": "Image heading",
+            "text": "<p>Pair text with image or loop video to focus on your featured product, collection, or promotion. Tell a story, describe your brand or share announcements.</p>",
+            "button_label": "Discover",
+            "button_link": "",
+            "target_blank": false,
+            "full_block_clickable": false
+          }
+        },
+        "image_LiDEWj": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3-mobile.jpg",
+            "heading": "Image heading",
+            "text": "<p>Pair text with image or loop video to focus on your featured product, collection, or promotion. Tell a story, describe your brand or share announcements.</p>",
+            "button_label": "Discover",
+            "button_link": "",
+            "target_blank": false,
+            "full_block_clickable": false
+          }
+        }
+      },
+      "block_order": [
+        "image_AHXXFP",
+        "image_krczaU",
+        "image_EyMBfB",
+        "image_LiDEWj"
+      ],
+      "name": "t:sections.multicolumn.name",
+      "settings": {
+        "subheading": "",
+        "heading": "",
+        "max_columns": "4",
+        "mobile_layout": "2",
+        "enable_masonry_grid": false,
+        "subheading_size": "default",
+        "subheading_tag": "h3",
+        "heading_size": "default",
+        "heading_tag": "h2",
+        "media_ratio": "original",
+        "center_text": false,
+        "title_size": "default",
+        "text_size": "default",
+        "image_radius": "0px",
+        "button_style": "outlined",
+        "color_type": "default",
+        "background_color": "#FFFFFF",
+        "text_color": "#000000",
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0
       }
     }
   },
   "order": [
-    "tabs_hzUyEp",
     "main-page",
-    "anchor_link_f9qnAN"
+    "image_banner_at3GTd",
+    "rich_text_eyKP7J",
+    "multicolumn_azphGL"
   ]
 }

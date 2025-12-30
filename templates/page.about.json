@@ -508,69 +508,6 @@
         "mobile_padding_top": 0,
         "mobile_padding_bottom": 60
       }
-    },
-    "banner_gallery_8WqWDY": {
-      "type": "banner-gallery",
-      "blocks": {
-        "image_gtitBy": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Store2.jpg",
-            "heading": "",
-            "link": "",
-            "target_blank": false
-          }
-        },
-        "image_ADViLV": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/manocanh.jpg",
-            "heading": "",
-            "link": "",
-            "target_blank": false
-          }
-        },
-        "image_7N6FVy": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/manocanh2.jpg",
-            "heading": "",
-            "link": "",
-            "target_blank": false
-          }
-        }
-      },
-      "block_order": [
-        "image_gtitBy",
-        "image_ADViLV",
-        "image_7N6FVy"
-      ],
-      "disabled": true,
-      "name": "t:sections.banner-gallery.name",
-      "settings": {
-        "content_on_hover": true,
-        "heading": "",
-        "banner_heading_size": "default",
-        "desktop_grid_type": "4",
-        "mobile_layout": "2",
-        "mobile_navigation": "arrows",
-        "center_text": true,
-        "vertical_content_position": "end",
-        "image_ratio": "original",
-        "overlay_color": "#000000",
-        "overlay_gradient": "",
-        "overlay_opacity": 70,
-        "image_radius": "default",
-        "heading_size": "default",
-        "heading_tag": "h2",
-        "color_type": "invert-content",
-        "background_color": "#ffffff",
-        "text_color": "#000000",
-        "desktop_padding_top": 0,
-        "desktop_padding_bottom": 32,
-        "mobile_padding_top": 0,
-        "mobile_padding_bottom": 32
-      }
     }
   },
   "order": [
@@ -580,7 +517,6 @@
     "rich_text_VPqrdX",
     "b833d0f2-b6b0-47c9-835d-0f3a2de746cd",
     "collection_list_Cc6Fq7",
-    "slideshow_with_media_KRLjJ7",
-    "banner_gallery_8WqWDY"
+    "slideshow_with_media_KRLjJ7"
   ]
 }
