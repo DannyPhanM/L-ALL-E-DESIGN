@@ -4631,3 +4631,7 @@ height: 20px !important;
     content: '/';
     padding-right: 2px;
 }
+
+.xb-wishlist-products__no-product-desc {
+  font-size: 12px !important;
+}
