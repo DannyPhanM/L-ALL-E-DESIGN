@@ -4528,3 +4528,7 @@ height: 20px !important;
 .xb-wishlist-product__remove-product svg path {
     stroke-width: 0.5px;
 }
+
+.xb-wishlist__add, .xb-wishlist__remove {
+  display: none;
+}
