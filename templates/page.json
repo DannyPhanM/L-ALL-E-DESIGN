@@ -36,7 +36,7 @@
           "type": "tab",
           "settings": {
             "custom_heading": "RETURN & EXCHANGES",
-            "url_path": "",
+            "url_path": "pages/return-exchange",
             "text": "",
             "text_size": "default",
             "page": "return-exchange"
