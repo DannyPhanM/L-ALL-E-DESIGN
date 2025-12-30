@@ -55,7 +55,7 @@
         "measurement_field_EbWt47": {
           "type": "measurement_field",
           "settings": {
-            "label": "Shoulder to shoulder",
+            "label": "SHOULDER TO SHOULDER",
             "required": true,
             "description": ""
           }
