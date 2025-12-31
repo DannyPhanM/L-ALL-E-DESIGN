@@ -14,78 +14,88 @@
       "blocks": {
         "measurement_field_U74E6A": {
           "type": "measurement_field",
+          "name": "1. Weight",
           "settings": {
-            "label": "1. WEIGHT",
+            "label": "1. Weight",
             "required": false,
             "description": ""
           }
         },
         "measurement_field_jqMhKz": {
           "type": "measurement_field",
+          "name": "2. Height",
           "settings": {
-            "label": "2. HEIGHT",
+            "label": "2. Height",
             "required": true,
             "description": ""
           }
         },
         "measurement_field_RkAEiN": {
           "type": "measurement_field",
+          "name": "3. Shoulder to shoulder",
           "settings": {
-            "label": "3. SHOULDER TO SHOULDER",
+            "label": "3. Shoulder to shoulder",
             "required": true,
             "description": ""
           }
         },
         "measurement_field_4AEyLc": {
           "type": "measurement_field",
+          "name": "4. Arm Length",
           "settings": {
-            "label": "4. ARM LENGTH",
+            "label": "4. Arm Length",
             "required": true,
             "description": ""
           }
         },
         "measurement_field_zEcEy9": {
           "type": "measurement_field",
+          "name": "5. Arm Hole",
           "settings": {
-            "label": "5. ARM HOLE",
+            "label": "5. Arm Hole",
             "required": true,
             "description": ""
           }
         },
         "measurement_field_EbWt47": {
           "type": "measurement_field",
+          "name": "6. Bicep",
           "settings": {
-            "label": "6. BICEP",
+            "label": "6. Bicep",
             "required": true,
             "description": ""
           }
         },
         "measurement_field_yd9N7b": {
           "type": "measurement_field",
+          "name": "7.  Bust (Bra included)",
           "settings": {
-            "label": "7. BUST (BRA INCLUDED)",
+            "label": "7.  Bust (Bra included)",
             "required": true,
             "description": ""
           }
         },
         "measurement_field_XAa3Jn": {
           "type": "measurement_field",
+          "name": "8. Under bust",
           "settings": {
-            "label": "8. UNDER BUST",
+            "label": "8. Under bust",
             "required": false,
             "description": ""
           }
         },
         "measurement_field_qBf3Vi": {
           "type": "measurement_field",
+          "name": "9. Shoulder to bust",
           "settings": {
-            "label": "9. SHOULDER TO BUST",
+            "label": "9. Shoulder to bust",
             "required": false,
             "description": ""
           }
         },
         "measurement_field_eaE6LG": {
           "type": "measurement_field",
+          "name": "10. Shoulder to under bust",
           "settings": {
             "label": "10. Shoulder to under bust",
             "required": false,
@@ -94,56 +104,63 @@
         },
         "measurement_field_AhtTWe": {
           "type": "measurement_field",
+          "name": "11. Waist",
           "settings": {
-            "label": "11. WAIST",
+            "label": "11. Waist",
             "required": true,
             "description": ""
           }
         },
         "measurement_field_AbPMhy": {
           "type": "measurement_field",
+          "name": "12. Waistband",
           "settings": {
-            "label": "12. WAISTBAND",
+            "label": "12. Waistband",
             "required": false,
             "description": ""
           }
         },
         "measurement_field_dmYnEP": {
           "type": "measurement_field",
+          "name": "13. Shoulder to waist",
           "settings": {
-            "label": "13. SHOULDER TO WAIST",
+            "label": "13. Shoulder to waist",
             "required": false,
             "description": ""
           }
         },
         "measurement_field_icK7VY": {
           "type": "measurement_field",
+          "name": "14. Full hip",
           "settings": {
-            "label": "14. FULL HIP",
+            "label": "14. Full hip",
             "required": true,
             "description": ""
           }
         },
         "measurement_field_piV8hM": {
           "type": "measurement_field",
+          "name": "15. Crotch",
           "settings": {
-            "label": "15. CROTCH",
+            "label": "15. Crotch",
             "required": false,
             "description": ""
           }
         },
         "measurement_field_N9cB9d": {
           "type": "measurement_field",
+          "name": "16. Thigh",
           "settings": {
-            "label": "16. THIGH",
+            "label": "16. Thigh",
             "required": false,
             "description": ""
           }
         },
         "measurement_field_kTBiXf": {
           "type": "measurement_field",
+          "name": "17. Trousers length",
           "settings": {
-            "label": "17. TROUSERS LENGTH",
+            "label": "17. Trousers length",
             "required": false,
             "description": ""
           }
