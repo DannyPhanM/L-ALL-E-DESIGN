@@ -87,7 +87,7 @@
         "measurement_field_eaE6LG": {
           "type": "measurement_field",
           "settings": {
-            "label": "10. SHOULDER TO UNDER BUST",
+            "label": "10. Shoulder to under bust",
             "required": false,
             "description": ""
           }
