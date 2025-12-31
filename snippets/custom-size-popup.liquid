@@ -378,7 +378,7 @@ let currentProductForm = null;
 function closeCustomSizePopup() {
   const popup = document.getElementById('CustomSizePopup');
   popup.classList.add('hidden');
-  document.body.classList.remove('overflow-hidden');
+  document.body.classList.remove('hidden');
   currentProductForm = null;
 }
 
@@ -386,7 +386,7 @@ function openCustomSizePopup(form) {
   currentProductForm = form;
   const popup = document.getElementById('CustomSizePopup');
   popup.classList.remove('hidden');
-  document.body.classList.add('overflow-hidden');
+  document.body.classList.add('hidden');
   
   // Autofocus first input
   // setTimeout(() => {
