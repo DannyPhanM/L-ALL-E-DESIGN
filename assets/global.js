@@ -4988,10 +4988,15 @@ class VariantSelects extends HTMLElement {
   }
 
   handleProductUpdate(event) {
-    let loader 
-    if (document.querySelector('.product-form__submit .loading-overlay__spinner')) loader = document.querySelector('.product-form__submit .loading-overlay__spinner').innerHTML
-    const addButton = document.querySelector('.product-form__submit[name="add"]');
-    if (addButton) addButton.innerHTML = `<div class="loading-overlay__spinner">${loader}</div>`
+    const productForms = document.querySelectorAll(`#product-form-${this.dataset.section}, #product-form-${this.dataset.section}--alt`);
+    productForms.forEach((productForm) => {
+      const addButton = productForm.querySelector('[name="add"]');
+      if (addButton) {
+        const loader = document.querySelector('.product-form__submit .loading-overlay__spinner')?.innerHTML || '';
+        addButton.style.pointerEvents = 'none';
+        addButton.innerHTML = `<div class="loading-overlay__spinner">${loader}</div>`;
+      }
+    });
     this.handleFunctionProductUpdate(event)
     
     document.dispatchEvent(new CustomEvent('variant:change', {
@@ -5291,6 +5296,9 @@ class VariantSelects extends HTMLElement {
       let buttonIcon = ''
       if(this.buttonIcon) buttonIcon = document.querySelector('.product-form__buttons-icon').innerHTML
       if(this.priceInsideButton) priceContent = document.getElementById(`price-${this.dataset.section}`).querySelector('.price').innerHTML
+      
+      addButton.style.pointerEvents = modifyClass ? '' : 'none';
+
       if (disable) {
         addButton.setAttribute('disabled', true);
         addButton.setAttribute('data-sold-out', true);
@@ -5315,6 +5323,7 @@ class VariantSelects extends HTMLElement {
       let buttonIcon = ''
       if(this.buttonIcon) buttonIcon = document.querySelector('.product-form__buttons-icon').innerHTML
       if(this.priceInsideButton) priceContent = document.getElementById(`price-${this.dataset.section}`).querySelector('.price').innerHTML
+      addButton.style.pointerEvents = '';
       addButton.innerHTML = `<span class="price-inside-button">${priceContent}</span><span>${variantStrings.unavailable}</span> <span class="product-form__buttons-icon">${buttonIcon}</span> <div class="loading-overlay__spinner hidden">${loader}</div>`;
 
       const price = document.getElementById(`price-${this.dataset.section}`);
