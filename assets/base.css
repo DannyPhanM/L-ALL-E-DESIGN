@@ -4591,7 +4591,7 @@ height: 20px !important;
     font-size: 10px;
 }
 .measurement-inputs-scroll input::placeholder {
-    font-size: 10px;
+    font-size: 12px;
     text-transform: lowercase;
 }
 
