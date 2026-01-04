@@ -216,7 +216,7 @@
         "collection_w9JWyz": {
           "type": "collection",
           "settings": {
-            "collection": "collection-name",
+            "collection": "mirage",
             "custom_tab_heading": "BEST SELLERS"
           }
         }
@@ -337,7 +337,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/11-featurecollection_0b0e4ccf-0ec1-485d-b7c5-0ceaad2caae7.jpg",
-            "link": "shopify://collections/collection-name",
+            "link": "shopify://collections/mirage",
             "target_blank": false,
             "banner_size": "big_square",
             "overlay_color": "#000000",

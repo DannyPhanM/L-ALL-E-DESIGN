@@ -48,7 +48,7 @@
           "type": "button",
           "settings": {
             "button_label": "Discover",
-            "button_link": "shopify://collections/collection-name",
+            "button_link": "shopify://collections/mirage",
             "target_blank": false,
             "button_style": "outlined"
           }
