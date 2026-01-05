@@ -809,6 +809,267 @@
         "applied_free_shipping_discount_label": "مُطبَّق",
         "apply_discount_button_label": "يتقدم",
         "applied_discount_message": "خصم بنسبة %{amount} من إجمالي سعر الطلب"
+      },
+      "field_errors": {
+        "address_country_not_supported": "لا نقوم بالشحن إلى هذا البلد أو المنطقة. أدخل عنوان شحن جديد وحاول مرة أخرى.",
+        "address_province_blank": "اختر ولاية / مقاطعة",
+        "address_province_invalid": "اختر ولاية / مقاطعة صالحة",
+        "address_company_blank": "أدخل اسم الشركة",
+        "address_company_too_long": "اسم الشركة طويل جدًا (الحد الأقصى 255 حرفًا)",
+        "address_company_contains_emojis": "لا يمكن للشركة أن تحتوي على رموز تعبيرية",
+        "address_company_contains_html_tags": "لا يمكن أن تحتوي الشركة على وسوم HTML.",
+        "address_company_contains_mathematical_symbols": "لا يجوز أن تحتوي الشركة على رموز رياضية",
+        "address_phone_blank": "أدخل رقم هاتف صحيح",
+        "address_phone_contains_emojis": "لا يمكن أن يحتوي رقم الهاتف على رموز تعبيرية",
+        "address_phone_invalid": "أدخل رقم هاتف صحيح",
+        "address_zip_blank": "أدخل الرمز البريدي",
+        "address_zip_blocked_address": "هذا الموقع غير مدعوم",
+        "address_zip_too_long": "الرمز البريدي طويل جدًا (الحد الأقصى 255 حرفًا)",
+        "address_zip_not_supported": "هذا الموقع غير مدعوم",
+        "address_zip_invalid_for_country": "أدخل رمزًا بريديًا صحيحًا لـ %{country}",
+        "address_zip_invalid_for_province": "أدخل رمزًا بريديًا صحيحًا لـ %{province}",
+        "address_zip_invalid_for_country_and_province": "أدخل رمزًا بريديًا صحيحًا لـ %{province}، %{country}",
+        "address_zip_contains_emojis": "لا يمكن أن يحتوي الرمز البريدي على رموز تعبيرية.",
+        "address_zip_contains_mathematical_symbols": "لا يمكن أن يحتوي الرمز البريدي على رموز رياضية",
+        "address_generic_blank": "حقل مطلوب",
+        "address_generic_invalid": "إدخال غير صالح",
+        "address_generic_error": "خطأ في الحقل",
+        "credit_card_name_blank": "أدخل اسمك تمامًا كما هو مكتوب على بطاقتك",
+        "credit_card_name_invalid": "أدخل اسمك تمامًا كما هو مكتوب على بطاقتك",
+        "credit_card_number_invalid": "أدخل رقم بطاقة صالح",
+        "credit_card_expiry_invalid": "أدخل تاريخ انتهاء صلاحية صحيح",
+        "credit_card_month_invalid": "أدخل شهر انتهاء الصلاحية الصحيح",
+        "credit_card_year_invalid": "أدخل سنة انتهاء صلاحية صالحة",
+        "credit_card_start_invalid": "أدخل تاريخ بدء صلاحية البطاقة",
+        "credit_card_start_month_invalid": "أدخل شهر بدء صلاحية البطاقة",
+        "credit_card_start_year_invalid": "أدخل سنة بدء صلاحية البطاقة",
+        "credit_card_number_blank": "أدخل رقم البطاقة",
+        "credit_card_verification_value_blank": "أدخل رمز التحقق من البطاقة (CVV) أو رمز الأمان الموجود على بطاقتك",
+        "delivery_line_detail_changed": "قد تكون بعض تفاصيل التوصيل قد تغيرت. يرجى التحقق من طريقة الشحن والمحاولة مرة أخرى.",
+        "delivery_zone_not_found": "لم يتم العثور على المنطقة المحددة في البلد المحدد.",
+        "reduction_code_code_not_found": "أدخل رمز خصم صالح أو بطاقة هدية",
+        "reduction_code_discount_not_found": "أدخل رمز خصم صالح",
+        "reduction_code_gift_card_code_invalid": "أدخل بطاقة هدايا صالحة",
+        "reduction_code_gift_card_unusable": "لا يمكنك استخدام بطاقة هدية لشراء بطاقة هدية أخرى",
+        "reduction_code_gift_cards_not_supported_with_deferred_purchase_options": "لا تدعم بطاقات الهدايا خيارات الشراء المؤجل.",
+        "shipping_line_phone_blank": "أدخل رقم الهاتف لاستخدام طريقة التوصيل هذه",
+        "shipping_line_phone_invalid": "أدخل رقم هاتف صحيح",
+        "tips_invalid_tip_amount": "أدخل إكرامية أقل من %{amount}",
+        "gift_card_already_applied": "تم تطبيق بطاقة الهدية هذه بالفعل على طلبك",
+        "gift_card_disabled": "بطاقة الهدية هذه لم تعد متوفرة",
+        "gift_card_expired": "انتهت صلاحية بطاقة الهدية هذه",
+        "gift_card_depleted": "لا يوجد رصيد متبق في بطاقة الهدية هذه",
+        "gift_card_currency_mismatch": "لا يمكن استخدام سوى بطاقات الهدايا بعملة %{checkout_currency} مع هذا الطلب",
+        "gift_cards_not_supported_with_deferred_purchase_options": "لا تدعم بطاقات الهدايا خيارات الشراء المؤجل.",
+        "gift_card_buying_gift_card": "لا يمكنك استخدام بطاقة هدية لشراء بطاقة هدية أخرى",
+        "payment_gateway_missing": "اختر طريقة الدفع.",
+        "payment_gateway_needs_paid_plan_error": "طريقة الدفع هذه غير متاحة في المتجر حاليًا",
+        "payment_gateway_not_in_test_mode": "هذا المتجر غير مُهيأ لاختبار الطلبات. لا يمكنه قبول الطلبات أو المدفوعات الحقيقية.",
+        "payment_gateway_incompatible_with_multi_currency": "لإتمام عملية الدفع هذه بعملتك المحلية، عليك الدفع ببطاقة الائتمان.",
+        "payment_gateway_unsupported_for_subscriptions": "طريقة الدفع هذه غير متاحة لطلبات الاشتراك.",
+        "payment_gateway_unsupported_for_deferred_purchase_options": "طريقة الدفع هذه غير متاحة لخيارات الشراء المؤجل.",
+        "payment_gateway_unsupported_for_country": "طريقة الدفع هذه غير متاحة لبلد الشحن الخاص بك.",
+        "payment_gateway_unsupported_for_development_store_html": "لإجراء طلب تجريبي، ستحتاج إلى استخدام بوابة دفع تجريبية. تعرف على المزيد حول <a href=\"%{docs_link}\">اختبار الطلبات في المتاجر التجريبية</a> .",
+        "payment_gateway_unsupported_for_order_above_maximum_orders_html": "لقد وصلت إلى الحد الأقصى لطلبات متجر التطوير باستخدام معالج الدفع هذا. لتقديم طلب آخر، ستحتاج إلى استخدام بوابة دفع تجريبية. تعرّف على المزيد حول <a href=\"%{docs_link}\">اختبار الطلبات في متاجر التطوير</a> .",
+        "purchase_options_agreement_blank": "لإتمام عملية الشراء، يرجى الموافقة على شروط الشراء المؤجل أو المتكرر.",
+        "physical_gift_card_invalid_quantity": "يجب أن تتطابق كمية بنود بطاقات الهدايا المادية مع عدد رموز بطاقات الهدايا.",
+        "physical_gift_card_duplicate_code": "يحتوي بند بطاقة الهدايا المادية على رمز مكرر.",
+        "physical_gift_card_invalid_code": "رمز بطاقة الهدية المادية غير صالح.",
+        "email_blank": "أدخل بريدًا إلكترونيًا",
+        "phone_blank": "أدخل رقم الهاتف",
+        "address_country_invalid": "اختر دولة/منطقة من القائمة",
+        "address_zip_invalid": "أدخل رمزًا بريديًا صحيحًا",
+        "gift_card_invalid": "بطاقة الهدايا \"••••%{last_four_characters}\" لم تعد صالحة",
+        "vaulting_agreement_blank": "يجب حفظ طريقة الدفع الخاصة بك لأن دفع المبلغ المتبقي من هذا الطلب مستحق لاحقًا.",
+        "sms_marketing_phone_invalid": "أدخل رقم هاتف صحيح",
+        "shipping_method_invalid_phone_number": "قم بتحديث رقم الهاتف في عنوان التسليم الخاص بك للاطلاع على طرق الشحن المتاحة.",
+        "address_suggestion_did_you_mean_html": "هل تقصد %{html}؟",
+        "split_cart_international_shipping_not_supported": "يجب استخدام نفس طريقة التوصيل لجميع المنتجات عند الشحن الدولي. يُرجى تحديث طريقة التوصيل أو إنشاء طلبات متعددة.",
+        "invalid_delivery_address_reference_handle": "لم يتم العثور على أي عنوان توصيل متاح.",
+        "must_use_available_delivery_address": "يجب اختيار عنوان التوصيل من بين عناوين التوصيل المتاحة.",
+        "must_use_available_shipping_rate": "يجب اختيار سعر الشحن من بين أسعار الشحن المتاحة.",
+        "split_by_delivery_method_not_allowed": "لا يُسمح بتقسيم الطلبات حسب طريقة التوصيل لهذه الجلسة أو المتجر."
+      },
+      "store_credit_errors": {
+        "generic_error": "حدثت مشكلة في رصيدك في المتجر. حاول مرة أخرى أو أعد تحميل الصفحة."
+      },
+      "redeemable_errors": {
+        "shop_cash": {
+          "currency_mismatch": "لقد تغيرت العملة. يرجى مراجعة رصيدك في المتجر والعرض المقدم."
+        },
+        "gift_card": {
+          "duplicate": "تم بالفعل تطبيق بطاقة الهدية على طلبك",
+          "insufficient_funds": "لا يوجد رصيد متبق في بطاقة الهدية هذه",
+          "expired": "انتهت صلاحية بطاقة الهدية هذه",
+          "not_available": "بطاقة الهدية هذه لم تعد متوفرة",
+          "invalid": "أدخل بطاقة هدايا صالحة",
+          "currency_mismatch": "لا تُقبل إلا بطاقات الهدايا بعملة %{shop_currency}",
+          "generic": "لم يتم إضافة بطاقة الهدية إلى عملية الدفع",
+          "throttle_limit_exceeded": "لقد تجاوزت الحد الأقصى لعدد المحاولات. حاول مرة أخرى لاحقاً.",
+          "no_longer_available": "لم يعد بالإمكان استخدام بطاقة الهدية هذه مع عملية الدفع هذه"
+        }
+      },
+      "merchant_instruction_errors": {
+        "empty_stable_id": "تحتوي تعليمات البضائع %{position} %{name} على معرف ثابت فارغ.",
+        "invalid_stable_id_target": "تشير تعليمات البضائع %{position} %{name} إلى المعرف الثابت %{stable_id}، ولكن هذا المعرف الثابت غير موجود في بنود البضائع.",
+        "duplicate_variant_id": "تحتوي تعليمات البضائع %{position} %{name} على معرف متغير مكرر %{variant_id}.",
+        "invalid_variant_id_target": "تشير تعليمات البضائع %{name} إلى معرف المتغير %{variant_id}، ولكن هذا المتغير غير موجود في خطوط البضائع.",
+        "invalid_price_override_target": "تعليمات تجاوز سعر البضائع لعنصر السطر %{stable_id} غير صالحة لأنها مكون حزمة."
+      },
+      "payment_errors": {
+        "amount_too_small": "يجب أن يكون الحد الأدنى للدفع أعلى من 0.50 دولار أمريكي. يرجى المحاولة مرة أخرى بمبلغ أعلى.",
+        "method_not_available": "طريقة الدفع المطلوبة غير متاحة. اختر طريقة دفع أخرى وحاول مرة أخرى.",
+        "available_methods_updated": "تم تحديث طرق الدفع المتاحة.",
+        "generic_error": "حدثت مشكلة أثناء معالجة دفعتك. حاول مرة أخرى أو استخدم طريقة دفع مختلفة.",
+        "rejected_transaction": "تم رفض عملية الدفع. حاول مرة أخرى أو استخدم طريقة دفع مختلفة.",
+        "credit_card_processing": "لا يمكن معالجة دفعتك لأسباب فنية. حاول مرة أخرى بعد بضع دقائق أو استخدم طريقة دفع أخرى."
+      },
+      "wallets": {
+        "payment_in_progress_title": "عملية الدفع جارية",
+        "payment_in_progress_body": "جارٍ معالجة دفعتك. سيتم إكمال طلبك قريبًا.",
+        "call_to_action": "ادفع باستخدام {{walletName}}",
+        "redirection_notice": "بعد النقر على \" {{buttonLabel}} \"، ستتم إعادة توجيهك إلى {{walletName}} لإكمال عملية الشراء بشكل آمن.",
+        "errors": {
+          "unavailable": {
+            "title": "{{walletName}} غير متوفر",
+            "description": "{{walletName}} غير متوفر. استخدم طريقة دفع أخرى أو حاول مرة أخرى لاحقاً.",
+            "instructions": "حدثت مشكلة في {{walletName}} . يرجى العودة إلى المتجر للمحاولة مرة أخرى أو إتمام عملية الشراء بطريقة أخرى.",
+            "unavailable_for_country": "{{walletName}} غير متوفر في {{countryName}} . اختر طريقة دفع أخرى لإتمام عملية الشراء"
+          },
+          "unavailable_terminal": {
+            "instructions": "{{walletName}} غير متوفر حاليًا لطلبك. لمتابعة عملية الشراء، اختر طريقة دفع أخرى."
+          },
+          "generic": "حدثت مشكلة في {{walletName}} . حاول مرة أخرى أو استخدم طريقة دفع مختلفة.",
+          "discount_code": "تعذر تطبيق رمز الخصم هذا. يرجى مراجعة الرمز الخاص بك والمحاولة مرة أخرى.",
+          "terminal": "حدثت مشكلة في {{walletName}} . يرجى استخدام طريقة دفع أخرى.",
+          "detour": {
+            "stock_problems": "بعض المنتجات لم تعد متوفرة. أغلق {{walletName}} وحاول مرة أخرى.",
+            "price_change": "لقد تغيرت أسعار بعض المنتجات. أغلق {{walletName}} لمراجعة طلبك وحاول مرة أخرى.",
+            "queue": "لقد تم وضعك في قائمة انتظار الدفع. أغلق {{walletName}} للمتابعة.",
+            "currency_change": "لا يمكنك استخدام عنوان مختلف مع {{walletName}} . استخدم العنوان الأصلي، أو جرب طريقة دفع مختلفة."
+          },
+          "unsupported": {
+            "address": "لا يمكن للتاجر التوصيل إلى هذا العنوان",
+            "wallet_is_unavailable": "لا يمكن استخدام {{walletName}} مع هذا العنوان. اختر عنوانًا مختلفًا أو أغلق {{walletName}} لإتمام عملية الشراء.",
+            "postal_code": "هذا الموقع غير مدعوم"
+          },
+          "outdated": {
+            "shipping_method": "لقد تغيرت خيارات الشحن لطلبك. يرجى مراجعة اختيارك.",
+            "payment_terms": "لقد تغيرت شروط الدفع. يرجى مراجعة طلبك."
+          },
+          "invalid": {
+            "shipping_address": "أدخل عنوان شحن صحيح",
+            "billing_address": "أدخل عنوان فوترة صحيحًا",
+            "shipping_option": "اختر خيار شحن صالح",
+            "email": "أدخل بريدًا إلكترونيًا صحيحًا",
+            "zone": "أدخل ولاية / مقاطعة صالحة",
+            "billing_zone": "أدخل عنوان فوترة صالحًا (الولاية/المقاطعة)",
+            "emirate": "أدخل إمارة صالحة",
+            "postal_code": "أدخل رمزًا بريديًا صحيحًا",
+            "phone": "أدخل رقم هاتف صحيح",
+            "billing_phone": "أدخل عنوان فوترة صحيحًا ورقم هاتف",
+            "reduction_code": "أدخل رمز خصم صالح أو بطاقة هدية",
+            "billing_must_match_shipping": "يجب أن يتطابق عنوان الشحن",
+            "billing_zip": "أدخل عنوان فوترة صحيحًا / الرمز البريدي"
+          },
+          "missing": {
+            "first_name": "أدخل الاسم الأول",
+            "billing_first_name": "أدخل اسمك الأول في عنوان الفوترة",
+            "last_name": "أدخل اسم العائلة",
+            "address1": "أدخل عنوانًا",
+            "billing_address1": "أدخل عنوان الفوترة",
+            "address2": "ادخل إلى شقة، جناح، إلخ.",
+            "billing_address2": "أدخل عنوان الفاتورة: شقة، جناح، إلخ.",
+            "city": "ادخل مدينة",
+            "billing_city": "أدخل مدينة عنوان الفوترة",
+            "province": "اختر ولاية / مقاطعة",
+            "billing_province": "حدد الولاية / المقاطعة لعنوان الفوترة",
+            "country": "اختر بلدًا/منطقة",
+            "zip": "أدخل الرمز البريدي",
+            "billing_zip": "أدخل الرمز البريدي لعنوان الفاتورة",
+            "phone": "أدخل رقم الهاتف",
+            "contact_info": "أدخل معلومات الاتصال"
+          },
+          "formatting": {
+            "name_contains_emojis": "احذف الرموز التعبيرية من اسمك",
+            "postal_code_contains_emoji": "احذف الرموز التعبيرية من الرمز البريدي الخاص بك",
+            "first_name_too_long": "الاسم الأول يحتوي على عدد كبير جدًا من الأحرف",
+            "last_name_too_long": "يحتوي اسم العائلة على عدد كبير جدًا من الأحرف",
+            "address_too_long": "سطر العنوان طويل جدًا"
+          },
+          "select_different_shipping_address_to_resolve_errors": "عنوان الشحن الخاص بك غير صالح. اختر عنوانًا مختلفًا أو استخدم عنوانًا جديدًا."
+        },
+        "scrim": {
+          "continue_purchase_in_window": "أكمل عملية الشراء في نافذة {{walletName}}",
+          "and_return_to_checkout": "ثم العودة إلى صفحة الدفع",
+          "cancel": "يلغي"
+        }
+      },
+      "note": {
+        "length_exceeds_maximum": "قلل حجم الملاحظة إلى 5000 حرف أو أقل."
+      },
+      "offsite_payment_failed": {
+        "title": "فشلت عملية الدفع خارج الموقع",
+        "payment_not_processed_title": "فشلت عملية الدفع",
+        "payment_not_processed_text": "حاول مسح رمز الاستجابة السريعة مرة أخرى. إذا استمرت المشكلة، فأبلغ موظفينا وجرّب طريقة دفع أخرى.",
+        "payment_link_expired_title": "انتهت صلاحية رابط الدفع",
+        "payment_link_expired_text": "حاول مسح رمز الاستجابة السريعة مرة أخرى."
+      },
+      "one": {
+        "errors": {
+          "merchandise": {
+            "gift_card_price_must_be_greater_than_zero": "يجب أن يكون سعر بطاقة الهدية أكبر من 0.",
+            "gift_card_price_must_not_exceed_limit": "يجب ألا يتجاوز سعر بطاقة الهدية %{gift_card_limit}.",
+            "subtotal_limit_reached": "تم الوصول إلى الحد الأقصى لقيمة بنود الفاتورة.",
+            "signature_mismatch": "عدم تطابق توقيع البضائع للسطر %{stable_id}."
+          }
+        }
+      },
+      "remote": {
+        "errors": {
+          "only_remote_merchandise_lines": "لا تحتوي صفحة الدفع إلا على منتجات عن بُعد. يلزم إعادة توجيهك إلى المتجر عن بُعد لإتمام عملية الدفع.",
+          "currency_mismatch": "لا يمكن إضافة هذا المنتج إلى سلة التسوق الخاصة بك لأنه من متجر يستخدم عملة مختلفة.",
+          "currency_mismatch_removal": "تمت إزالة أحد المنتجات من سلة التسوق الخاصة بك لأنه من متجر يستخدم عملة مختلفة.",
+          "max_remote_shops_exceeded": "لا يمكن إضافة هذا المنتج لأن سلة التسوق الخاصة بك تحتوي بالفعل على الحد الأقصى من المنتجات من متاجر أخرى."
+        }
+      },
+      "units": {
+        "milligram": "ملغ",
+        "kilogram": "كيلوغرام",
+        "milliliter": "مل",
+        "cubic_meter": "م³",
+        "millimeter": "مم",
+        "centimeter": "سم",
+        "square_meter": "م²",
+        "ounce": "أونصة",
+        "pound": "رطل",
+        "fluid_ounce": "أونصة سائلة",
+        "pint": "نقطة",
+        "quart": "كيو تي",
+        "gallon": "غال",
+        "inch": "في",
+        "foot": "قدم",
+        "yard": "يارد",
+        "square_foot": "قدم مربع",
+        "item": "غرض"
+      },
+      "memberships": {
+        "delivery_promise_unfulfillable": "العنوان غير مدعوم للعضوية الحالية.",
+        "items_split_across_locations_unsupported": "خدمة التوصيل السريع غير متاحة لطلبك. تم تحديث خيارات الشحن الخاصة بك."
+      },
+      "editor": {
+        "navigation": {
+          "store_logo_accessibility_label": "انتقل إلى المتجر الإلكتروني"
+        }
+      },
+      "tooltip": {
+        "accessibility_label_context": "مزيد من المعلومات حول %{context}",
+        "additional_payment_methods": "طرق دفع إضافية"
+      },
+      "required_extensions": {
+        "errors": {
+          "interaction_required": "يلزم إجراء تفاعل إضافي لإتمام عملية الدفع."
+        }
       }
     },
     "notices": {
@@ -1086,6 +1347,10 @@
           }
         }
       }
+    },
+    "pagination": {
+      "previous": "سابق",
+      "next": "التالي"
     }
   },
   "products": {
