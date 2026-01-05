@@ -2922,10 +2922,70 @@
         "delivery_promise_v2": {
           "promise_line": {
             "shop_promise_brand_label": "التوصيل مضمون من قبل",
-            "external_promise_brand_label": "التوصيل بواسطة"
+            "external_promise_brand_label": "التوصيل بواسطة",
+            "not_delivered_by_label": "تم التسليم بعد {{date}}",
+            "delivery_guarantee_expired_label": "انتهت صلاحية ضمان التسليم",
+            "modal_accessibility_button_label": "تفاصيل وعد التسليم",
+            "download_shop_app_button_label": "قم بتنزيل تطبيق المتجر لتتبع المنتجات",
+            "track_with_shop_button_label": "تتبع مع المتجر",
+            "claim_shop_cash_button_label": "استلام النقود من المتجر"
+          },
+          "details_modal": {
+            "title": "ضمان التسليم",
+            "active_delivery_guarantee_label": "التسليم بحلول {{date}}",
+            "expired_delivery_guarantee_description": "انتهت صلاحية ضمان المتجر لمدة 30 يومًا لهذا الطلب.",
+            "expired_badge_label": "منتهي الصلاحية",
+            "order_includes_guarantees_label": "يشمل طلبك {{deliveryAgreementsCount}} ضمانًا",
+            "order_includes_guarantees_description": "يضمن لك متجرنا خدمة توصيل سريعة وموثوقة. احصل على رصيدك النقدي من المتجر إذا وصل طلبك بعد {{date}} .",
+            "delivered_after_label": "تم التسليم بعد {{date}}",
+            "delivered_after_description": "نظراً لتأخر وصول طلبك، يحق لك المطالبة {{amount}} نقداً من المتجر.",
+            "claimed_shop_cash_description": "نظراً لتأخر وصول هذا الطلب، فقد طالبت {{amount}} من رصيد المتجر.",
+            "eligible_to_claim_shop_cash_description": "نظراً لتأخر وصول طلبك، يحق لك المطالبة {{amount}} نقداً من المتجر.",
+            "learn_more_button_label": "يتعلم أكثر",
+            "claim_shop_cash_button_label": "استلام النقود من المتجر",
+            "view_balance_in_shop_button_label": "عرض الرصيد في المتجر",
+            "scan_to_claim_shop_cash_label": "امسح ضوئيًا للحصول على {{amount}} رصيدًا نقديًا"
+          }
+        },
+        "delivery_promise": {
+          "promise_line": {
+            "single_brand_label": "خدمة التوصيل مدعومة من",
+            "mixed_brands_label": "التوصيل مضمون",
+            "not_delivered_by_label": "لم يتم التسليم بحلول {{date}}",
+            "modal_accessibility_button_label": "تفاصيل وعد التسليم"
+          },
+          "claim_shop_cash_cta": {
+            "has_shop_app_label": "استلم رصيدك النقدي من المتجر",
+            "no_shop_app_label": "{{appDownloadLink}} للمطالبة برصيد المتجر",
+            "download_shop_app_label": "متجر التنزيلات"
+          },
+          "details_modal": {
+            "title": "خدمة التوصيل مدعومة من",
+            "modal_accessiblity_label": "تفاصيل وعد التسليم",
+            "delivery_guarantee_label": "ضمان التسليم",
+            "delivery_by_label": "التسليم بحلول {{date}}",
+            "delivery_guaranteed_by_label": "التوصيل مضمون بحلول {{date}}",
+            "shop_cash_claim": {
+              "may_be_eligible_label": "يضمن لك متجرنا خدمة توصيل سريعة وموثوقة. احصل على رصيد من المتجر إذا وصل طلبك متأخرًا.",
+              "may_be_eligible_not_authorized_label": "قد تكون مؤهلاً للحصول على رصيد تسوّق لأن هذا الطلب وصل متأخراً. سجّل الدخول للاطلاع على التفاصيل.",
+              "redeemed_label": "لقد استفدت بالفعل من رصيد المتجر لأن هذا الطلب وصل متأخراً.",
+              "expired_label": "هذا الطلب غير مؤهل لتقديم مطالبة بالتأخير في التسليم لأن ضمان الـ 30 يومًا قد انتهى.",
+              "no_shop_cash_label": "هذا الطلب غير مؤهل للمطالبة بتعويض عن التأخير في التسليم لأنه لم يتم دفعه باستخدام خدمة Shop Pay.",
+              "no_longer_guaranteed_label": "لم تعد هذه المنتجات مشمولة بضمان التسليم.",
+              "claim_shop_cash_title": "امسح ضوئيًا للحصول على {{amount}} في رصيد المتجر",
+              "claim_shop_cash_description": "يمكنك استخدام رصيدك في تطبيق المتجر على عمليات الشراء المستقبلية."
+            }
           }
         }
-      }
+      },
+      "status_mark_as_delivered": "تم وضع علامة \"تم التسليم\"",
+      "fulfillment_status_title": "حالة التنفيذ: {{status}}",
+      "buy_again": "سأشتري مرة أخرى",
+      "buy_again_accessibility_label": "أعد الشراء للطلب {{orderId}}",
+      "manage": "يدير",
+      "manage_accessiblity_label": "إدارة الطلب {{orderId}}",
+      "group_title_label": "جزء من: {{groupTitle}}",
+      "group_title_label_with_parent": "لـ: {{groupTitle}}"
     },
     "editor": {
       "link_new_tab_confirmation": "لا يمكن فتح هذا الرابط داخل المحرر. سيتم فتحه في نافذة جديدة ( {{resolved_to_link}} ). انقر فوق \"موافق\" للمتابعة."
@@ -3095,6 +3155,80 @@
       "too_many_attempts": {
         "message": "محاولات كثيرة جداً",
         "description": "يرجى المحاولة مرة أخرى بعد بضع دقائق"
+      }
+    },
+    "order_details": {
+      "shipment_timeline": {
+        "expand_events_label": "عرض التفاصيل",
+        "expand_events_accessibility_label": "عرض تفاصيل شحن الطلب",
+        "hide_events_label": "إخفاء التفاصيل",
+        "hide_events_accessibility_label": "إخفاء تفاصيل شحن الطلب"
+      },
+      "addresses_section_title": "إصدار الفواتير والشحن",
+      "order_details": "تفاصيل الطلب",
+      "order_details_skeleton_accessibility_label": "سجّل الدخول لعرض جميع تفاصيل الطلب.",
+      "billing_address": "عنوان الفواتير",
+      "card_ending_with": "ينتهي بـ {{lastDigits}}",
+      "contact": "اتصال",
+      "contact_information": "معلومات الاتصال",
+      "company": "شركة",
+      "company_and_location": "الشركة والموقع",
+      "fully_refunded_label": "تم استرداد المبلغ",
+      "group_title_label": "جزء من: {{groupTitle}}",
+      "group_title_label_with_parent": "لـ: {{groupTitle}}",
+      "view_controls": {
+        "gallery": "معرض",
+        "list": "قائمة"
+      },
+      "grouped_view_components": {
+        "expand_line_items": "عرض {{count}} عنصرًا",
+        "collapse_line_items": "إخفاء {{count}} عنصرًا",
+        "line_item_summary_list_accessibility_label": "العناصر الموجودة في حزمة {{productTitle}}"
+      },
+      "discount": "تخفيض",
+      "hide_items": "إخفاء العناصر",
+      "loading": "تفاصيل طلب التحميل",
+      "loading_finished_accessibility_message": "تم تحميل تفاصيل الطلب",
+      "location": "موقع",
+      "image_gallery": {
+        "next": "عرض العناصر التالية",
+        "previous": "عرض العناصر السابقة",
+        "load_more_items": {
+          "one": "تحميل {{count}} عنصرًا إضافيًا",
+          "other": "تحميل {{count}} عنصرًا إضافيًا"
+        }
+      },
+      "mobile_summary_toggle_button": {
+        "open": "عرض ملخص الطلب",
+        "closed": "إخفاء ملخص الطلب"
+      },
+      "no_data": "لا أحد",
+      "no_data_provided_accessibility_label": "{{fieldName}} فارغ",
+      "not_applicable": "غير متوفر",
+      "paid_amount": "مدفوع",
+      "partially_refunded_label": "تم استرداد جزء من المبلغ",
+      "payment": {
+        "status_in_review": "يُستحق الدفع بعد المراجعة",
+        "status_unpaid": "تاريخ استحقاق الدفع: {{date}}",
+        "title": "قسط",
+        "payment_type": {
+          "gift_card": "بطاقة هدايا",
+          "store_credit": "رصيد المتجر",
+          "money_order": "حوالة بريدية",
+          "cash_on_delivery": "الدفع عند الاستلام (COD)",
+          "bank_deposit": "إيداع بنكي",
+          "manual": "يدوي"
+        },
+        "card_payment_details": "ينتهي بـ {{lastDigits}} - {{formattedTransactionAmount}}",
+        "gift_card_payment_details": "ينتهي بـ {{lastDigits}} - {{formattedTransactionAmount}}",
+        "store_credit_payment_details": "رصيد المتجر - {{formattedTransactionAmount}}",
+        "shop_pay_installments": {
+          "paid_in_installments": "تم الدفع بالتقسيط عبر خدمة الدفع الإلكتروني",
+          "view_schedule": "عرض الجدول الزمني"
+        },
+        "manual_payment_methods": {
+          "money_order": "حوالة بريدية - {{formattedTransactionAmount}}"
+        }
       }
     }
   },
