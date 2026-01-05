@@ -837,7 +837,7 @@
               "menu": "main-menu",
               "use_accent_color": false,
               "show_collection_image": true,
-              "image_ratio": "square",
+              "image_ratio": "original",
               "focal_point": "center center",
               "image_radius": "0px",
               "highlight_menu_item": "",
