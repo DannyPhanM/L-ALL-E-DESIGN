@@ -28,7 +28,7 @@
         "show_bullets": false,
         "enable_add_to_cart": false,
         "enable_quick_view": true,
-        "price_position": "with_title",
+        "price_position": "bottom",
         "show_vendor": false,
         "max_product_name_characters": 100,
         "show_rating": true,
