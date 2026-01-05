@@ -1722,7 +1722,39 @@
   },
   "sections": {
     "cart": {
-      "quick_add_to_basket": "أضف إلى السلة بسرعة"
+      "quick_add_to_basket": "أضف إلى السلة بسرعة",
+      "title_cart": "سلة التسوق الخاصة بك",
+      "title_basket": "سلة التسوق الخاصة بك",
+      "title_bag": "حقيبتك",
+      "remove_title": "إزالة {{ title }}",
+      "subtotal": "المجموع الفرعي",
+      "cart_total": "إجمالي سلة التسوق",
+      "bag_total": "إجمالي الحقائب",
+      "basket_total": "إجمالي سلة التسوق",
+      "saved": "لقد حفظت",
+      "checkout": "الدفع",
+      "cart_error": "حدث خطأ أثناء تحديث سلة التسوق. يرجى المحاولة مرة أخرى.",
+      "bag_error": "حدث خطأ أثناء تحديث حقيبتك. يرجى المحاولة مرة أخرى.",
+      "basket_error": "حدث خطأ أثناء تحديث سلة التسوق. يرجى المحاولة مرة أخرى.",
+      "cart_quantity_error_html": "يمكنك إضافة {{ quantity }} فقط من هذا المنتج إلى حقيبتك.",
+      "bag_quantity_error_html": "يمكنك إضافة {{ quantity }} فقط من هذا المنتج إلى سلة التسوق الخاصة بك.",
+      "basket_quantity_error_html": "يمكنك إضافة {{ quantity }} فقط من هذا المنتج إلى سلة التسوق الخاصة بك.",
+      "taxes_and_shipping_policy_at_checkout_html": "يتم احتساب الضرائب ورسوم <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">الشحن</a> عند إتمام عملية الشراء",
+      "taxes_included_but_shipping_at_checkout": "يشمل السعر الضريبة ويتم احتساب تكلفة الشحن عند إتمام عملية الشراء.",
+      "taxes_included_and_shipping_policy_html": "الضريبة مشمولة. يتم احتساب <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">تكلفة الشحن</a> عند إتمام عملية الشراء.",
+      "taxes_and_shipping_at_checkout": "يتم احتساب الضرائب ورسوم الشحن عند إتمام عملية الشراء",
+      "estimate": "تقدير",
+      "zip": "الرمز البريدي",
+      "zip_placeholder": "أدخل الرمز البريدي",
+      "shipping_country": "دولة",
+      "shipping_state": "ولاية",
+      "headings": {
+        "product": "منتج",
+        "total": "المجموع"
+      },
+      "update": "تحديث",
+      "quick_add_to_cart": "أضف إلى السلة بسرعة",
+      "quick_add_to_bag": "أضف إلى السلة بسرعة"
     },
     "featured_blog": {
       "onboarding_content": "أنشئ منشورك الأول، أو اختر مدونة تحتوي على منشورات."
@@ -2274,7 +2306,14 @@
     },
     "active_inspector": {
       "extension": {
-        "select": "حدد الامتداد المسمى {{extensionName}}"
+        "select": "حدد الامتداد المسمى {{extensionName}}",
+        "unselect": "قم بإلغاء تحديد الامتداد المسمى {{extensionName}}",
+        "move_down": "انقل الامتداد إلى الموضع التالي",
+        "move_up": "انقل الامتداد إلى الموضع السابق",
+        "remove": "إزالة الإضافة",
+        "move_down_tooltip": "انتقل إلى الموضع التالي",
+        "move_up_tooltip": "الانتقال إلى الموضع السابق",
+        "remove_tooltip": "يزيل"
       }
     },
     "orders": {
@@ -2428,6 +2467,109 @@
             "shop_promise_brand_label": "التوصيل مضمون من قبل",
             "external_promise_brand_label": "التوصيل بواسطة"
           }
+        }
+      }
+    },
+    "editor": {
+      "link_new_tab_confirmation": "لا يمكن فتح هذا الرابط داخل المحرر. سيتم فتحه في نافذة جديدة ( {{resolved_to_link}} ). انقر فوق \"موافق\" للمتابعة."
+    },
+    "settings": {
+      "title": "إعدادات",
+      "loading_accessibility_message": "جارٍ تحميل صفحة الإعدادات",
+      "log_out_everywhere": {
+        "title": "تسجيل الخروج من كل مكان",
+        "description": "إذا فقدت جهازًا أو كانت لديك مخاوف أمنية، فقم بتسجيل الخروج من كل مكان لضمان أمان حسابك.",
+        "button": "تسجيل الخروج من كل مكان",
+        "warning_message": "سيتم تسجيل خروجك أيضًا من هذا الجهاز."
+      }
+    },
+    "shop_ads": {
+      "title": "منتجات أخرى قد تعجبك",
+      "subtitle": "متوفر لفترة محدودة",
+      "button": "استكشف المزيد في المتجر",
+      "previous_button": "سابق",
+      "next_button": "التالي"
+    },
+    "knowledge_base": {
+      "self_serve_returns": {
+        "enabled": "بإمكان العملاء طلب عمليات الإرجاع وإدارتها بأنفسهم.",
+        "disabled": "يجب على العملاء الاتصال بالتاجر لطلب إرجاع المنتج."
+      }
+    },
+    "subscriptions": {
+      "update_payment_instrument": {
+        "title": "استبدال طريقة الدفع",
+        "loading": "تحميل طرق الدفع",
+        "no_payment_methods_available": "لا تتوفر طرق دفع",
+        "select_new_payment_method": "اختر طريقة دفع جديدة",
+        "current_method": "حاضِر",
+        "cancel": "يلغي",
+        "save": "يحفظ",
+        "success": "تم تحديث طريقة الدفع",
+        "use_new_payment_method": "+ استخدام طريقة دفع جديدة"
+      },
+      "subscription_contracts": {
+        "title": "استخدم طريقة الدفع هذه للطلبات المتكررة",
+        "more_items": {
+          "one": "{{count}} منتج إضافي",
+          "other": "{{count}} منتجًا إضافيًا"
+        },
+        "product_count": {
+          "one": "{{count}} منتج",
+          "other": "{{count}} منتجًا"
+        },
+        "subscription_contracts_updated": "تم تحديث {{succeeded}} من {{total}} اشتراكات",
+        "product_details": "تفاصيل المنتج",
+        "load_more": "تحميل المزيد"
+      },
+      "updating_contracts": {
+        "one": "جارٍ تحديث عقد اشتراك {{count}} ...",
+        "other": "جارٍ تحديث {{count}} عقد اشتراك..."
+      },
+      "contracts_updated": {
+        "one": "تم تحديث عقد اشتراك {{count}} بنجاح",
+        "other": "تم تحديث {{count}} عقد اشتراك بنجاح"
+      },
+      "contracts_update_failed": "فشل تحديث بعض عقود الاشتراك",
+      "invalid_wallet_type_error": "نوع المحفظة غير صالح."
+    },
+    "intents": {
+      "subscription_replace_payment_method": {
+        "card_number": "رقم البطاقة",
+        "title": "استبدال طريقة الدفع",
+        "replace_with": "استبدل بـ",
+        "add_new_payment_method": "إضافة طريقة دفع جديدة",
+        "save_button": "يحفظ",
+        "close_button": "يغلق",
+        "loading": "نموذج استبدال طريقة الدفع",
+        "success": "تم تحديث طريقة الدفع",
+        "invalid_subscription_contract": "تعذر العثور على الاشتراك"
+      }
+    },
+    "sign_in": {
+      "brand_logo_alt_text": "شعار %{shop_name}",
+      "processing": "يعالج…",
+      "step_one": {
+        "page_title": "تسجيل الدخول - %{shop_name}",
+        "heading": "تسجيل الدخول",
+        "subheading": "أدخل بريدك الإلكتروني وسنرسل لك رمز التحقق",
+        "subheading_with_sign_in_options": "سجّل الدخول أو أنشئ حسابًا",
+        "input_field_label": "بريد إلكتروني",
+        "button": "يكمل",
+        "or": "أو"
+      },
+      "step_two": {
+        "page_title": "أدخل الرمز - %{shop_name}",
+        "heading": "أدخل الرمز",
+        "subheading": "تم الإرسال إلى %{email}",
+        "restart_link": "قم بتسجيل الدخول باستخدام بريد إلكتروني مختلف",
+        "input_field_label": "رمز مكون من 6 أرقام",
+        "button": "يُقدِّم"
+      },
+      "error": {
+        "invalid": {
+          "invalid_email": "أدخل عنوان بريد إلكتروني صحيح",
+          "invalid_code": "أدخل الرمز الصحيح المكون من 6 أرقام"
         }
       }
     }
