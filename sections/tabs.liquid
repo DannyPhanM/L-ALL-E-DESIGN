@@ -40,7 +40,7 @@
     }
 {% endstyle %}
 
-<div class="tabs section-tabs tabs-container-js section-tabs--{{ settings.white_space }} ordinal-section ordinal-section--{{ settings.white_space }} section-padding--{{ settings.white_space }} {% if settings.show_lines %}ordinal-section--lines lines{% endif %} {% if settings.max_page_width == '1400' or settings.max_page_width == '1200' %}page-width {% endif %} page-width--{{ settings.max_page_width }} color-{{ section.settings.color_type }} {% if section.settings.color_type != 'default' %}no-default-color{% endif %} {% if section.settings.section_width == 'narrow' %}tabs--narrow{% endif %}">
+<div class="tabs section-tabs tabs-container-js section-tabs--{{ settings.white_space }} ordinal-section ordinal-section--{{ settings.white_space }} section-padding--{{ settings.white_space }} {% if settings.show_lines %}ordinal-section--lines lines{% endif %} {% if settings.max_page_width == '1400' or settings.max_page_width == '1200' %}page-width {% endif %} page-width--{{ settings.max_page_width }} color-{{ section.settings.color_type }} {% if section.settings.color_type != 'default' %}no-default-color{% endif %} {% if section.settings.section_width == 'narrow' %}tabs--narrow{% endif %}" data-enable-redirect="{{ section.settings.enable_redirect }}">
     <div class="section-tabs__header">
         {% if section.settings.subheading != blank %}
             <{{ section.settings.subheading_tag }} class="content-subheading content-subheading--{{ settings.typography_preset }} {% if section.settings.subheading_size != 'default' %}{{ section.settings.subheading_size }}{% else %}{% if settings.typography_preset == 'custom' %}{% if settings.uppercase_label %} uppercase{% endif %}{% if settings.bolder_font_label %} bolder-font{% endif %}{% endif %}{% endif %} {% if settings.dim_text %}dim{% endif %}" {% if section.settings.center_text %}style="text-align: center;"{% endif %}>
@@ -71,9 +71,15 @@
             <component-tabs class="component-tabs__wrapper {% if section.settings.center_text %}center{% endif %}">
                 {%- for block in section.blocks -%}
                     {%- assign path_setting = block.settings.url_path | strip -%}
+                    {%- assign page_url = '' -%}
+                    {%- if block.settings.page != blank -%}
+                        {%- assign page_url = block.settings.page.url -%}
+                    {%- elsif path_setting != blank -%}
+                        {%- assign page_url = path_setting -%}
+                    {%- endif -%}
                     <button {{ block.shopify_attributes }} id="{{ block.id }}" 
                       class="section-tab-js component-tabs__tab {% if forloop.first %}active{% endif %} component-tabs__tab--{{ settings.typography_preset }} {% if section.settings.tab_heading_size != 'default' %}{{ section.settings.tab_heading_size }}{% else %}{% if settings.typography_preset == 'custom' %}{% if settings.uppercase_body_l %} uppercase{% endif %}{% if settings.bolder_font_body_l %} bolder-font{% endif %}{% endif %}{% endif %} tab-js tab-js-block-id--{{ block.id }}"
-                      {% if path_setting != blank %}data-auto-path="{{ path_setting }}"{% endif %}>
+                      {% if page_url != blank %}data-page-url="{{ page_url }}"{% endif %}>
                         {% if block.settings.custom_heading != blank %}{{ block.settings.custom_heading }}{% else %}{{ block.settings.page.title | escape }}{% endif %}
                     </button>
                 {%- endfor -%}
@@ -102,65 +108,64 @@
 {% endif %}
 
 <script>
+(function () {
+  const tabsContainer = document.querySelector('.tabs-container-js');
+  if (!tabsContainer) return;
 
-  (function () {
-    const section = document.querySelector('#shopify-section-{{ section.id }}');
-    if (!section) return;
-    const tabsContainer = section.querySelector('.tabs-container-js');
-    if (!tabsContainer) return;
+  const tabs = tabsContainer.querySelectorAll('.section-tab-js');
+  const contents = tabsContainer.querySelectorAll('.tab-content-js');
 
-    const tabs = tabsContainer.querySelectorAll('.section-tab-js');
-    const contents = tabsContainer.querySelectorAll('.tab-content-js');
-    if (!tabs.length || !contents.length) return;
+  if (!tabs.length || !contents.length) return;
 
-    const currentPath = window.location.pathname.replace(/\/$/, ""); 
-    let targetIndex = -1;
+  const enableRedirect = tabsContainer.getAttribute('data-enable-redirect') === 'true';
+  const currentPath = window.location.pathname.replace(/\/$/, '');
 
-    // 1. Auto-activate based on URL path
-    tabs.forEach((tab, index) => {
-      const autoPath = tab.getAttribute('data-auto-path');
-      if (autoPath) {
-        let normalizedAutoPath = autoPath.trim().replace(/\/$/, "");
-        if (!normalizedAutoPath.startsWith('/')) normalizedAutoPath = '/' + normalizedAutoPath;
-        
-        if (currentPath === normalizedAutoPath || currentPath.endsWith(normalizedAutoPath)) {
-          targetIndex = index;
-        }
+
+  // Auto-activate tab based on current URL
+  let activeIndex = -1;
+  tabs.forEach((tab, index) => {
+    const pageUrl = tab.getAttribute('data-page-url');
+    if (pageUrl) {
+      const normalizedPageUrl = pageUrl.replace(/\/$/, '');
+      if (currentPath === normalizedPageUrl || currentPath.endsWith(normalizedPageUrl)) {
+        activeIndex = index;
+      }
+    }
+  });
+
+  const activateTab = (index) => {
+    tabs.forEach((tab, i) => {
+      tab.classList.toggle('active', i === index);
+      tab.setAttribute('aria-selected', i === index ? 'true' : 'false');
+    });
+    contents.forEach((content, i) => {
+      content.classList.toggle('active', i === index);
+    });
+  };
+
+  // If found matching tab, activate it
+  if (activeIndex !== -1) {
+    activateTab(activeIndex);
+  }
+
+  // Handle tab clicks
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', (e) => {
+      e.preventDefault();
+      const pageUrl = tab.getAttribute('data-page-url');
+      
+      console.log('Clicked tab:', { enableRedirect, pageUrl }); // Debug
+      
+      if (enableRedirect && pageUrl) {
+        // Redirect mode - go to page URL
+        window.location.href = pageUrl;
+      } else {
+        // Normal tab switching
+        activateTab(index);
       }
     });
-
-    const activateTab = (index) => {
-      tabs.forEach((tab, i) => {
-        tab.classList.toggle('active', i === index);
-        tab.setAttribute('aria-selected', i === index ? 'true' : 'false');
-      });
-      contents.forEach((content, i) => {
-        content.classList.toggle('active', i === index);
-      });
-    };
-
-    if (targetIndex !== -1) {
-      activateTab(targetIndex);
-    }
-
-    // 2. Handle manual clicks
-    tabs.forEach((tab, index) => {
-      tab.addEventListener('click', (e) => {
-        const autoPath = tab.getAttribute('data-auto-path');
-        if (autoPath) {
-           e.preventDefault();
-           let normalizedPath = autoPath.trim();
-           if (!normalizedPath.startsWith('/')) normalizedPath = '/' + normalizedPath;
-           window.location.href = normalizedPath;
-        } else {
-           e.preventDefault();
-           activateTab(index);
-        }
-      });
-    });
-  })()
-
-
+  });
+})();
 </script>
 
 {% schema %}
@@ -170,6 +175,13 @@
     "class": "tabs",
     "max_blocks": 5,
     "settings": [
+        {
+            "type": "checkbox",
+            "id": "enable_redirect",
+            "label": "Enable redirect on tab click",
+            "info": "When enabled, clicking tabs will redirect to their associated page URLs",
+            "default": false
+        },
         {
             "type": "text",
             "id": "subheading",
@@ -615,12 +627,6 @@
                     "label": "t:sections.collection-list.settings.custom_heading.label",
                     "info": "t:sections.tabs.blocks.tab.settings.custom_heading.info",
                     "default": "Page heading"
-                },
-                {
-                    "type": "text",
-                    "id": "url_path",
-                    "label": "Auto-open on Path",
-                    "info": "Example: /pages/about-us. The tab will open automatically if the URL matches."
                 },
                 {
                     "type": "richtext",
