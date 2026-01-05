@@ -666,5 +666,160 @@
     "reset_password": {
       "title": "أعد تعيين كلمة المرور الخاصة بك"
     }
+  },
+  "sections": {
+    "cart": {
+      "quick_add_to_basket": "أضف إلى السلة بسرعة"
+    },
+    "featured_blog": {
+      "onboarding_content": "أنشئ منشورك الأول، أو اختر مدونة تحتوي على منشورات."
+    },
+    "featured_collection": {
+      "collection": "مجموعة"
+    },
+    "featured_collection_tabs": {
+      "tab_placeholder": "مجموعة"
+    },
+    "collection_template": {
+      "empty": "لا تحتوي هذه المجموعة على أي منتج.",
+      "link": "تابع التسوق",
+      "no_products": "لم يتم العثور على أي منتجات.",
+      "use_fewer_filters_html": "استخدم عددًا أقل من الفلاتر أو <a class=\"&lt;span class='notranslate'&gt;{{ class }}&lt;/span&gt;\" href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">قم بإزالة جميعها</a>"
+    },
+    "video": {
+      "load_video": "تحميل الفيديو: {{ description }}"
+    },
+    "slideshow": {
+      "pause_slideshow": "إيقاف عرض الشرائح مؤقتًا",
+      "play_slideshow": "تشغيل عرض الشرائح"
+    },
+    "page": {
+      "heading": "عنوان الصفحة"
+    },
+    "collection_list": {
+      "first_placeholder": "أولاً",
+      "second_placeholder": "ثانية",
+      "third_placeholder": "ثالث",
+      "fourth_placeholder": "رابعاً",
+      "fifth_placeholder": "الخامس",
+      "other_placeholders": "مجموعة"
+    },
+    "qiuck_view": {
+      "open_quick_view": "فتح نافذة العرض السريع المنبثقة"
+    },
+    "countdown_timer": {
+      "days": "يوم",
+      "hours": "الموارد البشرية",
+      "minutes": "مين",
+      "seconds": "القسم"
+    },
+    "stories_slideshow": {
+      "products_promotion_label": "منتجات من العرض الترويجي"
+    }
+  },
+  "general": {
+    "social_media": {
+      "text": {
+        "instagram": "انستغرام",
+        "twitter": "تغريد",
+        "tiktok": "تيك توك",
+        "snapchat": "سناب شات",
+        "pinterest": "بينترست",
+        "tumblr": "تمبلر",
+        "facebook": "فيسبوك",
+        "linkedin": "لينكد إن",
+        "youtube": "يوتيوب",
+        "vimeo": "فيميو",
+        "reddit": "ريديت",
+        "trustpilot": "تراست بايلوت",
+        "tripadvisor": "تريب أدفايزر",
+        "telegram": "برقية",
+        "line": "خط"
+      },
+      "short_text": {
+        "instagram": "إنستغرام",
+        "tiktok": "تي تي",
+        "snapchat": "فرقعة",
+        "pinterest": "دبوس",
+        "facebook": "فيسبوك",
+        "linkedin": "لي",
+        "youtube": "يوتيوب",
+        "vimeo": "آلة افتراضية",
+        "reddit": "ريديت",
+        "trustpilot": "تي بي",
+        "tripadvisor": "مساعد تدريس",
+        "telegram": "تي جي"
+      }
+    },
+    "breadcrumbs": {
+      "home": "بيت",
+      "collections": "المجموعات"
+    },
+    "burger_menu": "افتح قائمة البرجر",
+    "anchor_link": {
+      "title": "رابط التثبيت",
+      "text": "هذا القسم غير مرئي خارج تخصيص القالب"
+    },
+    "pagination": {
+      "label": "ترقيم الصفحات",
+      "page": "الصفحة {{ number }}",
+      "next": "الصفحة التالية",
+      "previous": "الصفحة السابقة",
+      "load_more": "تحميل المزيد"
+    },
+    "password_page": {
+      "login_password_button": "أدخل باستخدام كلمة المرور",
+      "login_form_heading": "ادخل إلى المتجر باستخدام كلمة المرور:",
+      "login_form_password_label": "كلمة المرور",
+      "login_form_submit": "يدخل",
+      "admin_link": "هل أنت صاحب المتجر؟",
+      "admin_link_html": "هل أنت صاحب المتجر؟ <a href=\"/admin\" class=\"link underlined-link\">سجّل دخولك هنا</a>",
+      "login": "سجل دخولك هنا",
+      "powered_by_shopify_html": "سيتم تشغيل هذا المتجر بواسطة {{ shopify }}"
+    },
+    "slider": {
+      "of": "ل",
+      "next_slide": "الشريحة التالية",
+      "previous_slide": "الشريحة السابقة"
+    },
+    "links": {
+      "link_to_button_label": "رابط إلى {{ label }}"
+    }
+  },
+  "templates": {
+    "search": {
+      "no_results": "لم يتم العثور على نتائج للبحث عن \" {{ terms }} \". يرجى التحقق من التهجئة أو استخدام كلمة أو عبارة مختلفة.",
+      "products": "منتجات",
+      "queries": "اقتراحات",
+      "collections": "المجموعات",
+      "articles": "منشورات المدونة",
+      "pages": "الصفحات",
+      "search_for": "ابحث عن {{ terms }}",
+      "go_to_search_page": "انتقل إلى صفحة البحث",
+      "results_with_count": {
+        "one": "{{ count }} result",
+        "other": "{{ count }} نتيجة"
+      },
+      "results_with_count_and_term": {
+        "one": "{{ count }} نتيجة للبحث عن \" {{ terms }} \"",
+        "other": "{{ count }} نتيجة للبحث عن \" {{ terms }} \""
+      },
+      "use_fewer_filters_html": "استخدم عددًا أقل من الفلاتر أو <a class=\"&lt;span class='notranslate'&gt;{{ class }}&lt;/span&gt;\" href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">قم بإزالة جميعها</a>",
+      "search_title": "يبحث",
+      "placeholder": "يبحث",
+      "clear": "واضح",
+      "menu_title": "عمليات البحث الشائعة"
+    },
+    "contact": {
+      "form": {
+        "name": "اسم",
+        "email": "بريد إلكتروني",
+        "phone": "هاتف",
+        "comment": "رسالة",
+        "post_success": "نشكركم على تواصلكم معنا. سنعاود الاتصال بكم في أقرب وقت ممكن.",
+        "error_heading": "يرجى تعديل ما يلي:",
+        "checkbox": "الشروط والأحكام"
+      }
+    }
   }
 }
