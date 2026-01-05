@@ -9,10 +9,26 @@
  */
 {
   "sections": {
-    "tabs_hzUyEp": {
+    "main-page": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "hide_heading": false,
+        "heading_size": "default",
+        "heading_tag": "h2",
+        "text_size": "default",
+        "section_width": "wide",
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0
+      }
+    },
+    "tabs_k7UQYE": {
       "type": "tabs",
       "blocks": {
-        "tab_EDVfNM": {
+        "tab_aM6yCt": {
           "type": "tab",
           "settings": {
             "custom_heading": "Shopping Guide",
@@ -22,7 +38,7 @@
             "page": "shopping-guide"
           }
         },
-        "tab_m3ip8q": {
+        "tab_6eMYJg": {
           "type": "tab",
           "settings": {
             "custom_heading": "SHIPPING POLICY",
@@ -32,7 +48,7 @@
             "page": "shipping-policy"
           }
         },
-        "tab_rLXbYn": {
+        "tab_zpicRm": {
           "type": "tab",
           "settings": {
             "custom_heading": "RETURN & EXCHANGES",
@@ -42,7 +58,7 @@
             "page": "return-exchange"
           }
         },
-        "tab_UXnjEx": {
+        "tab_FCbVwm": {
           "type": "tab",
           "settings": {
             "custom_heading": "Privacy Policy",
@@ -54,10 +70,10 @@
         }
       },
       "block_order": [
-        "tab_EDVfNM",
-        "tab_m3ip8q",
-        "tab_rLXbYn",
-        "tab_UXnjEx"
+        "tab_aM6yCt",
+        "tab_6eMYJg",
+        "tab_zpicRm",
+        "tab_FCbVwm"
       ],
       "name": "t:sections.tabs.name",
       "settings": {
@@ -79,22 +95,6 @@
         "mobile_padding_bottom": 0
       }
     },
-    "main-page": {
-      "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "heading": "",
-        "hide_heading": false,
-        "heading_size": "default",
-        "heading_tag": "h2",
-        "text_size": "default",
-        "section_width": "wide",
-        "desktop_padding_top": 0,
-        "desktop_padding_bottom": 0,
-        "mobile_padding_top": 0,
-        "mobile_padding_bottom": 0
-      }
-    },
     "anchor_link_f9qnAN": {
       "type": "anchor-link",
       "disabled": true,
@@ -105,7 +105,7 @@
     }
   },
   "order": [
-    "tabs_hzUyEp",
+    "tabs_k7UQYE",
     "main-page",
     "anchor_link_f9qnAN"
   ]
