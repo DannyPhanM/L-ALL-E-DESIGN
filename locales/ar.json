@@ -529,11 +529,7 @@
         "pay_now": "ادفع الآن"
       },
       "change_currency": {
-        "credit_card_will_be_charged_html": "سيتم خصم مبلغ %{amount} من بطاقتك الائتمانية",
-        "payment_total_label": "إجمالي الدفع",
-        "change_currency_link": "غيّر إلى %{currency_name}",
-        "card_provider_fx_charges_warning": "قد يفرض مزود بطاقتك رسومًا على معاملات %{currency_code}.",
-        "currency_not_supported_by_shop": "العملة التي اخترتها غير متوفرة. جميع الأسعار الآن بـ %{currency_code}."
+        "credit_card_will_be_charged_html": "سيتم خصم مبلغ %{amount} من بطاقتك الائتمانية"
       },
       "stock": {
         "unpurchasable_product": {
@@ -691,173 +687,6 @@
         "applied_free_shipping_discount_label": "مُطبَّق",
         "apply_discount_button_label": "يتقدم",
         "applied_discount_message": "خصم بنسبة %{amount} من إجمالي سعر الطلب"
-      },
-      "change_country": {
-        "cart_updated_based_on_country": "تم تحديث سلة التسوق الخاصة بك بناءً على بلد الشحن الخاص بك.",
-        "cart_and_currency_updated_based_on_country": "تم تحديث سلة التسوق والعملة بناءً على بلد الشحن الخاص بك."
-      },
-      "change_cart_localization": {
-        "verify_shipping_address": "تم تحديث بلدك/منطقتك. أدخل عنوان الشحن الخاص بك لمتابعة عملية الدفع."
-      },
-      "tips": {
-        "title": "أضف بقشيشًا",
-        "description": "أظهر دعمك للفريق على %{shop_name}",
-        "presets_description": "اختر نسبة الإكرامية",
-        "custom_label": "نصيحة مخصصة",
-        "add_tip": "أضف بقشيشًا",
-        "update_tip": "نصيحة التحديث",
-        "message": "شكراً لكم، نحن نقدر ذلك.",
-        "preset_label": "%{نسبة_الإكرامية}%",
-        "no_tip_label": "لا أحد"
-      },
-      "open_graph_meta_tag": {
-        "title_with_products": {
-          "zero": "شراء %{product_name}",
-          "one": "اشترِ %{product_name} و%{count} من المنتجات الأخرى",
-          "other": "اشترِ %{product_name} و%{count} من المنتجات الأخرى"
-        }
-      },
-      "subscriptions": {
-        "recurring_total_intervals": {
-          "day": {
-            "one": "يوم",
-            "other": "%{count} يومًا"
-          },
-          "week": {
-            "one": "أسبوع",
-            "other": "%{count} أسابيع"
-          },
-          "month": {
-            "one": "شهر",
-            "other": "%{count} أشهر"
-          },
-          "year": {
-            "one": "سنة",
-            "other": "%{count} سنوات"
-          }
-        },
-        "recurring_totals": "%{total_price} كل %{interval}",
-        "recurring_totals_with_initial_order_shipping_discount": "الدفعة الأولى %{total_price_with_discount}، ثم %{recurring_total}",
-        "recurring_totals_with_policies": {
-          "first_cycles": {
-            "one": "الدفعة الأولى %{total_price}",
-            "other": "الدفعة الأولى %{count} دفعة %{total_price} لكل منها"
-          },
-          "following_cycles": "ثم %{total_price} كل %{interval}"
-        },
-        "recurring_totals_with_initial_order_shipping_discount_with_policies": {
-          "first_cycles": {
-            "one": "ثم يتم دفع مبلغ %{count} بقيمة %{total_price}",
-            "other": "ثم %{count} دفعة بسعر %{total_price} لكل دفعة"
-          }
-        }
-      },
-      "customer_payment_methods": {
-        "page_title": "طرق الدفع",
-        "title": "طرق الدفع",
-        "update_card_button_label": "تحديث البطاقة",
-        "delete_customer_mandate": {
-          "generic_error": "حدثت مشكلة أثناء معالجة طلبك.",
-          "success_message": "تم حذف طريقة الدفع الخاصة بك بنجاح"
-        }
-      },
-      "throttle": {
-        "too_many_attempts": {
-          "message": "محاولات كثيرة جداً",
-          "description": "يرجى المحاولة مرة أخرى بعد بضع دقائق"
-        },
-        "line_to_check_out": "أنت الآن في صف الدفع",
-        "cart_summary_heading": "سلة التسوق الخاصة بك",
-        "merchandise": {
-          "available": "متاح",
-          "sold_out": "نفذ"
-        },
-        "inventory": {
-          "partial_inventory_banner": "بعض المنتجات الموجودة في سلة التسوق الخاصة بك نفدت من المخزون ولن تكون متاحة للشراء عند إتمام عملية الدفع.",
-          "sold_out": {
-            "heading": "نفدت الكمية في سلة التسوق الخاصة بك",
-            "storefront_body": "ارجع إلى المتجر لمواصلة التسوق",
-            "no_storefront_body": "للأسف، المنتج الذي ترغب في شرائه لم يعد متوفراً.",
-            "link": "العودة إلى المتجر"
-          }
-        },
-        "title": "طابور",
-        "time_to_checkout_title": "حان وقت التسوق - {{shopName}}",
-        "estimated_wait_time": {
-          "calculating": "حساب وقت الانتظار المقدر",
-          "less_than_one": "مدة الانتظار المتوقعة: أقل من دقيقة",
-          "one": "مدة الانتظار المقدرة: {{count}} دقيقة",
-          "other": "مدة الانتظار المقدرة: {{count}} دقيقة"
-        },
-        "last_checked": "(آخر فحص: {{time}} )",
-        "footer": {
-          "heading": "لا تقم بتحديث هذه الصفحة، سيتم تحديثها تلقائيًا.",
-          "body": "لن يتم حجز المنتجات الموجودة في سلة التسوق الخاصة بك إلا بعد إتمام عملية الدفع."
-        }
-      },
-      "cart_checkout_validation": {
-        "runtime_error": "حدثت مشكلة أثناء معالجة طلبك، يرجى الاتصال بصاحب المتجر."
-      },
-      "no_address_location": {
-        "title": "موقع بدون عنوان",
-        "header": "ليس لديك عنوان شحن لهذا الموقع",
-        "alt_header": "عنوان الشحن مفقود",
-        "message": "اتصل بنا لإضافة عنوان لهذا الموقع لإتمام عملية الدفع.",
-        "email_us_button_label": "أرسل لنا بريدًا إلكترونيًا"
-      },
-      "order_errors": {
-        "creation_failure": "حدثت مشكلة أثناء إنشاء طلبك. حاول مرة أخرى، أو تواصل معنا لمزيد من التفاصيل.",
-        "network_failure": "لم يتم إرسال طلبك بسبب خطأ في الشبكة. يرجى التحقق من اتصالك بالإنترنت والمحاولة مرة أخرى.",
-        "inventory_reservation_failure": "بعض المنتجات لم تعد متوفرة."
-      },
-      "session_errors": {
-        "session_not_unique": "حدثت مشكلة أثناء معالجة طلبك. قم بتحديث هذه الصفحة للعودة إلى المتجر.",
-        "session_already_finished": "تم تقديم هذا الطلب مسبقاً. يمكنك العودة إلى المتجر لتقديم طلب جديد."
-      },
-      "artifact_errors": {
-        "artifact_dissatisfaction_without_violation": "حدثت مشكلة أثناء معالجة طلبك. حاول مرة أخرى بعد بضع دقائق."
-      },
-      "pickup_point": {
-        "location_is_currently_closed": "مغلق",
-        "business_hours": "ساعات العمل",
-        "no_business_hours": "لا توجد ساعات عمل متاحة",
-        "open_twenty_four_hours": "مفتوح 24/7",
-        "title": "نقطة الاستلام",
-        "or": "أو",
-        "search_button": "يبحث",
-        "address_label": "عنوان",
-        "selector_tabs": "محدد نقطة الالتقاط",
-        "selector_tab_map": "رسم خريطة",
-        "selector_tab_list": "قائمة",
-        "could_not_resolve_address": "لم يتم العثور على عنوانك. حاول مرة أخرى أو استخدم عنوانًا مختلفًا.",
-        "no_pickup_points_near_you": "لم يتم العثور على نقاط استلام بالقرب من العنوان المحدد",
-        "no_pickup_points_near_location": "لم يتم العثور على نقاط استلام بالقرب من موقعك",
-        "pickup_unavailable_banner_title": {
-          "one": "لا توجد نقاط استلام متاحة لمنتجك",
-          "other": "لا توجد نقاط استلام متاحة لمنتجاتك"
-        },
-        "no_pickup_points_found": "لم يتم العثور على نقاط استلام",
-        "paginator": {
-          "next_accessibility_label": "الصفحة التالية",
-          "previous_accessibility_label": "الصفحة السابقة",
-          "header": {
-            "one": "عرض النقاط من %{first} إلى %{last} من أصل %{count} نقطة",
-            "other": "عرض %{first} - %{last} من %{count} نقطة"
-          },
-          "selected_pickup_point_label": {
-            "one": "%{pickup_point_index} من %{count} نقطة",
-            "other": "%{pickup_point_index} من %{count} نقطة"
-          },
-          "selected_page": {
-            "one": "%{first} - %{last} من %{count} نقطة",
-            "other": "من %{first} إلى %{last} من %{count} نقطة"
-          }
-        },
-        "number_of_pickup_points_near_location": {
-          "one": "%{count} نقطة استلام بالقرب من موقعك",
-          "other": "عدد نقاط الاستلام القريبة من موقعك: %{count}"
-        },
-        "change": "تغيير الموقع"
       }
     },
     "notices": {
@@ -1582,6 +1411,136 @@
         "edit_accessibility_label": "تعديل رقم أمر الشراء",
         "edit_modal_title": "تعديل رقم أمر الشراء",
         "empty_state": "لا يوجد رقم أمر شراء"
+      }
+    },
+    "payment_methods": {
+      "payment_details": {
+        "billing_title": "عنوان الفواتير",
+        "card_info_title": "معلومات البطاقة",
+        "payment_method_expiring_on": "تاريخ الانتهاء {{expiryDate}}",
+        "payment_method_expired_on": "تاريخ انتهاء الصلاحية: {{expiryDate}}",
+        "preauthorized_payments": "المدفوعات المعتمدة مسبقاً",
+        "close_payment_modal": "يغلق",
+        "close_payment_modal_accessibility_label": "إغلاق نافذة تفاصيل طريقة الدفع",
+        "payment_method_not_found_error": "تعذر العثور على طريقة الدفع",
+        "payment_details_loading": "جارٍ تحميل تفاصيل طريقة الدفع",
+        "pre_authorized_payments": "المدفوعات المعتمدة مسبقًا",
+        "total_amount_of_subscription_line_items_left": "و {{total}} أكثر",
+        "total_amount_of_subscription_line_items_left_accessibility_label": "إجمالي عدد العناصر {{totalItems}} عنصرًا، ويتم عرض {{totalItemsToDisplay}} عنصرًا.",
+        "next_payment_due": "موعد استحقاق الدفعة التالية هو {{dueDateInMonthDayYear}}",
+        "edit_payment_method_button": "يحرر",
+        "edit_payment_method_button_accessibility_label": "تعديل طريقة الدفع التي تنتهي بـ {{lastDigits}}",
+        "loading_shop_pay": "تحميل متجر الدفع",
+        "invalid_payment_method": "طريقة دفع غير صالحة",
+        "invalid_payment_method_message": "استخدم بطاقة ائتمان جديدة لمواصلة تلقي الطلبات القادمة.",
+        "replace_payment_method": "استبدال طريقة الدفع",
+        "checkout_card_banner": "لا يمكن استخدام طريقة الدفع هذه إلا للمدفوعات التي تم تفويضها مسبقًا. ولن تظهر عند إتمام عملية الشراء إذا كنت مسجلاً دخولك إلى هذا المتجر. ",
+        "default_checkbox": "تعيين كافتراضي",
+        "default_checkbox_accessibility_label": "عيّن طريقة الدفع هذه كطريقة افتراضية.",
+        "replace_payment_method_button": "يستبدل"
+      },
+      "edit_payment_method": {
+        "title": "تعديل طريقة الدفع",
+        "save_payment_method_button": "يحفظ",
+        "cancel_edit_payment_method_button": "يلغي",
+        "payment_method_updated_toast": "تم تحديث طريقة الدفع",
+        "billing_address": "عنوان الفواتير",
+        "billing_address_add_new": "إضافة جديد",
+        "billing_address_choose_from_list": "اختر من القائمة",
+        "future_purchases_notice": "سيتم حفظ طريقة الدفع هذه لاستخدامها في عمليات الشراء المستقبلية.",
+        "generic_error": "حدثت مشكلة أثناء التحديث. يرجى المحاولة مرة أخرى."
+      },
+      "update_payment_method": {
+        "title": "تحديث طريقة الدفع",
+        "button_title": "تحديث",
+        "billing_address": "عنوان الفواتير",
+        "disclaimer": "سيتم حفظ طريقة الدفع هذه للمشتريات المستقبلية ويمكن استخدامها لأي عملية شراء متكررة أو مؤجلة.",
+        "error_message": "تعذر تحديث طريقة الدفع",
+        "current": "حاضِر",
+        "subscriptions_title": "الاشتراكات",
+        "subscriptions_list_accessibility_label": "قائمة منتجات الاشتراك",
+        "pre_orders_title": "قريباً",
+        "pre_orders_list_accessibility_label": "قائمة المنتجات قيد الطلب",
+        "resources_list_accessibility_label": "المنتجات التي يتم الاشتراك فيها والمنتجات التي لا تزال قيد الطلب والتي تستخدم طريقة الدفع هذه",
+        "resources_card_scroll": "تصفح للمزيد من العناصر",
+        "resources_card_show_more": "عرض المزيد",
+        "resources_card_show_less": "عرض أقل",
+        "loading_form_accessibility_message": "جارٍ تحميل نموذج تحديث طريقة الدفع",
+        "loading_current_payment_method": "جارٍ تحميل طريقة الدفع الحالية",
+        "loading_digital_wallets": "جارٍ تحميل خيارات المحفظة الرقمية",
+        "loading_card_fields": "تحميل حقول بطاقة الائتمان",
+        "loading_resources": "جارٍ تحميل الاشتراكات والطلبات القادمة"
+      },
+      "link_expired": {
+        "message": "انتهت صلاحية هذا الرابط لتحديث طريقة الدفع الخاصة بك.",
+        "update_message": "انتهت صلاحية هذا الرابط لتحديث طريقة الدفع الخاصة بك.",
+        "add_message": "انتهت صلاحية هذا الرابط لإضافة طريقة الدفع الخاصة بك.",
+        "return_home_button": "العودة إلى الصفحة الرئيسية"
+      },
+      "update_success": {
+        "title": "تم تحديث طريقة الدفع",
+        "done_button": "تابع التسوق"
+      },
+      "add_success": {
+        "title": "تمت إضافة طريقة الدفع",
+        "done_button": "تابع التسوق"
+      },
+      "card_fields": {
+        "card_number_label": "رقم البطاقة",
+        "card_number_placeholder": "رقم البطاقة",
+        "name_on_card_label": "الاسم على البطاقة",
+        "name_on_card_placeholder": "الاسم على البطاقة",
+        "card_expiry_label": "تاريخ الانتهاء (شهر / سنة)",
+        "card_expiry_placeholder": "تاريخ الانتهاء (شهر / سنة)",
+        "card_verification_value_label": "رمز الأمان",
+        "card_verification_value_placeholder": "رمز الأمان",
+        "card_start_label": "تاريخ الإصدار (شهر / سنة)",
+        "card_start_placeholder": "تاريخ الإصدار (شهر / سنة)",
+        "tooltip": {
+          "tooltip_accessibility_label": "للمزيد من المعلومات",
+          "card_verification_value_explanation_amex": "رمز أمان مكون من 4 أرقام موجود على وجه بطاقتك",
+          "card_verification_value_explanation_other": "رمز أمان مكون من 3 أرقام موجود على ظهر بطاقتك",
+          "card_verification_value_explanation": "رمز الأمان المكون من 3 أرقام موجود عادةً على ظهر البطاقة. أما بطاقات أمريكان إكسبريس، فيحتوي رمزها على 4 أرقام موجود على وجهها.",
+          "card_security_notice": "جميع المعاملات آمنة ومشفرة."
+        },
+        "field_errors": {
+          "credit_card_name_invalid": "أدخل اسمك تمامًا كما هو مكتوب على بطاقتك",
+          "credit_card_number_invalid": "أدخل رقم بطاقة صالح",
+          "credit_card_expiry_invalid": "أدخل تاريخ انتهاء صلاحية البطاقة الصحيح",
+          "credit_card_verification_value_blank": "أدخل رمز التحقق من البطاقة (CVV) أو رمز الأمان الموجود على بطاقتك"
+        },
+        "unavailable": {
+          "text": "الدفع ببطاقات الائتمان والخصم غير متاح حاليًا.",
+          "link_text": "قم بتحديث هذه الصفحة",
+          "suffix": "أو حاول مرة أخرى لاحقاً."
+        }
+      },
+      "payment_delete": {
+        "title": "حذف طريقة الدفع",
+        "description_without_replacement": "لن تكون طريقة الدفع هذه متاحة للمشتريات المستقبلية.",
+        "description_with_replacement": "سيؤثر حذف طريقة الدفع هذه على عمليات الدفع المسبقة. يمكنك استبدالها بطريقة دفع أخرى لمواصلة استلام الطلبات القادمة.",
+        "warning_message_with_replacement": {
+          "with_pending_orders_and_subscriptions": "سيؤثر حذف طريقة الدفع هذه على المدفوعات المسبقة. ما لم تختر طريقة دفع بديلة، فسيتم خصم أي أرصدة مستحقة على الطلبات الحالية من هذه الطريقة. سيُمكّنك اختيار طريقة دفع بديلة من استلام طلبات الاشتراك القادمة دون انقطاع.",
+          "with_pending_orders": "سيؤدي حذف طريقة الدفع هذه إلى إزالتها من حسابك ولن تكون متاحة للمشتريات المستقبلية. ما لم تختر طريقة دفع بديلة، فسيتم خصم أي مبالغ مستحقة على الطلبات الحالية.",
+          "with_subscriptions": "سيؤدي حذف طريقة الدفع هذه إلى التأثير على المدفوعات المسبقة. استبدلها بطريقة دفع بديلة لمواصلة استلام الطلبات القادمة."
+        },
+        "warning_message_without_replacement": {
+          "with_pending_orders_and_subscriptions": "سيؤثر حذف طريقة الدفع هذه على المدفوعات المسبقة. سيتم خصم أي أرصدة مستحقة على الطلبات الحالية من هذه الطريقة، ولكنك لن تتلقى طلبات الاشتراك القادمة. أضف طريقة دفع بديلة لمواصلة تلقي طلبات الاشتراك.",
+          "with_pending_orders": "سيؤدي حذف طريقة الدفع هذه إلى إزالتها من حسابك ولن تكون متاحة للمشتريات المستقبلية. مع ذلك، سيتم خصم أي مبالغ مستحقة على الطلبات الحالية منها.",
+          "with_subscriptions": "سيؤثر حذف طريقة الدفع هذه على المدفوعات المسبقة. أضف طريقة دفع بديلة لمواصلة استلام الطلبات القادمة."
+        },
+        "payment_method_selector_placeholder": "اختر طريقة دفع بديلة (اختياري)",
+        "payment_method_selector_no_alternative_payment": "لا توجد طريقة بديلة",
+        "replace_method_with_new_method_description": "سيتم حذف {{currentPaymentMethodName}} واستبداله بـ {{newPaymentMethodName}} .",
+        "error_when_deleting": "نعتذر، ولكن حدث خطأ ما ولم نتمكن من حذف طريقة الدفع هذه. يرجى المحاولة مرة أخرى لاحقًا أو تحديث الصفحة.",
+        "delete_and_replace_button": "حذف واستبدال",
+        "delete_and_replace_button_accessibility_label": "احذف {{currentPaymentMethodName}} واستبدله بـ {{newPaymentMethodName}} .",
+        "deleted_successfully": "تم حذف طريقة الدفع بنجاح.",
+        "loading_available_payment_methods_accessibility_label": "جارٍ تحميل طرق الدفع المتاحة"
+      },
+      "add_payment_method": {
+        "title": "إضافة طريقة دفع",
+        "button_title": "يضيف"
       }
     }
   },
