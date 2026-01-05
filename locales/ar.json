@@ -1051,7 +1051,62 @@
         "free_shipping_discount_label": "ًالشحن مجانا",
         "applied_free_shipping_discount_label": "مُطبَّق",
         "apply_discount_button_label": "يتقدم",
-        "applied_discount_message": "خصم بنسبة %{amount} من إجمالي سعر الطلب"
+        "applied_discount_message": "خصم بنسبة %{amount} من إجمالي سعر الطلب",
+        "deferred_payment_info": {
+          "description_html": "للاستفسارات المتعلقة بطلبك، يرجى التواصل معنا.",
+          "paid_today": "إجمالي المبلغ المدفوع اليوم",
+          "paid_today_next": "تم الدفع اليوم",
+          "due_on_fulfillment_title": "يُستحق دفع مبلغ %{amount_due} عند إتمام عملية الدفع.",
+          "due_on_receipt_title": "يُستحق دفع مبلغ %{amount_due} عند استلام الإيصال."
+        },
+        "deferred_balance_info": {
+          "title": "يُستحق دفع المبلغ المتبقي {{amount_due}} في تاريخ {{due_at}}",
+          "due_on_fulfillment_title": "يُستحق دفع المبلغ المتبقي {{amount_due}} عند إتمام عملية الدفع."
+        },
+        "payment_terms_totals": {
+          "due_today": "إجمالي اليوم",
+          "due_today_next": "مستحق اليوم",
+          "due_later": "إجمالي المبلغ المستحق %{due_at}",
+          "due_on_fulfillment": "المبلغ الإجمالي المستحق عند إتمام عملية الشراء",
+          "due_on_fulfillment_next": "مستحق الدفع عند الإنجاز",
+          "due_on_receipt": "المبلغ الإجمالي المستحق عند الاستلام",
+          "due_later_checkout_to_draft": "المبلغ الإجمالي مستحق لاحقاً",
+          "total_paid": "إجمالي المبلغ المدفوع"
+        },
+        "maximum_discount_code_limit_reached": "لقد وصلت إلى الحد الأقصى لعدد أكواد الخصم. قم بإزالة كود موجود لاستخدام <strong style=\"text-transform:uppercase\">%{code}</strong> .",
+        "discount_code_application_failed": "لا يعمل <strong style=\"text-transform:uppercase\">الرمز %{code}</strong> حاليًا. تواصل معنا للحصول على المساعدة.",
+        "due_on_fulfillment": "مستحق الدفع عند الإنجاز",
+        "subscriptions": "الاشتراكات",
+        "duties_label": "الواجبات",
+        "duties_and_taxes_label": "الرسوم والضرائب",
+        "error_duties_tooltip": "يتم شحن هذا الطلب من دولة أخرى، لذا قد يتم فرض رسوم وضرائب عند التسليم.",
+        "may_be_charged_on_delivery": "قد يتم تحصيل رسوم عند التسليم",
+        "total_updated_label_with_price": "السعر الإجمالي المحدث: %{totalPrice}",
+        "updated_shipping_method": "طريقة الشحن المحدثة: %{shipping_method}",
+        "recurring_payments": "المدفوعات المتكررة",
+        "recurring_total_multiple_label": "يتضمن هذا الطلب رسومًا متكررة عند شراء عدة منتجات.",
+        "deferred_total_due_date_label": "إجمالي المبلغ المستحق {{date}}",
+        "deferred_total_due_date_label_next": "تاريخ الاستحقاق %{date}",
+        "full_price": "السعر الكامل: %{price}",
+        "custom_discount": "خصم مخصص",
+        "expand_component_information": {
+          "one": "عرض عدد العناصر %{count}",
+          "other": "عرض %{count} عنصرًا"
+        },
+        "collapse_component_information": {
+          "one": "إخفاء عنصر واحد (عدد العناصر)",
+          "other": "إخفاء %{count} عنصرًا"
+        },
+        "component_quantity_title": "%{الكمية} × %{اسم_المنتج}",
+        "discount_discovery": {
+          "add_code": "أضف خصمًا",
+          "merchandise_quantity_label": {
+            "one": "%{count} عنصر",
+            "other": "%{count} عنصرًا"
+          }
+        },
+        "alternative_payment_currency_total": "تم تحصيل المبلغ المستحق بنسبة %{amount_due}",
+        "discount_applies_to_subscription_items_only": "يسري هذا الخصم فقط على عناصر الاشتراك"
       },
       "field_errors": {
         "address_country_not_supported": "لا نقوم بالشحن إلى هذا البلد أو المنطقة. أدخل عنوان شحن جديد وحاول مرة أخرى.",
@@ -1686,6 +1741,22 @@
           "free_for_first_n_order": {
             "one": "للطلب الأول",
             "other": "لأول %{count} طلب"
+          },
+          "free_shipping_cycles": {
+            "one": "شحن مجاني لـ %{count} طلب توصيل إضافي",
+            "other": "شحن مجاني لـ %{count} عملية توصيل إضافية"
+          },
+          "free_shipping_cycles_delivery_not_included": {
+            "one": "شحن مجاني لـ %{count} طلب توصيل",
+            "other": "شحن مجاني لـ %{count} عملية توصيل"
+          },
+          "first_n_order_free_with_cycle": {
+            "one": "شحن مجاني لـ %{count} طلب إضافي، ثم %{recurring_order_shipping_price}",
+            "other": "شحن مجاني لـ %{count} طلب توصيل إضافي، ثم %{recurring_order_shipping_price}"
+          },
+          "first_n_order_free_with_cycle_delivery_not_included": {
+            "one": "شحن مجاني لـ %{count} طلب توصيل، ثم %{recurring_order_shipping_price}",
+            "other": "شحن مجاني لـ %{count} عملية توصيل، ثم %{recurring_order_shipping_price}"
           }
         },
         "one_time_purchase_shipping": "شحن لمرة واحدة",
@@ -1755,7 +1826,66 @@
         "split_shipping_shipment_notice": "سيصل طلبك خلال %{quantity_shipments}",
         "split_shipping_first_shipment_notice": "سيصل طلبك الأول خلال %{quantity_shipments}",
         "split_shipping_multiple_shipment_quantity_label": "شحنات بقيمة %{quantity}",
-        "split_shipping_multiple_shipment_notice": "سيصل طلبك على دفعات متعددة"
+        "split_shipping_multiple_shipment_notice": "سيصل طلبك على دفعات متعددة",
+        "title": "شحن",
+        "delivery_title": "توصيل",
+        "shipping_method_title": "طريقة الشحن",
+        "shipping_method_rollup_accessibility_label": "خيارات طريقة الشحن",
+        "shipping_method_one_time_purchase_group_title": "عملية شراء لمرة واحدة",
+        "shipping_method_first_shipment_group_title": {
+          "one": "الشحنة الأولى",
+          "other": "الشحنات الأولى"
+        },
+        "shipping_method_subscription_group_title": "الاشتراك",
+        "shipping_method_recurring_shipments_group_title": {
+          "one": "شحنة متكررة",
+          "other": "الشحنات المتكررة"
+        },
+        "subscription_shipping": "شحن الاشتراكات",
+        "subscription_local_delivery": "خدمة التوصيل المحلي عبر الاشتراك",
+        "subscription_pickup": "استلام الاشتراك",
+        "waiting_on_rate_notice": "الحصول على أسعار الشحن المتاحة...",
+        "waiting_on_pickup_location_notice": "جارٍ البحث عن مواقع الاستلام المتاحة...",
+        "no_rates_for_cart_or_destination_notice": "لا تتوفر أي طرق شحن لسلة التسوق أو العنوان الخاص بك",
+        "no_pickup_location_notice": "أحد منتجاتك على الأقل غير متاح للاستلام",
+        "no_rates_for_country_notice": "لم يتم العثور على أسعار الشحن لهذا العنوان.",
+        "no_rates_contact_notice": "تواصل معنا للحصول على مزيد من المعلومات",
+        "free_rate_label": "حر",
+        "cheapest_rate_label": "الأرخص",
+        "please_enter_your_shipping_information_notice": "يرجى إدخال معلومات الشحن الخاصة بك.",
+        "estimated_delivery_date": {
+          "one": "يوم عمل واحد",
+          "other": "%{count} أيام عمل"
+        },
+        "estimated_delivery_date_range": "من %{minimum} إلى %{maxum} يوم عمل",
+        "estimated_delivery_time": "وقت التسليم المتوقع %{time}",
+        "estimated_delivery_time_range": "وقت التسليم المتوقع: من الحد الأدنى للوقت إلى الحد الأقصى للوقت",
+        "delivery_today": "التوصيل في نفس اليوم %{time}",
+        "delivery_tomorrow": "التوصيل في اليوم التالي %{time}",
+        "two_day_delivery": "التوصيل خلال يومين %{time}",
+        "delivery": "موعد التسليم}",
+        "arrives_time": "يصل في الوقت المحدد %{time}",
+        "arrives_time_range": "يصل في الفترة من 80 دقيقة إلى 80 دقيقة.",
+        "estimated_time": "الوقت المقدر %{time}",
+        "estimated_time_range": "الوقت المقدر %{min_time}–%{max_time}",
+        "default_description": "يتم الشحن خلال يوم عمل واحد",
+        "unbranded_default_description": "جاهز للشحن",
+        "shipping_line_phone_label": "رقم الهاتف المحمول (مطلوب)",
+        "shipping_line_phone": "قد يستخدم مندوب التوصيل هذا الرقم للاتصال بك.",
+        "shipping_line_delivery_phone_label": "رقم الهاتف المحمول",
+        "shipping_line_delivery_phone": "قد يتم التواصل معك لإطلاعك على آخر المستجدات المتعلقة بتسليم طلبك.",
+        "optional_shipping_line_delivery_instructions_label": "تعليمات التوصيل (اختياري)",
+        "shipping_line_delivery_instructions": "أدخل المعلومات الضرورية مثل رموز الأبواب أو تعليمات التسليم.",
+        "other_method": {
+          "zero": "لا توجد طرق أخرى متاحة",
+          "one": "تتوفر طريقة أخرى بنسبة 1% في",
+          "other": "تتوفر طرق أخرى تبدأ من %{count}"
+        },
+        "shipping_rate_discounted_amount": "كان: %{original_amount}. الآن: %{amount}",
+        "local_delivery": "خدمة التوصيل المحلية",
+        "prime_not_available": {
+          "default": "خدمة التوصيل السريع غير متاحة لطلبك. تم تحديث خيارات الشحن الخاصة بك."
+        }
       },
       "pickup_point": {
         "waiting_on_pickup_point_location_notice": "البحث عن نقاط الالتقاء...",
