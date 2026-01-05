@@ -9,22 +9,6 @@
  */
 {
   "sections": {
-    "main-page": {
-      "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "heading": "",
-        "hide_heading": false,
-        "heading_size": "default",
-        "heading_tag": "h2",
-        "text_size": "default",
-        "section_width": "wide",
-        "desktop_padding_top": 0,
-        "desktop_padding_bottom": 0,
-        "mobile_padding_top": 0,
-        "mobile_padding_bottom": 0
-      }
-    },
     "tabs_y4n9Xy": {
       "type": "tabs",
       "blocks": {
@@ -32,7 +16,6 @@
           "type": "tab",
           "settings": {
             "custom_heading": "Shopping Guide",
-            "url_path": "pages/shopping-guide",
             "text": "",
             "text_size": "default",
             "page": "shopping-guide"
@@ -42,7 +25,6 @@
           "type": "tab",
           "settings": {
             "custom_heading": "SHIPPING POLICY",
-            "url_path": "pages/shipping-policy",
             "text": "",
             "text_size": "default",
             "page": "shipping-policy"
@@ -52,7 +34,6 @@
           "type": "tab",
           "settings": {
             "custom_heading": "RETURN & EXCHANGES",
-            "url_path": "pages/return-exchange",
             "text": "",
             "text_size": "default",
             "page": "return-exchange"
@@ -62,7 +43,6 @@
           "type": "tab",
           "settings": {
             "custom_heading": "Privacy Policy",
-            "url_path": "pages/privacy-policy",
             "text": "",
             "text_size": "default",
             "page": "privacy-policy"
@@ -77,6 +57,7 @@
       ],
       "name": "t:sections.tabs.name",
       "settings": {
+        "enable_redirect": true,
         "subheading": "",
         "heading": "L'ALLEE DESIGN POLICY",
         "center_text": true,
@@ -89,6 +70,22 @@
         "color_type": "default",
         "background_color": "#ffffff",
         "text_color": "#000000",
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0
+      }
+    },
+    "main-page": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "hide_heading": false,
+        "heading_size": "default",
+        "heading_tag": "h2",
+        "text_size": "default",
+        "section_width": "wide",
         "desktop_padding_top": 0,
         "desktop_padding_bottom": 0,
         "mobile_padding_top": 0,

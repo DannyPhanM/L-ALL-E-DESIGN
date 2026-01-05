@@ -237,7 +237,7 @@
           }
         },
         "es_back_in_stock_product_restore_email_7FFJpd": {
-          "type": "shopify://apps/es-back-in-stock/blocks/product-restore-email/b190bced-3b7b-47da-a05f-6ea4821c3a77",
+          "type": "shopify://apps/sw-back-in-stock/blocks/product-restore-email/b190bced-3b7b-47da-a05f-6ea4821c3a77",
           "disabled": true,
           "settings": {}
         },

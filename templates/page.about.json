@@ -32,7 +32,6 @@
           "type": "tab",
           "settings": {
             "custom_heading": "OUR STORY",
-            "url_path": "pages/our-story",
             "text": "",
             "text_size": "default",
             "page": "our-story"
@@ -42,7 +41,6 @@
           "type": "tab",
           "settings": {
             "custom_heading": "FLAGSHIP STORE",
-            "url_path": "pages/flagship-store",
             "text": "",
             "text_size": "default",
             "page": "flagship-store"
@@ -52,7 +50,6 @@
           "type": "tab",
           "settings": {
             "custom_heading": "CONTACT US",
-            "url_path": "pages/contact",
             "text": "",
             "text_size": "default",
             "page": "contact"
@@ -66,6 +63,7 @@
       ],
       "name": "t:sections.tabs.name",
       "settings": {
+        "enable_redirect": true,
         "subheading": "",
         "heading": "",
         "center_text": true,
