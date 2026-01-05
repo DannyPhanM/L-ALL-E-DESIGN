@@ -532,5 +532,139 @@
         "credit_card_will_be_charged_html": "سيتم خصم مبلغ %{amount} من بطاقتك الائتمانية"
       }
     }
+  },
+  "products": {
+    "facets": {
+      "filter_button": "تصفية وفرز",
+      "product_count": {
+        "one": "{{ product_count }} من {{ count }} منتج",
+        "other": "{{ product_count }} من {{ count }} منتجًا"
+      },
+      "product_count_simple": {
+        "one": "{{ count }} منتج",
+        "other": "{{ count }} منتجًا"
+      },
+      "found_count": {
+        "one": "تم العثور على {{ product_count }} من أصل {{ count }}",
+        "other": "تم العثور على {{ product_count }} من أصل {{ count }}"
+      },
+      "found_count_simple": {
+        "one": "تم العثور على {{ count }}",
+        "other": "تم العثور على {{ count }}"
+      },
+      "sort_by_label": "الترتيب حسب:",
+      "to": "ل",
+      "filters_selected": {
+        "one": "{{ count }} تم تحديده",
+        "other": "{{ count }} تم تحديده"
+      },
+      "reset": "إعادة ضبط",
+      "max_price": "أعلى سعر هو {{ price }}",
+      "show_more": "عرض المزيد",
+      "show_less": "عرض أقل"
+    }
+  },
+  "customer": {
+    "account": {
+      "title": "حساب",
+      "details": "تفاصيل الحساب",
+      "return": "العودة إلى تفاصيل الحساب",
+      "go_to_account": "انتقل إلى صفحة الحساب",
+      "create_account": "تسجيل الدخول / إنشاء حساب"
+    },
+    "activate_account": {
+      "title": "تفعيل الحساب",
+      "subtext": "أنشئ كلمة مرور لتفعيل حسابك.",
+      "password": "كلمة المرور",
+      "password_confirm": "تأكيد كلمة المرور",
+      "submit": "تفعيل الحساب",
+      "cancel": "رفض الدعوة"
+    },
+    "addresses": {
+      "title": "العناوين",
+      "view": "عرض العناوين",
+      "default": "تقصير",
+      "add_new": "أضف عنوانًا جديدًا",
+      "edit_address": "تعديل العنوان",
+      "first_name": "الاسم الأول",
+      "last_name": "اسم العائلة",
+      "company": "شركة",
+      "address1": "العنوان 1",
+      "address2": "العنوان 2",
+      "city": "مدينة",
+      "country": "البلد/المنطقة",
+      "province": "مقاطعة",
+      "zip": "الرمز البريدي",
+      "phone": "هاتف",
+      "set_default": "قم بتعيينه كعنوان افتراضي",
+      "add": "إضافة عنوان",
+      "update": "تحديث العنوان",
+      "cancel": "يلغي",
+      "edit": "يحرر",
+      "delete": "يمسح",
+      "delete_confirm": "هل أنت متأكد من رغبتك في حذف هذا العنوان؟"
+    },
+    "log_out": "تسجيل الخروج",
+    "login_page": {
+      "cancel": "يلغي",
+      "create_account": "إنشاء حساب",
+      "email": "بريد إلكتروني",
+      "forgot_password": "نسيت كلمة السر؟",
+      "guest_continue": "يكمل",
+      "guest_title": "تابع كضيف",
+      "password": "كلمة المرور",
+      "title": "تسجيل الدخول",
+      "sign_in": "تسجيل الدخول",
+      "submit": "يُقدِّم",
+      "have_account": "ليس لديك حساب؟"
+    },
+    "order": {
+      "title": "اطلب {{ name }}",
+      "date_html": "تم النشر في {{ date }}",
+      "billing_address": "عنوان الفواتير",
+      "payment_status": "حالة الدفع",
+      "shipping_address": "عنوان الشحن",
+      "fulfillment_status": "حالة الإنجاز",
+      "discount": "تخفيض",
+      "shipping": "شحن",
+      "tax": "ضريبة",
+      "product": "منتج",
+      "sku": "رمز المنتج",
+      "price": "سعر",
+      "quantity": "كمية",
+      "total": "المجموع",
+      "fulfilled_at_html": "تم التنفيذ {{ date }}",
+      "track_shipment": "تتبع الشحنة",
+      "subtotal": "المجموع الفرعي",
+      "total_duties": "الواجبات"
+    },
+    "orders": {
+      "title": "سجل الطلبات",
+      "order_number": "طلب",
+      "order_number_link": "رقم الطلب {{ number }}",
+      "date": "تاريخ",
+      "payment_status": "حالة الدفع",
+      "fulfillment_status": "حالة الإنجاز",
+      "total": "المجموع",
+      "none": "لم تقم بتقديم أي طلبات حتى الآن."
+    },
+    "recover_password": {
+      "title": "أعد تعيين كلمة المرور الخاصة بك",
+      "subtext": "سنرسل إليك بريدًا إلكترونيًا لإعادة تعيين كلمة مرورك",
+      "success": "لقد أرسلنا إليك بريدًا إلكترونيًا يحتوي على رابط لتحديث كلمة مرورك."
+    },
+    "register": {
+      "title": "إنشاء حساب",
+      "first_name": "الاسم الأول",
+      "last_name": "اسم العائلة",
+      "email": "بريد إلكتروني",
+      "password": "كلمة المرور",
+      "submit": "يخلق",
+      "have_account": "هل لديك حساب بالفعل؟",
+      "login": "تسجيل الدخول"
+    },
+    "reset_password": {
+      "title": "أعد تعيين كلمة المرور الخاصة بك"
+    }
   }
 }
