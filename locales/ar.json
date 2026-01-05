@@ -808,7 +808,12 @@
       "login": "تسجيل الدخول"
     },
     "reset_password": {
-      "title": "أعد تعيين كلمة المرور الخاصة بك"
+      "title": "أعد تعيين كلمة المرور الخاصة بك",
+      "subtext": "أدخل كلمة مرور جديدة لـ {{ email }}",
+      "password_confirm": "تأكيد كلمة المرور",
+      "submit": "يُقدِّم",
+      "cancel": "يلغي",
+      "password": "كلمة المرور"
     }
   },
   "sections": {
@@ -1119,5 +1124,96 @@
         "empty_state": "لا يوجد رقم أمر شراء"
       }
     }
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "إليك بطاقة هدايا {{ value }} لمتجر {{ shop }} !",
+      "subtext": "بطاقة هديتك",
+      "shop_link": "ابدأ التسوق",
+      "remaining_html": "الرصيد المتبقي {{ balance }}",
+      "price_value": "قيمة بطاقة الهدية:",
+      "text_1": "استخدم هذا الرمز عند إتمام عملية الشراء",
+      "text_2": "لاسترداد بطاقة الهدية الخاصة بك",
+      "qr_image_alt": "رمز الاستجابة السريعة — امسحه ضوئيًا لاسترداد بطاقة الهدية",
+      "expired": "منتهي الصلاحية",
+      "print_gift_card": "اطبع بطاقة الهدية هذه",
+      "add_to_apple_wallet": "أضف إلى محفظة Apple"
+    }
+  },
+  "recipient": {
+    "form": {
+      "checkbox": "أريد إرسال هذا كهدية",
+      "email_label": "البريد الإلكتروني للمستلم*",
+      "email_label_optional": "البريد الإلكتروني للمستلم (اختياري)",
+      "email": "بريد إلكتروني",
+      "name_label": "اسم المستلم",
+      "name": "اسم",
+      "message_label": "رسالة",
+      "message": "رسالة",
+      "max_characters": "{{ max_chars }} حرفًا كحد أقصى"
+    }
+  },
+  "newsletter": {
+    "success": "شكراً لاشتراكك",
+    "button_label": "يشترك"
+  },
+  "cart": {
+    "title_basket": "عربة التسوق",
+    "title_cart": "عربة التسوق",
+    "title_bag": "شنطة",
+    "continue_shopping": "تابع التسوق",
+    "empty_cart": "سلة التسوق الخاصة بك فارغة",
+    "empty_bag": "حقيبتك فارغة",
+    "empty_basket": "سلة التسوق الخاصة بك فارغة",
+    "login": "تسجيل الدخول",
+    "item_added_cart": "تمت إضافة المنتج إلى سلة التسوق الخاصة بك",
+    "item_added_bag": "تمت إضافة المنتج إلى حقيبتك",
+    "item_added_basket": "تمت إضافة المنتج إلى سلة التسوق الخاصة بك",
+    "free_shipping_minimum": "تقصير"
+  },
+  "cart_drawer": {
+    "product": "منتج",
+    "products": "منتجات",
+    "view_cart": "عرض سلة التسوق",
+    "view_bag": "حقيبة عرض",
+    "view_basket": "عرض السلة",
+    "quantity": "كمية"
+  },
+  "blogs": {
+    "article": {
+      "all_tags": "الجميع",
+      "comments": {
+        "one": "{{ count }} تعليق",
+        "other": "{{ count }} تعليقات"
+      },
+      "moderated": "يرجى ملاحظة أن التعليقات تحتاج إلى الموافقة قبل نشرها.",
+      "comment_form_title": "اترك تعليقًا",
+      "name": "اسم",
+      "email": "بريد إلكتروني",
+      "message": "تعليق",
+      "post": "أضف تعليقًا",
+      "tags": "الوسوم",
+      "back_to_blog": "انتقل إلى المجلة",
+      "previous_post": "المنشور السابق",
+      "next_post": "المنشور التالي",
+      "success": "تم نشر تعليقك بنجاح! شكرًا لك!",
+      "success_moderated": "تم نشر تعليقك بنجاح. سنقوم بنشره بعد قليل، حيث أن مدونتنا تخضع للمراجعة."
+    }
+  },
+  "free_shipping_bar": {
+    "complete_text": "تهانينا! لقد حصلت على شحن مجاني.",
+    "progress_text": "أنفق مبلغاً إضافياً قدره {{ rest_amount }} للوصول إلى الشحن المجاني."
+  },
+  "discount_code": {
+    "enter_discount_code": "أدخل رمز الخصم",
+    "discount_code_error": "لا يمكن تطبيق رمز الخصم ' {{ code }} ' على سلة التسوق الخاصة بك",
+    "existing_discount_code_error": "تم تطبيق رمز الخصم ' {{ code }} ' بالفعل على سلة التسوق الخاصة بك.",
+    "shipping_discount_code_warning": "تظهر خصومات الشحن عند إتمام عملية الشراء بعد إضافة العنوان",
+    "apply": "يتقدم",
+    "remove_discount": "إزالة الخصم {{ code }}"
+  },
+  "store_selector": {
+    "change_my_store": "غيّر متجري",
+    "select_your_store": "اختر متجرك"
   }
 }
