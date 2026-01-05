@@ -2251,7 +2251,95 @@
       "reset": "إعادة ضبط",
       "max_price": "أعلى سعر هو {{ price }}",
       "show_more": "عرض المزيد",
-      "show_less": "عرض أقل"
+      "show_less": "عرض أقل",
+      "clear_all": "مسح الكل",
+      "from": "من"
+    },
+    "product": {
+      "all": "الجميع",
+      "by_vendor": "بواسطة ",
+      "vendor_placeholder": "بائع",
+      "title_placeholder": "عنوان المنتج",
+      "description_placeholder": "بمجرد إضافة منتج، سيتغير وصفه.",
+      "add_to_cart": "أضف إلى السلة",
+      "add_to_bag": "أضف إلى السلة",
+      "add_to_basket": "أضف إلى السلة",
+      "pre_order": "النظام السابق",
+      "color_swatch_tag": "لون",
+      "on_sale": "أُوكَازيُون",
+      "product_variants": "أنواع المنتجات",
+      "collection_by_brand": "مجموعة حسب العلامة التجارية",
+      "brand": "تسوق حسب العلامة التجارية",
+      "related_collection": "تسوق المجموعة",
+      "media": {
+        "gallery_viewer": "عارض الصور",
+        "load_image": "قم بتحميل الصورة {{ index }} في عرض المعرض",
+        "load_model": "قم بتحميل النموذج ثلاثي الأبعاد {{ index }} في عرض المعرض",
+        "load_video": "تشغيل الفيديو {{ index }} في عرض المعرض",
+        "image_available": "الصورة {{ index }} متاحة الآن في عرض المعرض",
+        "open_media": "افتح الوسائط {{ index }} في نافذة منبثقة",
+        "zoom_in": "تكبير الصورة",
+        "play_media": "تشغيل الوسائط"
+      },
+      "quantity": {
+        "label": "كمية",
+        "input_label": "الكمية المطلوبة لـ {{ product }}",
+        "increase": "زيادة الكمية لـ {{ product }}",
+        "decrease": "خفض كمية {{ product }}"
+      },
+      "pickup_availability": {
+        "view_store_info": "عرض معلومات المتجر",
+        "check_other_stores": "تحقق من التوفر في المتاجر الأخرى",
+        "pick_up_available": "الاستلام متاح",
+        "pick_up_available_at_html": "الاستلام متاح في <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "الاستلام غير متاح حاليًا في <span class=\"color-foreground\">{{ location_name }}</span>",
+        "unavailable": "تعذر تحميل معلومات توفر الاستلام",
+        "refresh": "ينعش",
+        "available_to_pickup_at": "متوفر للاستلام من {{ store_name }}",
+        "out_of_stock_at": "غير متوفر في {{ store_name }}"
+      },
+      "price": {
+        "from_price_html": "ابتداءً من {{ price }}",
+        "regular_price": "السعر العادي",
+        "sale_price": "سعر البيع",
+        "unit_price": "سعر الوحدة"
+      },
+      "inventory": {
+        "inventory_label": "التوافر",
+        "in_stock_label": "في الأوراق المالية",
+        "stock_label_html": "الكمية المتبقية في المخزون هي {{ count }} فقط",
+        "out_of_stock": "نفذ",
+        "will_not_ship_until": "جاهز للشحن {{ date }}",
+        "will_be_in_stock_after": "متوفر الآن {{ date }}",
+        "waiting_for_stock": "المخزون في الطريق"
+      },
+      "share_button": "يشارك",
+      "share_on_facebook": "يشارك",
+      "share_on_twitter": "سقسقة",
+      "share_on_pinterest": "احفظها",
+      "share_on_line": "يشارك",
+      "copy_link": "نسخ الوصلة",
+      "copy_code": "ينسخ",
+      "copied_message": "تم النسخ!",
+      "sold_out": "نفذ",
+      "unavailable": "غير متاح",
+      "value_unavailable": "{{ option_value }} — غير متوفر",
+      "video_exit_message": "{{ title }} يفتح فيديو ملء الشاشة في نفس النافذة.",
+      "xr_button": "عرض في مساحتك",
+      "xr_button_label": "اعرض في مساحتك، ثم حمّل العنصر في نافذة الواقع المعزز",
+      "include_taxes": "الضريبة مشمولة.",
+      "shipping_policy_html": "يتم احتساب <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">تكلفة الشحن</a> عند إتمام عملية الشراء.",
+      "change_button": "يتغير",
+      "error_message_required": "هذه الخانة مطلوبه.",
+      "custom_error": "يرجى تعبئة جميع الحقول المطلوبة.",
+      "error_select_options": "يرجى تحديد ما لا يقل عن {{ options }} خيارًا.",
+      "error_select_option": "يرجى اختيار خيار واحد على الأقل من بين {{ option }} .",
+      "drop_zone_text": "اسحب وأفلت أو تصفح",
+      "drop_zone_size": "الحد الأقصى لحجم الملف 5 ميجابايت",
+      "file_size_error": "حجم الملف كبير جدًا (الحد الأقصى 5 ميجابايت)."
+    },
+    "modal": {
+      "label": "معرض الوسائط"
     }
   },
   "customer": {
@@ -2545,8 +2633,16 @@
         "comment": "رسالة",
         "post_success": "نشكركم على تواصلكم معنا. سنعاود الاتصال بكم في أقرب وقت ممكن.",
         "error_heading": "يرجى تعديل ما يلي:",
-        "checkbox": "الشروط والأحكام"
+        "checkbox": "الشروط والأحكام",
+        "send": "إرسال الرسائل",
+        "product_url": "منتج",
+        "send_form": "يرسل"
       }
+    },
+    "404": {
+      "title": "صفحة 404 غير موجودة",
+      "subtext": "الصفحة التي طلبتها غير موجودة",
+      "return_home": "العودة إلى المنزل"
     }
   },
   "customer_accounts": {
@@ -3602,5 +3698,31 @@
   "store_selector": {
     "change_my_store": "غيّر متجري",
     "select_your_store": "اختر متجرك"
+  },
+  "accessibility": {
+    "skip_to_product_info": "انتقل إلى معلومات المنتج",
+    "close": "يغلق",
+    "unit_price_separator": "لكل",
+    "link_messages": {
+      "new_window": "يفتح في نافذة جديدة."
+    },
+    "loading": "تحميل...",
+    "review": "مراجعة",
+    "reviews": "التقييمات",
+    "total_reviews": "إجمالي التقييمات",
+    "star_reviews_info": "{{ rating_value }} من أصل {{ rating_max }} نجمة",
+    "drag_to_compare": "اسحب لرؤية الفرق بين الصورتين",
+    "pause": "يوقف",
+    "play": "يلعب",
+    "mute": "صامت",
+    "unmute": "إلغاء كتم الصوت",
+    "discount": "رمز الخصم",
+    "discount_applied": "تم تطبيق الخصم {{ code }}"
+  },
+  "collections": {
+    "page_title": "مجموعات",
+    "product": "منتج",
+    "products": "منتجات",
+    "shop_all": "تسوق الكل"
   }
 }
