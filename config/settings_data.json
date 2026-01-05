@@ -1006,7 +1006,7 @@
         "type": "shopify://apps/xb-wishlist/blocks/wishlist_collection/cc07f1e9-907b-431d-99f8-4fce3efa75f1",
         "disabled": false,
         "settings": {
-          "selector_collection": ".card-container > . card",
+          "selector_collection": ".card-container > .card",
           "icon_position": "top-right",
           "custom_position": false,
           "x_position": 0,

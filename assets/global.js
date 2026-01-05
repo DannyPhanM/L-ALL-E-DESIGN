@@ -5087,7 +5087,9 @@ class VariantSelects extends HTMLElement {
     if (!section) return;
 
     const productForm = section.querySelector('product-form');
-    if (productForm) productForm.handleErrorMessage();
+    if (productForm && typeof productForm.handleErrorMessage === 'function') {
+      productForm.handleErrorMessage();
+    }
   }
 
   getWrappingSection(sectionId) {

@@ -4635,3 +4635,36 @@ height: 20px !important;
 .xb-wishlist-products__no-product-desc {
   font-size: 12px !important;
 }
+
+xb-wishlist-button-collection {
+  display: none;
+}
+
+html[lang="ar"] .card__picture-wrapper .xb-wishlist__btn-custom {
+  right: auto;
+  left: 10px;
+}
+html[lang="ar"] .product__info-container .xb-wishlist-button {
+  right: auto;
+  left: 0;
+}
+html[lang="ar"] .section-block.product__title {
+  padding-right: 0;
+  padding-left: 30px;
+}
+
+html[lang="ar"] .xb-product-quantity.show {
+  right: auto;
+  left: 0;
+}
+
+html[lang="ar"]  .custom-size-popup__close {
+	right: auto;
+	left: 20px;
+}
+
+@media(max-width: 749px) {
+	html[lang="ar"] .section-block.product__title {
+		padding-left: 25px;
+	}
+}

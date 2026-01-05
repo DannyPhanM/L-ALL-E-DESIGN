@@ -16,6 +16,9 @@
 -%}
 
 <div id="CustomSizePopup" class="custom-size-popup popup-wrapper hidden">
+  <div class="custom-size-popup__loading">
+    <div class="custom-size-popup__spinner"></div>
+  </div>
   <div class="custom-size-popup__overlay" onclick="closeCustomSizePopup()"></div>
   <div class="custom-size-popup__content hide-scrollbar">
     <button type="button" class="custom-size-popup__close" onclick="closeCustomSizePopup()" aria-label="{{ 'accessibility.close' | t }}">
@@ -117,6 +120,49 @@
 .custom-size-popup:not(.hidden) {
   visibility: visible;
   opacity: 1;
+}
+
+/* Loading Overlay */
+.custom-size-popup__loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2002;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  pointer-events: none;
+}
+
+.custom-size-popup.loading .custom-size-popup__loading {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.custom-size-popup__spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #000;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.custom-size-popup.loading .custom-size-popup__content {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .custom-size-popup__overlay {
@@ -378,6 +424,7 @@ let currentProductForm = null;
 function closeCustomSizePopup() {
   const popup = document.getElementById('CustomSizePopup');
   popup.classList.add('hidden');
+  popup.classList.remove('loading');
   document.body.classList.remove('hidden');
   currentProductForm = null;
 }
@@ -385,8 +432,24 @@ function closeCustomSizePopup() {
 function openCustomSizePopup(form) {
   currentProductForm = form;
   const popup = document.getElementById('CustomSizePopup');
+  
+  // Show loading state
+  popup.classList.add('loading');
   popup.classList.remove('hidden');
   document.body.classList.add('hidden');
+  
+  // Remove loading after popup is visible
+  setTimeout(() => {
+    popup.classList.remove('loading');
+    
+    // Remove page loading overlay if it exists (from redirect)
+    const pageLoading = document.getElementById('customSizeRedirectLoading');
+    if (pageLoading) {
+      pageLoading.style.opacity = '0';
+      setTimeout(() => pageLoading.remove(), 300);
+    }
+    sessionStorage.removeItem('customSizeRedirectLoading');
+  }, 400);
   
   // Autofocus first input
   // setTimeout(() => {
@@ -462,5 +525,51 @@ function submitCustomSizeForm() {
 // Global escape key to close
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeCustomSizePopup();
+});
+
+// Auto-open popup if redirected from quickview
+document.addEventListener('DOMContentLoaded', () => {
+  // Check if we need to show loading from redirect
+  if (sessionStorage.getItem('customSizeRedirectLoading') === 'true') {
+    // Add spinner animation if not exists
+    if (!document.getElementById('custom-size-spinner-style')) {
+      const style = document.createElement('style');
+      style.id = 'custom-size-spinner-style';
+      style.textContent = '@keyframes customSizeSpin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}';
+      document.head.appendChild(style);
+    }
+    
+    // Show loading overlay
+    const loadingOverlay = document.createElement('div');
+    loadingOverlay.id = 'customSizeRedirectLoading';
+    loadingOverlay.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(255,255,255,0.95);z-index:9999;display:flex;align-items:center;justify-content:center;transition:opacity 0.3s;';
+    const spinner = document.createElement('div');
+    spinner.style.cssText = 'width:48px;height:48px;border:4px solid #f3f3f3;border-top:4px solid #000;border-radius:50%;animation:customSizeSpin 0.8s linear infinite;';
+    loadingOverlay.appendChild(spinner);
+    document.body.appendChild(loadingOverlay);
+  }
+  
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('open_custom_size') === 'true') {
+    // Find the product form
+    const productForm = document.querySelector('product-form form');
+    if (productForm && typeof openCustomSizePopup === 'function') {
+      // Small delay to ensure page is fully loaded
+      setTimeout(() => {
+        openCustomSizePopup(productForm);
+        // Remove the parameter from URL without reload
+        const newUrl = window.location.pathname + window.location.hash;
+        window.history.replaceState({}, '', newUrl);
+      }, 300);
+    } else {
+      // If popup can't open, remove loading anyway
+      const pageLoading = document.getElementById('customSizeRedirectLoading');
+      if (pageLoading) {
+        pageLoading.style.opacity = '0';
+        setTimeout(() => pageLoading.remove(), 300);
+      }
+      sessionStorage.removeItem('customSizeRedirectLoading');
+    }
+  }
 });
 </script>

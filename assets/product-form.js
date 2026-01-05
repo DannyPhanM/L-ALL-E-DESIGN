@@ -32,10 +32,83 @@ if (!customElements.get("product-form")) {
             `input[form="${formId}"]:checked, select[form="${formId}"] option:checked, #${formId} input:checked, #${formId} option:checked`
           )
         ).some(
-          (el) => el.value && el.value.trim().toLowerCase() === "custom size"
+          (el) => {
+            const value = el.value && el.value.trim().toLowerCase();
+            return value === "custom size" || el.value && el.value.trim() === "مقاس مخصص";
+          }
         );
 
         if (isCustomSize && !this.form.dataset.customSizeValidated) {
+          // Check if we're in quickview
+          const isInQuickView = this.closest('.quick-view__content') || this.closest('quick-view');
+          
+          if (isInQuickView) {
+            // Get product URL - try multiple sources
+            let productUrl = null;
+            
+            // Method 1: Get from quick-view element (variant URL)
+            const quickViewElement = document.querySelector('quick-view[data-product-url]');
+            if (quickViewElement) {
+              const variantUrl = quickViewElement.getAttribute('data-product-url');
+              // Extract base product URL (remove variant parameter)
+              productUrl = variantUrl.split('?')[0];
+            }
+            
+            // Method 2: Try from global product object
+            if (!productUrl && typeof product !== 'undefined' && product.url) {
+              productUrl = product.url;
+            }
+            
+            // Method 3: Try from form action
+            if (!productUrl && this.form.action) {
+              const formUrl = new URL(this.form.action);
+              if (formUrl.pathname.includes('/cart/add')) {
+                // Try to find product link in the page
+                const productLink = document.querySelector('.quick-view__content a[href*="/products/"]');
+                if (productLink) {
+                  productUrl = productLink.href;
+                }
+              }
+            }
+            
+            if (productUrl) {
+              // Add spinner animation if not exists
+              if (!document.getElementById('custom-size-spinner-style')) {
+                const style = document.createElement('style');
+                style.id = 'custom-size-spinner-style';
+                style.textContent = '@keyframes customSizeSpin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}';
+                document.head.appendChild(style);
+              }
+              
+              // Show loading overlay
+              const loadingOverlay = document.createElement('div');
+              loadingOverlay.id = 'customSizeRedirectLoading';
+              loadingOverlay.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(255,255,255,0.95);z-index:9999;display:flex;align-items:center;justify-content:center;';
+              const spinner = document.createElement('div');
+              spinner.style.cssText = 'width:48px;height:48px;border:4px solid #f3f3f3;border-top:4px solid #000;border-radius:50%;animation:customSizeSpin 0.8s linear infinite;';
+              loadingOverlay.appendChild(spinner);
+              document.body.appendChild(loadingOverlay);
+              
+              // Set flag in sessionStorage to keep loading on next page
+              sessionStorage.setItem('customSizeRedirectLoading', 'true');
+              
+              // Close quickview drawer
+              const drawer = document.querySelector('quick-view-drawer');
+              if (drawer) {
+                const summary = drawer.querySelector('summary');
+                if (summary) {
+                  summary.click();
+                }
+              }
+              
+              // Redirect to product page with flag
+              setTimeout(() => {
+                window.location.href = productUrl + '?open_custom_size=true';
+              }, 100);
+              return;
+            }
+          }
+          
           if (typeof openCustomSizePopup === "function") {
             openCustomSizePopup(this.form);
             return;
