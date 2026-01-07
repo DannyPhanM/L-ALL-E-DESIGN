@@ -180,15 +180,6 @@
             "icon_size": 2
           }
         },
-        "sku_JL6Yfm": {
-          "type": "sku",
-          "settings": {
-            "sku_heading": "SKU:",
-            "sku_size": "default",
-            "top_spacing": 1,
-            "mobile_top_spacing": 1
-          }
-        },
         "5dc5b007-724d-4c23-96b1-6555fc3ac5c4": {
           "type": "title",
           "settings": {
@@ -196,6 +187,15 @@
             "heading_tag": "h1",
             "top_spacing": 1,
             "mobile_top_spacing": 1
+          }
+        },
+        "sku_JL6Yfm": {
+          "type": "sku",
+          "settings": {
+            "sku_heading": "SKU:",
+            "sku_size": "label_font",
+            "top_spacing": 0.2,
+            "mobile_top_spacing": 0.2
           }
         },
         "fb7e45ed-5850-43ba-8d9f-a9fb45354ca4": {
@@ -421,8 +421,8 @@
         "measurement_field_N9cB9d",
         "measurement_field_kTBiXf",
         "xb_wishlist_button_wishlist_9fkMLf",
-        "sku_JL6Yfm",
         "5dc5b007-724d-4c23-96b1-6555fc3ac5c4",
+        "sku_JL6Yfm",
         "fb7e45ed-5850-43ba-8d9f-a9fb45354ca4",
         "f4ca971a-5662-4f51-abc2-9ae805b35906",
         "ac52b7ff-a78f-40ff-9826-d1b661c098c9",
