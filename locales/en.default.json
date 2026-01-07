@@ -540,7 +540,7 @@
     }
   },
   "free_shipping_bar": {
-    "complete_text": "Congratulations! You've got free shipping.",
+    "complete_text": "🎉 Congratulations! You've got free shipping.",
     "progress_text": "🚚 Spend {{ rest_amount }} more to reach free shipping."
   },
   "discount_code": {
