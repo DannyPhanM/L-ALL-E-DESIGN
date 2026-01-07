@@ -45,9 +45,9 @@
         "heading_tag": "h1",
         "show_vendor": false,
         "desktop_padding_top": 0,
-        "desktop_padding_bottom": 0,
+        "desktop_padding_bottom": 20,
         "mobile_padding_top": 0,
-        "mobile_padding_bottom": 0
+        "mobile_padding_bottom": 20
       }
     },
     "recently_viewed_products_GpxqTk": {
@@ -81,10 +81,49 @@
         "mobile_padding_top": 32,
         "mobile_padding_bottom": 60
       }
+    },
+    "selected_products_qWyHwM": {
+      "type": "selected-products",
+      "name": "t:sections.selected-products.name",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "default",
+        "heading_tag": "h2",
+        "product_list": [
+          "asymmetric-off-shoulder-a-line-midi-in-black",
+          "asymmetric-bow-wrap-set-in-cream",
+          "asymmetric-off-shoulder-a-line-midi-in-cream",
+          "asymmetrical-lapel-crystal-blazer-dress"
+        ],
+        "desktop_grid_type": "4",
+        "mobile_layout": "2",
+        "mobile_navigation": "arrows",
+        "image_ratio": "original",
+        "focal_point": "center center",
+        "hover_behavior": "slider",
+        "show_bullets": true,
+        "enable_add_to_cart": false,
+        "enable_quick_view": true,
+        "price_position": "bottom",
+        "show_vendor": true,
+        "max_product_name_characters": 100,
+        "show_rating": true,
+        "show_short_description": true,
+        "enable_color_pills": true,
+        "show_pickup_availability": false,
+        "color_type": "default",
+        "background_color": "#FFFFFF",
+        "text_color": "#000000",
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0
+      }
     }
   },
   "order": [
     "main-cart",
-    "recently_viewed_products_GpxqTk"
+    "recently_viewed_products_GpxqTk",
+    "selected_products_qWyHwM"
   ]
 }
