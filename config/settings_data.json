@@ -260,7 +260,7 @@
         ],
         "settings": {
           "sticky_header": "always_stick",
-          "show_bottom_line": true,
+          "show_bottom_line": false,
           "block_alignment": "stretched",
           "menu": "",
           "highlight_menu_item": "",
