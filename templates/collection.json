@@ -13,8 +13,8 @@
       "type": "main-collection-product-grid",
       "settings": {
         "show_product_quantity": false,
-        "show_description": true,
-        "show_image": false,
+        "show_description": false,
+        "show_image": true,
         "show_image_under_heading": false,
         "banner_image_ratio": "original",
         "banner_focal_point": "center center",
