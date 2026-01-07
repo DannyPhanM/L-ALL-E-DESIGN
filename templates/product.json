@@ -185,7 +185,7 @@
           "settings": {
             "title_size": "heading_xs_uppercase",
             "heading_tag": "h1",
-            "top_spacing": 1,
+            "top_spacing": 0,
             "mobile_top_spacing": 1
           }
         },
