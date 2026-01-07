@@ -578,43 +578,11 @@
         "mobile_padding_top": 32,
         "mobile_padding_bottom": 32
       }
-    },
-    "06276a8b-3afe-469c-be8e-380883ba80a7": {
-      "type": "recently-viewed-products",
-      "settings": {
-        "heading": "Recently viewed",
-        "heading_size": "heading_xs_uppercase",
-        "heading_tag": "h3",
-        "desktop_grid_type": "5",
-        "mobile_layout": "2",
-        "mobile_navigation": "arrows",
-        "image_ratio": "original",
-        "focal_point": "center center",
-        "hover_behavior": "slider",
-        "show_bullets": true,
-        "enable_add_to_cart": false,
-        "enable_quick_view": true,
-        "price_position": "bottom",
-        "show_vendor": false,
-        "max_product_name_characters": 100,
-        "show_rating": true,
-        "show_short_description": false,
-        "enable_color_pills": true,
-        "show_pickup_availability": false,
-        "color_type": "default",
-        "background_color": "#ffffff",
-        "text_color": "#000000",
-        "desktop_padding_top": 32,
-        "desktop_padding_bottom": 60,
-        "mobile_padding_top": 32,
-        "mobile_padding_bottom": 60
-      }
     }
   },
   "order": [
     "main-product",
     "f88eefea-3183-4353-a927-eb373e1f61f5",
-    "afaa1caf-6b34-4fbe-aa72-e50883d86941",
-    "06276a8b-3afe-469c-be8e-380883ba80a7"
+    "afaa1caf-6b34-4fbe-aa72-e50883d86941"
   ]
 }

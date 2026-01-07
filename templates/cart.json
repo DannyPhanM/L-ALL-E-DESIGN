@@ -24,14 +24,6 @@
           "type": "checkout_button",
           "settings": {}
         },
-        "449b6b84-cb19-4ba7-9d2e-343564694f99": {
-          "type": "shipping_calculator",
-          "settings": {
-            "shipping_heading": "Estimate",
-            "shipping_heading_size": "default",
-            "shipping_country": "United States"
-          }
-        },
         "f7fba67b-f53b-4852-837c-e36331b14a6f": {
           "type": "order_note",
           "settings": {
@@ -46,7 +38,6 @@
       "block_order": [
         "9d4e3ee5-cefb-4109-b1cf-38cb7e7414df",
         "5b1a083e-eff7-4728-afd3-b568d5255087",
-        "449b6b84-cb19-4ba7-9d2e-343564694f99",
         "f7fba67b-f53b-4852-837c-e36331b14a6f"
       ],
       "settings": {
