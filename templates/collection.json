@@ -43,9 +43,9 @@
         "show_short_description": false,
         "enable_color_pills": true,
         "show_pickup_availability": false,
-        "desktop_padding_top": 32,
+        "desktop_padding_top": 160,
         "desktop_padding_bottom": 120,
-        "mobile_padding_top": 32,
+        "mobile_padding_top": 12,
         "mobile_padding_bottom": 80
       }
     }
