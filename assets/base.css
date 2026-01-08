@@ -4668,3 +4668,7 @@ html[lang="ar"]  .custom-size-popup__close {
 		padding-left: 25px;
 	}
 }
+
+.page__content.popup-content.body-text--minimal_uppercase.rte {
+  padding: 0;
+}
