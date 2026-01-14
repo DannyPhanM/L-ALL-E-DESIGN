@@ -202,7 +202,7 @@
           "type": "variant_picker",
           "settings": {
             "show_label": true,
-            "label_size": "default",
+            "label_size": "body_m_uppercase",
             "text_size": "label_font",
             "top_spacing": 1,
             "mobile_top_spacing": 1
