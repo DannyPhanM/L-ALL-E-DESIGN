@@ -5974,3 +5974,14 @@ product-checkbox-group.layout-row {
       min-width: 200px;
     }
   }
+
+  .variant-not-color.color__swatch  {
+  min-width: 50px !important;
+  min-height: 50px !important;
+  padding: 8px !important;
+  border: 1px solid #c5c5c5 !important;
+}
+
+.product-form__input input[type=radio]:checked+label.variant-not-color.color__swatch  {
+  border: 2px solid #000 !important;
+}
