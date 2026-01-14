@@ -4672,3 +4672,9 @@ html[lang="ar"]  .custom-size-popup__close {
 .page__content.popup-content.body-text--minimal_uppercase.rte {
   padding: 0;
 }
+
+.free-shipping-bar p {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
