@@ -140,7 +140,7 @@
     "blog_results_layout": "grid",
     "show_blog_post_image": true,
     "blog_image_ratio": "original",
-    "menu": "main-menu",
+    "menu": "footer-support",
     "sale_text_color": "#ffffff",
     "sale_background": "#971400",
     "sold_text_color": "#585858",
