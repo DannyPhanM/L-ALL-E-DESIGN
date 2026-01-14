@@ -214,7 +214,7 @@
           "settings": {
             "icon": "measuring_tape",
             "link_text": "Size chart",
-            "link_size": "body_l_uppercase",
+            "link_size": "body_s_uppercase",
             "text": "",
             "text_size": "default",
             "page": "size-chart",
