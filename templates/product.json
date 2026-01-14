@@ -269,9 +269,9 @@
           "settings": {
             "heading": "",
             "heading_size": "default",
-            "text_size": "default",
+            "text_size": "label_font_uppercase",
             "icon_size": "small",
-            "icon_weight": "regular",
+            "icon_weight": "light",
             "context_icon_radius": "default",
             "fill_container": false,
             "icon_1": "loop",
