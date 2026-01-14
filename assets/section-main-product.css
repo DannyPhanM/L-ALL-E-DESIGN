@@ -1713,9 +1713,9 @@ main > section:first-child .product.product--lines {
 
 .color__swatch-dot {
   display: block;
-  width: 20px;
-  min-width: 20px;
-  height: 20px;
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
   background: var(--swatch-background);
   background-size: cover;
   background-repeat: no-repeat;
