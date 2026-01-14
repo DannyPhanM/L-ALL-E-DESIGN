@@ -304,7 +304,6 @@
         },
         "line_hAEx8C": {
           "type": "line",
-          "disabled": true,
           "settings": {
             "desktop_padding_top": 24,
             "desktop_padding_bottom": 24,
@@ -327,6 +326,7 @@
         },
         "line_FDPdKe": {
           "type": "line",
+          "disabled": true,
           "settings": {
             "desktop_padding_top": 8,
             "desktop_padding_bottom": 8,
@@ -349,6 +349,7 @@
         },
         "line_jGiWfJ": {
           "type": "line",
+          "disabled": true,
           "settings": {
             "desktop_padding_top": 8,
             "desktop_padding_bottom": 8,
@@ -371,6 +372,7 @@
         },
         "line_dKU48e": {
           "type": "line",
+          "disabled": true,
           "settings": {
             "desktop_padding_top": 8,
             "desktop_padding_bottom": 8,
@@ -393,6 +395,7 @@
         },
         "line_YyVkdd": {
           "type": "line",
+          "disabled": true,
           "settings": {
             "desktop_padding_top": 8,
             "desktop_padding_bottom": 8,
@@ -417,6 +420,15 @@
             "show_pickup_availability": false,
             "top_spacing": 1,
             "mobile_top_spacing": 1
+          }
+        },
+        "line_LnkbLM": {
+          "type": "line",
+          "settings": {
+            "desktop_padding_top": 24,
+            "desktop_padding_bottom": 24,
+            "mobile_padding_top": 16,
+            "mobile_padding_bottom": 16
           }
         },
         "f8c922ec-d527-49f4-81d7-e882bc9219a1": {
@@ -468,6 +480,7 @@
         "collapsible_tab_3U6JPi",
         "line_YyVkdd",
         "dc56d1d9-cab4-452f-9272-c52197a7ab88",
+        "line_LnkbLM",
         "f8c922ec-d527-49f4-81d7-e882bc9219a1"
       ],
       "settings": {
