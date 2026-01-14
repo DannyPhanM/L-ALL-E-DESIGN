@@ -317,7 +317,7 @@
             "heading": "Details and Fit",
             "collapsible_tabs_size": "default",
             "text": "{{ product.description }}",
-            "text_size": "default",
+            "text_size": "body_s_uppercase",
             "icon": "none",
             "page": "",
             "top_spacing": 1,
