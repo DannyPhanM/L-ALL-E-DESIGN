@@ -202,7 +202,7 @@
           "type": "variant_picker",
           "settings": {
             "show_label": true,
-            "label_size": "body_m_uppercase",
+            "label_size": "body_l_uppercase",
             "text_size": "label_font",
             "top_spacing": 1,
             "mobile_top_spacing": 1
@@ -214,7 +214,7 @@
           "settings": {
             "icon": "measuring_tape",
             "link_text": "Size chart",
-            "link_size": "default",
+            "link_size": "body_l_uppercase",
             "text": "",
             "text_size": "default",
             "page": "size-chart",
@@ -315,7 +315,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Details and Fit",
-            "collapsible_tabs_size": "body_m_uppercase",
+            "collapsible_tabs_size": "body_l_uppercase",
             "text": "{{ product.description }}",
             "text_size": "default",
             "icon": "clothes",
@@ -338,7 +338,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "CARE INSTRUCTIONS",
-            "collapsible_tabs_size": "body_m_uppercase",
+            "collapsible_tabs_size": "body_l_uppercase",
             "text": "<p>L’ALLÉE | CARE INSTRUCTIONS</p><p>Each L’ALLÉE creation is crafted from premium fabrics and delicate silhouettes. Adhering to these care instructions will ensure the longevity, structure, and timeless beauty of your garment.</p><p>CLEANING</p><p>- Professional Dry Clean Only: To preserve fabric integrity, do not hand wash or machine wash. Professional dry cleaning is strictly recommended.</p><p>- Color Separation: Always wash dark, red, and white garments separately to prevent color bleeding or transfer.</p><p>STEAMING & PRESSING </p><p>- Gentle Steaming: Use a steamer at medium heat for silk, pleated, or delicate fabrics.</p><p>- Detail Protection: Avoid direct high heat on structured elements, intricate embellishments, or draped silhouettes to prevent deformation.</p><p>DRYING & STORAGE </p><p>- Shape Preservation: Always hang garments vertically after use or cleaning to maintain their original form. Use padded hangers to protect the shoulder structure.</p><p>- Storage Environment: Store in a cool, dry place, shielded from direct sunlight to prevent color fading.</p><p>IMPORTANT NOTES </p><p>- Hardware & Accessories: Avoid contact with sharp objects (watches, jewelry, or nails) to prevent snagging or damaging the delicate fabric surface.</p><p>- Disclaimer: Damage or distortion resulting from improper care is not covered under our exchange policy.</p><p>OUR PHILOSOPHY </p><p><em>- Luxury deserves thoughtful care. </em>Please follow these instructions meticulously to preserve the integrity of your L’ALLÉE piece.</p><p></p><p>Contact Support/ Whatsapp: <a href=\"https://wa.me/+84963271383\" target=\"_blank\">+84-963-271-383</a></p>",
             "text_size": "default",
             "icon": "washing_symbol",
@@ -361,7 +361,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Duties & Taxes",
-            "collapsible_tabs_size": "body_m_uppercase",
+            "collapsible_tabs_size": "body_l_uppercase",
             "text": "<p>- Import duties and taxes may apply upon arrival in your country.</p><p>- Any additional customs charges are the responsibility of the recipient.</p><p>- These fees are determined by local authorities and are beyond our control.</p><p>- For further details, please contact your local customs office.</p>",
             "text_size": "default",
             "icon": "bill",
@@ -384,7 +384,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Shipping, Return & Exchange",
-            "collapsible_tabs_size": "body_m_uppercase",
+            "collapsible_tabs_size": "body_l_uppercase",
             "text": "<p>SHIPPING:</p><p>- Global Availability: We offer worldwide shipping to most destinations.<br/>- In-stock items: Delivered within 5–7 business days<br/>- Made-to-order items: Require additional production time, with total delivery up to 15–20 days<br/>- Shipping Fees: Calculated at checkout based on the total item count, package weight, and destination.</p><p><a href=\"https://lalee-fashion.myshopify.com/pages/shipping-policy\" target=\"_blank\" title=\"https://lalee-fashion.myshopify.com/pages/shipping-policy\">View more details</a></p><p>RETURN & EXCHANGE:</p><p>- Condition: Items must be unworn, in pristine condition, and returned in their original LALLEE packaging (including all tags and accessories).</p><p>- Timeline: Exchange requests must be submitted within 7 days of receipt</p><p>- Required Proof: An unboxing video and the original order receipt are strictly mandatory to process your request.</p><p>- Exchange Value: The eligible value is based on the product price only. Initial shipping fees, taxes, and duties are non-refundable and excluded from the exchange credit.</p><p>- Refund Policy: We do not offer cash refunds. Any price difference will be issued as Store Credit for your future purchases.</p><p>CANCELLATION:</p><p>- Orders Not Yet Shipped: Please contact our Customer Service team immediately if you wish to cancel an order that has not been dispatched. We will assist you with the cancellation and issue a full refund.</p><p>- Refund Timeline: The process typically takes 10–15 business days from the date of your request, though it may take up to 30 business days depending on your card issuer’s policies.</p><p>- Exclusion: This cancellation policy does not apply to Final Sale or discounted items purchased during promotional seasons.<br/>Orders Already Shipped: Once an order has been dispatched, we are unable to process a cancellation.</p><p><a href=\"https://lalee-fashion.myshopify.com/pages/shipping-policy\" target=\"_blank\" title=\"https://lalee-fashion.myshopify.com/pages/shipping-policy\">View more details</a><br/></p>",
             "text_size": "default",
             "icon": "moving_truck",
