@@ -840,7 +840,7 @@
           "main_menu_kmJRbc": {
             "type": "main_menu",
             "settings": {
-              "menu": "main-menu",
+              "menu": "footer-support",
               "use_accent_color": false,
               "show_collection_image": true,
               "image_ratio": "original",
