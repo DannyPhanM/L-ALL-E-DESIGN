@@ -252,8 +252,8 @@ a.card:focus-visible::after {
     justify-content: center;
     cursor: pointer;
     position: relative;
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     border-radius: var(--other-buttons-radius);
     backface-visibility: hidden;
     transition: all var(--animation-duration) var(--transition-timing-function);
@@ -418,8 +418,8 @@ a.card:focus-visible::after {
     background: var(--swatch-background);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 32px;
-    height: 32px;
+    width: 14px;
+    height: 14px;
     top: 50%;
     transform: translate(-50%, -50%);
     left: 50%;
@@ -431,8 +431,8 @@ a.card:focus-visible::after {
 .color-swatch.active-swatch:not(.color-swatch-image) .color-swatch__dot {
     background: rgb(var(--layout-background-color));
     background-image: none;
-    width: 32px;
-    height: 32px;
+    width: 14px;
+    height: 14px;
     top: 50%;
     transform: translate(-50%, -50%);
     left: 50%;
