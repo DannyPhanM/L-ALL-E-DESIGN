@@ -229,7 +229,7 @@ a.card:focus-visible::after {
   }
 .swatches_container {
     display: flex;
-    gap: 2px;
+    gap: 6px;
 }
 .slider__viewport .swatches_container:last-child,
 .slider__viewport .swatches_container:has( + .swatches_container.size-label:last-child) {
