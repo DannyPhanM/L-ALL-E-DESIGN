@@ -5985,3 +5985,15 @@ product-checkbox-group.layout-row {
 .product-form__input input[type=radio]:checked+label.variant-not-color.color__swatch  {
   border: 2px solid #000 !important;
 }
+
+.product-labels__wrapper .product-labels__icon {
+  width: 20px;
+  height: 20px;
+}
+.product-labels__wrapper .product-labels__icon svg {
+  width: 20px;
+  height: 20px;
+}
+.product-labels__wrapper p {
+  font-size: 10px;
+}
