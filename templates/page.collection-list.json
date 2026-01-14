@@ -25,482 +25,138 @@
         "mobile_padding_bottom": 0
       }
     },
-    "tabs_wHL3b6": {
-      "type": "tabs",
+    "banner_grid_3VEpcM": {
+      "type": "banner-grid",
       "blocks": {
-        "tab_pqKBqJ": {
-          "type": "tab",
+        "image_x74GpJ": {
+          "type": "image",
           "settings": {
-            "custom_heading": "OUR STORY",
-            "text": "",
-            "text_size": "default",
-            "page": "our-story"
-          }
-        },
-        "tab_ziaYXm": {
-          "type": "tab",
-          "settings": {
-            "custom_heading": "FLAGSHIP STORE",
-            "text": "",
-            "text_size": "default",
-            "page": "flagship-store"
-          }
-        },
-        "tab_hb4EBL": {
-          "type": "tab",
-          "settings": {
-            "custom_heading": "CONTACT US",
-            "text": "",
-            "text_size": "default",
-            "page": "contact"
-          }
-        }
-      },
-      "block_order": [
-        "tab_pqKBqJ",
-        "tab_ziaYXm",
-        "tab_hb4EBL"
-      ],
-      "name": "t:sections.tabs.name",
-      "settings": {
-        "enable_redirect": true,
-        "subheading": "",
-        "heading": "",
-        "center_text": true,
-        "section_width": "narrow",
-        "tab_heading_size": "default",
-        "subheading_size": "default",
-        "subheading_tag": "h3",
-        "heading_size": "default",
-        "heading_tag": "h2",
-        "color_type": "default",
-        "background_color": "#ffffff",
-        "text_color": "#000000",
-        "desktop_padding_top": 0,
-        "desktop_padding_bottom": -24,
-        "mobile_padding_top": 0,
-        "mobile_padding_bottom": -24
-      }
-    },
-    "slideshow_with_media_9JiPbq": {
-      "type": "slideshow-with-media",
-      "blocks": {
-        "image_slide_8cNaWR": {
-          "type": "image_slide",
-          "settings": {
-            "block_link": "",
-            "block_target_blank": false,
-            "desktop_image": "shopify://shop_images/STORE_17.jpg",
-            "mobile_image": "shopify://shop_images/Store8.jpg",
-            "fill_content": false,
+            "image": "shopify://shop_images/11-featurecollection_0b0e4ccf-0ec1-485d-b7c5-0ceaad2caae7.jpg",
+            "link": "shopify://collections/mirage",
+            "target_blank": false,
+            "banner_size": "big_square",
             "overlay_color": "#000000",
             "overlay_gradient": "",
-            "overlay_opacity": 0,
-            "center_text": false,
-            "vertical_content_position": "center",
-            "horizontal_content_position": "center",
-            "narrow_content": true,
-            "context_image_width": 120,
-            "image_ratio": "original",
-            "context_image_radius": "default",
-            "context_image_link": "",
-            "context_image_target_blank": false,
-            "subheading": "",
-            "heading": "",
-            "text": "",
-            "dim_text": false,
-            "button_label_1": "",
-            "button_link_1": "",
-            "target_blank_1": false,
-            "button_style_1": "solid",
-            "button_label_2": "",
-            "button_link_2": "",
-            "target_blank_2": false,
-            "button_style_2": "outlined",
-            "countdown_enable": false,
-            "countdown_end_date": "",
-            "countdown_end_time": "",
-            "countdown_expiration_action": "hide_timer",
-            "countdown_complete_message": "",
-            "countdown_text": "base",
-            "countdown_text_size": "heading_m",
-            "countdown_text_color": "#000000",
-            "countdown_show_background": true,
-            "countdown_background_color": "#e8e8e8",
-            "countdown_background_gradient": "linear-gradient(180deg, rgba(235, 235, 235, 1), rgba(255, 255, 255, 1) 100%)",
-            "countdown_corner_radius": 2,
-            "countdown_show_outline": true,
-            "countdown_outline_color": "#dcdcdc",
-            "countdown_show_labels": true,
-            "countdown_labels_color": "#565656",
-            "countdown_enable_animation": true,
-            "subheading_size": "default",
-            "subheading_tag": "h3",
+            "overlay_opacity": 15,
+            "heading": "MIRAGE | PRE-FALL 2025",
             "heading_size": "default",
-            "heading_tag": "h2",
-            "main_text_size": "default"
+            "button_label": "Discover",
+            "show_button_on_mobile": true,
+            "button_style": "outlined",
+            "center_text": true,
+            "vertical_content_position": "space-between",
+            "narrow_content": true,
+            "color_type": "invert",
+            "background_color": "#ffffff",
+            "text_color": "#000000"
+          }
+        },
+        "image_6jX89j": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/12-featurecollection_d7868dbf-177e-4e16-95ed-a218672cdfe0.jpg",
+            "link": "shopify://collections/monolith",
+            "target_blank": false,
+            "banner_size": "big_square",
+            "overlay_color": "#000000",
+            "overlay_gradient": "",
+            "overlay_opacity": 15,
+            "heading": "MONOLITH | 2025 Holiday Capsule",
+            "heading_size": "default",
+            "button_label": "Discover",
+            "show_button_on_mobile": true,
+            "button_style": "outlined",
+            "center_text": true,
+            "vertical_content_position": "space-between",
+            "narrow_content": true,
+            "color_type": "invert",
+            "background_color": "#ffffff",
+            "text_color": "#000000"
+          }
+        },
+        "image_bkr4xj": {
+          "type": "image",
+          "settings": {
+            "link": "shopify://collections/symphony-of-grace",
+            "target_blank": false,
+            "banner_size": "big_square",
+            "overlay_color": "#000000",
+            "overlay_gradient": "",
+            "overlay_opacity": 15,
+            "heading": "SYMPHONY OF GRACE",
+            "heading_size": "default",
+            "button_label": "Discover",
+            "show_button_on_mobile": true,
+            "button_style": "outlined",
+            "center_text": true,
+            "vertical_content_position": "space-between",
+            "narrow_content": true,
+            "color_type": "invert",
+            "background_color": "#ffffff",
+            "text_color": "#000000"
+          }
+        },
+        "image_x36EtM": {
+          "type": "image",
+          "settings": {
+            "link": "shopify://collections/stillness-in-bloom",
+            "target_blank": false,
+            "banner_size": "big_square",
+            "overlay_color": "#000000",
+            "overlay_gradient": "",
+            "overlay_opacity": 15,
+            "heading": "STILLNESS IN BLOOM",
+            "heading_size": "default",
+            "button_label": "Discover",
+            "show_button_on_mobile": true,
+            "button_style": "outlined",
+            "center_text": true,
+            "vertical_content_position": "space-between",
+            "narrow_content": true,
+            "color_type": "invert",
+            "background_color": "#ffffff",
+            "text_color": "#000000"
+          }
+        },
+        "image_UCAQjW": {
+          "type": "image",
+          "settings": {
+            "link": "shopify://collections/divine-bloom",
+            "target_blank": false,
+            "banner_size": "big_square",
+            "overlay_color": "#000000",
+            "overlay_gradient": "",
+            "overlay_opacity": 15,
+            "heading": "DIVINE BLOOM",
+            "heading_size": "default",
+            "button_label": "Discover",
+            "show_button_on_mobile": true,
+            "button_style": "outlined",
+            "center_text": true,
+            "vertical_content_position": "space-between",
+            "narrow_content": true,
+            "color_type": "invert",
+            "background_color": "#ffffff",
+            "text_color": "#000000"
           }
         }
       },
       "block_order": [
-        "image_slide_8cNaWR"
+        "image_x74GpJ",
+        "image_6jX89j",
+        "image_bkr4xj",
+        "image_x36EtM",
+        "image_UCAQjW"
       ],
-      "name": "t:sections.slideshow-with-media.name",
+      "name": "t:sections.banner-grid.name",
       "settings": {
-        "desktop_height": 70,
-        "mobile_height": 60,
+        "content_on_hover": false,
+        "grid_gap": 4,
+        "mobile_grid_gap": 2,
         "section_width": "wide",
-        "controls": "classic_arrows",
-        "fill_controls": false,
-        "enable_autoplay": true,
-        "autoplay_speed": 7,
-        "color_type": "invert",
-        "background_color": "#ffffff",
-        "text_color": "#000000",
-        "desktop_padding_top": -12,
-        "desktop_padding_bottom": 0,
-        "mobile_padding_top": -12,
-        "mobile_padding_bottom": 0
-      }
-    },
-    "rich_text_VPqrdX": {
-      "type": "rich-text",
-      "blocks": {
-        "subheading_6D9wL4": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "Since 2016 — Huyen Pham’s design journey",
-            "subheading_size": "default",
-            "subheading_tag": "h3"
-          }
-        },
-        "heading_yrPbGa": {
-          "type": "heading",
-          "settings": {
-            "heading": "L'ALLEE DESIGN",
-            "heading_size": "default",
-            "heading_tag": "h2"
-          }
-        },
-        "text_LkbNKe": {
-          "type": "text",
-          "settings": {
-            "text": "<p>As a woman with taste, personality and independence, designer Huyen Pham conveys all her thoughts and thoughts into L’ALLÉE’s designs in a subtle and attractive way.</p><p>At L’ALLÉE, it is easy to see the Army style imprints interwoven in classic silhouettes, creating a charm that is both liberal and elegant. Not following the fashion trends, L’ALLÉE focuses on form-building techniques and sophisticated and sharp cutting and sewing to produce unique designs that always blend with the fashion flow. Coming to L’ALLÉE is coming to experience handmade fashion, sophisticated but easy to apply in life.</p><p>Like many people of her generation, designer Huyen Pham is family-oriented to strive for a stable office job. After more than 10 years of working, she is in her 30s, but it seems that “passion for fashion has never stopped” in this brave and ambitious woman.</p><p>It was that passion that prompted her to make the decision to quit her current job, where she has worked hard for many years and achieved many remarkable achievements, to start from zero with fashion.</p><p>Learning design from scratch at the age of 33, and not sure what the road ahead will be, but with the mindset of “living your life with passion”, designer Huyen Pham and L’ALLÉE have become clear examples of daring Follow your dreams and it’s never too late to start.</p>",
-            "dim_text": false,
-            "text_size": "default"
-          }
-        }
-      },
-      "block_order": [
-        "subheading_6D9wL4",
-        "heading_yrPbGa",
-        "text_LkbNKe"
-      ],
-      "name": "t:sections.rich-text.name",
-      "settings": {
-        "section_width": "narrow",
-        "center_text": false,
+        "image_radius": "0px",
         "color_type": "default",
         "background_color": "#ffffff",
-        "text_color": "#000000",
-        "desktop_padding_top": -24,
-        "desktop_padding_bottom": 60,
-        "mobile_padding_top": -24,
-        "mobile_padding_bottom": 60
-      }
-    },
-    "b833d0f2-b6b0-47c9-835d-0f3a2de746cd": {
-      "type": "media-with-text",
-      "blocks": {
-        "context_image_jMKWPk": {
-          "type": "context_image",
-          "settings": {
-            "context_image": "shopify://shop_images/lallee-logo.png",
-            "context_image_width": 120,
-            "context_image_ratio": "original",
-            "context_image_radius": "default",
-            "context_image_link": "",
-            "context_target_blank": false
-          }
-        },
-        "subheading_WbNf4h": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "Since 2016 — Huyen Pham’s design journey",
-            "subheading_size": "default",
-            "subheading_tag": "h3"
-          }
-        },
-        "template--18897235280146__b833d0f2-b6b0-47c9-835d-0f3a2de746cd-16835718968f2c7baf-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "L'ALLEE DESIGN",
-            "heading_size": "heading_m_uppercase",
-            "heading_tag": "h2"
-          }
-        },
-        "line_FB6HNB": {
-          "type": "line",
-          "settings": {
-            "desktop_padding_top": 24,
-            "desktop_padding_bottom": 24,
-            "mobile_padding_top": 16,
-            "mobile_padding_bottom": 16
-          }
-        },
-        "template--18897235280146__b833d0f2-b6b0-47c9-835d-0f3a2de746cd-16835718968f2c7baf-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>As a woman with taste, personality and independence, designer Huyen Pham conveys all her thoughts and thoughts into L’ALLÉE’s designs in a subtle and attractive way.</p><p>At L’ALLÉE, it is easy to see the Army style imprints interwoven in classic silhouettes, creating a charm that is both liberal and elegant. Not following the fashion trends, L’ALLÉE focuses on form-building techniques and sophisticated and sharp cutting and sewing to produce unique designs that always blend with the fashion flow. Coming to L’ALLÉE is coming to experience handmade fashion, sophisticated but easy to apply in life.</p><p>Like many people of her generation, designer Huyen Pham is family-oriented to strive for a stable office job. After more than 10 years of working, she is in her 30s, but it seems that “passion for fashion has never stopped” in this brave and ambitious woman.</p><p>It was that passion that prompted her to make the decision to quit her current job, where she has worked hard for many years and achieved many remarkable achievements, to start from zero with fashion.</p><p>Learning design from scratch at the age of 33, and not sure what the road ahead will be, but with the mindset of “living your life with passion”, designer Huyen Pham and L’ALLÉE have become clear examples of daring Follow your dreams and it’s never too late to start.</p>",
-            "dim_text": false,
-            "text_size": "default"
-          }
-        }
-      },
-      "block_order": [
-        "context_image_jMKWPk",
-        "subheading_WbNf4h",
-        "template--18897235280146__b833d0f2-b6b0-47c9-835d-0f3a2de746cd-16835718968f2c7baf-0",
-        "line_FB6HNB",
-        "template--18897235280146__b833d0f2-b6b0-47c9-835d-0f3a2de746cd-16835718968f2c7baf-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "image": "shopify://shop_images/543362100_1202849878546278_7498736316341031551_n.jpg",
-        "link": "",
-        "target_blank": false,
-        "video_focal_point": "center center",
-        "section_width": "full-width",
-        "swap_media": false,
-        "media_size": "half",
-        "media_ratio": "original",
-        "narrow_content": true,
-        "vertical_text_alignment": "center",
-        "horizontal_text_alignment": "center",
-        "color_type": "default",
-        "background_color": "#ffffff",
-        "text_color": "#000000",
-        "fill_section": false,
-        "desktop_padding_top": -32,
-        "desktop_padding_bottom": 0,
-        "mobile_padding_top": -32,
-        "mobile_padding_bottom": 0
-      }
-    },
-    "collection_list_Cc6Fq7": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_CeMr8H": {
-          "type": "collection",
-          "settings": {
-            "collection": "all-products",
-            "focal_point": "center center",
-            "custom_heading": ""
-          }
-        },
-        "collection_pXGyLR": {
-          "type": "collection",
-          "settings": {
-            "collection": "best-seller",
-            "focal_point": "center center",
-            "custom_heading": ""
-          }
-        },
-        "collection_gTWmqQ": {
-          "type": "collection",
-          "settings": {
-            "collection": "sale",
-            "focal_point": "center center",
-            "custom_heading": ""
-          }
-        },
-        "collection_wMHCfw": {
-          "type": "collection",
-          "settings": {
-            "collection": "top",
-            "focal_point": "center center",
-            "custom_heading": ""
-          }
-        },
-        "collection_aRAQzb": {
-          "type": "collection",
-          "settings": {
-            "collection": "bottom",
-            "focal_point": "center center",
-            "custom_heading": ""
-          }
-        },
-        "collection_WxRJiB": {
-          "type": "collection",
-          "settings": {
-            "collection": "dress",
-            "focal_point": "center center",
-            "custom_heading": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_CeMr8H",
-        "collection_pXGyLR",
-        "collection_gTWmqQ",
-        "collection_wMHCfw",
-        "collection_aRAQzb",
-        "collection_WxRJiB"
-      ],
-      "disabled": true,
-      "name": "t:sections.collection-list.name",
-      "settings": {
-        "subheading": "EXPLORE OUR COLLECTION",
-        "subheading_size": "heading_s_uppercase",
-        "subheading_tag": "h2",
-        "item_heading_size": "heading_xs_uppercase",
-        "button_label": "",
-        "button_style": "solid",
-        "image_width": 30,
-        "image_ratio": "original",
-        "image_radius": "default",
-        "color_type": "default",
-        "background_color": "#ffffff",
-        "text_color": "#000000",
-        "desktop_padding_top": 0,
-        "desktop_padding_bottom": 32,
-        "mobile_padding_top": 0,
-        "mobile_padding_bottom": 32
-      }
-    },
-    "slideshow_with_media_KRLjJ7": {
-      "type": "slideshow-with-media",
-      "blocks": {
-        "image_slide_CnX6Vf": {
-          "type": "image_slide",
-          "settings": {
-            "block_link": "",
-            "block_target_blank": false,
-            "desktop_image": "shopify://shop_images/STORE_17.jpg",
-            "mobile_image": "shopify://shop_images/596052171_1279534394211159_259485061987494241_n.jpg",
-            "fill_content": false,
-            "overlay_color": "#000000",
-            "overlay_gradient": "",
-            "overlay_opacity": 40,
-            "center_text": true,
-            "vertical_content_position": "end",
-            "horizontal_content_position": "center",
-            "narrow_content": true,
-            "context_image_width": 120,
-            "image_ratio": "original",
-            "context_image_radius": "default",
-            "context_image_link": "",
-            "context_image_target_blank": false,
-            "subheading": "2025 Holiday Capsule",
-            "heading": "MONOLITH COLLECTION",
-            "text": "",
-            "dim_text": false,
-            "button_label_1": "DISCOVER",
-            "button_link_1": "#",
-            "target_blank_1": false,
-            "button_style_1": "outlined",
-            "button_label_2": "",
-            "button_link_2": "#",
-            "target_blank_2": false,
-            "button_style_2": "link",
-            "countdown_enable": false,
-            "countdown_end_date": "",
-            "countdown_end_time": "",
-            "countdown_expiration_action": "hide_timer",
-            "countdown_complete_message": "",
-            "countdown_text": "base",
-            "countdown_text_size": "heading_m",
-            "countdown_text_color": "#000000",
-            "countdown_show_background": true,
-            "countdown_background_color": "#e8e8e8",
-            "countdown_background_gradient": "linear-gradient(180deg, rgba(235, 235, 235, 1), rgba(255, 255, 255, 1) 100%)",
-            "countdown_corner_radius": 2,
-            "countdown_show_outline": true,
-            "countdown_outline_color": "#dcdcdc",
-            "countdown_show_labels": true,
-            "countdown_labels_color": "#565656",
-            "countdown_enable_animation": true,
-            "subheading_size": "default",
-            "subheading_tag": "h3",
-            "heading_size": "default",
-            "heading_tag": "h2",
-            "main_text_size": "default"
-          }
-        },
-        "image_slide_qcaxNq": {
-          "type": "image_slide",
-          "settings": {
-            "block_link": "",
-            "block_target_blank": false,
-            "desktop_image": "shopify://shop_images/Store2.jpg",
-            "mobile_image": "shopify://shop_images/anh_san_pham.jpg",
-            "fill_content": false,
-            "overlay_color": "#000000",
-            "overlay_gradient": "",
-            "overlay_opacity": 40,
-            "center_text": true,
-            "vertical_content_position": "end",
-            "horizontal_content_position": "center",
-            "narrow_content": true,
-            "context_image_width": 120,
-            "image_ratio": "original",
-            "context_image_radius": "default",
-            "context_image_link": "",
-            "context_image_target_blank": false,
-            "subheading": "2025 Holiday Capsule",
-            "heading": "MONOLITH COLLECTION",
-            "text": "",
-            "dim_text": false,
-            "button_label_1": "DISCOVER",
-            "button_link_1": "#",
-            "target_blank_1": false,
-            "button_style_1": "outlined",
-            "button_label_2": "",
-            "button_link_2": "#",
-            "target_blank_2": false,
-            "button_style_2": "link",
-            "countdown_enable": false,
-            "countdown_end_date": "",
-            "countdown_end_time": "",
-            "countdown_expiration_action": "hide_timer",
-            "countdown_complete_message": "",
-            "countdown_text": "base",
-            "countdown_text_size": "heading_m",
-            "countdown_text_color": "#000000",
-            "countdown_show_background": true,
-            "countdown_background_color": "#e8e8e8",
-            "countdown_background_gradient": "linear-gradient(180deg, rgba(235, 235, 235, 1), rgba(255, 255, 255, 1) 100%)",
-            "countdown_corner_radius": 2,
-            "countdown_show_outline": true,
-            "countdown_outline_color": "#dcdcdc",
-            "countdown_show_labels": true,
-            "countdown_labels_color": "#565656",
-            "countdown_enable_animation": true,
-            "subheading_size": "default",
-            "subheading_tag": "h3",
-            "heading_size": "default",
-            "heading_tag": "h2",
-            "main_text_size": "default"
-          }
-        }
-      },
-      "block_order": [
-        "image_slide_CnX6Vf",
-        "image_slide_qcaxNq"
-      ],
-      "disabled": true,
-      "name": "t:sections.slideshow-with-media.name",
-      "settings": {
-        "desktop_height": 80,
-        "mobile_height": 70,
-        "section_width": "full-width",
-        "controls": "classic_arrows",
-        "fill_controls": false,
-        "enable_autoplay": true,
-        "autoplay_speed": 7,
-        "color_type": "invert",
-        "background_color": "#ffffff",
-        "text_color": "#000000",
         "desktop_padding_top": 0,
         "desktop_padding_bottom": 60,
         "mobile_padding_top": 0,
@@ -510,11 +166,6 @@
   },
   "order": [
     "main-page",
-    "tabs_wHL3b6",
-    "slideshow_with_media_9JiPbq",
-    "rich_text_VPqrdX",
-    "b833d0f2-b6b0-47c9-835d-0f3a2de746cd",
-    "collection_list_Cc6Fq7",
-    "slideshow_with_media_KRLjJ7"
+    "banner_grid_3VEpcM"
   ]
 }
