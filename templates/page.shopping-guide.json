@@ -17,7 +17,7 @@
           "settings": {
             "custom_heading": "Shopping Guide",
             "text": "",
-            "text_size": "default",
+            "text_size": "body_s",
             "page": "shopping-guide"
           }
         },
