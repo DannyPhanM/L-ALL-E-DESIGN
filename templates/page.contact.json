@@ -103,7 +103,7 @@
         "template--15091190628467__83462665-e357-4caf-9a75-170b1ba75762-168362428402bf1696-2": {
           "type": "text",
           "settings": {
-            "text": "<p>EMAIL: huyenpham@lalee.com</p><p>CLIENT SUPPORT t: <a href=\"https://wa.me/+84963271383\">+84-963-271-383</a></p><p>WHOLESALE AND PARTNERSHIP :<a href=\"https://wa.me/+84989293965\">+84989293965</a></p>",
+            "text": "<p>EMAIL: <a href=\"mailto:huyenpham@lalee.com\" target=\"_blank\" title=\"mailto:huyenpham@lalee.com\">huyenpham@lalee.com</a></p><p>CLIENT SUPPORT: <a href=\"https://wa.me/+84963271383\">+84-963-271-383</a></p><p>WHOLESALE AND PARTNERSHIP :<a href=\"https://wa.me/+84989293965\">+84989293965</a></p>",
             "dim_text": false,
             "text_size": "default"
           }
