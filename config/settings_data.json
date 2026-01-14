@@ -115,7 +115,7 @@
     "pills_variant_label": "Size",
     "pills_layout": "original",
     "color_pills_variant_label": "Color",
-    "show_color_name": true,
+    "show_color_name": false,
     "image_swatch_variant_label": "",
     "image_swatch_ratio": "original",
     "linked_products_image_ratio": "original",
