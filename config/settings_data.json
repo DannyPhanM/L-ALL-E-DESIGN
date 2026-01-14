@@ -83,7 +83,7 @@
     "font_label": "base",
     "label_desktop_size": 12,
     "label_mobile_size": 12,
-    "regular_button_size": "default",
+    "regular_button_size": "body_m_uppercase",
     "navigation_button_size": "default",
     "product_title_size": "default",
     "product_price_size": "default",
