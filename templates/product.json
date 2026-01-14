@@ -316,12 +316,21 @@
           "settings": {
             "heading": "Details and Fit",
             "collapsible_tabs_size": "default",
-            "text": "{{ product.description }}",
+            "text": "<p>{{ product.description }}</p>",
             "text_size": "body_m_uppercase",
             "icon": "clothes",
             "page": "",
             "top_spacing": 1,
             "mobile_top_spacing": 1
+          }
+        },
+        "line_FDPdKe": {
+          "type": "line",
+          "settings": {
+            "desktop_padding_top": 8,
+            "desktop_padding_bottom": 8,
+            "mobile_padding_top": 8,
+            "mobile_padding_bottom": 8
           }
         },
         "collapsible_tab_6kYyPy": {
@@ -337,6 +346,15 @@
             "mobile_top_spacing": 1
           }
         },
+        "line_jGiWfJ": {
+          "type": "line",
+          "settings": {
+            "desktop_padding_top": 8,
+            "desktop_padding_bottom": 8,
+            "mobile_padding_top": 8,
+            "mobile_padding_bottom": 8
+          }
+        },
         "collapsible_tab_Wcbct3": {
           "type": "collapsible_tab",
           "settings": {
@@ -348,6 +366,15 @@
             "page": "flagship-store",
             "top_spacing": 1,
             "mobile_top_spacing": 1
+          }
+        },
+        "line_dKU48e": {
+          "type": "line",
+          "settings": {
+            "desktop_padding_top": 8,
+            "desktop_padding_bottom": 8,
+            "mobile_padding_top": 8,
+            "mobile_padding_bottom": 8
           }
         },
         "collapsible_tab_3U6JPi": {
@@ -363,13 +390,13 @@
             "mobile_top_spacing": 1
           }
         },
-        "line_kanCCT": {
+        "line_YyVkdd": {
           "type": "line",
           "settings": {
-            "desktop_padding_top": 24,
-            "desktop_padding_bottom": 24,
-            "mobile_padding_top": 16,
-            "mobile_padding_bottom": 16
+            "desktop_padding_top": 8,
+            "desktop_padding_bottom": 8,
+            "mobile_padding_top": 8,
+            "mobile_padding_bottom": 8
           }
         },
         "dc56d1d9-cab4-452f-9272-c52197a7ab88": {
@@ -432,10 +459,13 @@
         "icons_with_text_7w3nmJ",
         "line_hAEx8C",
         "collapsible_tab_itJezC",
+        "line_FDPdKe",
         "collapsible_tab_6kYyPy",
+        "line_jGiWfJ",
         "collapsible_tab_Wcbct3",
+        "line_dKU48e",
         "collapsible_tab_3U6JPi",
-        "line_kanCCT",
+        "line_YyVkdd",
         "dc56d1d9-cab4-452f-9272-c52197a7ab88",
         "f8c922ec-d527-49f4-81d7-e882bc9219a1"
       ],
