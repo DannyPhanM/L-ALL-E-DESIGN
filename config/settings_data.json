@@ -36,7 +36,7 @@
     "error_color": "#ba1d26",
     "success_color": "#088b6f",
     "select_text_accent_color": true,
-    "typography_preset": "minimal_uppercase",
+    "typography_preset": "custom",
     "swap_fonts": false,
     "desktop_font_scale": 70,
     "mobile_font_scale": 70,
