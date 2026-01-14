@@ -462,7 +462,7 @@ main > section:first-child .product.product--lines {
     color: rgb(var(--layout-text-color));
     cursor: pointer;
     position: relative;
-    min-height: 44px;
+    min-height: 32px;
     display: flex;
     gap: 8px;
     flex-wrap: nowrap;
@@ -470,8 +470,8 @@ main > section:first-child .product.product--lines {
     justify-content: center;
     text-align: center;
     width: fit-content;
-    min-width: 44px;
-    padding: 0 12px;
+    min-width: 32px;
+    padding: 0;
     transition: background-color var(--animation-duration) var(--transition-timing-function), border var(--animation-duration) var(--transition-timing-function);
   }
   .product-form__input input[type="radio"]:disabled + label:after, 
