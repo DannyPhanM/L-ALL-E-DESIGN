@@ -252,8 +252,8 @@ a.card:focus-visible::after {
     justify-content: center;
     cursor: pointer;
     position: relative;
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
     border-radius: var(--other-buttons-radius);
     backface-visibility: hidden;
     transition: all var(--animation-duration) var(--transition-timing-function);
