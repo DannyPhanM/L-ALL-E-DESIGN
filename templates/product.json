@@ -269,7 +269,7 @@
           "settings": {
             "heading": "",
             "heading_size": "default",
-            "text_size": "label_font_uppercase",
+            "text_size": "default",
             "icon_size": "small",
             "icon_weight": "regular",
             "context_icon_radius": "default",
