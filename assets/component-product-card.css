@@ -418,8 +418,8 @@ a.card:focus-visible::after {
     background: var(--swatch-background);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 8px;
-    height: 8px;
+    width: 32px;
+    height: 32px;
     top: 50%;
     transform: translate(-50%, -50%);
     left: 50%;
@@ -431,8 +431,8 @@ a.card:focus-visible::after {
 .color-swatch.active-swatch:not(.color-swatch-image) .color-swatch__dot {
     background: rgb(var(--layout-background-color));
     background-image: none;
-    width: 8px;
-    height: 8px;
+    width: 32px;
+    height: 32px;
     top: 50%;
     transform: translate(-50%, -50%);
     left: 50%;
