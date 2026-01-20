@@ -257,10 +257,10 @@
           "type": "icons_with_text",
           "settings": {
             "heading": "",
-            "heading_size": "default",
-            "text_size": "label_font_uppercase",
+            "heading_size": "body_s_uppercase",
+            "text_size": "body_s_uppercase",
             "icon_size": "small",
-            "icon_weight": "light",
+            "icon_weight": "medium",
             "context_icon_radius": "default",
             "fill_container": false,
             "icon_1": "loop",
