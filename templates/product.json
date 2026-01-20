@@ -585,7 +585,7 @@
       "type": "product-recommendations",
       "settings": {
         "heading": "Recommended For You",
-        "heading_size": "heading_xs_uppercase",
+        "heading_size": "heading_m_uppercase",
         "heading_tag": "h3",
         "desktop_grid_type": "5",
         "mobile_layout": "2",
