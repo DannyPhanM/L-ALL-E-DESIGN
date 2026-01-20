@@ -257,8 +257,8 @@
           "type": "icons_with_text",
           "settings": {
             "heading": "",
-            "heading_size": "body_s_uppercase",
-            "text_size": "body_s_uppercase",
+            "heading_size": "body_m",
+            "text_size": "body_m",
             "icon_size": "small",
             "icon_weight": "medium",
             "context_icon_radius": "default",
