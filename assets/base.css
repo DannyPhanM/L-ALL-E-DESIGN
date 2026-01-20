@@ -4153,7 +4153,9 @@ input[type=checkbox] {
 .card-container .swatches_container {
   gap: 0
 }
-
+.card-container  .card__title-text {
+  text-align: left;
+}
 .card-container>.card__content>.card>.card__price {
   display: flex;
 }
