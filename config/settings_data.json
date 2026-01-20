@@ -577,7 +577,7 @@
         ],
         "settings": {
           "announcement_bar": "show",
-          "text_size": "body_m_uppercase",
+          "text_size": "body_s_uppercase",
           "show_bottom_line": false,
           "center_text": true,
           "enable_autoplay": false,
