@@ -235,7 +235,7 @@
           "settings": {
             "text": "<p><em><strong>Sale items are final, non-returnable, and not eligible for free shipping</strong></em><em>.</em></p>",
             "dim_text": true,
-            "text_size": "label_font",
+            "text_size": "body_s",
             "top_spacing": 1,
             "mobile_top_spacing": 1
           }
