@@ -257,7 +257,7 @@
           "type": "icons_with_text",
           "settings": {
             "heading": "",
-            "heading_size": "body_m",
+            "heading_size": "default",
             "text_size": "body_m",
             "icon_size": "small",
             "icon_weight": "medium",
