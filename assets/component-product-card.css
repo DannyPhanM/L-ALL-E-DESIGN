@@ -245,7 +245,7 @@ a.card:focus-visible::after {
     flex-wrap: wrap;
     align-items: flex-start;
     pointer-events: visible;
-    gap: 2px;
+    gap: 0px;
 }
 .color-swatch:not(.color-swatch-image) {
     display: flex;
