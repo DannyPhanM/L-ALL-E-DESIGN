@@ -4150,6 +4150,10 @@ input[type=checkbox] {
   gap: 8px;
 }
 
+.card-container .swatches_container {
+  gap: 0
+}
+
 .card-container>.card__content>.card>.card__price {
   display: flex;
 }
