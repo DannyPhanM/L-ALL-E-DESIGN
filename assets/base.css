@@ -4663,6 +4663,10 @@ html[lang="ar"]  .custom-size-popup__close {
 	left: 20px;
 }
 
+.free-shipping-bar p  {
+  text-align: center;
+}
+
 @media(max-width: 749px) {
 	html[lang="ar"] .section-block.product__title {
 		padding-left: 25px;
