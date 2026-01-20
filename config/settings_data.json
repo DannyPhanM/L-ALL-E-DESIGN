@@ -87,7 +87,7 @@
     "label_mobile_size": 12,
     "regular_button_size": "body_l_uppercase",
     "navigation_button_size": "default",
-    "product_title_size": "heading_xs",
+    "product_title_size": "body_m",
     "product_price_size": "default",
     "product_text_size": "default",
     "collection_title_size": "default",
