@@ -4674,7 +4674,7 @@ html[lang="ar"]  .custom-size-popup__close {
     padding: 6px;
   }
 
-  .product-popup-modal__content .button-close close-popup {
+  .product-popup-modal__content .button-close.close-popup {
     width: 20px;
     height: 20px;
   }
