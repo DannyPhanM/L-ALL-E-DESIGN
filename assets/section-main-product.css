@@ -5986,8 +5986,12 @@ product-checkbox-group.layout-row {
   border: 2px solid #000 !important;
 }
 
-.product-labels__wrapper.double-hover.column  {
+.product-labels .product-labels__wrapper.double-hover.column  {
   align-items: center;
+}
+
+.product-labels .product-labels__description p {
+  font-size: 12px;
 }
 
 .product-labels__wrapper .product-labels__icon {
