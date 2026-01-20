@@ -577,19 +577,19 @@
         ],
         "settings": {
           "announcement_bar": "show",
-          "text_size": "label_font_uppercase",
+          "text_size": "body_m_uppercase",
           "show_bottom_line": false,
           "center_text": true,
           "enable_autoplay": false,
           "autoplay_speed": 5,
           "image_ratio": "original",
-          "image_width": 20,
+          "image_width": 48,
           "context_image_radius": "default",
           "icon_weight": "regular",
           "color_type": "custom",
           "background_color": "#000000",
           "text_color": "#ffffff",
-          "section_paddings": 8
+          "section_paddings": 16
         }
       },
       "menu-drawer": {
