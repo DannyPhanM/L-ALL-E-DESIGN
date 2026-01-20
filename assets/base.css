@@ -4670,6 +4670,9 @@ html[lang="ar"]  .custom-size-popup__close {
   .free-shipping-bar p {
     font-size: 10px !important;
   }
+  .product-popup-modal__content .page__content.popup-content {
+    padding: 6px;
+  }
 }
 
 .page__content.popup-content.body-text--minimal_uppercase.rte {
