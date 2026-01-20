@@ -4681,3 +4681,8 @@ html[lang="ar"]  .custom-size-popup__close {
   font-weight: 600;
   text-align: center;
 }
+
+.tax-note {
+  text-transform: inherit;
+  font-size: 10px;
+}
