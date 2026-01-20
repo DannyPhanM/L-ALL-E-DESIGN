@@ -4673,6 +4673,11 @@ html[lang="ar"]  .custom-size-popup__close {
   .product-popup-modal__content .page__content.popup-content {
     padding: 6px;
   }
+
+  .product-popup-modal__content .button-close close-popup {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .page__content.popup-content.body-text--minimal_uppercase.rte {
