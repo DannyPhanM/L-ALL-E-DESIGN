@@ -17,7 +17,7 @@
         "show_image": true,
         "show_image_under_heading": false,
         "banner_image_ratio": "original",
-        "banner_focal_point": "top center",
+        "banner_focal_point": "20% 50%",
         "heading_size": "default",
         "text_size": "default",
         "enable_filtering": true,

@@ -18,7 +18,7 @@
     "show_lines": false,
     "line_width": 1,
     "line_opacity": 20,
-    "center_text": true,
+    "center_text": false,
     "max_page_width": "1700",
     "include_header_footer": false,
     "layout_background_color": "#ffffff",
