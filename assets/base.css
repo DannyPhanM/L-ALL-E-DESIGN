@@ -4678,6 +4678,11 @@ html[lang="ar"]  .custom-size-popup__close {
     width: 20px;
     height: 20px;
   }
+
+  .product-popup-modal__content .button-close.close-popup svg {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .page__content.popup-content.body-text--minimal_uppercase.rte {
