@@ -4667,6 +4667,9 @@ html[lang="ar"]  .custom-size-popup__close {
 	html[lang="ar"] .section-block.product__title {
 		padding-left: 25px;
 	}
+  .free-shipping-bar p {
+    font-size: 10px !important;
+  }
 }
 
 .page__content.popup-content.body-text--minimal_uppercase.rte {
