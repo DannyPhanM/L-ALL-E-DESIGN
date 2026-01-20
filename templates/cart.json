@@ -52,6 +52,7 @@
     },
     "recently_viewed_products_GpxqTk": {
       "type": "recently-viewed-products",
+      "disabled": true,
       "name": "t:sections.recently-viewed-products.name",
       "settings": {
         "heading": "Recently viewed",
@@ -112,7 +113,7 @@
         "enable_color_pills": true,
         "show_pickup_availability": false,
         "color_type": "default",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "text_color": "#000000",
         "desktop_padding_top": 0,
         "desktop_padding_bottom": 0,
