@@ -4147,13 +4147,11 @@ input[type=checkbox] {
 .card-container>.card__content>.card {
   width: 100%;
   text-align: center;
-  justify-content: center;
   gap: 8px;
 }
 
 .card-container>.card__content>.card>.card__price {
   display: flex;
-  justify-content: center;
 }
 
 xb-wishlist-button-collection {
