@@ -425,8 +425,8 @@
           "5e6ad0c3-e619-47d4-a0e6-ab86dd0c9282": {
             "type": "miscellaneous",
             "settings": {
-              "enable_language": true,
-              "search_style": "icon",
+              "enable_language": false,
+              "search_style": "disable",
               "news_style": "disable",
               "news_heading": "News",
               "news_icon": "fire",
