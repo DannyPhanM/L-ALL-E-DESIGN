@@ -33,10 +33,17 @@
         background-color: rgb(var(--layout-background-color));
         color: rgb(var(--layout-text-color));
     }
+    .collection-heading {
+        font-size: 32px;
+        text-align: left;
+    }
     @media screen and (max-width: 920px) {
         #shopify-section-{{ section.id }} {
             --padding-top: {{ section.settings.mobile_padding_top }}px;
             --padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+        }
+        .collection-heading {
+            font-size: 16px;
         }
     }
 {% endstyle %}
@@ -44,7 +51,7 @@
 <div class="collection-list collection-list--{{ settings.white_space }} ordinal-section ordinal-section--{{ settings.white_space }} section-padding--{{ settings.white_space }} {% if settings.show_lines %}ordinal-section--lines lines{% endif %} {% if settings.max_page_width == '1400' or settings.max_page_width == '1200' %}page-width {% endif %} page-width--{{ settings.max_page_width }} color-{{ section.settings.color_type }} {% if section.settings.color_type != 'default' %}no-default-color{% endif %}">
     <div class="collection-list__wrapper {% if settings.enable_buttons_zoom %}buttons-zoom{% endif %}">
         {% if section.settings.subheading != blank %}
-            <{{ section.settings.subheading_tag }} class="content-subheading content-subheading--{{ settings.typography_preset }} {% if section.settings.subheading_size != 'default' %}{{ section.settings.subheading_size }}{% else %}{% if settings.typography_preset == 'custom' %}{% if settings.uppercase_label %} uppercase{% endif %}{% if settings.bolder_font_label %} bolder-font{% endif %}{% endif %}{% endif %} {% if settings.dim_text %}dim{% endif %}">{{ section.settings.subheading }}</{{ section.settings.subheading_tag }}>
+            <{{ section.settings.subheading_tag }} class="collection-heading content-subheading content-subheading--{{ settings.typography_preset }} {% if section.settings.subheading_size != 'default' %}{{ section.settings.subheading_size }}{% else %}{% if settings.typography_preset == 'custom' %}{% if settings.uppercase_label %} uppercase{% endif %}{% if settings.bolder_font_label %} bolder-font{% endif %}{% endif %}{% endif %} {% if settings.dim_text %}dim{% endif %}">{{ section.settings.subheading }}</{{ section.settings.subheading_tag }}>
         {% endif %}
         <div class="collection-list__list">
             {%- for block in section.blocks -%}
