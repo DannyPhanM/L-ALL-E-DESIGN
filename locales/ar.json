@@ -915,7 +915,8 @@
       },
       "change_currency": {
         "credit_card_will_be_charged_html": "سيتم خصم مبلغ %{amount} من بطاقتك الائتمانية",
-        "change_currency_link": "غيّر إلى %{currency_name}"
+        "change_currency_link": "غيّر إلى %{currency_name}",
+        "currency_not_supported_by_shop": "العملة التي اخترتها غير متوفرة. جميع الأسعار الآن بـ %{currency_code}."
       },
       "stock": {
         "unpurchasable_product": {
@@ -1190,7 +1191,14 @@
         },
         "shipping_default_value": "يتم حسابها في الخطوة التالية",
         "percent_off_shipping": "خصم %{percent}% على الشحن",
-        "amount_off_shipping": "خصم على الشحن بنسبة %{amount}"
+        "amount_off_shipping": "خصم على الشحن بنسبة %{amount}",
+        "cart_does_not_meet_discount_requirements_notice": "رمز الخصم <strong style=\"text-transform:uppercase\">%{code}</strong> غير صالح للمنتجات الموجودة في سلة التسوق الخاصة بك",
+        "discount_requires_customer_notice": "أدخل معلومات الشحن الخاصة بك لتطبيق رمز الخصم <strong style=\"text-transform:uppercase\">%{code}</strong>",
+        "customer_does_not_meet_discount_requirements_notice": "رمز الخصم <strong style=\"text-transform:uppercase\">%{code}</strong> غير متاح لك حاليًا",
+        "eligible_customer_missing_notice": "يتطلب رمز الخصم <strong style=\"text-transform:uppercase\">%{code}</strong> عميلًا مؤهلًا",
+        "shipping_information_does_not_meet_discount_requirements_notice": "رمز الخصم <strong style=\"text-transform:uppercase\">%{code}</strong> غير متوفر لعنوان الشحن الخاص بك",
+        "customer_already_used_once_per_customer_discount_notice": "تم استخدام رمز الخصم <strong style=\"text-transform:uppercase\">%{code}</strong> بالفعل",
+        "higher_value_discount_applied": "لا يمكن استخدام <strong style=\"text-transform:uppercase\">الرمز %{code}</strong> مع خصوماتك الحالية."
       },
       "field_errors": {
         "address_country_not_supported": "لا نقوم بالشحن إلى هذا البلد أو المنطقة. أدخل عنوان شحن جديد وحاول مرة أخرى.",
@@ -1718,7 +1726,8 @@
           "multibanco": {
             "entity": "كيان",
             "amount": "كمية",
-            "reference": "مرجع"
+            "reference": "مرجع",
+            "instruction_html": "قم بالدفع عبر Multibanco أو عبر الإنترنت باستخدام البيانات الموضحة أدناه. للاستفسارات أو لتحديث بيانات الدفع، تواصل معنا."
           }
         },
         "clear": "واضح",
@@ -1812,7 +1821,21 @@
         "saved_credit_card": "بطاقة الائتمان المحفوظة الخاصة بك",
         "order_edit_banner_items_returned": {
           "in_full": "تم إرجاع {{quantity}}"
-        }
+        },
+        "amazon_payments_failed_mfa_challenge": "لم يتم استخدام طريقة الدفع المختارة. يرجى اختيار طريقة دفع أخرى أو الاتصال بالبنك أو جهة إصدار بطاقتك.",
+        "amazon_payments_abandoned_mfa_challenge": "لم يتم إتمام عملية الدفع. حاول استخدام طريقة دفع أخرى أو اتصل بالبنك أو جهة إصدار بطاقتك.",
+        "card_verification_value_explanation": "رمز الأمان المكون من 3 أرقام موجود عادةً على ظهر البطاقة. أما بطاقات أمريكان إكسبريس، فيحتوي رمزها على 4 أرقام موجود على وجهها.",
+        "no_taxes_banner_content": "لن تُفرض ضرائب على هذا الطلب. بمجرد استلامك للدفع، لا يمكن إضافة الضرائب.",
+        "apple": {
+          "not_available": "خدمة Apple Pay غير متوفرة في هذا المتصفح. لربط حساب Apple Pay الخاص بك، ستحتاج إلى استخدام متصفح Safari على جهاز Apple."
+        },
+        "mor_disclaimer_html": "بالنقر أدناه وإتمام طلبك، فإنك توافق على شراء منتجاتك من Global-e بصفتها التاجر المسجل.\n بالنسبة لهذه المعاملة، وفقًا <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{mor_terms}\" href=\"%{terms_href}\">لشروط وأحكام</a> Global-e\n <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{privacy_policy}\" href=\"%{policy_href}\">وسياسة الخصوصية</a> . غلوبال-إي هي شركة دولية\n موفر خدمة التوصيل إلى %{shop_name}\n",
+        "billing_address_invalid_phone": "قم بتحديث رقم الهاتف في عنوان الفواتير الخاص بك لـ {{label}} {{last_digits}} للمتابعة.",
+        "business_customer_vaulting_payment_label": "احفظ طريقة الدفع هذه عند إتمام عملية الشراء، وامنح شركة %{company} صلاحية تحصيل المبلغ منها في عمليات الشراء المستقبلية لهذا الموقع. يمكن لجميع جهات الاتصال المرتبطة بهذا الموقع استخدام طريقة الدفع هذه.",
+        "business_customer_with_bank_account_vaulting_payment_label": "احفظ طريقة الدفع هذه عند إتمام عملية الشراء، وصرح لشركة %{company} بخصم المبلغ من حسابك مقابل عمليات الشراء المستقبلية التي توافق عليها لهذا الموقع، إلى حين إلغاء العملية. يمكن لجميع جهات الاتصال المرتبطة بهذا الموقع استخدام طريقة الدفع هذه.",
+        "purchase_options_and_vaulting_agreement_label": "يُعدّ عنصر واحد أو أكثر في سلة التسوق الخاصة بك عملية شراء مؤجلة أو اشتراك. بمتابعة عملية الدفع، فإنك توافق على خصم المبلغ تلقائيًا من وسيلة الدفع الخاصة بك بالسعر والوتيرة الموضحة في هذه الصفحة حتى انتهاء مدة الاشتراك أو قيامك بإلغائه. تخضع جميع عمليات الإلغاء لسياسة الإلغاء.",
+        "local_payment_method_receiver_notice": "بعد إتمام طلبك، ستتلقى تفاصيل الدفع. يُرجى إتمام الدفع عبر أجهزة الصراف الآلي أو عبر الإنترنت خلال {{dueDays}} يومًا.",
+        "order_edit_banner_subtitle": "تم تحديث طلبك {{order_number}} . راجع هذه التغييرات، ثم ادفع لتأكيد طلبك."
       },
       "shipping_errors": {
         "shipping_method": "لقد تغيرت خيارات الشحن لطلبك. يرجى مراجعة اختيارك.",
@@ -2289,7 +2312,8 @@
         "pick_up_in_twenty_four_hours": "جاهز عادةً خلال 24 ساعة",
         "pick_up_in_two_to_four_days": "جاهز عادةً خلال 2-4 أيام",
         "pick_up_in_five_or_more_days": "جاهز عادةً خلال 5 أيام أو أكثر",
-        "pick_up_next_day": "جاهز للاستلام في اليوم التالي"
+        "pick_up_next_day": "جاهز للاستلام في اليوم التالي",
+        "subscription_pickup_information": "سيتم تطبيق طريقة التوصيل هذه على جميع العناصر في هذا الطلب وعلى جميع الطلبات المستقبلية لهذا الاشتراك."
       },
       "localized_fields": {
         "additional_information": {
@@ -2355,7 +2379,8 @@
       },
       "remote_merchandise_only": {
         "title": "أكمل عملية الشراء",
-        "checkout_on_shop_label": "قم بإتمام عملية الشراء على %{shop_name}"
+        "checkout_on_shop_label": "قم بإتمام عملية الشراء على %{shop_name}",
+        "remote_only_notice": "تُباع هذه المنتجات وتُشحن من متاجر أخرى. يُرجى إتمام عملية الشراء من كل متجر على حدة."
       },
       "open_graph_meta_tag": {
         "title_with_products": {
@@ -2365,6 +2390,9 @@
       "no_address_location": {
         "title": "موقع بدون عنوان",
         "alt_header": "عنوان الشحن مفقود"
+      },
+      "order_errors": {
+        "network_failure": "لم يتم إرسال طلبك بسبب خطأ في الشبكة. يرجى التحقق من اتصالك بالإنترنت والمحاولة مرة أخرى."
       }
     },
     "notices": {
@@ -2512,6 +2540,10 @@
         },
         "track": {
           "status_html": "<b>يتم الإبلاغ عن تتبع فتح البريد الإلكتروني.</b>"
+        },
+        "updated_policy": {
+          "visibility": "لقد قمنا بتحديث سياستنا، ونتتبع الآن عمليات فتح الرسائل الإلكترونية. سيتم الإبلاغ عن معدلات فتح الرسائل الإلكترونية بشكل مجهول. سنرى فقط ما إذا كنت قد فتحت رسالة إلكترونية كجزء من إجمالي معدل فتح الرسائل الإلكترونية.",
+          "opt_out_html": "إذا كنت لا ترغب في مشاركة هذه المعلومات، يمكنك <a style=\"text-decoration:underline;\" href=\"%{link}\">إلغاء الاشتراك.</a>"
         }
       }
     },
@@ -2679,7 +2711,8 @@
         "relevance": "الأهمية",
         "price_ascending": "السعر، من الأدنى إلى الأعلى",
         "price_descending": "السعر، من الأعلى إلى الأدنى"
-      }
+      },
+      "error": "حدثت مشكلة أثناء تحميل نتائج البحث. يرجى تحديث الصفحة أو المحاولة مرة أخرى لاحقاً."
     },
     "store_availability": {
       "pick_up_time": {
@@ -2696,7 +2729,9 @@
       }
     },
     "subscriptions": {
-      "cancellation_policy": "سياسة الإلغاء"
+      "cancellation_policy": "سياسة الإلغاء",
+      "buyer_consent_product": "هذا المنتج عبارة عن عملية شراء متكررة أو مؤجلة. بمتابعتي، أوافق على سياسة الإلغاء %{cancellationPolicyLink} وأُصرّح لكم بخصم المبلغ من وسيلة الدفع الخاصة بي بالأسعار والتكرار والتواريخ المذكورة في هذه الصفحة حتى يتم تنفيذ طلبي أو أقوم بإلغائه، إن كان ذلك مسموحًا به.",
+      "buyer_consent_cart": "أحد المنتجات أو أكثر في سلة التسوق الخاصة بك عبارة عن عملية شراء متكررة أو مؤجلة. بمتابعتك، أوافق على سياسة الإلغاء %{cancellationPolicyLink} وأُصرّح لك بخصم المبلغ من وسيلة الدفع الخاصة بي بالأسعار والتكرار والتواريخ الموضحة في هذه الصفحة حتى يتم تنفيذ طلبي أو أقوم بإلغائه، إذا كان ذلك مسموحًا به."
     }
   },
   "products": {
@@ -3137,7 +3172,9 @@
         "no_locations_found": "لم يتم العثور على مواقع",
         "search": "ابحث عن المواقع",
         "search_location_title": "حدد موقعًا",
-        "list_loading_accessibility_message": "جارٍ تحميل قائمة المواقع"
+        "list_loading_accessibility_message": "جارٍ تحميل قائمة المواقع",
+        "description": "إذا كانت لديك بالفعل عناصر في سلة التسوق الخاصة بك، فقد يؤثر تغيير المواقع على أسعار وكميات سلة التسوق.",
+        "no_location_description": "لم يعد لديك إذن لتقديم طلبات لشركة {{company}} . لا يزال بإمكانك تقديم طلبات شخصية."
       },
       "addresses": {
         "add_billing_address_button": "أضف عنوان الفوترة",
@@ -4237,7 +4274,9 @@
       "total": "المجموع",
       "refunded_amount": "تم استرداد المبلغ",
       "login_card": {
-        "log_in": "تسجيل الدخول"
+        "log_in": "تسجيل الدخول",
+        "resend_link_and_login": "لعرض تفاصيل طلبك، قم بتسجيل الدخول أو أرسل رابطًا جديدًا إلى البريد الإلكتروني أو رقم الهاتف المستخدم عند إتمام عملية الشراء.",
+        "resend_link_only": "للاطلاع على تفاصيل طلبك، أرسل رابطًا جديدًا إلى البريد الإلكتروني أو رقم الهاتف المستخدم عند إتمام عملية الشراء."
       },
       "remaining_amount": "متبقي",
       "subtotal": "المجموع الفرعي",
@@ -4265,7 +4304,11 @@
       "shop_pay": {
         "order_completed_with": "تم إتمام الطلب بنجاح."
       },
-      "due_on_fulfillment": "مستحق الدفع عند الإنجاز"
+      "due_on_fulfillment": "مستحق الدفع عند الإنجاز",
+      "ok_duties_tooltip": "يتم شحن هذا الطلب من دولة أخرى، لذلك تمت إضافة الرسوم الجمركية إلى إجمالي طلبك.",
+      "error_duties_tooltip": "يتم شحن هذا الطلب من دولة أخرى، لذا قد يتم فرض رسوم وضرائب عند التسليم.",
+      "zero_duties_tooltip": "يتم شحن هذا الطلب من دولة أخرى. لا تُفرض رسوم جمركية على الطلبات التي تبلغ قيمتها هذا الحد.",
+      "logged_in_account_no_permission_to_order": "أنت مسجل دخولك باسم {{email}} . لا يملك هذا الحساب صلاحية إدارة هذا الطلب."
     },
     "account_information": {
       "profile_card": {
@@ -4421,7 +4464,8 @@
       "expand_label": "توسيع شريط الإعلانات",
       "collapse_label": "شريط إعلانات الانهيار",
       "close_label": "إغلاق شريط الإعلانات"
-    }
+    },
+    "enable_javascript": "لعرض حسابك، قم بتمكين جافا سكريبت في إعدادات متصفحك أو قم بتسجيل الدخول باستخدام متصفح آخر."
   },
   "gift_cards": {
     "issued": {
