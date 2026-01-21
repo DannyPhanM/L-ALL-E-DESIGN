@@ -2,6 +2,7 @@ if (!customElements.get('media-gallery')) {
   customElements.define('media-gallery', class MediaGallery extends HTMLElement {
     constructor() {
       super();
+      console.log('MediaGallery: Initializing component');
       this.elements = {
         liveRegion: this.querySelector('[id^="GalleryStatus"]'),
         viewer: this.querySelector('[id^="GalleryViewer"]'),
@@ -13,6 +14,9 @@ if (!customElements.get('media-gallery')) {
         sliderViewport: this.querySelector('[id^="GalleryViewer"] .slider__viewport')
       }
       this.mql = window.matchMedia('(min-width: 750px)');
+      
+      this.scrollToActiveOnLoad();
+
       if (!this.elements.thumbnails) return;
       this.elements.slider.addEventListener('click', this.setActiveThumbnail.bind(this))
       this.elements.slider.addEventListener('keyup', (event) => {
@@ -21,7 +25,85 @@ if (!customElements.get('media-gallery')) {
       if (this.dataset.desktopLayout !== 'one_column_grid' && this.dataset.desktopLayout !== 'two_columns_grid' && this.mql.matches) this.removeListSemantic();
     }
 
-    setActiveMedia(mediaId) { 
+    scrollToActiveOnLoad() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const variantId = urlParams.get('variant');
+      if (!variantId) return;
+
+      let scrollTriggered = false;
+      let attempts = 0;
+
+      const checkAndScroll = () => {
+        if (scrollTriggered) return;
+        
+        const viewer = this.querySelector('[id^="GalleryViewer"]');
+        if (!viewer) return;
+
+        // 1. Tìm variant data từ các script JSON trên trang
+        const variantScripts = document.querySelectorAll('script[type="application/json"][data-resource]');
+        let targetMediaId = null;
+
+        for (const script of variantScripts) {
+          try {
+            const data = JSON.parse(script.textContent);
+            if (data && data.id == variantId && data.featured_media) {
+              targetMediaId = data.featured_media.id;
+              break;
+            }
+          } catch (e) {}
+        }
+
+        // 2. Tìm phần tử media tương ứng
+        let activeMedia = null;
+        if (targetMediaId) {
+          activeMedia = viewer.querySelector(`[data-product-media-id="${targetMediaId}"]`) || 
+                        viewer.querySelector(`[data-media-id$="${targetMediaId}"]`);
+        }
+
+        // Fallback nếu không tìm thấy qua ID (như cũ)
+        if (!activeMedia) {
+          activeMedia = viewer.querySelector('.is-active:not(.product__media-item--hide)') || 
+                        viewer.querySelector('.product__media-item:not(.product__media-item--hide)');
+        }
+        
+        if (activeMedia && activeMedia.offsetHeight > 50) {
+          const stickyHeader = document.querySelector('sticky-header') || document.querySelector('.header-wrapper') || document.querySelector('.header');
+          const headerOffset = stickyHeader ? stickyHeader.offsetHeight : 0;
+          
+          const rect = activeMedia.getBoundingClientRect();
+          const currentTop = rect.top + window.pageYOffset;
+          const topOffset = currentTop - headerOffset - 20;
+
+          // Chỉ cuộn khi vị trí có vẻ hợp lý (không phải ở sát đỉnh trang nếu đó không phải ảnh đầu)
+          // Hoặc sau khi đã thử nhiều lần mà vị trí vẫn vậy
+          if (topOffset > 100 || attempts > 20) {
+            window.scrollTo({
+              top: Math.max(0, topOffset),
+              behavior: 'smooth'
+            });
+            
+            if (activeMedia.dataset.mediaId) {
+              this.setActiveMedia(activeMedia.dataset.mediaId, false);
+            }
+            
+            scrollTriggered = true;
+            console.log('MediaGallery: Precision scroll triggered to media', targetMediaId || 'initial', 'at', topOffset);
+          }
+        }
+      };
+
+      const interval = setInterval(() => {
+        checkAndScroll();
+        attempts++;
+        if (scrollTriggered || attempts > 80) clearInterval(interval);
+      }, 100);
+
+      window.addEventListener('load', () => {
+        if (!scrollTriggered) setTimeout(checkAndScroll, 500);
+      });
+    }
+
+    setActiveMedia(mediaId, isScroll) { 
       const activeMedia = this.elements.viewer.querySelector(`[data-media-id="${ mediaId }"]`)
       if (this.elements.viewer.querySelectorAll(`.product__media-item--hide`).length > 0 && activeMedia) {
         let activeMediaAlt = activeMedia.dataset.mediaAlt
@@ -47,10 +129,12 @@ if (!customElements.get('media-gallery')) {
             this.elements.sliderMedia.closest('.product--side_thumbnails') ? this.elements.sliderMedia.closest('.slider-block').style.height = height + 'px' : this.elements.sliderMedia.style.height = height + 'px'
           }
         }
-        this.elements.sliderMedia.scrollTo({
-          left: activeMedia.offsetLeft,
-          behavior: 'smooth'
-        })
+        if (isScroll !== false) {
+          this.elements.sliderMedia.scrollTo({
+            left: activeMedia.offsetLeft,
+            behavior: 'smooth'
+          })
+        }
       }
       if (this.querySelector('[id^="GalleryThumbnails"]')) {
         const prevActiveThumbnail = this.elements.thumbnails.querySelector(`.is-active`)
@@ -69,22 +153,32 @@ if (!customElements.get('media-gallery')) {
             if (thumbnail.dataset.mediaAlt == activeMediaAlt) thumbnail.classList.add('product__media-item--variant-alt')
           })
         } 
-        this.elements.slider.scrollTo({
-          left: activeThumbnail.offsetLeft - activeThumbnail.offsetWidth - 8,
-          behavior: 'smooth'
-        })
-        if (activeThumbnail.parentElement.classList.contains('thumbnail-list--column')) {
-          this.elements.thumbnails.scrollTo({
-            top: activeThumbnail.offsetTop - activeThumbnail.offsetHeight - 8,
+        if (isScroll !== false) {
+          this.elements.slider.scrollTo({
+            left: activeThumbnail.offsetLeft - activeThumbnail.offsetWidth - 8,
             behavior: 'smooth'
           })
+          if (activeThumbnail.parentElement.classList.contains('thumbnail-list--column')) {
+            this.elements.thumbnails.scrollTo({
+              top: activeThumbnail.offsetTop - activeThumbnail.offsetHeight - 8,
+              behavior: 'smooth'
+            })
+          }
         }
       }
       if (!activeMedia) return
       this.preventStickyHeader();
       window.setTimeout(() => {
-        if (this.dataset.desktopLayout === 'one_column_grid' && !activeMedia.classList.contains('product__media-item--hide') || this.dataset.desktopLayout === 'two_columns_grid' && !activeMedia.classList.contains('product__media-item--hide')) {
-          activeMedia.scrollIntoView({behavior: 'smooth'});
+        if (isScroll === true || (isScroll !== false && (this.dataset.desktopLayout === 'one_column_grid' || this.dataset.desktopLayout === 'two_columns_grid') && !activeMedia.classList.contains('product__media-item--hide'))) {
+          // Tính toán Header để bù trừ
+          const stickyHeader = document.querySelector('sticky-header') || document.querySelector('.header-wrapper') || document.querySelector('.header');
+          const headerOffset = stickyHeader ? stickyHeader.offsetHeight : 0;
+          
+          activeMedia.style.scrollMarginTop = `${headerOffset + 20}px`;
+          activeMedia.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
         }
       });
       this.playActiveMedia(activeMedia);

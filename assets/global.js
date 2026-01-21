@@ -93,6 +93,9 @@ document.addEventListener("DOMContentLoaded", () => {
   configurePageFadeInOnLoad();
 
   document.body.classList.add("loaded");
+  
+  const lang = document.documentElement.lang || 'en';
+  document.body.classList.add(`lang-${lang}`);
 });
 
 const PUB_SUB_EVENTS = {
@@ -1170,6 +1173,12 @@ function isStorageSupported (type) {
       event.preventDefault();
       const form = this.querySelector('form');
       this.elements.input.value = event.currentTarget.dataset.value;
+      if (this.elements.inputLanguage) {
+        document.body.classList.forEach(className => {
+          if (className.startsWith('lang-')) document.body.classList.remove(className);
+        });
+        document.body.classList.add(`lang-${this.elements.inputLanguage.value}`);
+      }
       if (form) form.submit();
     }
 
@@ -5006,6 +5015,11 @@ class VariantSelects extends HTMLElement {
     const targetId = input.id;
     let targetUrl = input.dataset.productUrl;
     this.currentVariant = this.getVariantData(targetId);
+
+    const optionName = (event.target.name || "").toLowerCase();
+    const isSize = optionName.includes('size') || optionName.includes('kích thước');
+    const isColor = optionName.includes('color') || optionName.includes('colour') || optionName.includes('màu') || optionName.includes('colorway');
+
     const sectionId = this.dataset.originalSection || this.dataset.section;
     this.updateSelectedSwatchValue(event);
     this.toggleAddButton(true, '', false);
@@ -5017,7 +5031,10 @@ class VariantSelects extends HTMLElement {
       this.setUnavailable();
       if(this.querySelector('.product-combined-listings')) callback = this.handleSwapProduct(sectionId, true)
     } else if (this.dataset.url !== targetUrl) {
-      this.updateMedia();
+      if (isColor) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      this.updateMedia(false);
       this.updateURL(targetUrl);
       this.updateVariantInput();
       this.querySelector('.product-combined-listings') ? callback = this.handleSwapProduct(sectionId) : callback = this.handleUpdateProductInfo(sectionId);
@@ -5033,14 +5050,14 @@ class VariantSelects extends HTMLElement {
     }
   }
 
-  updateMedia() {
+  updateMedia(isScroll = true) {
     if (!this.currentVariant) return;
     if (this.currentVariant.featured_media) {
       const mediaGallery = document.getElementById(`MediaGallery-${this.dataset.section}`);
-      mediaGallery.setActiveMedia(`${this.dataset.section}-${this.currentVariant.featured_media.id}`, true);
+      mediaGallery.setActiveMedia(`${this.dataset.section}-${this.currentVariant.featured_media.id}`, isScroll);
     } else if (!this.currentVariant.featured_media && document.querySelector('.product__media-list.variant-images')) {
       const mediaGallery = document.getElementById(`MediaGallery-${this.dataset.section}`);
-      mediaGallery.setActiveMedia(`false`, true);
+      mediaGallery.setActiveMedia(`false`, isScroll);
     }
     document.dispatchEvent(new CustomEvent('updateVariantMedia'))
   }
@@ -5337,6 +5354,8 @@ class VariantSelects extends HTMLElement {
   }
 }
 customElements.define('variant-selects', VariantSelects);
+class VariantRadios extends VariantSelects {}
+customElements.define('variant-radios', VariantRadios);
 
 class ProgressBar extends HTMLElement {
   constructor() {
@@ -6870,20 +6889,20 @@ class ColorSwatch extends HTMLElement {
     this.colorsContainer = this.closest('.card__colors')
     this.tooltip = this.querySelector('.color-swatch__title')
     this.quickViewButton = this.closest('.card-container').querySelector('.quick-view')
-    this.productCard = this.closest('.card')
-    this.productHref = this.productCard.href
+    this.productCard = this.closest('.card');
+    if (!this.productCard) return;
+
+    this.productHref = this.productCard.href;
     this.mediaContainer = this.productCard.querySelector('.card__product-image');
     this.hoverBehavior = this.dataset.hoverBehavior;
 
-    this.firstMedia = this.productCard.querySelector('.card__product-image .card__image')?.cloneNode(true)
-    this.secondMedia = this.productCard.querySelector('.card__product-image .card__image--second')?.cloneNode(true)
+    this.firstMedia = this.productCard.querySelector('.card__product-image .card__image')?.cloneNode(true);
+    this.secondMedia = this.productCard.querySelector('.card__product-image .card__image--second')?.cloneNode(true);
     this.variantFirstMedia = parseNode(this.dataset.firstMediaNode);
     this.variantSecondMedia = parseNode(this.dataset.secondMediaNode);
-    this.priceInCard = this.productCard.querySelector('.price').innerHTML
+    this.priceInCard = this.productCard.querySelector('.price')?.innerHTML;
 
     this.addEventListener('click', (event) => {
-      event.preventDefault()
-
       this.onClickHandler()
 
       if (event.target.closest('a')) return false

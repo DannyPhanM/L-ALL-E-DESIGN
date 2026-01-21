@@ -39,15 +39,11 @@
                 {% if miscellaneous_settings.enable_store_selector and section.id == 'menu-drawer' or section.id == 'mega-menu-drawer'  %}
                     {%- render 'store-selector', store_selector_settings: miscellaneous_settings -%}
                 {% endif %}
-                <xb-wishlist-header class='xb-wishlist__header'>
-                    <div class='xb-header__icon'>
-                        <span  style=" --icon-color: #000; --icon-size: 2rem;">
-<svg width="24" height="24" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 16c-1.2 1.323-4.5 4.5-4.5 4.5S9.2 17.323 8 16c-2.8-3.088-3.5-4.294-3.5-6.5s1.6-4 4-4c2 0 3.2 1.324 4 2.647.8-1.323 2-2.647 4-2.647 2.4 0 4 1.794 4 4s-.7 3.412-3.5 6.5Z" stroke="#121923" stroke-width="1"/></svg>
-
-                        </span>
-                    </div>
-                    <span class='xb-product-quantity xb-product-quantity--bottom-right'></span>
-                </xb-wishlist-header>
+                <a href="#swym-wishlist" class="swym-wishlist">
+                    <span  style=" --icon-color: #000; --icon-size: 2rem;">
+                        <svg width="24" height="24" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 16c-1.2 1.323-4.5 4.5-4.5 4.5S9.2 17.323 8 16c-2.8-3.088-3.5-4.294-3.5-6.5s1.6-4 4-4c2 0 3.2 1.324 4 2.647.8-1.323 2-2.647 4-2.647 2.4 0 4 1.794 4 4s-.7 3.412-3.5 6.5Z" stroke="#121923" stroke-width="1"/></svg>
+                    </span>
+                </a>
                 {% if miscellaneous_settings.search_style != 'disable' %}
                     {%- render 'search', search_settings: miscellaneous_settings -%}
                 {% endif %}

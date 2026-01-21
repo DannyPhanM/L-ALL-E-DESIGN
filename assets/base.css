@@ -4708,3 +4708,48 @@ html[lang="ar"]  .custom-size-popup__close {
   text-transform: inherit;
   font-size: 10px;
 }
+
+body.lang-ar .ecomsend__Popover__Widget .ecomsend__Popover__Widget__CustomContainer {
+  position: absolute;
+  right: 0;
+  transform: rotate(-90deg) translateX(50%);
+  transform-origin: right bottom;
+  width: max-content;
+}
+
+body.hidden #ecomsend-widget,
+body.hidden #rawa-container {
+  z-index: -1;
+  position: relative;
+}
+
+p.form__label {
+  display: none;
+}
+
+#swym-storefront-extention-render-container * {
+  font: var(--body-l-font) !important;
+}
+
+.swym-storefront-layout-action-content, #swym-storefront-layout-action-options {
+  overflow: auto !important;
+}
+
+swym-storefront-layout-actions#swym-storefront-layout-actions-target-page .swym-storefront-layout-action-layout,
+.swym-storefront-layout-collection-action-btn,
+input#swym-storefront-layout-create-collection-name-input,
+#swym-storefront-layout-save-collection-list-button,
+.swym-storefront-layout-notification-container,
+.swym-storefront-layout-root-component button,
+swym-storefront-layout-notification,
+.swym-storefront-layout-collection-grid-item {
+  border-radius: 0 !important;
+}
+
+.swym-storefront-layout-action-image-container img {
+  object-fit: contain;
+}
+
+.card-container {
+  position: relative;
+}
