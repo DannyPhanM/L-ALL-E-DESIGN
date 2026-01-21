@@ -203,6 +203,10 @@
     "line_link": "",
     "disable_right_click": false,
     "disable_text_selection": false,
+    "swym_button_position": "default",
+    "swym_wishlist_custom_button_before_html": "<button class=\"swym-icon-text\" type=\"button\">\n\t<svg class=\"swym-icon\" width=\"20\" height=\"20\" viewbox=\"0 0 24 24\">\n\t\t<path d=\"M19.6706 5.4736C17.6806 3.8336 14.7206 4.1236 12.8906 5.9536L12.0006 6.8436L11.1106 5.9536C9.29063 4.1336 6.32064 3.8336 4.33064 5.4736C2.05064 7.3536 1.93063 10.7436 3.97063 12.7836L11.6406 20.4536C11.8406 20.6536 12.1506 20.6536 12.3506 20.4536L20.0206 12.7836C22.0706 10.7436 21.9506 7.3636 19.6706 5.4736Z\" stroke=\"currentColor\" stroke-width=\"1.75px\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n\t</svg>\n\t<span class=\"swym-custom-btn-txt\">{{WishlistAddCTA}}</span>\n</button>",
+    "swym_wishlist_custom_button_after_html": "<button class=\"swym-icon-text\" type=\"button\">\n\t<svg class=\"swym-icon\" width=\"20\" height=\"20\" viewbox=\"0 0 24 24\">\n\t\t<path d=\"M19.6706 5.4736C17.6806 3.8336 14.7206 4.1236 12.8906 5.9536L12.0006 6.8436L11.1106 5.9536C9.29063 4.1336 6.32064 3.8336 4.33064 5.4736C2.05064 7.3536 1.93063 10.7436 3.97063 12.7836L11.6406 20.4536C11.8406 20.6536 12.1506 20.6536 12.3506 20.4536L20.0206 12.7836C22.0706 10.7436 21.9506 7.3636 19.6706 5.4736Z\" stroke=\"currentColor\" stroke-width=\"1.75px\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n\t</svg>\n\t<span class=\"swym-custom-btn-txt\">{{WishlistAddedCTA}}</span>\n</button>",
+    "swym_wishlist_custom_button_css": "/* Base button styles using CSS variables (set by JavaScript) */\n/* Loading state for user interactions */\n.swym-loading .swym-button-content button,\n.swym-loading .swym-button-content [role=\"button\"],\n.swym-loading .swym-button-content .btn,\n.swym-loading .swym-button-content a {\n  opacity: 0.6;\n  cursor: not-allowed;\n  pointer-events: none;\n}\n.swym-button-content > button,\n.swym-button-content > [role=\"button\"],\n.swym-button-content > span,\n.swym-button-content > a {\n  color: #fff;  \n  background: #000;\n  border: 1px solid #000;\n  font-family: inherit;\n  padding: 12px 16px;\n  font-size: 14px;\n  font-weight: normal;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  cursor: pointer;\n  transition: all 0.2s ease;\n  text-align: center;\n  pointer-events: auto;\n  min-height: 45px;\n  width: 100%;\n  letter-spacing: normal;\n}\n\n/* Focus styles for accessibility */\n.swym-button-content button:focus-visible,\n.swym-button-content [role=\"button\"]:focus-visible,\n.swym-button-content .btn:focus-visible,\n.swym-button-content a:focus-visible {\n  outline: 2px solid currentColor;\n  outline-offset: 2px;\n}\n/* Disabled state styles */\n.swym-button-content button:disabled,\n.swym-button-content [role=\"button\"][aria-disabled=\"true\"],\n.swym-button-content .btn:disabled,\n.swym-button-content a[aria-disabled=\"true\"] {\n  opacity: 0.5;\n  cursor: not-allowed;\n  pointer-events: none;\n}\n/* Product image position styling (top-left default) */\n.swym-atw-btn-wrapper-for-img.swym-btn-position-product-img {\n  position: absolute;\n  top: 10px;\n  left: 10px;\n  z-index: 10;\n  width: fit-content!important;\n}\n.swym-custom-pdp-button.swym-btn-position-product-title {\n  width: fit-content;\n}\n.swym-button-content.swym-btn-custom-position {\n  margin-top: 8px;\n} \n.swym-button-content button.swym-icon-text svg {\n  margin-right: 5px;\n}\n/* ACCESSIBILITY IMPROVEMENTS */\n@media (prefers-reduced-motion: reduce) {\n  .swym-button-content,\n  .swym-button-content button,\n  .swym-button-content [role=\"button\"],\n  .swym-button-content .btn,\n  .swym-button-content a {\n    transition: none;\n    animation: none;\n  }  \n  .swym-button-content.swym-initialized button:hover,\n  .swym-button-content.swym-initialized [role=\"button\"]:hover,\n  .swym-button-content.swym-initialized .btn:hover,\n  .swym-button-content.swym-initialized a:hover {\n    transform: none;\n  }\n}\n/* HIGH CONTRAST MODE SUPPORT */\n@media (prefers-contrast: high) {\n  .swym-atw-btn-wrapper-for-img .swym-button-content button,\n  .swym-atw-btn-wrapper-for-img .swym-button-content [role=\"button\"],\n  .swym-atw-btn-wrapper-for-img .swym-button-content .btn,\n  .swym-atw-btn-wrapper-for-img .swym-button-content a {\n    border: 2px solid;\n    background: #fff;\n  }\n}",
     "fill_close_button": false,
     "sections": {
       "header": {
@@ -985,6 +989,40 @@
         "disabled": false,
         "settings": {}
       },
+      "12342438634123318931": {
+        "type": "shopify://apps/xb-wishlist/blocks/xo-wishlist/cc07f1e9-907b-431d-99f8-4fce3efa75f1",
+        "disabled": true,
+        "settings": {
+          "selector_collection": ""
+        }
+      },
+      "10274264662263595587": {
+        "type": "shopify://apps/wishlist-plus/blocks/wishlist-collections-embed/80c3b1fc-3a8f-407e-8367-ffdeebb8b612",
+        "disabled": false,
+        "settings": {
+          "swym_collections_icon_type": "heart",
+          "swym_collections_icon_thickness": 1.7,
+          "swym_collections_position": "top-right",
+          "swym_collections_vertical_offset": 0,
+          "swym_collections_horizontal_offset": 0,
+          "swym_collections_button_size": 25,
+          "swym_collections_icon_color": "#000000",
+          "swym_collections_product_link_selector": "-",
+          "swym_collections_product_tile_selector": "-",
+          "enable_variant_selector": false,
+          "swym_add_to_wishlist_title_color": "#333",
+          "swym_variant_selector_font_size_1": 14,
+          "swym_variant_selector_popup_bg_color": "#fff",
+          "swym_variant_selector_section_heading_color": "#000",
+          "swym_variant_selector_section_heading_font_size_2": 12,
+          "swym_variant_selector_choose_create_text": "Choose or Create new Wishlist",
+          "swym_variant_selector_wishlist_btn_bg_color": "#292929",
+          "swym_variant_selector_wishlist_btn_color": "#fff",
+          "swym_variant_selector_product_detail_font_color": "#fff",
+          "swym_variant_selector_create_list_placeholder_text": "Enter wishlist name",
+          "swym_variant_selector_create_list_title": "Name Your Wishlist"
+        }
+      },
       "17689656347596778739": {
         "type": "shopify://apps/wishlist-plus/blocks/wishlist-app-embed/80c3b1fc-3a8f-407e-8367-ffdeebb8b612",
         "disabled": false,
@@ -992,7 +1030,7 @@
           "storefront_layout_enabled": false,
           "storefront_layout_primary_bg_color": "#000000",
           "storefront_layout_primary_text_color": "#ffffff",
-          "storefront_layout_secondary_bg_color": "#F4F8FE",
+          "storefront_layout_secondary_bg_color": "#f4f8fe",
           "storefront_layout_secondary_text_color": "#333333",
           "storefront_layout_ui_border_radius": 6,
           "storefront_layout_notification_position": "left",
@@ -1001,18 +1039,14 @@
           "storefront_layout_as_section_page": ""
         }
       },
-      "12342438634123318931": {
-        "type": "shopify://apps/xb-wishlist/blocks/xo-wishlist/cc07f1e9-907b-431d-99f8-4fce3efa75f1",
+      "6933373160360723723": {
+        "type": "shopify://apps/swishlist-simple-wishlist/blocks/wishlist_settings/bfcb80f2-f00d-42ae-909a-9f00c726327b",
         "disabled": true,
         "settings": {
-          "selector_collection": ""
+          "custom_css": ""
         }
       }
-    },
-    "swym_button_position": "default",
-    "swym_wishlist_custom_button_css": "/* Base button styles using CSS variables (set by JavaScript) */\n/* Loading state for user interactions */\n.swym-loading .swym-button-content button,\n.swym-loading .swym-button-content [role=\"button\"],\n.swym-loading .swym-button-content .btn,\n.swym-loading .swym-button-content a {\n  opacity: 0.6;\n  cursor: not-allowed;\n  pointer-events: none;\n}\n.swym-button-content > button,\n.swym-button-content > [role=\"button\"],\n.swym-button-content > span,\n.swym-button-content > a {\n  color: #fff;  \n  background: #000;\n  border: 1px solid #000;\n  font-family: inherit;\n  padding: 12px 16px;\n  font-size: 14px;\n  font-weight: normal;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  cursor: pointer;\n  transition: all 0.2s ease;\n  text-align: center;\n  pointer-events: auto;\n  min-height: 45px;\n  width: 100%;\n  letter-spacing: normal;\n}\n\n/* Focus styles for accessibility */\n.swym-button-content button:focus-visible,\n.swym-button-content [role=\"button\"]:focus-visible,\n.swym-button-content .btn:focus-visible,\n.swym-button-content a:focus-visible {\n  outline: 2px solid currentColor;\n  outline-offset: 2px;\n}\n/* Disabled state styles */\n.swym-button-content button:disabled,\n.swym-button-content [role=\"button\"][aria-disabled=\"true\"],\n.swym-button-content .btn:disabled,\n.swym-button-content a[aria-disabled=\"true\"] {\n  opacity: 0.5;\n  cursor: not-allowed;\n  pointer-events: none;\n}\n/* Product image position styling (top-left default) */\n.swym-atw-btn-wrapper-for-img.swym-btn-position-product-img {\n  position: absolute;\n  top: 10px;\n  left: 10px;\n  z-index: 10;\n  width: fit-content!important;\n}\n.swym-custom-pdp-button.swym-btn-position-product-title {\n  width: fit-content;\n}\n.swym-button-content.swym-btn-custom-position {\n  margin-top: 8px;\n} \n.swym-button-content button.swym-icon-text svg {\n  margin-right: 5px;\n}\n/* ACCESSIBILITY IMPROVEMENTS */\n@media (prefers-reduced-motion: reduce) {\n  .swym-button-content,\n  .swym-button-content button,\n  .swym-button-content [role=\"button\"],\n  .swym-button-content .btn,\n  .swym-button-content a {\n    transition: none;\n    animation: none;\n  }  \n  .swym-button-content.swym-initialized button:hover,\n  .swym-button-content.swym-initialized [role=\"button\"]:hover,\n  .swym-button-content.swym-initialized .btn:hover,\n  .swym-button-content.swym-initialized a:hover {\n    transform: none;\n  }\n}\n/* HIGH CONTRAST MODE SUPPORT */\n@media (prefers-contrast: high) {\n  .swym-atw-btn-wrapper-for-img .swym-button-content button,\n  .swym-atw-btn-wrapper-for-img .swym-button-content [role=\"button\"],\n  .swym-atw-btn-wrapper-for-img .swym-button-content .btn,\n  .swym-atw-btn-wrapper-for-img .swym-button-content a {\n    border: 2px solid;\n    background: #fff;\n  }\n}",
-    "swym_wishlist_custom_button_before_html": "<button class=\"swym-icon-text\" type=\"button\">\n\t<svg class=\"swym-icon\" width=\"20\" height=\"20\" viewbox=\"0 0 24 24\">\n\t\t<path d=\"M19.6706 5.4736C17.6806 3.8336 14.7206 4.1236 12.8906 5.9536L12.0006 6.8436L11.1106 5.9536C9.29063 4.1336 6.32064 3.8336 4.33064 5.4736C2.05064 7.3536 1.93063 10.7436 3.97063 12.7836L11.6406 20.4536C11.8406 20.6536 12.1506 20.6536 12.3506 20.4536L20.0206 12.7836C22.0706 10.7436 21.9506 7.3636 19.6706 5.4736Z\" stroke=\"currentColor\" stroke-width=\"1.75px\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n\t</svg>\n\t<span class=\"swym-custom-btn-txt\">{{WishlistAddCTA}}</span>\n</button>",
-    "swym_wishlist_custom_button_after_html": "<button class=\"swym-icon-text\" type=\"button\">\n\t<svg class=\"swym-icon\" width=\"20\" height=\"20\" viewbox=\"0 0 24 24\">\n\t\t<path d=\"M19.6706 5.4736C17.6806 3.8336 14.7206 4.1236 12.8906 5.9536L12.0006 6.8436L11.1106 5.9536C9.29063 4.1336 6.32064 3.8336 4.33064 5.4736C2.05064 7.3536 1.93063 10.7436 3.97063 12.7836L11.6406 20.4536C11.8406 20.6536 12.1506 20.6536 12.3506 20.4536L20.0206 12.7836C22.0706 10.7436 21.9506 7.3636 19.6706 5.4736Z\" stroke=\"currentColor\" stroke-width=\"1.75px\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n\t</svg>\n\t<span class=\"swym-custom-btn-txt\">{{WishlistAddedCTA}}</span>\n</button>"
+    }
   },
   "installed_preset_name": "Avante",
   "presets": {
