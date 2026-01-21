@@ -165,10 +165,6 @@
             "description": ""
           }
         },
-        "xb_wishlist_button_wishlist_9fkMLf": {
-          "type": "shopify://apps/xb-wishlist/blocks/button_wishlist/cc07f1e9-907b-431d-99f8-4fce3efa75f1",
-          "settings": {}
-        },
         "5dc5b007-724d-4c23-96b1-6555fc3ac5c4": {
           "type": "title",
           "settings": {
@@ -449,7 +445,6 @@
         "measurement_field_piV8hM",
         "measurement_field_N9cB9d",
         "measurement_field_kTBiXf",
-        "xb_wishlist_button_wishlist_9fkMLf",
         "5dc5b007-724d-4c23-96b1-6555fc3ac5c4",
         "sku_JL6Yfm",
         "fb7e45ed-5850-43ba-8d9f-a9fb45354ca4",
@@ -611,11 +606,49 @@
         "mobile_padding_top": 32,
         "mobile_padding_bottom": 32
       }
+    },
+    "1769008864ed74c155": {
+      "type": "apps",
+      "blocks": {
+        "wishlist_plus_wishlist_pdp_button_Hc9T6P": {
+          "type": "shopify://apps/wishlist-plus/blocks/wishlist-pdp-button/80c3b1fc-3a8f-407e-8367-ffdeebb8b612",
+          "settings": {
+            "swym_atw_button_icon": "heart",
+            "swym_atw_icon_thickness": 1.7,
+            "swym_atw_display_btn_text": true,
+            "swym_button_position": "default",
+            "swym_atw_button_vertical_offset": 0,
+            "swym_atw_full_width": true,
+            "swym_atw_button_alignment": "center",
+            "swym_add_to_wishlist_color": "#000000",
+            "swym_added_to_wishlist_color": "#222222",
+            "swym_button_text_color": "#fff",
+            "swym_atw_border_color": "#000",
+            "swym_atw_border_thickness": 0,
+            "swym_atw_button_border_radius": 0,
+            "swym_enable_hover_customization": false,
+            "swym_hover_add_to_wishlist_color": "#000000",
+            "swym_hover_added_to_wishlist_color": "#222222",
+            "swym_hover_button_text_color": "#fff",
+            "swym_hover_atw_border_color": "#000",
+            "swym_hover_atw_border_thickness": 0,
+            "swym_hover_atw_button_border_radius": 0,
+            "swym_custom_css": ""
+          }
+        }
+      },
+      "block_order": [
+        "wishlist_plus_wishlist_pdp_button_Hc9T6P"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main-product",
     "f88eefea-3183-4353-a927-eb373e1f61f5",
-    "afaa1caf-6b34-4fbe-aa72-e50883d86941"
+    "afaa1caf-6b34-4fbe-aa72-e50883d86941",
+    "1769008864ed74c155"
   ]
 }
