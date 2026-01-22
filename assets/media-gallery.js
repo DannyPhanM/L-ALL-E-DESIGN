@@ -15,7 +15,7 @@ if (!customElements.get('media-gallery')) {
       }
       this.mql = window.matchMedia('(min-width: 750px)');
       
-      this.scrollToActiveOnLoad();
+      // this.scrollToActiveOnLoad();
 
       if (!this.elements.thumbnails) return;
       this.elements.slider.addEventListener('click', this.setActiveThumbnail.bind(this))
