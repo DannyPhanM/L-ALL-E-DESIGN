@@ -4809,3 +4809,7 @@ swym-storefront-layout-notification,
 input#swym-storefront-layout-create-collection-name-input {
   width: 100% !important;
 }
+
+.product__info-block .section-block.product__title {
+  margin-top: 0 !important;
+}
