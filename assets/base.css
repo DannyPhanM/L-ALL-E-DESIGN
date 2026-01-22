@@ -4729,6 +4729,7 @@ p.form__label {
 
 #swym-storefront-extention-render-container * {
   font: var(--body-l-font) !important;
+  font-weight: normal !important;
 }
 
 .swym-storefront-layout-action-content, #swym-storefront-layout-action-options {
@@ -4742,6 +4743,7 @@ input#swym-storefront-layout-create-collection-name-input,
 .swym-storefront-layout-notification-container,
 .swym-storefront-layout-root-component button,
 swym-storefront-layout-notification,
+.swym-storefront-layout-login-button,
 .swym-storefront-layout-collection-grid-item {
   border-radius: 0 !important;
 }
@@ -4750,6 +4752,26 @@ swym-storefront-layout-notification,
   object-fit: contain;
 }
 
+.swym-storefront-layout-body {
+  overflow: auto !important;
+}
+#swym-storefront-layout-create-collection-name-input .swym-storefront-layout-checkbox-container {
+  display: none !important;
+}
 .card-container {
   position: relative;
+}
+
+.miscellaneous__subblock .swym-wishlist svg path {
+  stroke: rgb(var(--layout-text-color));
+  stroke-width: 0.8px;
+}
+
+.miscellaneous__subblock .swym-wishlist span {
+  height: 28px;
+  display: block;
+}
+.miscellaneous__subblock .swym-wishlist svg {
+  width: 28px;
+  height: 28px;
 }
