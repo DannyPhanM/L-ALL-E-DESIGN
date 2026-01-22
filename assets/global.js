@@ -5046,7 +5046,7 @@ class VariantSelects extends HTMLElement {
     }
 
     const isMobile = window.innerWidth < 921;
-    this.updateMedia(isMobile ? 'slider' : false);
+    this.updateMedia(isColor ? true : (isMobile ? 'slider' : false));
 
     let callback = () => {};
     if (!this.currentVariant) {

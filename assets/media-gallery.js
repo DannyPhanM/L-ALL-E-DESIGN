@@ -123,58 +123,37 @@ if (!customElements.get('media-gallery')) {
         if(prevActiv) prevActiv.classList.remove('is-active');
         if (activeMedia) activeMedia.classList.add('is-active');
       }
-      if (!activeMedia) return
-      if (activeMedia) {
-        if(this.elements.sliderMedia.classList.contains('slider-main--original') && !this.elements.sliderMedia.classList.contains('grid--peek')) {
-          let height = activeMedia.offsetHeight
-          if(this.elements.parentContainer.offsetWidth < 769) {
-            this.elements.sliderMedia.closest('.product--side_thumbnails') ? this.elements.sliderMedia.closest('.slider-block').removeAttribute('style') : this.elements.sliderMedia.removeAttribute('style')
-            this.elements.sliderViewport.style.height = height + 'px'
-          } else {
-            this.elements.sliderViewport.removeAttribute('style')
-            this.elements.sliderMedia.closest('.product--side_thumbnails') ? this.elements.sliderMedia.closest('.slider-block').style.height = height + 'px' : this.elements.sliderMedia.style.height = height + 'px'
-          }
-        }
-        if (isScroll !== false) {
-          this.elements.sliderMedia.scrollTo({
-            left: activeMedia.offsetLeft,
-            behavior: 'smooth'
-          })
-        }
-      }
-      if (this.querySelector('[id^="GalleryThumbnails"]')) {
-        const prevActiveThumbnail = this.elements.thumbnails.querySelector(`.is-active`)
-        if (prevActiveThumbnail) prevActiveThumbnail.classList.remove('is-active')
-        let activeMediaAlt
-        let mediaIdValue
+      this.preventStickyHeader();
+      window.setTimeout(() => {
+        if (!activeMedia) return;
+
         if (activeMedia) {
-          activeMediaAlt = activeMedia.dataset.mediaAlt
-          mediaIdValue = activeMedia.dataset.mediaId
-        }
-        const activeThumbnail = this.elements.thumbnails.querySelector(`[data-target="${ mediaIdValue }"]`)
-        if (activeThumbnail) activeThumbnail.classList.add('is-active')
-        if (this.elements.viewer.querySelectorAll(`.product__media-item--hide`).length > 0 && activeMedia) {
-          this.elements.thumbnails.querySelectorAll(`.thumbnail-list__item`).forEach(thumbnail => {
-            thumbnail.classList.remove('product__media-item--variant-alt')
-            if (thumbnail.dataset.mediaAlt == activeMediaAlt) thumbnail.classList.add('product__media-item--variant-alt')
-          })
-        } 
-        if (isScroll !== false) {
-          this.elements.slider.scrollTo({
-            left: activeThumbnail.offsetLeft - activeThumbnail.offsetWidth - 8,
-            behavior: 'smooth'
-          })
-          if (activeThumbnail.parentElement.classList.contains('thumbnail-list--column')) {
-            this.elements.thumbnails.scrollTo({
-              top: activeThumbnail.offsetTop - activeThumbnail.offsetHeight - 8,
+          if (isScroll !== false) {
+            this.elements.sliderMedia.scrollTo({
+              left: activeMedia.offsetLeft,
               behavior: 'smooth'
             })
           }
         }
-      }
-      if (!activeMedia) return
-      this.preventStickyHeader();
-      window.setTimeout(() => {
+
+        if (this.querySelector('[id^="GalleryThumbnails"]')) {
+          let mediaIdValue = activeMedia.dataset.mediaId;
+          const activeThumbnail = this.elements.thumbnails.querySelector(`[data-target="${ mediaIdValue }"]`);
+
+          if (activeThumbnail && isScroll !== false) {
+            this.elements.slider.scrollTo({
+              left: activeThumbnail.offsetLeft - activeThumbnail.offsetWidth - 8,
+              behavior: 'smooth'
+            })
+            if (activeThumbnail.parentElement.classList.contains('thumbnail-list--column')) {
+              this.elements.thumbnails.scrollTo({
+                top: activeThumbnail.offsetTop - activeThumbnail.offsetHeight - 8,
+                behavior: 'smooth'
+              })
+            }
+          }
+        }
+
         if (isScroll === true || (isScroll !== false && isScroll !== 'slider' && (this.dataset.desktopLayout === 'one_column_grid' || this.dataset.desktopLayout === 'two_columns_grid') && !activeMedia.classList.contains('product__media-item--hide'))) {
           // Tính toán Header để bù trừ
           const stickyHeader = document.querySelector('sticky-header') || document.querySelector('.header-wrapper') || document.querySelector('.header');
