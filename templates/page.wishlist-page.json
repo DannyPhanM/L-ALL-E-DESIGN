@@ -35,20 +35,6 @@
     },
     "17667744128bc4b7ac": {
       "type": "apps",
-      "blocks": {
-        "xb_wishlist_wishlist_A6bYwk": {
-          "type": "shopify://apps/xb-wishlist/blocks/wishlist/cc07f1e9-907b-431d-99f8-4fce3efa75f1",
-          "settings": {
-            "container": 1100,
-            "heading": true,
-            "text_size": 32,
-            "price_color": "#ff0000"
-          }
-        }
-      },
-      "block_order": [
-        "xb_wishlist_wishlist_A6bYwk"
-      ],
       "settings": {
         "include_margins": true
       }
