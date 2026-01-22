@@ -17,7 +17,7 @@
           "settings": {
             "swym_atw_button_icon": "heart",
             "swym_atw_icon_thickness": 1,
-            "swym_atw_display_btn_text": true,
+            "swym_atw_display_btn_text": false,
             "swym_button_position": "product_title_right",
             "swym_atw_button_vertical_offset": 0,
             "swym_atw_full_width": false,
