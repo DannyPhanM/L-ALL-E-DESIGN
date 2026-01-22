@@ -4799,5 +4799,5 @@ swym-storefront-layout-notification,
 }
 
 .swym-storefront-layout-create-collection-name-form-group .swym-storefront-layout-checkbox-container {
-  display: none;
+  display: none !important;
 }
