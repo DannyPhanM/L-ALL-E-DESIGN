@@ -4805,3 +4805,7 @@ swym-storefront-layout-notification,
 .swym-storefront-layout-create-collection-name-form-group {
   padding-left: 0 !important; 
 }
+
+input#swym-storefront-layout-create-collection-name-input {
+  width: 100% !important;
+}
