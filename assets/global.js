@@ -4949,7 +4949,10 @@ class VariantSelects extends HTMLElement {
   constructor() {
     super();
 
-    this.addEventListener('change', (event) => this.handleProductUpdate(event));
+    this.addEventListener('change', (event) => {
+      if (this.tagName === 'VARIANT-RADIOS' && this.closest('variant-selects')) return;
+      this.handleProductUpdate(event)
+    });
     this.initializeProductSwapUtility();
     this.priceInsideButton = false
     this.buttonIcon = false
@@ -5025,16 +5028,32 @@ class VariantSelects extends HTMLElement {
     this.toggleAddButton(true, '', false);
     this.removeErrorMessage();
 
+    if (isColor) {
+      setTimeout(() => {
+        const anchor = document.getElementById(`ProductMediaAnchor-${this.dataset.section}`);
+        if (!anchor) return;
+
+        const modalScrollArea = this.closest('.scroll-area');
+        if (modalScrollArea) {
+          modalScrollArea.scrollTo({ top: anchor.offsetTop, behavior: 'smooth' });
+        } else {
+          const headerHeight = getComputedStyle(document.documentElement).getPropertyValue('--header-height').trim();
+          const headerOffset = parseInt(headerHeight?.replace('px', '')) || 0;
+          const topOffset = anchor.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+          window.scrollTo({ top: topOffset, behavior: 'smooth' });
+        }
+      }, 50);
+    }
+
+    const isMobile = window.innerWidth < 921;
+    this.updateMedia(isMobile ? 'slider' : false);
+
     let callback = () => {};
     if (!this.currentVariant) {
       this.toggleAddButton(true, '', true);
       this.setUnavailable();
       if(this.querySelector('.product-combined-listings')) callback = this.handleSwapProduct(sectionId, true)
     } else if (this.dataset.url !== targetUrl) {
-      if (isColor) {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-      this.updateMedia(false);
       this.updateURL(targetUrl);
       this.updateVariantInput();
       this.querySelector('.product-combined-listings') ? callback = this.handleSwapProduct(sectionId) : callback = this.handleUpdateProductInfo(sectionId);

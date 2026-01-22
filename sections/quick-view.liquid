@@ -227,6 +227,7 @@
                   -%}
                       <div class="product  product--medium product--{{ section.settings.desktop_gallery_style }} product--{{ settings.white_space }} {% if settings.show_lines %}product--lines{% endif %} {% if section.settings.swap_position %}product--reverse{% endif %}">
                       <product-recently-viewed data-product-id="{{ product.id }}" class="hidden-block"></product-recently-viewed>
+                      <div id="ProductMediaAnchor-{{ section.id }}"></div>
                       <div class="grid__item product__media-wrapper">
                           <media-gallery id="MediaGallery-{{ section.id }}" role="region" {% if section.settings.sticky_content %} class="container--sticky"{% endif %} aria-label="{{ 'products.product.media.gallery_viewer' | t }}" data-desktop-layout="{{ section.settings.desktop_gallery_style }}">
                           <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>

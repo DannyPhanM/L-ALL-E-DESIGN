@@ -67,12 +67,17 @@ if (!customElements.get('media-gallery')) {
         }
         
         if (activeMedia && activeMedia.offsetHeight > 50) {
+          const anchor = document.getElementById(`ProductMediaAnchor-${this.dataset.section}`);
           const stickyHeader = document.querySelector('sticky-header') || document.querySelector('.header-wrapper') || document.querySelector('.header');
           const headerOffset = stickyHeader ? stickyHeader.offsetHeight : 0;
           
-          const rect = activeMedia.getBoundingClientRect();
-          const currentTop = rect.top + window.pageYOffset;
-          const topOffset = currentTop - headerOffset - 20;
+          let topOffset;
+          if (anchor) {
+            topOffset = anchor.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+          } else {
+            const rect = activeMedia.getBoundingClientRect();
+            topOffset = rect.top + window.pageYOffset - headerOffset - 20;
+          }
 
           // Chỉ cuộn khi vị trí có vẻ hợp lý (không phải ở sát đỉnh trang nếu đó không phải ảnh đầu)
           // Hoặc sau khi đã thử nhiều lần mà vị trí vẫn vậy
@@ -83,7 +88,8 @@ if (!customElements.get('media-gallery')) {
             });
             
             if (activeMedia.dataset.mediaId) {
-              this.setActiveMedia(activeMedia.dataset.mediaId, false);
+              const isMobile = window.innerWidth < 921;
+              this.setActiveMedia(activeMedia.dataset.mediaId, isMobile ? 'slider' : false);
             }
             
             scrollTriggered = true;
@@ -169,7 +175,7 @@ if (!customElements.get('media-gallery')) {
       if (!activeMedia) return
       this.preventStickyHeader();
       window.setTimeout(() => {
-        if (isScroll === true || (isScroll !== false && (this.dataset.desktopLayout === 'one_column_grid' || this.dataset.desktopLayout === 'two_columns_grid') && !activeMedia.classList.contains('product__media-item--hide'))) {
+        if (isScroll === true || (isScroll !== false && isScroll !== 'slider' && (this.dataset.desktopLayout === 'one_column_grid' || this.dataset.desktopLayout === 'two_columns_grid') && !activeMedia.classList.contains('product__media-item--hide'))) {
           // Tính toán Header để bù trừ
           const stickyHeader = document.querySelector('sticky-header') || document.querySelector('.header-wrapper') || document.querySelector('.header');
           const headerOffset = stickyHeader ? stickyHeader.offsetHeight : 0;

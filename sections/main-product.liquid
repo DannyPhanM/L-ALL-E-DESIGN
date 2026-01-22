@@ -195,6 +195,7 @@
   <div class="ordinal-section ordinal-section--{{ settings.white_space }} {% if settings.show_lines %}ordinal-section--lines{% endif %}  {% if settings.max_page_width == '1400' or settings.max_page_width == '1200' %}page-width {% endif %} page-width--{{ settings.max_page_width }}  section-padding--{{ settings.white_space }}">
     <div class="product product--{{ section.settings.desktop_gallery_size }} product--{{ section.settings.desktop_gallery_style }} product--{{ settings.white_space }} {% if settings.show_lines %}product--lines{% endif %} {% if section.settings.swap_position and section.settings.desktop_gallery_size != 'full_width' %}product--reverse{% endif %}{% if section.settings.enable_image_zoom and section.settings.image_zoom_style == 'zoom-in' %} product-with-image-zoom-in{% endif %}">
       <product-recently-viewed data-product-id="{{ product.id }}" class="hidden-block"></product-recently-viewed>
+    <div id="ProductMediaAnchor-{{ section.id }}"></div>
     <div class="grid__item product__media-wrapper">
         {% render 'custom-size-popup', custom_size_image: section.settings.custom_size_image, content_note: section.settings.note_popup, content_title: section.settings.title_popup %}
         <media-gallery id="MediaGallery-{{ section.id }}" role="region" {% if section.settings.enable_sticky_content %} class="container--sticky"{% endif %} aria-label="{{ 'products.product.media.gallery_viewer' | t }}" data-desktop-layout="{{ section.settings.desktop_gallery_style }}">
