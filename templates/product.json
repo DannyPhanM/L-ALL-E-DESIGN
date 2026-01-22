@@ -20,12 +20,12 @@
             "swym_atw_display_btn_text": false,
             "swym_button_position": "product_title_right",
             "swym_atw_button_vertical_offset": 0,
-            "swym_atw_full_width": true,
+            "swym_atw_full_width": false,
             "swym_atw_button_alignment": "center",
-            "swym_add_to_wishlist_color": "#FFFFFF",
-            "swym_added_to_wishlist_color": "#222222",
-            "swym_button_text_color": "#282828",
-            "swym_atw_border_color": "rgba(0,0,0,0)",
+            "swym_add_to_wishlist_color": "#282828",
+            "swym_added_to_wishlist_color": "#282828",
+            "swym_button_text_color": "#FFFFFF",
+            "swym_atw_border_color": "#282828",
             "swym_atw_border_thickness": 0,
             "swym_atw_button_border_radius": 0,
             "swym_enable_hover_customization": false,
@@ -35,7 +35,7 @@
             "swym_hover_atw_border_color": "#000000",
             "swym_hover_atw_border_thickness": 0,
             "swym_hover_atw_button_border_radius": 0,
-            "swym_custom_css": ".product__info-wrapper .atw-button-add-color {\n  padding: 0;\n  background: transparent;\n}"
+            "swym_custom_css": ".product__info-wrapper .atw-button-add-color {\n  padding: 0;\n  background: transparent;\n}\n.swym-atw-btn-wrapper.product_title_right-position {\nalign-items: flex-start !important;\n}"
           }
         },
         "measurement_field_U74E6A": {
