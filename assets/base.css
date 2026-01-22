@@ -4797,3 +4797,7 @@ swym-storefront-layout-notification,
 .swym-wishlist-collections-v2-container .swym-wishlist-collections-v2 {
   transform: none !important;
 }
+
+.swym-storefront-layout-create-collection-name-form-group .swym-storefront-layout-checkbox-container {
+  display: none;
+}
