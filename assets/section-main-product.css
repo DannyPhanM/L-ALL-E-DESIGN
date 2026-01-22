@@ -5992,6 +5992,7 @@ product-checkbox-group.layout-row {
 
 .product-labels .product-labels__description p {
   font-size: 12px;
+  text-align: center;
 }
 
 .product-labels__wrapper .product-labels__icon {
