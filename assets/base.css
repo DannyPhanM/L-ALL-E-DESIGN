@@ -4775,3 +4775,25 @@ swym-storefront-layout-notification,
   width: 28px;
   height: 28px;
 }
+
+.card-container .swym-wishlist-collections-v2,
+.card-container .swym-wishlist-collections-v2 svg {
+  height: 20px !important;
+  width: 20px !important;
+}
+@media (max-width: 749px) {
+  .card-container .swym-wishlist-collections-v2,
+  .card-container .swym-wishlist-collections-v2 svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+}
+.swym-wishlist-collections-v2-container {
+  left: auto !important;
+  right: 10px;
+  top: 10px !important;
+  padding: 0 !important;
+}
+.swym-wishlist-collections-v2-container .swym-wishlist-collections-v2 {
+  transform: none !important;
+}
