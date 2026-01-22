@@ -4801,3 +4801,7 @@ swym-storefront-layout-notification,
 .swym-storefront-layout-create-collection-name-form-group .swym-storefront-layout-checkbox-container {
   display: none !important;
 }
+
+.swym-storefront-layout-create-collection-name-form-group {
+  padding-left: 0 !important; 
+}
