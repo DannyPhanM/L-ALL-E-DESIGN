@@ -216,7 +216,7 @@
         "collection_w9JWyz": {
           "type": "collection",
           "settings": {
-            "collection": "mirage",
+            "collection": "dress",
             "custom_tab_heading": "BEST SELLERS"
           }
         }
@@ -336,7 +336,7 @@
         "image_ejkfbP": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/11-featurecollection_0b0e4ccf-0ec1-485d-b7c5-0ceaad2caae7.jpg",
+            "image": "shopify://shop_images/LEK1827-2.jpg",
             "link": "shopify://collections/mirage",
             "target_blank": false,
             "banner_size": "big_square",
@@ -359,7 +359,7 @@
         "image_BdXbqY": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/12-featurecollection_d7868dbf-177e-4e16-95ed-a218672cdfe0.jpg",
+            "image": "shopify://shop_images/z7476399247673_43e8901dd63f5ff86768211e68c1aff7.jpg",
             "link": "shopify://collections/monolith",
             "target_blank": false,
             "banner_size": "big_square",
