@@ -379,8 +379,32 @@
             "text_color": "#000000"
           }
         },
+        "image_8zdBMT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/A2506CV01DE_12.jpg",
+            "link": "",
+            "target_blank": false,
+            "banner_size": "wide",
+            "overlay_color": "#000000",
+            "overlay_gradient": "",
+            "overlay_opacity": 15,
+            "heading": "",
+            "heading_size": "default",
+            "button_label": "Discover",
+            "show_button_on_mobile": true,
+            "button_style": "outlined",
+            "center_text": true,
+            "vertical_content_position": "end",
+            "narrow_content": true,
+            "color_type": "invert",
+            "background_color": "#ffffff",
+            "text_color": "#000000"
+          }
+        },
         "loop_video_4YpYbP": {
           "type": "loop_video",
+          "disabled": true,
           "settings": {
             "video_load": "shopify://files/videos/video tổng.mp4",
             "link": "",
@@ -406,6 +430,7 @@
       "block_order": [
         "image_ejkfbP",
         "image_BdXbqY",
+        "image_8zdBMT",
         "loop_video_4YpYbP"
       ],
       "name": "t:sections.banner-grid.name",
