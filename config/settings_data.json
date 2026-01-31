@@ -199,7 +199,7 @@
     "tiktok_link": "https://www.tiktok.com/@lalleedesign",
     "facebook_link": "https://www.facebook.com/lallee.design",
     "youtube_link": "",
-    "telegram_link": "+84 98 929 39 65",
+    "telegram_link": "",
     "line_link": "",
     "disable_right_click": false,
     "disable_text_selection": false,
@@ -217,8 +217,8 @@
             "settings": {
               "menu": "main-menu",
               "use_accent_color": false,
-              "highlight_menu_item": "HOLIDAY SALE",
-              "highlight_menu_item_color": "#e01d1d",
+              "highlight_menu_item": "SALE",
+              "highlight_menu_item_color": "#ff3838",
               "link_size": "default",
               "menu_horizontal_alignment": "flex-start"
             }
