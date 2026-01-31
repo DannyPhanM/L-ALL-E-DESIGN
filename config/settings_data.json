@@ -268,6 +268,7 @@
           "13338b8d-9ca8-4bee-95df-8201e17013fb",
           "63f065f6-f1ee-4bf4-8383-2a4aea5a061e"
         ],
+        "custom_css": [],
         "settings": {
           "sticky_header": "always_stick",
           "show_bottom_line": false,
