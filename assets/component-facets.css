@@ -199,6 +199,10 @@ facet-filters-form .field {
     flex-direction: column;
     gap: 4px;
 }
+facet-filters-form .facet-filters-form-line{
+    position: relative;
+    z-index: 1;
+}
 input[type='number']::-webkit-outer-spin-button,
 input[type='number']::-webkit-inner-spin-button {
     -webkit-appearance: none;
