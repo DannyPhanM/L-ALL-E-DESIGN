@@ -558,7 +558,8 @@
   "shopify": {
     "checkout": {
       "contact": {
-        "address1_label": "Home No, Street"
+        "address1_label": "Home No, Street",
+        "city_label": "District, City"
       }
     }
   }
