@@ -4827,3 +4827,9 @@ input#swym-storefront-layout-create-collection-name-input {
   fill: #971400;;
   stroke: #971400;
 }
+
+.menu__item .first-nested__list a:not(.button) {
+  flex-grow: 1;
+  justify-content: center;
+  align-items: flex-start;
+}
