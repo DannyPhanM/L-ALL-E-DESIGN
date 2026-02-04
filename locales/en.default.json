@@ -383,7 +383,7 @@
       "company": "Company",
       "address1": "Address 1",
       "address2": "Address 2",
-      "city": "City",
+      "city": "District, City",
       "country": "Country/region",
       "province": "Province",
       "zip": "Postal/ZIP code",
