@@ -558,7 +558,7 @@
   "shopify": {
     "checkout": {
       "contact": {
-        "address_title": "Home No, Street"
+        "address1_label": "Home No, Street"
       }
     }
   }
