@@ -38,7 +38,7 @@
     "select_text_accent_color": true,
     "typography_preset": "custom",
     "swap_fonts": false,
-    "desktop_font_scale": 70,
+    "desktop_font_scale": 80,
     "mobile_font_scale": 70,
     "base_font": "jost_n4",
     "base_icon_weight": "regular",
