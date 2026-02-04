@@ -255,7 +255,7 @@
         "text_pKtMPh": {
           "type": "text",
           "settings": {
-            "text": "<p><em><strong>Sale items are final, non-returnable</strong></em></p>",
+            "text": "<p><em><strong>Sale items are final, non-returnable</strong></em><br/>• Customize size: <strong>15–20 days</strong> (longer processing time due to the Lunar New Year)<br/>• Standard sizes: <strong>7–25 business days</strong> processing time</p>",
             "dim_text": true,
             "text_size": "body_s",
             "top_spacing": 1,
