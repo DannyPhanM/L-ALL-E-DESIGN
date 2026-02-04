@@ -12,20 +12,20 @@
     "quick-view": {
       "type": "quick-view",
       "blocks": {
-        "sku_7ENKm3": {
-          "type": "sku",
-          "settings": {
-            "sku_heading": "SKU:",
-            "sku_size": "default",
-            "top_spacing": 1,
-            "mobile_top_spacing": 1
-          }
-        },
         "5e8c9327-e699-4289-b5d4-b055fc4f0862": {
           "type": "title",
           "settings": {
             "title_size": "heading_m_uppercase",
             "heading_tag": "h1",
+            "top_spacing": 1,
+            "mobile_top_spacing": 1
+          }
+        },
+        "sku_7ENKm3": {
+          "type": "sku",
+          "settings": {
+            "sku_heading": "SKU:",
+            "sku_size": "default",
             "top_spacing": 1,
             "mobile_top_spacing": 1
           }
@@ -77,7 +77,7 @@
             "display_in_a_row": false,
             "price_in_button": true,
             "compare_price_on_mobile": true,
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
             "hide_pickup_availability": false,
             "top_spacing": 1,
             "mobile_top_spacing": 1
@@ -104,8 +104,8 @@
         }
       },
       "block_order": [
-        "sku_7ENKm3",
         "5e8c9327-e699-4289-b5d4-b055fc4f0862",
+        "sku_7ENKm3",
         "e8d14fca-ff07-4108-a172-9ef5277aecf6",
         "63f93c87-7976-4d84-9caa-ec20c29b2cd6",
         "67d18980-87f7-4387-855c-ca214f4f8fe8",
