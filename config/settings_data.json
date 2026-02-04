@@ -219,7 +219,7 @@
               "use_accent_color": false,
               "highlight_menu_item": "SALE",
               "highlight_menu_item_color": "#ff3838",
-              "link_size": "default",
+              "link_size": "heading_xs_uppercase",
               "menu_horizontal_alignment": "flex-start"
             }
           },
