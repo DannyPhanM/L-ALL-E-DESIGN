@@ -255,7 +255,7 @@
         "text_pKtMPh": {
           "type": "text",
           "settings": {
-            "text": "<p><em><strong>- Sale items are final, non-returnable<br/></strong></em><em> -Customize size: </em><em><strong>15–20 business days</strong></em><em> processing time<br/>- Standard size: </em><em><strong>7–25 business days</strong></em><em> processing time</em></p>",
+            "text": "<p><em><strong>- Sale items are final, non-returnable<br/></strong></em><em> - Customize size: </em><em><strong>15–20 business days</strong></em><em> processing time<br/>- Standard size: </em><em><strong>7–25 business days</strong></em><em> processing time</em></p>",
             "dim_text": true,
             "text_size": "body_s",
             "top_spacing": 1,
