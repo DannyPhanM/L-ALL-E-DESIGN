@@ -4822,3 +4822,8 @@ input#swym-storefront-layout-create-collection-name-input {
 .link--highlighted {
   font-weight: 600;
 }
+
+.swym-wishlist-collections-v2[aria-pressed="true"] svg path {
+  fill: #971400;;
+  stroke: #971400;
+}
