@@ -21,7 +21,7 @@
 
     <title>
       {{ page_title }}
-      {%- if current_tags %}
+      {% comment %} {%- if current_tags %}
         &ndash; tagged "{{ current_tags | join: ', ' }}
         "{% endif -%}
       {%- if current_page != 1 %}
@@ -31,7 +31,7 @@
       {%- unless page_title contains shop.name %}
         &ndash;
         {{ shop.name }}
-      {% endunless -%}
+      {% endunless -%} {% endcomment %}
     </title>
 
     {% if page_description %}
