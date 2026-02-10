@@ -15,7 +15,7 @@
         "image_slide_aUi8kp": {
           "type": "image_slide",
           "settings": {
-            "block_link": "shopify://collections/all",
+            "block_link": "shopify://collections/stillness-in-bloom",
             "block_target_blank": false,
             "desktop_image": "shopify://shop_images/DSC_0410-1_copy-1_copy.jpg",
             "mobile_image": "shopify://shop_images/DSC_0410-1_copy-1_copy.jpg",
@@ -71,7 +71,7 @@
         "template--18483371475218__68cfae61-0ab2-4c3d-b51a-004ac5bd258b-1681990871ddb39b7e-0": {
           "type": "image_slide",
           "settings": {
-            "block_link": "shopify://collections/all",
+            "block_link": "shopify://collections/stillness-in-bloom",
             "block_target_blank": false,
             "desktop_image": "shopify://shop_images/DSC_0666-1_copy-1_copy_8419af7b-786d-47e2-83bf-5c6710c70ed8.jpg",
             "mobile_image": "shopify://shop_images/DSC_0666-1_copy-1_copy_3d9aec57-79af-487b-8683-afc11370f888.jpg",
@@ -127,7 +127,7 @@
         "image_slide_bQTmT7": {
           "type": "image_slide",
           "settings": {
-            "block_link": "shopify://collections/all",
+            "block_link": "shopify://collections/stillness-in-bloom",
             "block_target_blank": false,
             "desktop_image": "shopify://shop_images/DSC_1508_7e0e2ccf-10a1-4d6d-bab6-bfb3f59afa79.jpg",
             "mobile_image": "shopify://shop_images/DSC_1508.jpg",
