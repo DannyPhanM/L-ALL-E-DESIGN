@@ -337,7 +337,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/LEK1827-2.jpg",
-            "link": "shopify://collections/mirage",
+            "link": "shopify://collections/inner-arch",
             "target_blank": false,
             "banner_size": "big_square",
             "overlay_color": "#000000",
