@@ -175,6 +175,7 @@
     "enable_order_note": true,
     "show_collapsible_order": true,
     "order_heading_size": "default",
+    "order_label": "Add your height-weight (cm) or any notes for your order",
     "order_placeholder": "",
     "enable_shipping_calculator": false,
     "shipping_heading": "Estimate shipping!",
