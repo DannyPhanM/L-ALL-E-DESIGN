@@ -174,6 +174,7 @@
     "discount_code_heading_size": "default",
     "enable_order_note": true,
     "show_collapsible_order": true,
+    "order_heading": "Order note (Height- Weight)",
     "order_heading_size": "default",
     "order_label": "Add your height-weight (cm) or any notes for your order",
     "order_placeholder": "",
