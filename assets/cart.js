@@ -385,10 +385,12 @@ if (!customElements.get('cart-note')) {
         container.textContent = errorMessage;
         container.style.display = 'block';
         container.style.color = 'rgb(var(--error-color))';
-        container.style.marginTop = '5px';
-        container.style.marginBottom = '5px';
+        container.style.marginTop = '8px';
+        container.style.marginBottom = '8px';
         container.style.fontSize = '11px';
         container.style.fontWeight = 'bold';
+        container.style.lineHeight = '1.4';
+        container.style.padding = '2px 0';
 
         // Expand accordion if it's closed
         const accordionToggle = container.closest('.accordion-toggle');
