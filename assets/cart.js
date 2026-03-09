@@ -377,8 +377,10 @@ if (!customElements.get('cart-note')) {
       errorContainers.forEach(container => {
         container.textContent = errorMessage;
         container.style.display = 'block';
-        container.style.color = 'var(--error-color, #ff0000)';
+        container.style.color = '#ff0000';
+        container.style.marginTop = '1rem';
         container.style.marginBottom = '1rem';
+        container.style.fontWeight = 'bold';
       });
     }
 
