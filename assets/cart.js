@@ -380,6 +380,7 @@ if (!customElements.get('cart-note')) {
     showError() {
       const errorMessage = window.accessibilityStrings?.cartNoteRequired || 'Please add a note to your order before checking out.';
       const errorContainers = document.querySelectorAll('#CartDrawer-CartNoteError, #cart-note-error');
+      
       errorContainers.forEach(container => {
         container.textContent = errorMessage;
         container.style.display = 'block';
@@ -388,6 +389,13 @@ if (!customElements.get('cart-note')) {
         container.style.marginBottom = '5px';
         container.style.fontSize = '11px';
         container.style.fontWeight = 'bold';
+
+        // Expand accordion if it's closed
+        const accordionToggle = container.closest('.accordion-toggle');
+        if (accordionToggle && !accordionToggle.classList.contains('is-open')) {
+          const summary = accordionToggle.querySelector('.accordion__summary');
+          if (summary) summary.click();
+        }
       });
     }
 
