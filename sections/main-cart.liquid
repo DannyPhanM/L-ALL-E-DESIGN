@@ -801,8 +801,8 @@
                         <div class="accordion__panel">
                             <div class="accordion__content">
                                 <cart-note class="cart__note">
-                                  <label class="secondary-text {% if settings.dim_text %}dim{% endif %} label--{{ settings.typography_preset }}{% if bolder_font %} bolder-font{% endif %}" for="Cart-note">{{ block.settings.order_label }}</label>
-                                  <textarea class="text-area input--{{ settings.typography_preset }}{% if bolder_font %} bolder-font{% endif %}" name="note" form="cart" id="Cart-note" placeholder="{{ block.settings.order_placeholder | strip_html }}">{{ cart.note }}</textarea>
+                                  <label class="secondary-text {% if settings.dim_text %}dim{% endif %} label--{{ settings.typography_preset }}{% if bolder_font %} bolder-font{% endif %}" for="Cart-note">{{ block.settings.order_label }} *</label>
+                                  <textarea required class="text-area input--{{ settings.typography_preset }}{% if bolder_font %} bolder-font{% endif %}" name="note" form="cart" id="Cart-note" placeholder="{{ block.settings.order_placeholder | strip_html }}">{{ cart.note }}</textarea>
                                 </cart-note>
                             </div>
                         </div>
