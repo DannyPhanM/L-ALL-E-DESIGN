@@ -384,8 +384,9 @@ if (!customElements.get('cart-note')) {
         container.textContent = errorMessage;
         container.style.display = 'block';
         container.style.color = '#ff0000';
-        container.style.marginTop = '1rem';
-        container.style.marginBottom = '1rem';
+        container.style.marginTop = '5px';
+        container.style.marginBottom = '5px';
+        container.style.fontSize = '11px';
         container.style.fontWeight = 'bold';
       });
     }

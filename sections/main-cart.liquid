@@ -726,7 +726,6 @@
                     </label>
                   {%- endif -%}
                   <div class="cart__checkouts {% if settings.enable_buttons_zoom %}buttons-zoom{% endif %}">
-                    <div id="cart-note-error" role="alert" class="errors label--{{ settings.typography_preset }}{% if uppercase_font %} uppercase{% endif %}{% if bolder_font %} bolder-font{% endif %}"></div>
                     <div class="cart__checkout" {{ block.shopify_attributes }}>
                       <button type="submit" id="checkout" class="cart__checkout-button button solid-button big-button--{{ settings.typography_preset }} {% if settings.typography_preset == 'custom' %}{% if settings.regular_button_size == 'default' %}button-font--default{% else %}{{ settings.regular_button_size }}{% endif %}{% endif %}" name="checkout"{% if cart == empty %} disabled{% endif %} form="cart">
                         {{ 'sections.cart.checkout' | t }}
@@ -804,6 +803,7 @@
                                 <cart-note class="cart__note">
                                   <label class="secondary-text {% if settings.dim_text %}dim{% endif %} label--{{ settings.typography_preset }}{% if bolder_font %} bolder-font{% endif %}" for="Cart-note">{{ block.settings.order_label }} *</label>
                                   <textarea required class="text-area input--{{ settings.typography_preset }}{% if bolder_font %} bolder-font{% endif %}" name="note" form="cart" id="Cart-note" placeholder="{{ block.settings.order_placeholder | strip_html }}">{{ cart.note }}</textarea>
+                                  <div id="cart-note-error" role="alert" class="errors" style="display:none;"></div>
                                 </cart-note>
                             </div>
                         </div>
