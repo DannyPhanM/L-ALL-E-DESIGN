@@ -353,22 +353,28 @@ if (!customElements.get('cart-note')) {
     }
 
     initCheckoutValidation() {
+      // Capture clicks on checkout buttons before other scripts
       document.addEventListener('click', (event) => {
         const checkoutButton = event.target.closest('#CartDrawer-Checkout, #checkout, [name="checkout"]');
-        if (checkoutButton) {
-          const textarea = this.querySelector('textarea');
-          if (textarea && textarea.value.trim() === '') {
-            event.preventDefault();
-            event.stopPropagation();
-            this.showError();
-            // Scroll to textarea if not in drawer
-            if (!checkoutButton.closest('cart-drawer')) {
-               textarea.scrollIntoView({ behavior: 'smooth', block: 'center' });
-               textarea.focus();
-            }
+        if (!checkoutButton) return;
+
+        // Force reading latest value
+        const textarea = document.querySelector('cart-note textarea');
+        const value = textarea ? textarea.value.trim() : '';
+
+        if (value === '') {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+          this.showError();
+          
+          if (textarea) {
+             textarea.scrollIntoView({ behavior: 'smooth', block: 'center' });
+             textarea.focus();
           }
+        } else {
+          this.clearErrors();
         }
-      });
+      }, true);
     }
 
     showError() {

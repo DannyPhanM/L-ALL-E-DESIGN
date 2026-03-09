@@ -593,10 +593,11 @@
                             <p id="CartDrawer-LiveRegionText" class="visually-hidden" role="status"></p>
                             <p id="CartDrawer-LineItemStatus" class="visually-hidden" aria-hidden="true" role="status">{{ 'accessibility.loading' | t }}</p>
                         </div>
-                        <div id="CartDrawer-CartNoteError" role="alert" class="errors label--{{ settings.typography_preset }}{% if uppercase_font %} uppercase{% endif %}{% if bolder_font %} bolder-font{% endif %}"></div>
-                        <div id="CartDrawer-CartErrors" role="alert" class="label--{{ settings.typography_preset }}{% if uppercase_font %} uppercase{% endif %}{% if bolder_font %} bolder-font{% endif %}"></div>
-                        </form>
+                  <p class="visually-hidden" id="cart-live-region-text" aria-live="polite" role="status"></p>
+                  <p class="visually-hidden" id="shopping-cart-line-item-status" aria-live="polite" aria-hidden="true" role="status">{{ 'accessibility.loading' | t }}</p>  
+                </form>
                     </cart-drawer-items>
+                    <div id="CartDrawer-CartErrors" role="alert" class="label--{{ settings.typography_preset }}{% if uppercase_font %} uppercase{% endif %}{% if bolder_font %} bolder-font{% endif %}"></div>
 
                     {% if settings.enable_discount_code %}
                         {% render 'cart-discount', object_settings: settings, section_id: section.id %}
@@ -883,6 +884,7 @@
                         </label>
                     {%- endif -%}
                     <div class="drawer__footer-actions {% if settings.enable_buttons_zoom %}buttons-zoom{% endif %}">
+                        <div id="CartDrawer-CartNoteError" role="alert" class="errors label--{{ settings.typography_preset }}{% if settings.typography_preset == 'custom' %}{% if settings.uppercase_body_s %} uppercase{% endif %}{% if settings.bolder_font_body_s %} bolder-font{% endif %}{% endif %}"></div>
                         <div class="cart__checkout">
                             <button type="submit" id="CartDrawer-Checkout" class="cart__checkout-button button solid-button button--{{ settings.typography_preset }} {% if settings.typography_preset == 'custom' %}{% if settings.regular_button_size == 'default' %}button-font--default{% else %}{{ settings.regular_button_size }}{% endif %}{% endif %}" name="checkout"{% if cart == empty %} disabled{% endif %} form="CartDrawer-Form">
                                 {{ 'sections.cart.checkout' | t }}
