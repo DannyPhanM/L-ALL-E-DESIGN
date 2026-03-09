@@ -384,7 +384,7 @@ if (!customElements.get('cart-note')) {
       errorContainers.forEach(container => {
         container.textContent = errorMessage;
         container.style.display = 'block';
-        container.style.color = '#ff0000';
+        container.style.color = 'rgb(var(--error-color))';
         container.style.marginTop = '5px';
         container.style.marginBottom = '5px';
         container.style.fontSize = '11px';

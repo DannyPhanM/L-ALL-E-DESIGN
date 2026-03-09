@@ -752,7 +752,7 @@
                           endif
                       endif
 
-                      assign heading_text = block.settings.order_heading
+                      assign heading_text = settings.order_heading
                       assign final_text = ''
                       assign split_text_curly = heading_text | split: '{'
                       for part in split_text_curly
@@ -771,8 +771,8 @@
                         <div class="accordion-toggle {% unless block.settings.show_collapsible %}not_collapsible is-open{% endunless %}" {% unless block.settings.show_collapsible %}open{% endunless %}>
                         <div class="accordion__summary" tabindex="0">
                             <div class="summary__title">
-                                <div class="summary__title-name {% if block.settings.order_heading_size != 'default' %}{{ block.settings.order_heading_size }}{% else %}{% if uppercase_title_block %} uppercase{% endif %}{% if bolder_font_block %} bolder-font{% endif %}{% endif %}">
-                                    <h2 class="h4 accordion__title custom-heading accordion__title--{{ settings.typography_preset }} {% if block.settings.order_heading_size != 'default' %}{{ block.settings.order_heading_size }}{% else %}{% if uppercase_title_block %} uppercase{% endif %}{% if bolder_font_block %} bolder-font{% endif %}{% endif %}">
+                                <div class="summary__title-name {% if settings.order_heading_size != 'default' %}{{ settings.order_heading_size }}{% else %}{% if uppercase_title_block %} uppercase{% endif %}{% if bolder_font_block %} bolder-font{% endif %}{% endif %}">
+                                    <h2 class="h4 accordion__title custom-heading accordion__title--{{ settings.typography_preset }} {% if settings.order_heading_size != 'default' %}{{ settings.order_heading_size }}{% else %}{% if uppercase_title_block %} uppercase{% endif %}{% if bolder_font_block %} bolder-font{% endif %}{% endif %}">
                                       {{ final_text }}
                                     </h2>
                                 </div>
@@ -801,9 +801,9 @@
                         <div class="accordion__panel">
                             <div class="accordion__content">
                                 <cart-note class="cart__note">
-                                  <label class="secondary-text {% if settings.dim_text %}dim{% endif %} label--{{ settings.typography_preset }}{% if bolder_font %} bolder-font{% endif %}" for="Cart-note">{{ block.settings.order_label }} *</label>
-                                  <textarea required class="text-area input--{{ settings.typography_preset }}{% if bolder_font %} bolder-font{% endif %}" name="note" form="cart" id="Cart-note" placeholder="{{ block.settings.order_placeholder | strip_html }}">{{ cart.note }}</textarea>
-                                  <div id="cart-note-error" role="alert" class="errors" style="display:none;"></div>
+                                  <label class="secondary-text {% if settings.dim_text %}dim{% endif %} label--{{ settings.typography_preset }}{% if bolder_font %} bolder-font{% endif %}" for="Cart-note">{{ settings.order_label }} *</label>
+                                  <textarea required class="text-area input--{{ settings.typography_preset }}{% if bolder_font %} bolder-font{% endif %}" name="note" form="cart" id="Cart-note" placeholder="{{ settings.order_placeholder | strip_html }}">{{ cart.note }}</textarea>
+                                  <div id="cart-note-error" role="alert" class="errors label--{{ settings.typography_preset }}{% if settings.typography_preset == 'custom' %}{% if settings.uppercase_body_s %} uppercase{% endif %}{% if settings.bolder_font_body_s %} bolder-font{% endif %}{% endif %}" style="display:none;"></div>
                                 </cart-note>
                             </div>
                         </div>

@@ -667,7 +667,7 @@
                                     <cart-note class="cart__note">
                                       <label class="secondary-text {% if settings.dim_text %}dim{% endif %} label--{{ settings.typography_preset }}{% if bolder_font %} bolder-font{% endif %}" for="CartDrawer-Note">{{ settings.order_label }} *</label>
                                       <textarea required form="CartDrawer-Form" class="text-area input--{{ settings.typography_preset }}{% if bolder_font %} bolder-font{% endif %}" name="note" id="CartDrawer-Note" placeholder="{{ settings.order_placeholder | strip_html }}">{{ cart.note }}</textarea>
-                                      <div id="CartDrawer-CartNoteError" role="alert" class="errors" style="display:none;"></div>
+                                      <div id="CartDrawer-CartNoteError" role="alert" class="errors label--{{ settings.typography_preset }}{% if settings.typography_preset == 'custom' %}{% if settings.uppercase_body_s %} uppercase{% endif %}{% if settings.bolder_font_body_s %} bolder-font{% endif %}{% endif %}" style="display:none;"></div>
                                   </cart-note>
                                 </div>
                             </div>
