@@ -160,7 +160,9 @@
     assign settings_page_width = '100vw'
   endif
 %}
-
+<script>
+  console.log({{ product | json }});
+</script>
 <section class="section product-overview-section main-product" data-section="{{ section.id }}">
   {%- liquid 
     if section.settings.focal_point == '20% 0'
