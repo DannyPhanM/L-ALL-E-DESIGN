@@ -212,7 +212,10 @@
             id="ProductSubmitButton-{{ section_id }}"
             class="product-form__submit {% if block.settings.stretch_buy_buttons and block.settings.display_in_a_row and show_dynamic_checkout == false %}product-form__submit--full-width{% endif %} {% if block.settings.display_in_a_row and show_dynamic_checkout %}solid-button button--{{ settings.typography_preset }}{% else %}big-button big-button--{{ settings.typography_preset }}{% endif %} {% if settings.typography_preset == 'custom' %}{% if settings.regular_button_size == 'default' %}button-font--default{% else %}{{ settings.regular_button_size }}{% endif %}{% endif %} button button--full-width {% if show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %} 
             {% if block.settings.price_in_button and block.settings.compare_price_on_mobile %} show-compare-price-on-mobile{% endif %}{% if block.settings.price_in_button and block.settings.display_in_a_row == false %} product-form__submit--with-price{% endif %}"
-          {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %} {% if product.selected_or_first_available_variant.available == false and product.selected_or_first_available_variant.inventory_management != null %}data-sold-out{% endif %} {%- if product.template_suffix == 'preorder' %} data-pre-order="true"{% endif -%}
+          {% assign v = product.selected_or_first_available_variant %}
+
+{% if v.available == false and v.inventory_management != null %}disabled{% endif %}
+          {% if product.selected_or_first_available_variant.available == false and product.selected_or_first_available_variant.inventory_management != null %}data-sold-out{% endif %} {%- if product.template_suffix == 'preorder' %} data-pre-order="true"{% endif -%}
           >
             {%- if block.settings.price_in_button and block.settings.display_in_a_row == false and section.settings.desktop_gallery_size != 'full_width'-%}
               <span class="price-inside-button">{%- render 'price', product: product, use_variant: true, show_badges: false, type: block.type, price_settings: block.settings -%}</span>
