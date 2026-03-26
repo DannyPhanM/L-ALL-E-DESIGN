@@ -220,17 +220,25 @@
             {%- if block.settings.price_in_button and block.settings.display_in_a_row == false and section.settings.desktop_gallery_size != 'full_width'-%}
               <span class="price-inside-button">{%- render 'price', product: product, use_variant: true, show_badges: false, type: block.type, price_settings: block.settings -%}</span>
             {%- endif -%}
-            <span class="button-title">
-              {%- if product.selected_or_first_available_variant.available -%}
-                {%- if product.template_suffix == 'preorder' -%}
-                  {{ 'products.product.pre_order' | t }}
-                {%- else -%}
-                  {%- if settings.cart_name == 'cart' -%}{{ 'products.product.add_to_cart' | t }}{%- elsif settings.cart_name == 'bag' -%}{{ 'products.product.add_to_bag' | t }}{%- else -%}{{ 'products.product.add_to_basket' | t }}{%- endif -%}
-                {%- endif -%}
-              {%- else -%}
-                {{ 'products.product.sold_out' | t }}
-              {%- endif -%}
-            </span>
+<span class="button-title">
+  {%- assign v = product.selected_or_first_available_variant -%}
+
+  {%- if v.available or v.inventory_management == null -%}
+    {%- if product.template_suffix == 'preorder' -%}
+      {{ 'products.product.pre_order' | t }}
+    {%- else -%}
+      {%- if settings.cart_name == 'cart' -%}
+        {{ 'products.product.add_to_cart' | t }}
+      {%- elsif settings.cart_name == 'bag' -%}
+        {{ 'products.product.add_to_bag' | t }}
+      {%- else -%}
+        {{ 'products.product.add_to_basket' | t }}
+      {%- endif -%}
+    {%- endif -%}
+  {%- else -%}
+    {{ 'products.product.sold_out' | t }}
+  {%- endif -%}
+</span>
             {% if section.settings.enable_sticky_add_to_cart %}
               <span class="product-form__buttons-icon">
                 {% if settings.cart_name == 'basket' %}
