@@ -70,10 +70,12 @@
                               -%}
                               {%- for value in option.values -%}
                                 {%- liquid
-                                  assign option_disabled = true
-                                  if value.variant.available
-                                    assign option_disabled = false
-                                  endif
+assign option_disabled = true
+if value.variant.inventory_management == null
+  assign option_disabled = false
+elsif value.variant.available
+  assign option_disabled = false
+endif
 
 																	assign color_file_name = value | replace: ' ', '_' | append: '.' | append: swatch_file_extension
 																	assign color_value = value | replace: ' ', '_' | downcase
