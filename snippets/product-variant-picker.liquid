@@ -70,12 +70,10 @@
                               -%}
                               {%- for value in option.values -%}
                                 {%- liquid
-assign option_disabled = true
-if value.variant.inventory_management == null
-  assign option_disabled = false
-elsif value.variant.available
-  assign option_disabled = false
-endif
+                                  assign option_disabled = true
+                                  if value.variant.available
+                                    assign option_disabled = false
+                                  endif
 
 																	assign color_file_name = value | replace: ' ', '_' | append: '.' | append: swatch_file_extension
 																	assign color_value = value | replace: ' ', '_' | downcase
@@ -208,12 +206,10 @@ endif
                         >
                           {%- for value in option.values -%}
                             {%- liquid
-assign option_disabled = true
-if value.variant.inventory_management == null
-  assign option_disabled = false
-elsif value.variant.available
-  assign option_disabled = false
-endif
+                              assign option_disabled = true
+                              if value.variant.available
+                                assign option_disabled = false
+                              endif
                             -%}
                             {%- capture input_dataset -%}
                               data-available="{{ value.variant.available }}"
@@ -252,12 +248,10 @@ endif
                     <div class="visually-hidden card__sizes">
                       {%- for value in option.values -%}
                         {%- liquid
-assign option_disabled = true
-if value.variant.inventory_management == null
-  assign option_disabled = false
-elsif value.variant.available
-  assign option_disabled = false
-endif
+                          assign option_disabled = true
+                          if value.variant.available
+                            assign option_disabled = false
+                          endif
                         -%}
                       <span class="card__size{% if option_disabled %} card__size--disabled{% endif %}">{{- value -}}</span>
                       <script type="application/json" data-resource="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
