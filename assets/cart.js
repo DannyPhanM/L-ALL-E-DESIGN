@@ -362,18 +362,18 @@ if (!customElements.get('cart-note')) {
         const textarea = document.querySelector('cart-note textarea');
         const value = textarea ? textarea.value.trim() : '';
 
-        if (value === '') {
-          event.preventDefault();
-          event.stopImmediatePropagation();
-          this.showError();
+        // if (value === '') {
+        //   event.preventDefault();
+        //   event.stopImmediatePropagation();
+        //   this.showError();
           
-          if (textarea) {
-             textarea.scrollIntoView({ behavior: 'smooth', block: 'center' });
-             textarea.focus();
-          }
-        } else {
-          this.clearErrors();
-        }
+        //   if (textarea) {
+        //      textarea.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        //      textarea.focus();
+        //   }
+        // } else {
+        //   this.clearErrors();
+        // }
       }, true);
     }
 
