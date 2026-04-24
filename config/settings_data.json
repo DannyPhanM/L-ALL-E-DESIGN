@@ -849,7 +849,7 @@
             "settings": {
               "menu": "main-menu",
               "use_accent_color": false,
-              "show_collection_image": true,
+              "show_collection_image": false,
               "image_ratio": "original",
               "focal_point": "center center",
               "image_radius": "0px",
