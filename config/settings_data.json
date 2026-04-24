@@ -572,6 +572,7 @@
         "blocks": {
           "d4be93f3-b034-47a8-8f0e-fcfb40182b9e": {
             "type": "text",
+            "disabled": true,
             "settings": {
               "desktop_text": "<p>LATEST DESIGNS FOR EID. <a href=\"/collections/the-inner-flow\" title=\"EVERFLOW\">Shop now</a></p>",
               "mobile_text": "<p>LATEST DESIGNS FOR EID. <a href=\"/collections/the-inner-flow\" title=\"EVERFLOW\">Shop now</a></p>",
