@@ -167,7 +167,7 @@
     "cart_drawer_show_vendor": false,
     "show_cart_total": true,
     "show_saved": true,
-    "hide_cart_button": false,
+    "hide_cart_button": true,
     "cart_drawer_subtotal_size": "default",
     "total_cart_items_heading_size": "default",
     "enable_discount_code": false,
