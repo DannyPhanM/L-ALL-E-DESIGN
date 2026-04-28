@@ -1,0 +1,23 @@
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const utm = window._utmData || {};
+
+  // Không làm gì nếu không có UTM
+  if (!utm.utm_source && !utm.fbclid) return;
+
+  fetch('/cart/update.js', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      attributes: {
+        'UTM Source':   utm.utm_source   || '',
+        'UTM Medium':   utm.utm_medium   || '',
+        'UTM Campaign': utm.utm_campaign || '',
+        'UTM Content':  utm.utm_content  || '',
+        'UTM Term':     utm.utm_term     || '',
+        'FB Click ID':  utm.fbclid       || ''
+      }
+    })
+  });
+});
+</script>
