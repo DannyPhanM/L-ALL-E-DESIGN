@@ -5083,5 +5083,10 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      "button.chat-toggle .chat-title{font-size:18px}"
+    ]
   }
 }
