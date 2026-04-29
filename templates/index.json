@@ -435,7 +435,7 @@
       ],
       "name": "t:sections.banner-grid.name",
       "settings": {
-        "content_on_hover": false,
+        "content_on_hover": true,
         "grid_gap": 2,
         "mobile_grid_gap": 2,
         "section_width": "wide",
