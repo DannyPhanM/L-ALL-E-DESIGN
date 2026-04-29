@@ -10,13 +10,14 @@ document.addEventListener('DOMContentLoaded', function() {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       attributes: {
-        'UTM Source':   utm.utm_source   || '',
-        'UTM Medium':   utm.utm_medium   || '',
-        'UTM Campaign': utm.utm_campaign || '',
-        'UTM Content':  utm.utm_content  || '',
-        'UTM Term':     utm.utm_term     || '',
-        'FB Click ID':  utm.fbclid       || ''
-      }
+  'UTM Source':    utm.utm_source   || '',
+  'UTM Medium':    utm.utm_medium   || '',
+  'UTM Campaign':  utm.utm_campaign || '',
+  'UTM Content':   utm.utm_content  || '',
+  'UTM Term':      utm.utm_term     || '',
+  'FB Click ID':   utm.fbclid       || '',
+  'UTM Clicked At': getCookie('_utm_timestamp') || '' // thêm dòng này
+}
     })
   });
 });
