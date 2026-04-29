@@ -1,4 +1,8 @@
 <script>
+  function getCookie(name) {
+  const m = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+  return m ? decodeURIComponent(m[2]) : '';
+}
 document.addEventListener('DOMContentLoaded', function() {
   const utm = window._utmData || {};
 
