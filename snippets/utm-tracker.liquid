@@ -1,0 +1,58 @@
+<script>
+(function() {
+  const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid'];
+  const DAYS = 30;
+  const PAID_SOURCES = ['facebook', 'instagram', 'meta', 'fb', 'cpc', 'paid'];
+
+  function setCookie(name, value) {
+    const d = new Date();
+    d.setTime(d.getTime() + DAYS * 864e5);
+    document.cookie = name + '=' + encodeURIComponent(value) + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+  }
+
+  function getCookie(name) {
+    const m = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return m ? decodeURIComponent(m[2]) : '';
+  }
+
+  const params = new URLSearchParams(window.location.search);
+  const newSource = params.get('utm_source') || '';
+  const newMedium = params.get('utm_medium') || '';
+  const hasFbclid = !!params.get('fbclid');
+  const hasNewUtm = UTM_KEYS.some(k => params.get(k)) || hasFbclid;
+
+  // Kiểm tra session hiện tại có phải paid không
+  const isPaidNew = hasFbclid || 
+    PAID_SOURCES.some(s => newSource.toLowerCase().includes(s)) ||
+    PAID_SOURCES.some(s => newMedium.toLowerCase().includes(s));
+
+  // Kiểm tra cookie cũ có phải paid không  
+  const existingSource = getCookie('_utm_source');
+  const existingMedium = getCookie('_utm_medium');
+  const existingFbclid = getCookie('_fbclid');
+  const hasPaidCookie = existingFbclid || 
+    PAID_SOURCES.some(s => existingSource.toLowerCase().includes(s)) ||
+    PAID_SOURCES.some(s => existingMedium.toLowerCase().includes(s));
+
+  // --- Logic ghi đè ---
+  // Rule: Paid ads luôn thắng organic/bio
+  // Nếu đã có paid cookie → chỉ ghi đè nếu session mới cũng là paid
+  // Nếu chưa có cookie → ghi bình thường
+  
+  const shouldWrite = hasNewUtm && (isPaidNew || !hasPaidCookie);
+
+  if (shouldWrite) {
+    UTM_KEYS.forEach(k => {
+      if (params.get(k)) setCookie('_' + k, params.get(k));
+    });
+    setCookie('_utm_timestamp', new Date().toISOString());
+  }
+
+  // Expose ra global — luôn ưu tiên paid cookie nếu tồn tại
+  window._utmData = {};
+  UTM_KEYS.forEach(k => {
+    window._utmData[k] = params.get(k) || getCookie('_' + k) || '';
+  });
+
+})();
+</script>
