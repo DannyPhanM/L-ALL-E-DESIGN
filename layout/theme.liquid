@@ -278,6 +278,13 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/106776749" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MGMZ2LRL');</script>
+<!-- End Google Tag Manager -->
   </head>
   {% liquid
     assign uppercase_buttons = false
@@ -315,6 +322,10 @@
        
     "
   >
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGMZ2LRL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
     {% if settings.allow_transparent_navigation %}<overlap-navigation>{% endif %}
     {% section 'announcement-bar' %}
     {% if settings.menu_drawer_style == 'default' %}
