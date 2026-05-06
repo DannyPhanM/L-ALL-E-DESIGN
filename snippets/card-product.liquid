@@ -454,7 +454,7 @@
     <div class="card__content {% if settings.center_text %}card__content--center{% endif %}">
       {% if price_position == 'top' %}
         <div class="card__price card__price--{{ settings.typography_preset }} {% if settings.typography_preset == 'custom' %}{% if settings.product_price_size != 'default' %}{{ settings.product_price_size }}{% else %}{% if uppercase_price %} uppercase{% endif %}{% if bolder_price_font %} bolder-font{% endif %}{% endif %}{% endif %}">
-          {% render 'price', product: card_product, in_card_product: true, uppercase_price: uppercase_price, bolder_price_font: bolder_price_font %}
+          {% render 'price', product: card_product, in_card_product: true, use_variant: true, uppercase_price: uppercase_price, bolder_price_font: bolder_price_font %}
         </div>
       {% endif %}
       <div class="card__info">
@@ -477,7 +477,7 @@
               {% endif %}     
               {% if price_position == 'with_title' %}
                 <div class="card__price card__price--{{ settings.typography_preset }} {% if settings.typography_preset == 'custom' %}{% if settings.product_price_size != 'default' %}{{ settings.product_price_size }}{% else %}{% if uppercase_price %} uppercase{% endif %}{% if bolder_price_font %} bolder-font{% endif %}{% endif %}{% endif %}">
-                  {% render 'price', product: card_product, in_card_product: true, uppercase_price: uppercase_price, bolder_price_font: bolder_price_font %}
+                  {% render 'price', product: card_product, in_card_product: true, use_variant: true, uppercase_price: uppercase_price, bolder_price_font: bolder_price_font %}
                 </div>
               {% endif %}
             </div>
@@ -541,7 +541,7 @@
 
       {% if price_position == 'bottom' or show_price_in_quick_search %}
         <div class="card__price card__price--{{ settings.typography_preset }} {% if settings.typography_preset == 'custom' %}{% if settings.product_price_size != 'default' %}{{ settings.product_price_size }}{% else %}{% if uppercase_price %} uppercase{% endif %}{% if bolder_price_font %} bolder-font{% endif %}{% endif %}{% endif %}">
-          {% render 'price', product: card_product, product: card_product, in_card_product: true, uppercase_price: uppercase_price, bolder_price_font: bolder_price_font %}
+          {% render 'price', product: card_product, in_card_product: true, use_variant: true, uppercase_price: uppercase_price, bolder_price_font: bolder_price_font %}
         </div>
       {% endif %}
 

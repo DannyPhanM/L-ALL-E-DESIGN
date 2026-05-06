@@ -38,7 +38,7 @@
           {{ money_price }}
         </span>
       </div>
-      {%- if product.compare_at_price_varies or product.compare_at_price_max > product.price %}
+      
         {% comment %}On sale - Regular price{% endcomment %}
         <div class="price__regular">
           <span class="visually-hidden">
@@ -115,7 +115,6 @@
             {%- endif -%}
           </div>
         </div>
-      {%- endif -%}
 
     {%- else -%}
       {% comment %}Regular price{% endcomment %}
