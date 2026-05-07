@@ -60,7 +60,7 @@
             "countdown_show_labels": true,
             "countdown_labels_color": "#b9b9b9",
             "countdown_enable_animation": true,
-            "subheading_size": "default",
+            "subheading_size": "heading_s_uppercase",
             "subheading_tag": "p",
             "heading_size": "heading_xl_uppercase",
             "heading_tag": "h1",
