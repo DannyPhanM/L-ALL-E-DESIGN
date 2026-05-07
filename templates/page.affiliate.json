@@ -276,6 +276,7 @@
         "image_8XjDN4",
         "text_ejWayD"
       ],
+      "disabled": true,
       "name": "t:sections.multicolumn.name",
       "settings": {
         "subheading": "",
@@ -453,8 +454,8 @@
     "main-page",
     "anchor_link_f9qnAN",
     "icons_with_text_h7UKDA",
+    "rich_text_raPNdM",
     "multicolumn_YXebRb",
-    "icons_with_text_PHAUrM",
-    "rich_text_raPNdM"
+    "icons_with_text_PHAUrM"
   ]
 }
