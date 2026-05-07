@@ -251,10 +251,10 @@
         "image_8XjDN4": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/2_f9997e70-2c2f-4b04-ae3a-3a367f8daba7.png",
+            "image": "shopify://shop_images/2_59d35f1a-1ede-4ce4-82ab-46cb4d0b3530.png",
             "heading": "",
             "text": "",
-            "button_label": "Discover",
+            "button_label": "",
             "button_link": "",
             "target_blank": false,
             "full_block_clickable": false
