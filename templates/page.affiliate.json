@@ -64,7 +64,7 @@
             "subheading_tag": "p",
             "heading_size": "heading_xl_uppercase",
             "heading_tag": "h1",
-            "main_text_size": "default"
+            "main_text_size": "body_m"
           }
         }
       },
