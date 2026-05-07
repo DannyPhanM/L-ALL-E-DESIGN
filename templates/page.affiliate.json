@@ -39,7 +39,7 @@
             "button_link_1": "",
             "target_blank_1": false,
             "button_style_1": "link",
-            "button_label_2": "REGISTER NOW",
+            "button_label_2": "JOIN NOW",
             "button_link_2": "shopify://pages/affiliate",
             "target_blank_2": false,
             "button_style_2": "solid",
@@ -179,12 +179,78 @@
       "settings": {
         "anchor_link": "anchor-link"
       }
+    },
+    "icons_with_text_h7UKDA": {
+      "type": "icons-with-text",
+      "blocks": {
+        "item_iKgaQR": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "heading": "Icon heading",
+            "text": "<p><strong>REGISTER AN ACCOUNT</strong></p>",
+            "page": "",
+            "page_content_in_popup": true
+          }
+        },
+        "item_LGWHnA": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "heading": "Icon heading",
+            "text": "<p>Add a short advantage or guarantee description.</p>",
+            "page": "",
+            "page_content_in_popup": true
+          }
+        },
+        "item_zca9Wm": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "heading": "Icon heading",
+            "text": "<p>Add a short advantage or guarantee description.</p>",
+            "page": "",
+            "page_content_in_popup": true
+          }
+        }
+      },
+      "block_order": [
+        "item_iKgaQR",
+        "item_LGWHnA",
+        "item_zca9Wm"
+      ],
+      "name": "t:sections.icons_with_text.name",
+      "settings": {
+        "heading": "Why Collaborate With L'allee?",
+        "desktop_grid_type": "slider",
+        "max_columns": "default",
+        "mobile_layout": "2",
+        "mobile_navigation": "arrows",
+        "center_text": true,
+        "icon_or_image_size": 48,
+        "fill_container": false,
+        "context_icon_radius": "default",
+        "icon_weight": "medium",
+        "item_heading_size": "default",
+        "text_size": "default",
+        "dim_text": true,
+        "heading_size": "heading_m_uppercase",
+        "heading_tag": "h2",
+        "color_type": "default",
+        "background_color": "#FFFFFF",
+        "text_color": "#000000",
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0
+      }
     }
   },
   "order": [
     "slideshow_with_media_Rn7xhd",
     "tabs_hzUyEp",
     "main-page",
-    "anchor_link_f9qnAN"
+    "anchor_link_f9qnAN",
+    "icons_with_text_h7UKDA"
   ]
 }
