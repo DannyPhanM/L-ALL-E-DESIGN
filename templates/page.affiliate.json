@@ -446,6 +446,80 @@
         "mobile_padding_top": 16,
         "mobile_padding_bottom": 32
       }
+    },
+    "contact_form_pQPCCf": {
+      "type": "contact-form",
+      "blocks": {
+        "subheading_Q4QfGw": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "@lallee.international",
+            "subheading_size": "body_s_uppercase",
+            "subheading_tag": "p"
+          }
+        },
+        "heading_hjYeLm": {
+          "type": "heading",
+          "settings": {
+            "heading": "IMPORTANT POLICY",
+            "heading_size": "heading_m_uppercase",
+            "heading_tag": "h3"
+          }
+        },
+        "text_EFPwgL": {
+          "type": "text",
+          "settings": {
+            "text": "<h4></h4><ul><li>Commission is only applied to successfully paid orders.</li><li>A valid PayPal account is required to receive payouts.</li><li>All referrals and earnings are automatically tracked in your Affiliate Dashboard.</li><li>Orders identified as fraudulent, refunded, or canceled may not qualify for commission payouts.</li></ul><p></p><p></p>",
+            "dim_text": true,
+            "text_size": "default"
+          }
+        },
+        "contacts_nhJcyT": {
+          "type": "contacts",
+          "settings": {
+            "contacts_subheading": "Contact Information",
+            "subheading_size": "heading_xs_uppercase",
+            "contacts_1": "huyenpham@lalee.com",
+            "contacts_1_type": "email",
+            "contacts_2": "+84-963-271-383",
+            "contacts_2_type": "phone_number",
+            "use_accent_color": false,
+            "contacts_description": "Mon-Sun: 9:00 – 21:00 (GMT+7)",
+            "text_size": "body_s_uppercase"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_Q4QfGw",
+        "heading_hjYeLm",
+        "text_EFPwgL",
+        "contacts_nhJcyT"
+      ],
+      "name": "t:sections.contact-form.name",
+      "settings": {
+        "swap_position": false,
+        "narrow_content": false,
+        "heading": "Get in touch",
+        "heading_size": "default",
+        "heading_tag": "h2",
+        "show_container": true,
+        "name_placeholder": "",
+        "email_placeholder": "",
+        "show_phone": true,
+        "phone_placeholder": "",
+        "show_message": true,
+        "message_placeholder": "",
+        "enable_checkbox": false,
+        "make_required": true,
+        "checkbox_label": "<p>I have read and agreed to the <a href=\"/policies/privacy-policy\">Terms and Conditions</a>.</p>",
+        "color_type": "default",
+        "background_color": "#FFFFFF",
+        "text_color": "#000000",
+        "desktop_padding_top": 56,
+        "desktop_padding_bottom": 0,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -456,6 +530,7 @@
     "icons_with_text_h7UKDA",
     "rich_text_raPNdM",
     "multicolumn_YXebRb",
-    "icons_with_text_PHAUrM"
+    "icons_with_text_PHAUrM",
+    "contact_form_pQPCCf"
   ]
 }
