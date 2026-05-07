@@ -68,6 +68,7 @@
     "uppercase_heading_s": false,
     "heading_s_line_height": 1.4,
     "heading_s_desktop_size": 22,
+    "heading_s_mobile_size": 16,
     "font_heading_xs": "base",
     "heading_xs_desktop_size": 17,
     "heading_xs_mobile_size": 17,
