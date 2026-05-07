@@ -239,9 +239,9 @@
         "color_type": "default",
         "background_color": "#FFFFFF",
         "text_color": "#000000",
-        "desktop_padding_top": 0,
+        "desktop_padding_top": 56,
         "desktop_padding_bottom": 56,
-        "mobile_padding_top": 0,
+        "mobile_padding_top": 24,
         "mobile_padding_bottom": 24
       }
     },
