@@ -24,7 +24,7 @@
             "overlay_opacity": 10,
             "center_text": false,
             "vertical_content_position": "center",
-            "horizontal_content_position": "flex-start",
+            "horizontal_content_position": "flex-end",
             "narrow_content": true,
             "context_image_width": 120,
             "image_ratio": "original",
