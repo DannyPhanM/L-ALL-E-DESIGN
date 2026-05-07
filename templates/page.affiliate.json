@@ -231,7 +231,7 @@
         "fill_container": false,
         "context_icon_radius": "default",
         "icon_weight": "medium",
-        "item_heading_size": "heading_s_uppercase",
+        "item_heading_size": "heading_xs_uppercase",
         "text_size": "default",
         "dim_text": true,
         "heading_size": "heading_m_uppercase",
