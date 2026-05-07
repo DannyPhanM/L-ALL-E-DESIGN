@@ -236,7 +236,7 @@
         "dim_text": true,
         "heading_size": "heading_m_uppercase",
         "heading_tag": "h2",
-        "color_type": "custom",
+        "color_type": "default",
         "background_color": "#f8f8f8",
         "text_color": "#000000",
         "desktop_padding_top": 32,
