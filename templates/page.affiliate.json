@@ -186,9 +186,9 @@
         "item_iKgaQR": {
           "type": "item",
           "settings": {
-            "icon": "leaf",
-            "heading": "Icon heading",
-            "text": "<h3><strong>15% Commission</strong></h3>",
+            "icon": "chat",
+            "heading": "Easy To Join",
+            "text": "<p>Anyone can apply and start earning once referred orders are generated successfully.</p>",
             "page": "",
             "page_content_in_popup": true
           }
@@ -196,9 +196,9 @@
         "item_LGWHnA": {
           "type": "item",
           "settings": {
-            "icon": "leaf",
-            "heading": "Icon heading",
-            "text": "<p>Add a short advantage or guarantee description.</p>",
+            "icon": "money_bills",
+            "heading": "Earn 15% Commission",
+            "text": "<p>Receive 15% commission on every successful order made through your affiliate links.</p>",
             "page": "",
             "page_content_in_popup": true
           }
@@ -206,9 +206,9 @@
         "item_zca9Wm": {
           "type": "item",
           "settings": {
-            "icon": "leaf",
-            "heading": "Icon heading",
-            "text": "<p>Add a short advantage or guarantee description.</p>",
+            "icon": "user",
+            "heading": "Simple Affiliate Tools",
+            "text": "<p>Easily manage your dashboard, generate custom affiliate links, and track your earnings in one place.</p>",
             "page": "",
             "page_content_in_popup": true
           }
@@ -231,7 +231,7 @@
         "fill_container": false,
         "context_icon_radius": "default",
         "icon_weight": "medium",
-        "item_heading_size": "default",
+        "item_heading_size": "heading_s_uppercase",
         "text_size": "default",
         "dim_text": true,
         "heading_size": "heading_l_uppercase",
@@ -239,9 +239,9 @@
         "color_type": "default",
         "background_color": "#FFFFFF",
         "text_color": "#000000",
-        "desktop_padding_top": 0,
+        "desktop_padding_top": 32,
         "desktop_padding_bottom": 0,
-        "mobile_padding_top": 0,
+        "mobile_padding_top": 16,
         "mobile_padding_bottom": 0
       }
     }
