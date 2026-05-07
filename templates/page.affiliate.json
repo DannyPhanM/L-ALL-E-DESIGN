@@ -188,7 +188,7 @@
           "settings": {
             "icon": "leaf",
             "heading": "Icon heading",
-            "text": "<p><strong>REGISTER AN ACCOUNT</strong></p>",
+            "text": "<h3><strong>15% Commission</strong></h3>",
             "page": "",
             "page_content_in_popup": true
           }
@@ -234,7 +234,7 @@
         "item_heading_size": "default",
         "text_size": "default",
         "dim_text": true,
-        "heading_size": "heading_m_uppercase",
+        "heading_size": "heading_l_uppercase",
         "heading_tag": "h2",
         "color_type": "default",
         "background_color": "#FFFFFF",
