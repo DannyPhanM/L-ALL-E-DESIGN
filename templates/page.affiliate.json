@@ -244,6 +244,63 @@
         "mobile_padding_top": 16,
         "mobile_padding_bottom": 0
       }
+    },
+    "multicolumn_YXebRb": {
+      "type": "multicolumn",
+      "blocks": {
+        "loop_video_EYJQn7": {
+          "type": "loop_video",
+          "settings": {
+            "video_load": "shopify://files/videos/A2508DA16VA0.mov",
+            "heading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "target_blank": false,
+            "full_block_clickable": false
+          }
+        },
+        "text_ejWayD": {
+          "type": "text",
+          "settings": {
+            "heading": "Curate Influence. Earn With Style.",
+            "text": "<p>L'allee was created for those who believe style should feel effortless yet unforgettable.Every collection reflects a balance of sophistication, minimalism, and contemporary culture.We value creators who inspire through authenticity — not just reach.</p><p></p>",
+            "button_label": "JOIN IN A AFFILIATE",
+            "button_link": "",
+            "target_blank": false,
+            "full_block_clickable": false
+          }
+        }
+      },
+      "block_order": [
+        "loop_video_EYJQn7",
+        "text_ejWayD"
+      ],
+      "name": "t:sections.multicolumn.name",
+      "settings": {
+        "subheading": "",
+        "heading": "",
+        "max_columns": "default",
+        "mobile_layout": "2",
+        "enable_masonry_grid": false,
+        "subheading_size": "default",
+        "subheading_tag": "h3",
+        "heading_size": "heading_l",
+        "heading_tag": "h2",
+        "media_ratio": "square",
+        "center_text": false,
+        "title_size": "heading_l_uppercase",
+        "text_size": "default",
+        "image_radius": "default",
+        "button_style": "solid",
+        "color_type": "default",
+        "background_color": "#FFFFFF",
+        "text_color": "#000000",
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -251,6 +308,7 @@
     "tabs_hzUyEp",
     "main-page",
     "anchor_link_f9qnAN",
-    "icons_with_text_h7UKDA"
+    "icons_with_text_h7UKDA",
+    "multicolumn_YXebRb"
   ]
 }
