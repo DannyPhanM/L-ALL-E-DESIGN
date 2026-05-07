@@ -301,6 +301,82 @@
         "mobile_padding_top": 0,
         "mobile_padding_bottom": 0
       }
+    },
+    "icons_with_text_PHAUrM": {
+      "type": "icons-with-text",
+      "blocks": {
+        "item_LbDCUM": {
+          "type": "item",
+          "settings": {
+            "icon": "chat",
+            "heading": "Create Your Account",
+            "text": "<p>Register your L'ALLÉE account in just a few minutes to join the affiliate program. IN HERE</p>",
+            "page": "",
+            "page_content_in_popup": true
+          }
+        },
+        "item_wCdqGB": {
+          "type": "item",
+          "settings": {
+            "icon": "money_bills",
+            "heading": "Wait For Approval",
+            "text": "<p>Our team will review your application within 24 hours. Once approved, you’ll receive a confirmation email with full affiliate access.</p>",
+            "page": "",
+            "page_content_in_popup": true
+          }
+        },
+        "item_G3iUEt": {
+          "type": "item",
+          "settings": {
+            "icon": "user",
+            "heading": "Start Sharing & Earning",
+            "text": "<p>Share your affiliate links, promote your favorite products, and manage your commissions directly through your account dashboard</p>",
+            "page": "",
+            "page_content_in_popup": true
+          }
+        },
+        "item_6DxfcC": {
+          "type": "item",
+          "settings": {
+            "icon": "chat",
+            "heading": "Receive Your Payout",
+            "text": "<p>You can request a payout once your total commission reaches $300+ (equivalent to approximately $2,000 in successful referred sales).</p>",
+            "page": "",
+            "page_content_in_popup": true
+          }
+        }
+      },
+      "block_order": [
+        "item_LbDCUM",
+        "item_wCdqGB",
+        "item_G3iUEt",
+        "item_6DxfcC"
+      ],
+      "name": "t:sections.icons_with_text.name",
+      "settings": {
+        "heading": "How It Works",
+        "desktop_grid_type": "slider",
+        "max_columns": "default",
+        "mobile_layout": "2",
+        "mobile_navigation": "arrows",
+        "center_text": true,
+        "icon_or_image_size": 48,
+        "fill_container": false,
+        "context_icon_radius": "default",
+        "icon_weight": "medium",
+        "item_heading_size": "heading_xs_uppercase",
+        "text_size": "default",
+        "dim_text": true,
+        "heading_size": "heading_m_uppercase",
+        "heading_tag": "h2",
+        "color_type": "default",
+        "background_color": "#FFFFFF",
+        "text_color": "#000000",
+        "desktop_padding_top": 32,
+        "desktop_padding_bottom": 64,
+        "mobile_padding_top": 16,
+        "mobile_padding_bottom": 32
+      }
     }
   },
   "order": [
@@ -309,6 +385,7 @@
     "main-page",
     "anchor_link_f9qnAN",
     "icons_with_text_h7UKDA",
-    "multicolumn_YXebRb"
+    "multicolumn_YXebRb",
+    "icons_with_text_PHAUrM"
   ]
 }
