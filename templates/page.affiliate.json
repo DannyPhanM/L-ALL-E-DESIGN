@@ -116,11 +116,11 @@
       "type": "line-section",
       "name": "t:blocks.line.name",
       "settings": {
-        "color_type": "default",
+        "color_type": "invert",
         "background_color": "#FFFFFF",
         "text_color": "#000000",
-        "desktop_padding_top": 56,
-        "desktop_padding_bottom": 56,
+        "desktop_padding_top": 24,
+        "desktop_padding_bottom": 24,
         "mobile_padding_top": 24,
         "mobile_padding_bottom": 24
       }
