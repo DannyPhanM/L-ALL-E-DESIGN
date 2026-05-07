@@ -236,13 +236,81 @@
         "dim_text": true,
         "heading_size": "heading_m_uppercase",
         "heading_tag": "h2",
+        "color_type": "custom",
+        "background_color": "#f8f8f8",
+        "text_color": "#000000",
+        "desktop_padding_top": 32,
+        "desktop_padding_bottom": 48,
+        "mobile_padding_top": 24,
+        "mobile_padding_bottom": 24
+      }
+    },
+    "rich_text_raPNdM": {
+      "type": "rich-text",
+      "blocks": {
+        "block_image_6g4g8W": {
+          "type": "block_image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/b3a5cc18-LEK0655-scaled.jpg",
+            "desktop_image_ratio": "original",
+            "image_radius": "default",
+            "mobile_image_ratio": "original",
+            "image_link": "",
+            "target_blank": false
+          }
+        },
+        "subheading_4d9dyH": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "+ 300 ITEMS WITH 20 COLLECTIONS",
+            "subheading_size": "body_l_uppercase",
+            "subheading_tag": "h3"
+          }
+        },
+        "heading_ie8h9H": {
+          "type": "heading",
+          "settings": {
+            "heading": "Curate Influence. Earn With Style.",
+            "heading_size": "heading_m_uppercase",
+            "heading_tag": "h2"
+          }
+        },
+        "text_dqbWxn": {
+          "type": "text",
+          "settings": {
+            "text": "<p></p><p></p><p>L'ALLÉE was created for individuals who see fashion as more than appearance — but as a quiet expression of identity, taste, and perspective.<br/>We believe true style should feel effortless, intentional, and naturally memorable without the need to seek attention. Every collection is designed around a balance of refined minimalism, modern sophistication, and contemporary culture. From silhouettes to details, each piece is created to elevate everyday presence while remaining timeless beyond seasonal trends.<br/></p><p></p><p></p>",
+            "dim_text": false,
+            "text_size": "default"
+          }
+        },
+        "button_X3m4zX": {
+          "type": "button",
+          "settings": {
+            "button_label": "BECOME A L'ALLEE AFFILIATE",
+            "button_link": "/",
+            "target_blank": false,
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "block_image_6g4g8W",
+        "subheading_4d9dyH",
+        "heading_ie8h9H",
+        "text_dqbWxn",
+        "button_X3m4zX"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "section_width": "narrow",
+        "center_text": false,
         "color_type": "default",
         "background_color": "#FFFFFF",
         "text_color": "#000000",
-        "desktop_padding_top": 32,
-        "desktop_padding_bottom": 64,
-        "mobile_padding_top": 16,
-        "mobile_padding_bottom": 32
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0
       }
     },
     "multicolumn_YXebRb": {
@@ -370,81 +438,13 @@
         "dim_text": true,
         "heading_size": "heading_m_uppercase",
         "heading_tag": "h2",
-        "color_type": "default",
-        "background_color": "#FFFFFF",
+        "color_type": "custom",
+        "background_color": "#f8f8f8",
         "text_color": "#000000",
         "desktop_padding_top": 32,
         "desktop_padding_bottom": 64,
         "mobile_padding_top": 16,
         "mobile_padding_bottom": 32
-      }
-    },
-    "rich_text_raPNdM": {
-      "type": "rich-text",
-      "blocks": {
-        "block_image_6g4g8W": {
-          "type": "block_image",
-          "settings": {
-            "desktop_image": "shopify://shop_images/b3a5cc18-LEK0655-scaled.jpg",
-            "desktop_image_ratio": "original",
-            "image_radius": "default",
-            "mobile_image_ratio": "original",
-            "image_link": "",
-            "target_blank": false
-          }
-        },
-        "subheading_4d9dyH": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "+ 300 ITEMS WITH 20 COLLECTIONS",
-            "subheading_size": "body_l_uppercase",
-            "subheading_tag": "h3"
-          }
-        },
-        "heading_ie8h9H": {
-          "type": "heading",
-          "settings": {
-            "heading": "Curate Influence. Earn With Style.",
-            "heading_size": "heading_m_uppercase",
-            "heading_tag": "h2"
-          }
-        },
-        "text_dqbWxn": {
-          "type": "text",
-          "settings": {
-            "text": "<p>L'ALLÉE was created for individuals who see fashion as more than appearance — but as a quiet expression of identity, taste, and perspective.<br/>We believe true style should feel effortless, intentional, and naturally memorable without the need to seek attention. Every collection is designed around a balance of refined minimalism, modern sophistication, and contemporary culture. From silhouettes to details, each piece is created to elevate everyday presence while remaining timeless beyond seasonal trends.<br/></p>",
-            "dim_text": false,
-            "text_size": "default"
-          }
-        },
-        "button_X3m4zX": {
-          "type": "button",
-          "settings": {
-            "button_label": "BECOM A L'ALLEE AFFILIATE",
-            "button_link": "/",
-            "target_blank": false,
-            "button_style": "solid"
-          }
-        }
-      },
-      "block_order": [
-        "block_image_6g4g8W",
-        "subheading_4d9dyH",
-        "heading_ie8h9H",
-        "text_dqbWxn",
-        "button_X3m4zX"
-      ],
-      "name": "t:sections.rich-text.name",
-      "settings": {
-        "section_width": "narrow",
-        "center_text": false,
-        "color_type": "default",
-        "background_color": "#FFFFFF",
-        "text_color": "#000000",
-        "desktop_padding_top": 0,
-        "desktop_padding_bottom": 0,
-        "mobile_padding_top": 0,
-        "mobile_padding_bottom": 0
       }
     }
   },
