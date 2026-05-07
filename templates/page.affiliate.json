@@ -88,74 +88,6 @@
         "mobile_padding_bottom": 0
       }
     },
-    "tabs_hzUyEp": {
-      "type": "tabs",
-      "blocks": {
-        "tab_EDVfNM": {
-          "type": "tab",
-          "settings": {
-            "custom_heading": "Shopping Guide",
-            "text": "",
-            "text_size": "default",
-            "page": "shopping-guide"
-          }
-        },
-        "tab_m3ip8q": {
-          "type": "tab",
-          "settings": {
-            "custom_heading": "SHIPPING POLICY",
-            "text": "",
-            "text_size": "default",
-            "page": "shipping-policy"
-          }
-        },
-        "tab_rLXbYn": {
-          "type": "tab",
-          "settings": {
-            "custom_heading": "RETURN & EXCHANGES",
-            "text": "",
-            "text_size": "default",
-            "page": "return-exchange"
-          }
-        },
-        "tab_UXnjEx": {
-          "type": "tab",
-          "settings": {
-            "custom_heading": "Privacy Policy",
-            "text": "",
-            "text_size": "default",
-            "page": "privacy-policy"
-          }
-        }
-      },
-      "block_order": [
-        "tab_EDVfNM",
-        "tab_m3ip8q",
-        "tab_rLXbYn",
-        "tab_UXnjEx"
-      ],
-      "disabled": true,
-      "name": "t:sections.tabs.name",
-      "settings": {
-        "enable_redirect": false,
-        "subheading": "",
-        "heading": "L'ALLEE DESIGN POLICY",
-        "center_text": true,
-        "section_width": "narrow",
-        "tab_heading_size": "default",
-        "subheading_size": "default",
-        "subheading_tag": "h3",
-        "heading_size": "default",
-        "heading_tag": "h2",
-        "color_type": "default",
-        "background_color": "#ffffff",
-        "text_color": "#000000",
-        "desktop_padding_top": 0,
-        "desktop_padding_bottom": 0,
-        "mobile_padding_top": 0,
-        "mobile_padding_bottom": 0
-      }
-    },
     "main-page": {
       "type": "main-page",
       "disabled": true,
@@ -178,6 +110,19 @@
       "name": "t:sections.anchor-link.name",
       "settings": {
         "anchor_link": "anchor-link"
+      }
+    },
+    "line_section_AgYcVt": {
+      "type": "line-section",
+      "name": "t:blocks.line.name",
+      "settings": {
+        "color_type": "default",
+        "background_color": "#FFFFFF",
+        "text_color": "#000000",
+        "desktop_padding_top": 56,
+        "desktop_padding_bottom": 56,
+        "mobile_padding_top": 24,
+        "mobile_padding_bottom": 24
       }
     },
     "icons_with_text_h7UKDA": {
@@ -236,7 +181,7 @@
         "dim_text": true,
         "heading_size": "heading_m_uppercase",
         "heading_tag": "h2",
-        "color_type": "default",
+        "color_type": "custom",
         "background_color": "#f8f8f8",
         "text_color": "#000000",
         "desktop_padding_top": 32,
@@ -474,6 +419,14 @@
             "text_size": "default"
           }
         },
+        "text_LQVBjt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>* If you have any questions about the affiliate program, partnerships, payouts, or collaboration opportunities, feel free to contact our team — we’re always happy to assist you. </p>",
+            "dim_text": true,
+            "text_size": "default"
+          }
+        },
         "contacts_nhJcyT": {
           "type": "contacts",
           "settings": {
@@ -493,6 +446,7 @@
         "subheading_Q4QfGw",
         "heading_hjYeLm",
         "text_EFPwgL",
+        "text_LQVBjt",
         "contacts_nhJcyT"
       ],
       "name": "t:sections.contact-form.name",
@@ -524,9 +478,9 @@
   },
   "order": [
     "slideshow_with_media_Rn7xhd",
-    "tabs_hzUyEp",
     "main-page",
     "anchor_link_f9qnAN",
+    "line_section_AgYcVt",
     "icons_with_text_h7UKDA",
     "rich_text_raPNdM",
     "multicolumn_YXebRb",
