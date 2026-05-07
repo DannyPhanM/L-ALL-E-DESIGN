@@ -223,6 +223,15 @@
             "target_blank": false,
             "button_style": "solid"
           }
+        },
+        "button_a9bqNJ": {
+          "type": "button",
+          "settings": {
+            "button_label": "EXPLORE PRODUCTS",
+            "button_link": "shopify://collections/all-products",
+            "target_blank": true,
+            "button_style": "link"
+          }
         }
       },
       "block_order": [
@@ -230,14 +239,15 @@
         "subheading_4d9dyH",
         "heading_ie8h9H",
         "text_dqbWxn",
-        "button_X3m4zX"
+        "button_X3m4zX",
+        "button_a9bqNJ"
       ],
       "name": "t:sections.rich-text.name",
       "settings": {
         "section_width": "narrow",
         "center_text": false,
         "color_type": "default",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "text_color": "#000000",
         "desktop_padding_top": 56,
         "desktop_padding_bottom": 56,
@@ -295,7 +305,7 @@
         "image_radius": "default",
         "button_style": "solid",
         "color_type": "default",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "text_color": "#000000",
         "desktop_padding_top": 0,
         "desktop_padding_bottom": 0,
@@ -454,7 +464,7 @@
         "make_required": true,
         "checkbox_label": "<p>I have read and agreed to the <a href=\"/policies/privacy-policy\">Terms and Conditions</a>.</p>",
         "color_type": "default",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "text_color": "#000000",
         "desktop_padding_top": 56,
         "desktop_padding_bottom": 0,
