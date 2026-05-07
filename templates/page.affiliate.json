@@ -62,7 +62,7 @@
             "countdown_enable_animation": true,
             "subheading_size": "heading_s_uppercase",
             "subheading_tag": "p",
-            "heading_size": "heading_xl_uppercase",
+            "heading_size": "heading_l_uppercase",
             "heading_tag": "h1",
             "main_text_size": "body_m"
           }
@@ -234,7 +234,7 @@
         "item_heading_size": "heading_s_uppercase",
         "text_size": "default",
         "dim_text": true,
-        "heading_size": "heading_l_uppercase",
+        "heading_size": "heading_m_uppercase",
         "heading_tag": "h2",
         "color_type": "default",
         "background_color": "#FFFFFF",
@@ -264,7 +264,7 @@
           "type": "text",
           "settings": {
             "heading": "Curate Influence. Earn With Style.",
-            "text": "<p>L'allee was created for those who believe style should feel effortless yet unforgettable.Every collection reflects a balance of sophistication, minimalism, and contemporary culture.We value creators who inspire through authenticity — not just reach.</p><p></p>",
+            "text": "<p></p><p></p><p>L'ALLÉE was created for individuals who see fashion as more than appearance — but as a quiet expression of identity, taste, and perspective.<br/>We believe true style should feel effortless, intentional, and naturally memorable without the need to seek attention.<br/>Every collection is designed around a balance of refined minimalism, modern sophistication, and contemporary culture. From silhouettes to details, each piece is created to elevate everyday presence while remaining timeless beyond seasonal trends.</p><p></p>",
             "button_label": "JOIN IN A AFFILIATE",
             "button_link": "/",
             "target_blank": false,
@@ -289,7 +289,7 @@
         "heading_tag": "h2",
         "media_ratio": "original",
         "center_text": false,
-        "title_size": "heading_l_uppercase",
+        "title_size": "heading_m_uppercase",
         "text_size": "default",
         "image_radius": "default",
         "button_style": "solid",
