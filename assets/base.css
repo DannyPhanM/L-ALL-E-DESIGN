@@ -54,7 +54,7 @@ body.hidden {
 }
 
 #ShopifyChat {
-  z-index: 1;
+  z-index: 1!important;
 }
 
 .fade-in:not(.body)::before {
