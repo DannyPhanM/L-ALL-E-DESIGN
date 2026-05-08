@@ -53,6 +53,10 @@ body.hidden {
   z-index: 9999;
 }
 
+#ShopifyChat {
+  z-index: 1;
+}
+
 .fade-in:not(.body)::before {
   top: var(--header-group-height, 0);
 }
