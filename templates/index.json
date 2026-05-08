@@ -15,7 +15,7 @@
         "image_slide_aUi8kp": {
           "type": "image_slide",
           "settings": {
-            "block_link": "shopify://collections/stillness-in-bloom",
+            "block_link": "shopify://collections/all-products",
             "block_target_blank": false,
             "desktop_image": "shopify://shop_images/50_desktop.png",
             "mobile_image": "shopify://shop_images/50_mobile.png",
