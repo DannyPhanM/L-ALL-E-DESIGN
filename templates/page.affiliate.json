@@ -36,8 +36,8 @@
             "text": "<p>Partner with L'allee and earn commission by sharing modern luxury fashion with your audience.</p>",
             "dim_text": false,
             "button_label_1": "SIGN IN",
-            "button_link_1": "",
-            "target_blank_1": false,
+            "button_link_1": "https://lalee-fashion.bixgrow.com/register",
+            "target_blank_1": true,
             "button_style_1": "link",
             "button_label_2": "JOIN NOW",
             "button_link_2": "shopify://pages/affiliate",
@@ -219,8 +219,8 @@
           "type": "button",
           "settings": {
             "button_label": "BECOME A L'ALLEE AFFILIATE",
-            "button_link": "/",
-            "target_blank": false,
+            "button_link": "https://lalee-fashion.bixgrow.com/register",
+            "target_blank": true,
             "button_style": "solid"
           }
         },
