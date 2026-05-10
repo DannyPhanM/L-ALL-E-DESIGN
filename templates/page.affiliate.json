@@ -450,6 +450,7 @@
       "settings": {
         "swap_position": false,
         "narrow_content": false,
+        "form_first_mobile": true,
         "heading": "Get in touch",
         "heading_size": "default",
         "heading_tag": "h2",
