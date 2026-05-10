@@ -44,6 +44,12 @@
             --padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
         }
     }
+
+    @media(max-width: 750px) {
+        .form-is-second  {
+            order: 2 !important; 
+        }
+    }
 {% endstyle %}
 {% liquid
     assign uppercase_body_s = false
@@ -62,7 +68,7 @@
 <div class="contact-form contact-form--{{ settings.white_space }} ordinal-section ordinal-section--{{ settings.white_space }} {% if settings.show_lines %}ordinal-section--lines{% endif %}  media-with-text media-with-text--{{ settings.white_space }} {% if settings.show_lines %}lines{% endif %} section-padding--{{ settings.white_space }} {% if settings.max_page_width == '1400' or settings.max_page_width == '1200' %}page-width {% endif %} page-width--{{ settings.max_page_width }} {% if sizeArrayBlocks == 0 %}media-with-text--narrow{% else %}media-with-text--wide{% endif %} {% if section.settings.swap_position %}image-left{% else %}image-right{% endif %} no-fill-section color-{{ section.settings.color_type }} {% if section.settings.color_type != 'default' %}no-default-color{% endif %} {% if section.settings.show_container %}exclude-lines{% else %}include-lines{% endif %}">
     <div class="media-with-text__wrapper">
       <div class="media-with-text__card half {% if section.blocks.size == 0 %}form-centered{% endif %}">
-          <div class="media-with-text__media {% if section.settings.swap_position %}right-padding--media{% else %}left-padding--media{% endif %} {% if section.settings.show_container %}show_container{% else %}hide_container{% endif %}">
+          <div class="{% if section.settings.form_first_mobile %} form-is-second {% endif %} media-with-text__media {% if section.settings.swap_position %}right-padding--media{% else %}left-padding--media{% endif %} {% if section.settings.show_container %}show_container{% else %}hide_container{% endif %}">
             <div class="contact-form__wrapper {% if section.settings.show_container %}color-invert no-default-color{% endif %}">
                 {% style %}
                     #shopify-section-{{ section.id }} .contact-form__wrapper.color-invert {
