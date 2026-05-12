@@ -120,7 +120,7 @@
           "settings": {
             "icon": "chat",
             "heading": "Easy To Join",
-            "text": "<p>Anyone can apply and start earning once referred orders are generated successfully.</p>",
+            "text": "<p>Anyone can apply and start earning once referred orders are generated successfully. <a href=\"https://affiliate.lalleedesign.com/register\" target=\"_blank\" title=\"https://affiliate.lalleedesign.com/register\">IN HERE</a></p>",
             "page": "",
             "page_content_in_popup": true
           }
@@ -219,7 +219,7 @@
           "type": "button",
           "settings": {
             "button_label": "BECOME A L'ALLEE AFFILIATE",
-            "button_link": "https://lalee-fashion.bixgrow.com/register",
+            "button_link": "https://affiliate.lalleedesign.com/register",
             "target_blank": true,
             "button_style": "solid"
           }
