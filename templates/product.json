@@ -624,7 +624,7 @@
         "image_ratio": "original",
         "focal_point": "center center",
         "hover_behavior": "slider",
-        "show_bullets": false,
+        "show_bullets": true,
         "enable_add_to_cart": false,
         "enable_quick_view": true,
         "price_position": "bottom",
