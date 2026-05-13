@@ -100,7 +100,7 @@
         "mobile_navigation": "arrows",
         "image_ratio": "original",
         "focal_point": "center center",
-        "hover_behavior": "slider",
+        "hover_behavior": "nothing",
         "show_bullets": true,
         "enable_add_to_cart": true,
         "enable_quick_view": false,
