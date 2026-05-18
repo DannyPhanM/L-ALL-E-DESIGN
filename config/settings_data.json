@@ -1049,6 +1049,11 @@
           "button_vertical_position": "higher",
           "greeting_message": ""
         }
+      },
+      "8232719769135528861": {
+        "type": "shopify://apps/qikify-volume-discount/blocks/app-embed/f0592105-7af5-4bc5-afd2-d674b4b2de92",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
