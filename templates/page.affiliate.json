@@ -101,7 +101,7 @@
             "fill_content": false,
             "overlay_color": "#000000",
             "overlay_gradient": "",
-            "overlay_opacity": 10,
+            "overlay_opacity": 20,
             "center_text": false,
             "vertical_content_position": "center",
             "horizontal_content_position": "flex-start",
