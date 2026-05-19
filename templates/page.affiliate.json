@@ -74,6 +74,7 @@
         "button_z4mpcy",
         "block_image_mQgb8B"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.name",
       "settings": {
         "section_width": "narrow",
@@ -150,10 +151,9 @@
       "block_order": [
         "image_slide_KPDmWf"
       ],
-      "disabled": true,
       "settings": {
         "desktop_height": 100,
-        "mobile_height": 95,
+        "mobile_height": 70,
         "section_width": "overlap",
         "controls": "classic_arrows",
         "fill_controls": false,
