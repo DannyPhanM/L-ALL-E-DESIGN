@@ -53,6 +53,17 @@
             "target_blank": false,
             "button_style": "outlined"
           }
+        },
+        "block_image_mQgb8B": {
+          "type": "block_image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/cee4454e-A2504DA09DO-9-scaled.jpg",
+            "desktop_image_ratio": "original",
+            "image_radius": "default",
+            "mobile_image_ratio": "original",
+            "image_link": "",
+            "target_blank": false
+          }
         }
       },
       "block_order": [
@@ -60,7 +71,8 @@
         "heading_9cTLz6",
         "text_x9r9dT",
         "button_t8nR7T",
-        "button_z4mpcy"
+        "button_z4mpcy",
+        "block_image_mQgb8B"
       ],
       "name": "t:sections.rich-text.name",
       "settings": {
@@ -72,63 +84,6 @@
         "desktop_padding_top": 32,
         "desktop_padding_bottom": 0,
         "mobile_padding_top": 20,
-        "mobile_padding_bottom": 0
-      }
-    },
-    "multicolumn_VXwaAx": {
-      "type": "multicolumn",
-      "blocks": {
-        "text_PirBqb": {
-          "type": "text",
-          "settings": {
-            "heading": "Heading",
-            "text": "<p>This is where you can share your brand story and vision with your customers. You can change the text in the theme editor.</p>",
-            "button_label": "Discover",
-            "button_link": "",
-            "target_blank": false,
-            "full_block_clickable": false
-          }
-        },
-        "image_9G3zKW": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/cee4454e-A2504DA09DO-9-scaled.jpg",
-            "heading": "",
-            "text": "",
-            "button_label": "",
-            "button_link": "",
-            "target_blank": false,
-            "full_block_clickable": false
-          }
-        }
-      },
-      "block_order": [
-        "text_PirBqb",
-        "image_9G3zKW"
-      ],
-      "name": "t:sections.multicolumn.name",
-      "settings": {
-        "subheading": "",
-        "heading": "",
-        "max_columns": "default",
-        "mobile_layout": "1",
-        "enable_masonry_grid": false,
-        "subheading_size": "default",
-        "subheading_tag": "h3",
-        "heading_size": "default",
-        "heading_tag": "h2",
-        "media_ratio": "square",
-        "center_text": false,
-        "title_size": "default",
-        "text_size": "default",
-        "image_radius": "default",
-        "button_style": "outlined",
-        "color_type": "default",
-        "background_color": "#FFFFFF",
-        "text_color": "#000000",
-        "desktop_padding_top": 0,
-        "desktop_padding_bottom": 0,
-        "mobile_padding_top": 0,
         "mobile_padding_bottom": 0
       }
     },
@@ -601,7 +556,6 @@
   },
   "order": [
     "rich_text_yCiCqy",
-    "multicolumn_VXwaAx",
     "slideshow_with_media_Rn7xhd",
     "main-page",
     "anchor_link_f9qnAN",
