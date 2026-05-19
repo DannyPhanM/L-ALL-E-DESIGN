@@ -597,7 +597,7 @@
           "text_size": "body_s_uppercase",
           "show_bottom_line": false,
           "center_text": true,
-          "enable_autoplay": false,
+          "enable_autoplay": true,
           "autoplay_speed": 5,
           "image_ratio": "original",
           "image_width": 48,
