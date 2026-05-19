@@ -9,6 +9,62 @@
  */
 {
   "sections": {
+    "rich_text_yCiCqy": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_YTj6z4": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Turn Your Style Into Rewards",
+            "subheading_size": "default",
+            "subheading_tag": "h3"
+          }
+        },
+        "heading_9cTLz6": {
+          "type": "heading",
+          "settings": {
+            "heading": "Become a L'alee Affiliate",
+            "heading_size": "heading_m_uppercase",
+            "heading_tag": "h2"
+          }
+        },
+        "text_x9r9dT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Partner with L'allee and earn commission by sharing modern luxury fashion with your audience.</p>",
+            "dim_text": false,
+            "text_size": "default"
+          }
+        },
+        "button_t8nR7T": {
+          "type": "button",
+          "settings": {
+            "button_label": "Discover",
+            "button_link": "",
+            "target_blank": false,
+            "button_style": "outlined"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_YTj6z4",
+        "heading_9cTLz6",
+        "text_x9r9dT",
+        "button_t8nR7T"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "section_width": "narrow",
+        "center_text": false,
+        "color_type": "default",
+        "background_color": "#FFFFFF",
+        "text_color": "#000000",
+        "desktop_padding_top": 32,
+        "desktop_padding_bottom": 0,
+        "mobile_padding_top": 20,
+        "mobile_padding_bottom": 0
+      }
+    },
     "slideshow_with_media_Rn7xhd": {
       "type": "slideshow-with-media",
       "blocks": {
@@ -18,7 +74,7 @@
             "block_link": "shopify://collections/stillness-in-bloom",
             "block_target_blank": false,
             "desktop_image": "shopify://shop_images/cee4454e-A2504DA09DO-9-scaled.jpg",
-            "mobile_image": "shopify://shop_images/6af08b6d-A2504DA09DO-10-scaled.jpg",
+            "mobile_image": "shopify://shop_images/cee4454e-A2504DA09DO-9-scaled.jpg",
             "fill_content": false,
             "overlay_color": "#000000",
             "overlay_gradient": "",
@@ -476,6 +532,7 @@
     }
   },
   "order": [
+    "rich_text_yCiCqy",
     "slideshow_with_media_Rn7xhd",
     "main-page",
     "anchor_link_f9qnAN",
