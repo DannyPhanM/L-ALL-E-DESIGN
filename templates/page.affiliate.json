@@ -263,8 +263,8 @@
         "block_image_6g4g8W": {
           "type": "block_image",
           "settings": {
-            "desktop_image": "shopify://shop_images/b3a5cc18-LEK0655-scaled.jpg",
-            "desktop_image_ratio": "original",
+            "desktop_image": "shopify://shop_images/banner_affiliate.jpg",
+            "desktop_image_ratio": "landscape",
             "image_radius": "default",
             "mobile_image_ratio": "original",
             "image_link": "",
