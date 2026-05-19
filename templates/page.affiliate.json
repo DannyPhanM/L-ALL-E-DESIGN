@@ -153,7 +153,7 @@
       ],
       "settings": {
         "desktop_height": 100,
-        "mobile_height": 70,
+        "mobile_height": 80,
         "section_width": "overlap",
         "controls": "classic_arrows",
         "fill_controls": false,
