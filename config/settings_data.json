@@ -582,8 +582,8 @@
           "text_WEUewj": {
             "type": "text",
             "settings": {
-              "desktop_text": "<p>Unlock Exclusive Savings Up to 15% OFF. SHOP NOW<br/></p>",
-              "mobile_text": "<p>Unlock Exclusive Savings Up to 15% OFF. SHOP NOW</p>",
+              "desktop_text": "<p>Unlock Exclusive Savings Up to 15% OFF. <a href=\"https://lalleedesign.com/collections/best-sellers\" title=\"https://lalleedesign.com/collections/best-sellers\">SHOP NOW</a><br/></p>",
+              "mobile_text": "<p>Unlock Exclusive Savings Up to 15% OFF. <a href=\"https://lalleedesign.com/collections/best-sellers\" title=\"https://lalleedesign.com/collections/best-sellers\">SHOP NOW</a></p>",
               "icon": "none"
             }
           }
